@@ -1,0 +1,92 @@
+.page19-container {
+    background-color: #73e0ef;
+    color: black;
+    text-align: center;
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px; 
+  }
+  
+  .page19-heading {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+  
+  .page19-button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .button-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .calendar-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 20px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease;
+    width: 250px;
+  }
+  
+  .calendar-button:hover {
+    transform: scale(1.05);
+  }
+  
+  .calendar-icon {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .popup-message.button-popup {
+    position: absolute;
+    top: 110%;
+    background-color: white;
+    color:black;
+    border: 1px solid #93c5fd;
+    padding: 10px 16px;
+    border-radius: 10px;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    white-space: nowrap;
+    animation: fadeIn 0.3s ease-in-out;
+    z-index: 10;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-5px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @media (min-width: 600px) {
+    .page19-button-group {
+      flex-direction: row;
+    }
+  
+    .button-wrapper {
+      align-items: center;
+    }
+  }
+  

@@ -1,0 +1,111 @@
+.page16-container {
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    overflow: hidden;
+  }
+  
+  .page16-left-section {
+    width: 78.2%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 40px;
+    overflow: hidden;
+    z-index: 1;
+  }
+  
+  .page16-left-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('./page1bg.png'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(8px);
+    opacity: 0.8; 
+    z-index: 0;
+  }
+  
+  
+  .page16-right-section {
+    width: 30%;
+    background-color:rgb(54, 58, 95);
+  }
+  
+  .page16-image-wrapper {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .page16-image {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 90vh;
+  }
+  
+  .page16-text {
+    position: absolute;
+    left: 121px;
+    top: 19%;
+    transform: translateY(-50%);
+    font-size: 100px;
+    font-weight: bold;
+    color: rgb(54, 58, 95);
+    z-index: 2;
+    white-space: nowrap;
+  }
+  
+  @media (max-width: 1024px) {
+    .page16-text {
+      font-size: 70px;
+      left: -60px;
+    }
+  
+    .page16-image {
+      max-height: 70vh;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .page16-container {
+      flex-direction: column;
+      height: auto;
+    }
+  
+    .page16-left-section,
+    .page16-right-section {
+      width: 100%;
+      height: auto;
+    }
+  
+    .page16-left-section {
+      padding: 20px;
+      justify-content: center;
+      background-position: top;
+    }
+  
+    .page16-text {
+      left: 10px;
+      top: 10px;
+      font-size: 48px;
+      transform: none;
+    }
+  
+    .page16-image {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .page16-text {
+      font-size: 36px;
+      left: 10px;
+      top: 10px;
+    }
+  }
+  

@@ -1,0 +1,112 @@
+.page18-container {
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    overflow: hidden;
+  }
+  
+  .page18-left-section {
+    width: 78.2%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 20px;
+    overflow: hidden;
+    z-index: 1;
+  }
+  
+  .page18-left-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('./page1bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(8px); 
+    opacity: 0.8;      
+    z-index: 0;
+  }
+  
+  
+  .page18-right-section {
+    width: 30%;
+    background-color:rgb(54, 58, 95);
+  }
+  
+  .page18-image-wrapper {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .page18-image {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 90vh;
+  }
+  
+  .page18-plan-text {
+    position: absolute;
+    right: 150px;
+    top: 20%;
+    transform: translateY(-50%);
+    font-size: 100px;
+    font-weight: bold;
+    color:rgb(54, 58, 95);
+    z-index: 2;
+    white-space: nowrap;
+  }
+  
+  @media (max-width: 1024px) {
+    .page18-plan-text {
+      font-size: 70px;
+      right: -40px;
+    }
+  
+    .page18-image {
+      max-height: 70vh;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .page18-container {
+      flex-direction: column;
+      height: auto;
+    }
+  
+    .page18-left-section,
+    .page18-right-section {
+      width: 100%;
+      height: auto;
+    }
+  
+    .page18-left-section {
+      padding: 20px;
+      justify-content: center;
+      background-position: top;
+    }
+  
+    .page18-plan-text {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      font-size: 48px;
+      transform: none;
+    }
+  
+    .page18-image {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .page18-plan-text {
+      font-size: 36px;
+      right: 10px;
+      top: 10px;
+    }
+  }
+  

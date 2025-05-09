@@ -1,0 +1,105 @@
+.full-page-container {
+  padding-top: 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 100px; 
+}
+
+.half-page-banner {
+  position: relative;
+  height: 70vh;
+  width: 100%;
+  background-color: #CFF9FC;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+  padding: 20px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.half-page-banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('./bg3.png'); 
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  filter: blur(2px);
+  opacity: 0.8;
+  z-index: 0;
+}
+
+
+.content-overlay {
+  color: #000;
+  text-align: center;
+  padding: 20px;
+  z-index: 2;
+  margin-top: -10%;
+}
+
+.content-overlay h1 {
+  font-size: 3.5rem;
+  font-weight: normal;
+  color: #000;
+}
+
+.content-overlay h1 strong {
+  font-weight: bold;
+  color: #000;
+}
+
+.content-overlay p {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.centered-image {
+  width: 70%;
+  max-width: 700px;
+  margin-top: 30px;
+  z-index: 2;
+}
+
+.bottom-half-white {
+  height: auto;
+  width: 100%;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  z-index: 1;
+}
+
+.bottom-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+.overlay-wrapper {
+    position: relative;
+    width: 100%;
+  }
+  
+  .laptop-overlay {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    max-width: 700px;
+    z-index: 2;
+    pointer-events: none;
+    height: 75vh;
+  }
+  

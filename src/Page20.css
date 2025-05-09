@@ -1,0 +1,126 @@
+.page20-container {
+    background-color: #F7F7F7; 
+    text-align: center;
+    padding: 30px 10px;
+    font-family: "Segoe UI", sans-serif;
+    margin-top: 20px;
+    height: 350px; 
+    margin-bottom: 20px;
+  }
+  
+.page20-container p,
+.page20-container h1,
+.page20-container h2,
+.page20-container h3,
+.page20-container span,
+.page20-container div {
+  line-height: 1.5; 
+  margin: 0; 
+  padding: 0; 
+}
+  
+  .busy-being1 {
+    font-size: 30px;
+    font-weight: normal;
+  }
+  
+  .arrow-icon1 {
+    width: 850px;
+    margin-left: -20%;
+    margin-bottom: -0%;
+  }
+  
+  h2 {
+    font-size: 30px;
+    font-weight: normal;
+  }
+  
+  .fragment1 {
+    font-size: 25px;
+  }
+  
+  .goal-setter1 {
+    color: #5A6A84;
+    font-weight: 500;
+    font-size: 50px;
+    margin-left: 30px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+  
+  .website-link1 {
+    margin-top: 10px;
+    color: #777;
+    font-size: 25px;
+  }
+  
+  .web {
+    color: #5A6A84;
+  }
+  
+  .or-text1 {
+    margin: 15px 0;
+    font-weight: normal;
+    color: #5A6A84;
+    font-size: 25px;
+  }
+  
+  .store-buttons1 {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 15px;
+  }
+  
+  .button-wrapper1 {
+    position: relative;
+  }
+  
+  .store-button1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: #5C6371;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    padding: 12px 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    font-size: 0.95rem;
+    transition: transform 0.3s ease;
+    width: 170px;
+    height: 45px;
+  }
+  
+  .store-button1:hover {
+    transform: scale(1.05);
+  }
+  
+  .store-icon1 {
+    height: 30px;
+    width: auto;
+  }
+  
+  .popup-message1 {
+    position: absolute;
+    top: 110%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #5A6A84;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    white-space: nowrap;
+    z-index: 10;
+    animation: fadeInOut 2.5s ease forwards;
+  }
+  
+  @keyframes fadeInOut {
+    0% { opacity: 0; transform: translateX(-50%) translateY(10px); }
+    10% { opacity: 1; transform: translateX(-50%) translateY(0); }
+    90% { opacity: 1; }
+    100% { opacity: 0; transform: translateX(-50%) translateY(10px); }
+  }
+  

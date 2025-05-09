@@ -1,0 +1,100 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+.app-container {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+  position: relative;
+  padding-top: 80px;
+  overflow: hidden;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  background-color: transparent;
+}
+
+.navbar .logo img {
+  height: 50px;
+  width: auto;
+  margin-left: -25%;
+}
+
+.nav-links-wrapper {
+  background-color: white;
+  padding: 6px 16px;
+  border-radius: 999px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  margin: 0 20px;
+  max-width: 700px;
+  border: none; 
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 999px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-links a:hover {
+  background-color: #e0e0e0;
+}
+
+.nav-links a.active {
+  background-color: #d0f0ff;
+  color: black;
+}
+
+.auth-buttons {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.auth-buttons button {
+  background-color: transparent;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  margin-left: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.auth-buttons .login {
+  background-color: rgb(0, 153, 255);
+  color: white;
+}
+
+.auth-buttons button:hover {
+  background-color: #0056b3;
+  color: white;
+}

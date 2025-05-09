@@ -1,0 +1,129 @@
+.white-margin{
+  height: 20px;
+  background-color: #fff;
+}
+.page11-container {
+    background-color: #d4f7fc;
+    text-align: center;
+    padding: 30px 10px;
+    font-family: "Segoe UI", sans-serif;
+    /* margin-top: 20px; */
+    height: 350px;
+    /* margin-bottom: 20px; */
+
+  }
+  .page11-container p,
+.page11-container h1,
+.page11-container h2,
+.page11-container h3,
+.page11-container span,
+.page11-container div {
+  line-height: 1.5; 
+  margin: 0; 
+  padding: 0; 
+}
+h2 {
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  gap: 50px; 
+  font-size: 30px;
+  font-weight: normal;
+}
+
+.busy-being {
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.goal-setter {
+  color: #0FC6EE;
+  font-weight: 400;
+  font-size: 45px;
+}
+
+
+ 
+ 
+ 
+ .fragment{
+font-size: 25px;
+
+ }
+  
+  .website-link {
+    margin-top: 10px;
+    color: gray;
+    font-size: 25px;
+  }
+  
+  .or-text {
+    margin: 15px 0;
+    font-weight: normal;
+    color: gray;
+    font-size: 25px;
+  }
+  
+  .store-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 15px;
+    margin-right: 40%;
+  }
+  
+  .button-wrapper {
+    position: relative;
+  }
+  
+  .store-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: #0FC6EE; 
+    color: black;
+    border: none;
+    border-radius: 15px;
+    padding: 12px 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    font-size: 0.95rem;
+    transition: transform 0.3s ease;
+    width: 170px;
+    height: 70%;
+  }
+  
+  .store-button:hover {
+    transform: scale(1.05);
+  }
+  
+  .store-icon {
+    height: 30px;
+    width: auto;
+  }
+  
+  .popup-message {
+    position: absolute;
+    top: 110%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #0FC6EE;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    white-space: nowrap;
+    z-index: 10;
+    height: 30%;
+    width: 65%;
+    animation: fadeInOut 2.5s ease forwards;
+  }
+  
+  @keyframes fadeInOut {
+    0% { opacity: 0; transform: translateX(-50%) translateY(10px); }
+    10% { opacity: 1; transform: translateX(-50%) translateY(0); }
+    90% { opacity: 1; }
+    100% { opacity: 0; transform: translateX(-50%) translateY(10px); }
+  }
+  
