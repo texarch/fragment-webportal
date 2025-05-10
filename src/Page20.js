@@ -28,7 +28,7 @@ const Page20 = () => {
       </h2>
       <p className="fragment1">Fragment Business helps keep your entire team on the same page!</p>
       <p className="website-link1" style={{ color: '#5A6A84' }}>
-  <span className="web" style={{ color: '#5A6A84' }}>🌐</span> www.Fragment.com
+  <span className="web" style={{ color: '#5A6A84' }}>🌐</span> https://thefragment.app
 </p>
 
 
