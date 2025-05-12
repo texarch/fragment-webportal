@@ -13,7 +13,7 @@ const Page17 = () => {
         >
           <div className="page17-image-wrapper">
             <img src={grey} alt="Page 18" className="page17-image" />
-            <h1 className="page17-plan-text">keep</h1>
+            <h1 className="page17-plan-text">Keep</h1>
           </div>
         </div>
         <div className="page17-right-section"></div>

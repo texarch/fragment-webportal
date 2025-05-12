@@ -27,8 +27,8 @@ const Page11 = () => {
 </h2>
 
       <p className="fragment">Fragment makes time feel Kinder !!</p>
-      <p className="website-link">🌐 https://thefragment.app</p>
-      <p className="or-text">or</p>
+      {/* <p className="website-link">🌐 https://thefragment.app</p>
+      <p className="or-text">or</p> */}
 
       <div className="store-buttons">
         <div className="button-wrapper">

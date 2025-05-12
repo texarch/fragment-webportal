@@ -102,4 +102,35 @@
     pointer-events: none;
     height: 75vh;
   }
+  @media screen and (max-width: 768px) {
+  .half-page-banner {
+    height: auto;
+    padding: 40px 15px;
+  }
+
+  .content-overlay {
+    margin-top: 0;
+    padding: 10px;
+  }
+
+  .content-overlay h1 {
+    font-size: 2rem;
+  }
+
+  .content-overlay p {
+    font-size: 1rem;
+  }
+
+  .centered-image {
+    width: 90%;
+    margin-top: 20px;
+  }
+
+  .laptop-overlay {
+    top: 45%;
+    width: 90%;
+    height: auto;
+  }
+}
+
   

@@ -1,0 +1,129 @@
+.pricing-container {
+  position: relative;
+  background-image: url('../page1bg.png'); 
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
+}
+
+.pricing-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  
+  background-color: rgba(255, 255, 255, 0.3);
+  z-index: 1;
+}
+
+.pricing-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 20px;
+  max-width: 800px;
+  width: 90%;
+}
+
+.pricing-heading {
+  font-size: 6rem;
+  color: rgba(15, 198, 238, 1); 
+  margin-bottom: 20px;
+}
+
+.pricing-image {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.pricing-subtext {
+  font-size: 1.2rem;
+  color: rgba(0, 0, 0, 1);
+  font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .pricing-heading {
+    font-size: 2.2rem;
+  }
+
+  .pricing-subtext {
+    font-size: 1rem;
+  }
+
+  .pricing-image {
+    max-width: 220px;
+  }
+}
+.pricing-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.7);
+  z-index: 1;
+}
+.footer {
+  background-color: #f1f1f1;
+  padding: 40px 20px 20px;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  text-align: left;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 14px;
+  color: #000;
+  min-width: 150px;
+}
+
+.social-icons-footer {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.social-icons-footer img {
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+}
+
+.footer-column p {
+  margin: 0;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 14px;
+  color: #000;
+  margin-top: 20px;
+}
+
+
+.footer-column.offset-top {
+  margin-top: 38px;
+}

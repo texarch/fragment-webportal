@@ -1,30 +1,34 @@
+// Navbar.js
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Navbar.css';
-import logo from './logo2.png'; 
+import logo from './logo2.png';
 
 const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="logo">
-        <img src={logo} alt="Company Logo" />
+        <Link to="/">
+          <img src={logo} alt="Fragment Logo" />
+        </Link>
       </div>
 
       <div className="nav-links-wrapper">
         <div className="nav-links">
-          <a href="#">About</a>
-          <a href="#">Pricing</a>
-          <a href="#">Blog</a>
-          <a href="#">Contact</a>
-          <a href="#"> Demo</a>
+          <Link to="/about">About</Link>
+          <Link to="/pricing">Pricing</Link>
+          <Link to="/blog">Blog</Link>
+          <Link to="/contact">Contact</Link>
+          <Link to="/demo">Demo</Link>
         </div>
       </div>
+
       <div className="auth-buttons">
-        <button className="signup">Sign Up</button>
-        <button className="login">Log In</button>
+        <Link to="/signup"><button className="signup">Sign Up</button></Link>
+        <Link to="/login"><button className="login">Log In</button></Link>
       </div>
     </nav>
   );
 };
 
-export default Navbar;
-
+export default Navbar;

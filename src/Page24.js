@@ -20,9 +20,10 @@ const Page24 = () => {
               <img src={email} alt="YouTube" />
             </a>
           </div>
-          <p>Email hi@thefragment.app</p>
-          <p>Phone number 77605 13755</p>
-          <p>Address Bangalore, India</p>
+          <p>Email:<span> hi@thefragment.app</span> </p>
+          <p>FAQ</p>
+          {/* <p>Phone number 77605 13755</p>
+          <p>Address Bangalore, India</p> */}
         </div>
 
         <div className="footer-column offset-top">

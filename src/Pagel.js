@@ -4,6 +4,9 @@ import pagelBg from './pagel.png'; // Update the path if needed
 
 const Pagel = () => {
   return (
+    <>
+        <div className="white-margin"></div>
+
     <div className="pagel-container">
       <div className="pagel-content">
         <h3 className="pagel-subtitle">Our Calendars keep you on time</h3>
@@ -14,6 +17,7 @@ const Pagel = () => {
         <button className="pagel-button">Subscribe to explore</button>
       </div>
     </div>
+    </>
   );
 };
 

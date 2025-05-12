@@ -55,4 +55,32 @@
   .pagel-button:hover {
     background-color: #374151;
   }
-  
+  @media screen and (max-width: 768px) {
+  .pagel-container {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 20px;
+    background-position: center top; /* Adjust background on mobile */
+    background-size: contain;
+    height: auto;
+  }
+
+  .pagel-content {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .pagel-title {
+    font-size: 24px;
+  }
+
+  .pagel-subtitle {
+    font-size: 12px;
+  }
+
+  .pagel-button {
+    font-size: 14px;
+    padding: 8px 18px;
+  }
+}

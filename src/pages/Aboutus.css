@@ -1,0 +1,361 @@
+/* -------- aPage1.css -------- */
+.apage1-section-container {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  padding: 40px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.apage1-section-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.6);
+  z-index: 1;
+}
+
+.apage1-section-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.apage1-text-block {
+  flex: 1;
+  min-width: 280px;
+}
+
+.apage1-heading {
+  font-size: 4rem;
+  color: rgba(15, 198, 238, 1);
+  text-decoration: underline;
+  margin-bottom: 20px;
+}
+
+.apage1-subheading {
+  font-size: 1.25rem;
+  color: black;
+}
+
+.apage1-image-block {
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  justify-content: center;
+  background-color: transparent;
+}
+
+.apage1-image {
+  max-width: 100%;
+  height: auto;
+    background-color: transparent;
+
+}
+
+@media (max-width: 768px) {
+  .apage1-section-content {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .apage1-heading {
+    font-size: 2.5rem;
+  }
+
+  .apage1-subheading {
+    font-size: 1rem;
+  }
+}
+
+/* -------- aPage2.css -------- */
+.apage2-container {
+  padding: 60px 20px;
+  background-color: white;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.apage2-heading {
+  text-align: center;
+  font-size: 60px;
+  text-decoration: underline;
+  margin-bottom: 60px;
+}
+
+.apage2-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 60px;
+  flex-wrap: nowrap;
+  gap: 90px;
+}
+
+.apage2-section.reverse {
+  flex-direction: row-reverse;
+}
+
+.apage2-image-left,
+.apage2-image-right {
+  width: 100%;
+  max-width: min-content;
+  height: 190px;
+  flex-shrink: 0;
+  padding-right: 140px;
+}
+
+.apage2-text-right,
+.apage2-text-left {
+  flex: 1;
+  font-size: 18px;
+  line-height: 1.6;
+  text-align: justify;
+  max-width: 500px;
+  min-width: 280px;
+}
+
+.apage2-final-text {
+  text-align: center;
+  max-width: 660px;
+  margin: 0 auto;
+  font-size: 18px;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+@media (max-width: 768px) {
+  .apage2-section,
+  .apage2-section.reverse {
+    flex-direction: column;
+    text-align: center;
+    flex-wrap: wrap;
+  }
+
+  .apage2-text-right,
+  .apage2-text-left {
+    max-width: 100%;
+  }
+
+  .apage2-image-left,
+  .apage2-image-right {
+    max-width: 100%;
+  }
+
+  .apage2-final-text {
+    text-align: center;
+  }
+}
+
+.apage2-section.reverse {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 175px;
+  flex-direction: row;
+}
+
+.apage3-container {
+  width: 100%;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.apage3-heading {
+  font-size: 60px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+}
+
+.apage3-heading::after {
+  content: "";
+  display: block;
+  width: 60%;
+  height: 3px;
+  background-color: #000;
+  margin: 8px auto 0;
+}
+
+.apage3-image {
+  display: block;
+  margin: 20px auto 0;
+  width: 100%;
+  max-width: 830px;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .apage3-heading {
+    font-size: 2em;
+  }
+
+  .apage3-image {
+    max-width: 90%;
+  }
+}
+.apage4-container {
+  background-color: #FEABAF;
+  padding: 2rem;
+  border-radius: 20px;
+  text-align: center;
+  max-width: 1300px;
+  margin: 2rem auto; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.apage4-title {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.apage4-subtitle {
+  font-size: 1.1em;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.apage4-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  padding: 0.3rem;
+  border-radius: 999px;
+  width: 100%;
+  max-width: 450px; 
+  margin: 2rem auto;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.apage4-input {
+  flex: 1;
+  padding: 0.8rem 1.2rem;
+  border: none;
+  border-radius: 999px;
+  font-size: 1rem;
+  outline: none;
+  height: 48px;
+}
+
+.apage4-button {
+  background-color: #2c2f45;
+  color: white;
+  border: none;
+  padding: 0 1.5rem;
+  height: 48px;
+  border-radius: 999px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-left: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+.apage4-button:hover {
+  background-color: black;
+}
+
+@media (max-width: 600px) {
+  .apage4-title {
+    font-size: 2em;
+  }
+
+  .apage4-subtitle {
+    font-size: 1.2em;
+  }
+
+  .apage4-button {
+    font-size: 0.9em;
+    padding: 0 16px;
+  }
+
+  .apage4-input {
+    padding-right: 120px;
+  }
+}
+
+.apage4-message {
+  margin-top: 15px;
+  color: #ff0000;
+  font-size: 1em;
+}
+
+.footer {
+  background-color: #f1f1f1;
+  padding: 40px 20px 20px;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  text-align: left;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 14px;
+  color: #000;
+  min-width: 150px;
+}
+
+.social-icons-footer {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.social-icons-footer img {
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+}
+
+.footer-column p {
+  margin: 0;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 14px;
+  color: #000;
+  margin-top: 20px;
+}
+
+.footer-column.offset-top {
+  margin-top: 38px;
+}
