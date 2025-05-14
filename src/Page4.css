@@ -1,11 +1,14 @@
-.page4-container {
+.page01-container {
     width: 100%;
     display: flex;
     justify-content: center;
     box-sizing: border-box;
-    padding: 0;
+    /* padding: 0; */
     margin: 0;
     background-repeat: no-repeat;
+    margin-bottom: -200px;
+    background-color: #ffffff;
+
   }
   
   .dark-margin1 {

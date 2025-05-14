@@ -7,7 +7,7 @@ import bgImage from './page1bg.png';
 const Page1 = () => {
   return (
     <div
-      className="page1-container"
+      className="page01-container"
       style={{ backgroundImage: `url(${bgImage})` }}
     >
       <div className="page1-content">

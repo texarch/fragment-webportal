@@ -1,25 +1,37 @@
 import React, { useState } from "react";
 import "./Aboutus.css";
-import page1bg from "../page1bg.jpg";
-import apg1image from "../apg2image.png";
-import apg2a from '../apg2a.jpg';
-import apg2b from '../apg2b.jpg';
-import pg3img from "../pg3img.jpg";
-import Insta from '../insta.png';       
-import LinkedIn from '../linkedin.png';
-import YouTube from '../email.png';  
+import page1bg from "../page1bg.jpg"; // Fixed: removed the dot before filename
+import apg1image from "../apg00image.png";
+import apg2a from "../apg2a.jpg";
+import apg2b from "../apg2b.jpg";
 
+import Insta from "../insta.png";
+import LinkedIn from "../linkedin.png";
+import YouTube from "../email.png";
+
+import pg3a from "../pg3a.png";
+import pg3b from "../pg3b.png";
+import pg3c from "../pg3c.png";
+import pg3d from "../pg3d.png";
+
+// APage1 Component
 const APage1 = () => {
   return (
     <div
       className="apage1-section-container"
-      style={{ backgroundImage: `url(${page1bg})` }}
+      style={{
+        backgroundImage: `url(${page1bg})`,
+        backgroundSize: "200%",
+        opacity: 0.8,
+        backfaceVisibility: "visible"
+      }}
     >
       <div className="apage1-section-content">
         <div className="apage1-text-block">
           <h1 className="apage1-heading">Fragment</h1>
           <h3 className="apage1-subheading">
-            For personal use or business, we make<br />Scheduling easy
+            For personal use or business, we make<br />
+            Scheduling easy
           </h3>
         </div>
         <div className="apage1-image-block">
@@ -34,46 +46,53 @@ const APage1 = () => {
   );
 };
 
+// Apage2 Component
 const Apage2 = () => {
   return (
     <div className="apage2-container">
       <h1 className="apage2-heading">Story Behind Us</h1>
+
       <div className="apage2-section">
         <img src={apg2a} alt="Visual 1" className="apage2-image-left" />
         <p className="apage2-text-right">
           In a time when most of us are constantly distracted by unnecessary content, information overload,
-          and endless scrolling, we wanted to create something that reduces the daily hustle and helps us
-          stay focused on our goals.
+          and endless scrolling, we wanted to create something that <strong>reduces the daily hustle</strong> and helps us
+          <strong> stay focused on our goals.</strong>
         </p>
       </div>
+
       <div className="apage2-section reverse">
         <p className="apage2-text-left">
-          A platform like no other, Fragment helps organise daily events effortlessly. While many platforms
+          A platform like no other, <strong>Fragment</strong> helps <strong>organise daily events effortlessly.</strong> While many platforms
           cater to large, one-time events, none address the everyday activities that shape our lives.
         </p>
         <img src={apg2b} alt="Visual 2" className="apage2-image-right" />
       </div>
+
       <p className="apage2-final-text">
-        So, we built Fragment—a scheduling platform for both personal planning and for organisers to easily
-        create, share, and manage schedules with their users.
+        So, we built <strong>Fragment</strong>—a scheduling platform for both <strong>personal planning</strong> and for <strong>organisers</strong> to easily
+        create, share, and <strong>manage schedules with their users.</strong>
       </p>
     </div>
   );
 };
 
+// Apage3 Component
 const Apage3 = () => {
   return (
-    <div>
-      <div className="apage3-container">
-        <h2 className="apage3-heading">Why Choose Us</h2>
-      </div>
-      <div>
-        <img src={pg3img} alt="Why Choose Us" className="apage3-image" />
+    <div className="apage3-container">
+      <h2 className="apage3-heading">Why Choose Us?</h2>
+      <div className="apage3-images">
+        <img className="apage3-image" src={pg3a} alt="pg3a" />
+        <img className="apage3-image" src={pg3b} alt="pg3b" />
+        <img className="apage3-image" src={pg3c} alt="pg3c" />
+        <img className="apage3-image" src={pg3d} alt="pg3d" />
       </div>
     </div>
   );
 };
 
+// Apage4 Component
 const Apage4 = () => {
   const [showMessage, setShowMessage] = useState(false);
 
@@ -95,11 +114,12 @@ const Apage4 = () => {
           Subscribe
         </button>
       </div>
-      {showMessage && <p className="apage4-message">Feature need to be added</p>}
+      {showMessage && <p className="apage4-message">Feature needs to be added</p>}
     </div>
   );
 };
 
+// Apage5 Component
 const Apage5 = () => {
   return (
     <div>
@@ -139,6 +159,7 @@ const Apage5 = () => {
   );
 };
 
+// Combined Wrapper Component
 const About = () => {
   return (
     <>
@@ -151,4 +172,4 @@ const About = () => {
   );
 };
 
-export { APage1, Apage2, Apage3, Apage4, Apage5, About };
+export { APage1, Apage2, Apage3, Apage4, Apage5, About };

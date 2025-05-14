@@ -26,7 +26,7 @@ const Page11 = () => {
   <span className="goal-setter">Goal-setter</span>
 </h2>
 
-      <p className="fragment">Fragment makes time feel Kinder !!</p>
+      <p className="fragment0">Fragment makes time feel Kinder !!</p>
       {/* <p className="website-link">🌐 https://thefragment.app</p>
       <p className="or-text">or</p> */}
 

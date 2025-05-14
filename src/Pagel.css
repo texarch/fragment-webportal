@@ -1,7 +1,7 @@
 .pagel-container {
-    height: 100vh; /* Full screen */
+    height: 100vh;
     width: 100%;
-    background-image: url('./pagel.png'); /* Adjust path as needed */
+    background-image: url('./pagel.png'); 
     background-size: cover;
     background-position: right center;
     background-repeat: no-repeat;
@@ -23,30 +23,34 @@
   }
   
   
-  .pagel-subtitle {
-    font-size: 14px;
-    color: #444;
-    margin-bottom: 10px;
-  }
-  
-  .pagel-title {
-    font-size: 36px;
-    font-weight: 500;
-    color: #222;
-    margin-bottom: 25px;
-    line-height: 1.3;
-  }
-  
-  .pagel-title .bold {
-    font-weight: 700;
-  }
-  
+ .pagel-subtitle {
+  font-size: 20px;
+  color: #000000;
+  margin-bottom: 10px;
+  font-family: 'Cambo', serif;
+  font-weight: 600;
+}
+
+.pagel-title {
+  font-size: 47.5px;
+  font-family: 'Cambo', serif;
+  font-weight: 400;
+  color: #000000;
+  margin-bottom: 25px;
+  line-height: 1.4;
+}
+
+.pagel-title .bold {
+  font-weight: 700;
+  font-family: 'Cambo', serif;
+}
+
   .pagel-button {
     padding: 10px 22px;
     background-color: #1f2937;
     color: white;
     border: none;
-    border-radius: 6px;
+    border-radius: 10px;
     font-size: 16px;
     cursor: pointer;
     transition: background 0.3s ease;
@@ -61,7 +65,7 @@
     align-items: flex-start;
     justify-content: center;
     padding: 20px;
-    background-position: center top; /* Adjust background on mobile */
+    background-position: center top; 
     background-size: contain;
     height: auto;
   }

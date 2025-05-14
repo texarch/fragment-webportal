@@ -10,28 +10,33 @@ const Page2 = () => {
 
     <div className="Page2-container">
       <div className="Page2-text">
-        <h1>
-          <span className="Page2-upper">EXPERIENCE</span><br />
-          <span className="Page2-lower">the <strong>Perfect</strong></span>
-        </h1>
+  <h1>
+  <span className="Page2-upper">EXPERIENCE</span><br />
+  <span className="Page2-lower1">the</span>
+  <span className="Page2-lower"> <strong>Perfect</strong></span>
+</h1>
+
+
+
+
         <div className="Page2-ai-powered">AI Powered</div>
       </div>
 
       <div className="Page2-graphics">
   <div className="Page2-graphic-block">
     <img src={personalPlanningImg} alt="Personal Planning" className='first' />
-    <p>
-      <span className="Page2-main-label">Personal Planning</span><br />
-      <span className="Page2-sub-label">for Individuals</span>
-    </p>
+  <p>
+  <span className="Page2-main-label">Personal Planning</span><br />
+  <span className="Page2-sub-label1">for</span><span className="Page2-sub-label"> Individuals</span>
+</p>
   </div>
 
   <div className="Page2-graphic-block">
     <img src={groupSchedulingImg} alt="Group Scheduling" />
     <p>
-      <span className="Page2-main-label">Group Scheduling</span><br />
-      <span className="Page2-sub-label">for Organisations</span>
-    </p>
+  <span className="Page2-main-label">Group Scheduling</span><br />
+  <span className="Page2-sub-label1">for</span><span className="Page2-sub-label"> Organisations</span>
+</p>
   </div>
 </div>
 </div>

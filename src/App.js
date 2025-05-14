@@ -29,6 +29,8 @@ import { About } from './pages/About.js';
 import Pricing from './pages/Pricing.js';
 import SignUp from './pages/SignUp';   // Import SignUp component
 import Login from './pages/Login';     // Import Login component
+import Demo from './pages/Demo.js';
+
 
 function App() {
   return (
@@ -65,7 +67,7 @@ function App() {
         <Route path="/Contact" element={<Contact />} />
         <Route path="/About" element={<About />} />
         <Route path="/pricing" element={<Pricing />} />
-        <Route path="/Demo" element={<Pricing />} />
+        <Route path="/Demo" element={<Demo />} />
         <Route path="/Blog" element={<Pricing />} />
         <Route path="/signup" element={<SignUp />} />   {/* Route for Sign Up */}
         <Route path="/login" element={<Login />} />     {/* Route for Log In */}

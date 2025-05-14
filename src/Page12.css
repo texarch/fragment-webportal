@@ -3,13 +3,24 @@
   width: 100%;
   height: fit-content;
   overflow: hidden;
-
 }
 
 .dark-margin {
   height: 20px;
   background-color: #363a5f;
 }
+
+/* .page12-left-section {
+  width: 78%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 40px;
+  overflow: hidden; 
+  z-index: 1;
+  border-radius: 10px;
+} */
 
 .page12-left-section {
   width: 78%;
@@ -20,7 +31,10 @@
   padding-right: 40px;
   overflow: hidden; 
   z-index: 1;
+  border-radius: 20px; 
+  overflow: hidden; 
 }
+
 
 .page12-left-section::before {
   content: '';
