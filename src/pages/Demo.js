@@ -119,27 +119,27 @@ const Page4 = () => {
   );
 };
 
-const FAQ = () => {
-  const [faqs, setFaqs] = useState(FAQData);
+// const FAQ = () => {
+//   const [faqs, setFaqs] = useState(FAQData);
 
-  const toggleFAQ = (index) => {
-    setFaqs(
-      faqs.map((faq, i) =>
-        i === index ? { ...faq, isOpen: !faq.isOpen } : { ...faq, isOpen: false }
-      )
-    );
-  };
+//   const toggleFAQ = (index) => {
+//     setFaqs(
+//       faqs.map((faq, i) =>
+//         i === index ? { ...faq, isOpen: !faq.isOpen } : { ...faq, isOpen: false }
+//       )
+//     );
+//   };
 
-  return (
-    <div className="faq-container">
-      <h2 className="faq-title">Frequently Asked Questions</h2>
-      <p className="faq-subtitle">Clarifying your most asked questions about our features.</p>
-      {faqs.map((faq, index) => (
-        <FAQItem key={index} faq={faq} index={index} toggleFAQ={toggleFAQ} />
-      ))}
-    </div>
-  );
-};
+//   return (
+//     <div className="faq-container">
+//       <h2 className="faq-title">Frequently Asked Questions</h2>
+//       <p className="faq-subtitle">Clarifying your most asked questions about our features.</p>
+//       {faqs.map((faq, index) => (
+//         <FAQItem key={index} faq={faq} index={index} toggleFAQ={toggleFAQ} />
+//       ))}
+//     </div>
+//   );
+// };
 
 const Demo = () => {
   return (
@@ -148,7 +148,7 @@ const Demo = () => {
       <Page1 />
       <Page2 />
       <Page4 />
-      <FAQ />
+      {/* <FAQ /> */}
       <div>
         <footer className="footer">
         <div className="footer-content">
