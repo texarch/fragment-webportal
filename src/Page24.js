@@ -16,7 +16,7 @@ const Page24 = () => {
             <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
               <img src={LinkedIn} alt="LinkedIn" />
             </a>
-            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.youtube.com/@thefragmentapp" target="_blank" rel="noopener noreferrer">
               <img src={email} alt="YouTube" />
             </a>
           </div>

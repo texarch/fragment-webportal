@@ -375,7 +375,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 100vh;
+  justify-content: center;
+  height: fit-content; /* Let content define height */
+  box-sizing: border-box;
 }
 
 .page4-heading {
@@ -434,6 +436,7 @@
   text-align: center;
 }
 
+/* Responsive styles */
 @media (max-width: 768px) {
   .page4-heading {
     font-size: 2.25rem;
@@ -454,25 +457,6 @@
   }
 }
 
-@media (max-width: 480px) {
-  .page4-heading {
-    font-size: 1.75rem;
-  }
-
-  .page4-subheading {
-    font-size: 1rem;
-  }
-
-  .page4-button,
-  .page4-input {
-    font-size: 0.9rem;
-    padding: 0.65rem 1rem;
-  }
-
-  .page4-contact-note {
-    font-size: 0.95rem;
-  }
-}
 .footer {
   background-color: #f1f1f1;
   padding: 40px 20px 20px;

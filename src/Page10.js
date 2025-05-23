@@ -1,6 +1,6 @@
 import React from 'react';
 import './Page10.css';
-import image from './page10image.png';
+import image from './page10.png';
 
 const Page10 = () => {
   return (

@@ -1,8 +1,10 @@
 .page5-container {
   display: flex;
-  height: fit-content;
+  /* height: 0%; */
   width: 100%;
   flex-wrap: nowrap;
+  /* margin-bottom: 0%; */
+  padding-bottom: 0%;
   
 }
 
@@ -19,34 +21,38 @@
 .right-side5 {
   width: 70%;
   background-color: #C3F1FB;
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: flex-end;
   overflow: hidden;
+  height: fit-content; /* Match height to content (image) */
+  padding: 0; /* Remove extra padding */
 }
 
 .page5-image {
-  height: 100%;
-  width: -webkit-fill-available;
+  width: 70%;
+  height: auto; /* Maintain image's aspect ratio */
   object-fit: contain;
   position: relative;
   z-index: 1;
-  margin-bottom: 0%;
-  margin-top: 10%;
+  margin: 0; /* Remove negative margins */
 }
 
+
 .text5 {
-  font-size: 100px;
+    font-size: 110px;
   font-weight: bold;
   position: absolute;
   right: -50px;
   z-index: 2;
   color: #3FD1F1;
-  top: 160px;
+  top: 50px;
   left: 600px;
   white-space: nowrap;
   pointer-events: none; 
+  font-family: 'Cambo',serif;
+  /* line-height: 1rem; */
+  /* letter-spacing: 0.4rem; */
 }
 
 @media (max-width: 1024px) {

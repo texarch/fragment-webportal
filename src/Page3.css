@@ -10,15 +10,18 @@ html, body {
   background-color: #FAFAFA;
 }
 
-  .app-background {
-    width: 90vw;
-    height: 100vh;
-    background-color: #FAFAFA; 
-    position: relative;
-    overflow: hidden;
-    margin-top: 0%;
-  }
-  
+.app-background {
+  width: 90vw;
+  background-color: #FAFAFA; 
+  position: relative;
+  overflow: hidden;
+  margin-top: 0;
+  padding-top: 60px; /* Optional: add top padding if needed */
+  padding-bottom: 60px; /* Optional: bottom space under robot */
+  height: auto; /* ✅ Auto height to fit content */
+  min-height: 100vh; /* Optional: keep it full screen on larger screens */
+}
+
   
   .box {
     position: absolute;

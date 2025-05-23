@@ -63,6 +63,16 @@
   display: flex;
   justify-content: center;
 }
+.apage4-subtitle1{
+  font-size: 1.5em;
+  margin-bottom: 30px;
+  font-family: 'Cambo',serif;
+  /* font-weight: 700; */
+  /* color: #333; */
+  /* text-decoration: underline 2px; */
+  /* margin-top: -0%; */
+  padding-top: -5%;
+}
 
 .apage1-image {
   max-width: 100%;
@@ -239,32 +249,48 @@ padding-left: -20%;
 
 /* -------- aPage4.css -------- */
 .apage4-container {
-  width: 100%;
-  padding: 40px 20px;
-  box-sizing: border-box;
+  width: 80%; /* or whatever suits your layout */
+  margin: 25px auto; /* centers horizontally */
+  padding: 20px;
   text-align: center;
   background-color: rgba(254, 171, 175, 1);
-  margin-top: 25px;
-  margin-left: 25px;
-  margin-right: 25px;
-  margin-bottom: 25px;
   border-radius: 20px;
 }
-
 .apage4-title {
-  font-size: 2.5em;
-  margin-bottom: 10px;
-  font-family: 'Cambo',serif;
+  font-size: 3rem;        
+  margin: 8px 0;          
+  font-family: 'Cambo', serif;
   font-weight: bold;
+  line-height: 1.2;
+}
+.apage4-subtitle{
+    font-size: 2rem;       
+  margin: 8px 0;           
+  font-family: 'Cambo', serif;
+  /* font-weight: bold; */
+  line-height: 1.2;
 }
 
-.apage4-subtitle {
-  font-size: 1.1em;
-  margin-bottom: 30px;
-  font-family: 'Cambo',serif;
-  font-weight: 700;
-  color: #333;
+
+.apage4-subtitle1 {
+  font-size: 1.5rem;         
+  margin: 8px 0;           
+  font-family: 'Cambo', serif;
+  font-weight: 400;
+  line-height: 1.2;
 }
+
+.apage4-subtitle1 a {
+  color: black;
+  text-decoration: none;
+}
+
+.apage4-subtitle1 a:hover {
+  text-decoration: underline;
+  color:blue;
+}
+
+
 
 .apage4-form {
   max-width: 500px;

@@ -1,7 +1,7 @@
 import React from 'react';
 import './Page4.css';
-import logo from './logo.png';
-import sideImage from './page4image.png';
+import logo from './logo3.png';
+import sideImage from './page4c.png';
 
 const Page4 = () => {
   return (

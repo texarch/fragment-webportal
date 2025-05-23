@@ -53,7 +53,7 @@ function Contact() {
           <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
             <img src={LinkedIn} alt="LinkedIn" />
           </a>
-          <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.youtube.com/@thefragmentapp" target="_blank" rel="noopener noreferrer">
             <img src={YouTube} alt="YouTube" />
           </a>
           <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
@@ -64,12 +64,15 @@ function Contact() {
 
       <div className="subscribe-section-wrapper">
         <div className="subscribe-section">
-          <h2 className="subscribe-title">Subscribe</h2>
-          <p className="subscribe-desc">Be the first to know about our new products</p>
-          <div className="subscribe-form">
+          <h2 className="subscribe-title">Subscribe Us</h2>
+                <h2 className="subscribe-via">Via </h2>
+<h2 className="suscribe-email">
+       <a href="mailto:hi@thefragment.app">hi@thefragment.app</a></h2>
+          {/* <p className="subscribe-desc">Be the first to know about our new products</p> */}
+          {/* <div className="subscribe-form">
             <input type="email" placeholder="Enter Email.." />
             <button type="submit">Subscribe</button>
-            </div>
+            </div> */}
         </div>
       </div>
 

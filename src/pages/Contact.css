@@ -185,7 +185,40 @@ body {
   justify-content: center;
   padding: 40px 0;
 }
+.subscribe-title {
+  font-size: 3rem;        
+  margin: 8px 0;          
+  font-family: 'Cambo', serif;
+  font-weight: bold;
+  line-height: 1.2;
+}
+.subscribe-via{
+    font-size: 2rem;       
+  margin: 8px 0;           
+  font-family: 'Cambo', serif;
+  /* font-weight: bold; */
+  line-height: 1.2;
+}
 
+
+.subscribe-email{
+  font-size: 1rem;         
+  margin: 8px 0;           
+  font-family: 'Cambo', serif;
+  /* font-weight: 400; */
+  line-height: 1.2;
+   color: black;
+}
+
+.subscribe-email a {
+  color: black;
+  text-decoration: none;
+}
+
+.subscribe-email a:hover {
+  text-decoration: underline;
+  color:blue;
+}
 .subscribe-section {
   background-color: #FEF7AB;
   padding: 50px 20px;

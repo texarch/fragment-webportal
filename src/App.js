@@ -27,9 +27,12 @@ import Pagel from './Pagel.js';
 import Contact from './pages/Contact.js';
 import { About } from './pages/About.js';
 import Pricing from './pages/Pricing.js';
-import SignUp from './pages/SignUp';   // Import SignUp component
-import Login from './pages/Login';     // Import Login component
+import SignUp from './pages/SignUp';  
+import Login from './pages/Login';     
 import Demo from './pages/Demo.js';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
+
 
 
 function App() {

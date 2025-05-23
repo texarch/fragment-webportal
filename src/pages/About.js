@@ -102,9 +102,14 @@ const Apage4 = () => {
 
   return (
     <div className="apage4-container">
-      <h1 className="apage4-title">Subscribe</h1>
-      <h2 className="apage4-subtitle">Be the first to know about our new products</h2>
-      <div className="apage4-form">
+      <h1 className="apage4-title">Subscribe Us</h1>
+      <h2 className="apage4-subtitle">Via </h2>
+      {/* <h2 className="apage4-subtitle">Be the first to know about our new products..<br></br>
+      For more information contact us through
+      </h2> */}
+      <h2 className="apage4-subtitle1">
+       <a href="mailto:hi@thefragment.app">hi@thefragment.app</a></h2>
+      {/* <div className="apage4-form">
         <input
           type="email"
           placeholder="Enter your email"
@@ -113,7 +118,7 @@ const Apage4 = () => {
         <button className="apage4-button" onClick={handleSubscribe}>
           Subscribe
         </button>
-      </div>
+      </div> */}
       {showMessage && <p className="apage4-message">Feature needs to be added</p>}
     </div>
   );
@@ -133,7 +138,7 @@ const Apage5 = () => {
               <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
                 <img src={LinkedIn} alt="LinkedIn" />
               </a>
-              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.youtube.com/@thefragmentapp" target="_blank" rel="noopener noreferrer">
                 <img src={YouTube} alt="YouTube" />
               </a>
             </div>

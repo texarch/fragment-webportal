@@ -9,7 +9,8 @@ const Page12 = () => {
     <>
       <div className="dark-margin"></div>
       <div className="page12-container">
-        <div
+   
+         <div
           className="page12-left-section"
           style={{ backgroundImage: `url(${page1bg})` }}
         >
@@ -27,6 +28,7 @@ const Page12 = () => {
             />
           </div>
         </div>
+     
 
         <div className="page12-right-section"></div>
       </div>

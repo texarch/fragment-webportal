@@ -64,7 +64,7 @@ const Page1 = () => {
           Curious how it <br />
           <span className="highlight">Works?</span>
         </h1>
-        <p className="demo-link">Request a Demo</p>
+<a href="#demo-section" className="demo-link">Request a Demo</a>
       </div>
       <div className="page0-image">
         <img src={curiousImage} alt="Curious character asking a question" />
@@ -102,7 +102,7 @@ const Page2 = () => {
 
 const Page4 = () => {
   return (
-    <div className="page-container">
+    <div id="demo-section" className="page-container"> {/* <- Add id here */}
       <h1 className="page4-heading">Want a Demo to onboard your Company?</h1>
       <h2 className="page4-subheading">
         Drop us a mail with date and time suitable for you
@@ -118,6 +118,7 @@ const Page4 = () => {
     </div>
   );
 };
+
 
 // const FAQ = () => {
 //   const [faqs, setFaqs] = useState(FAQData);
@@ -160,7 +161,7 @@ const Demo = () => {
               <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
                 <img src={LinkedInIcon} alt="LinkedIn" />
               </a>
-              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.youtube.com/@thefragmentapp" target="_blank" rel="noopener noreferrer">
                 <img src={EmailIcon} alt="YouTube" />
               </a>
             </div>

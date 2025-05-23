@@ -1,7 +1,7 @@
 .page8-container {
   display: flex;
   width: 100%;
-  height: 80vh;
+  height: auto; /* Let container grow based on content */
   box-sizing: border-box;
 }
 
@@ -19,21 +19,31 @@
   padding: 40px 60px;
   gap: 20px;
   position: relative;
+  height: fit-content; /* Match height to image */
 }
 
 .img8 {
-  width: 110%;
+  width: 93%;
   height: auto;
+  /* top: -80%; */
+  margin-top: -5%;
+  
 }
 
 .com8 {
-  font-size: 80px;
+  font-size: 90px;
   font-weight: bold;
   color: #3FD1F1;
-  margin-left: 450px;
-  margin-top: -400px;
+  font-family: 'Cambo', serif;
+  position: absolute;
+  top: 80px;
+  right: 60px;
+  white-space: nowrap;
+  z-index: 1;
+  pointer-events: none;
 }
 
+/* Responsive */
 @media (max-width: 768px) {
   .page8-container {
     flex-direction: column;
@@ -47,7 +57,15 @@
 
   .com8 {
     font-size: 30px;
-    margin-left: 0;
+    position: static;
     margin-top: 20px;
+    margin-left: 0;
+    text-align: center;
+    width: 100%;
+  }
+
+  .img8 {
+    width: 100%;
+    height: auto;
   }
 }
