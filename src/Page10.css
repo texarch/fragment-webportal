@@ -21,7 +21,7 @@
   padding: 40px 60px;
   flex-wrap: wrap;
   gap: 20px;
-  border-radius: 0 0 0 20%;
+  border-radius: 0 0 26px 60px;
   height: fit-content; /* Fit image height */
 }
 

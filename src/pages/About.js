@@ -135,7 +135,7 @@ const Apage5 = () => {
               <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
                 <img src={Insta} alt="Instagram" />
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+              <a href="www.linkedin.com/company/thefragmentapp/" target="_blank" rel="noopener noreferrer">
                 <img src={LinkedIn} alt="LinkedIn" />
               </a>
               <a href="https://www.youtube.com/@thefragmentapp" target="_blank" rel="noopener noreferrer">

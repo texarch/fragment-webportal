@@ -50,7 +50,7 @@ function Contact() {
           <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
             <img src={Insta} alt="Instagram" />
           </a>
-          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+          <a href="www.linkedin.com/company/thefragmentapp/" target="_blank" rel="noopener noreferrer">
             <img src={LinkedIn} alt="LinkedIn" />
           </a>
           <a href="https://www.youtube.com/@thefragmentapp" target="_blank" rel="noopener noreferrer">
@@ -63,7 +63,7 @@ function Contact() {
       </div>
 
       <div className="subscribe-section-wrapper">
-        <div className="subscribe-section">
+        <div className="subscribe-section-c">
           <h2 className="subscribe-title">Subscribe Us</h2>
                 <h2 className="subscribe-via">Via </h2>
 <h2 className="suscribe-email">

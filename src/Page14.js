@@ -1,7 +1,7 @@
 import React from 'react';
 import './Page14.css';
 import page1bg from './page1bg.png';
-import page14 from './page14.png';
+import page14 from './page14a.png';
 
 
 const Page14 = () => {
@@ -12,7 +12,7 @@ const Page14 = () => {
         style={{ backgroundImage: `url(${page1bg})` }}
       >
         <div className="page14-image-wrapper">
-          <h1 className="page14-text">Share</h1>
+          <h1 className="page14-text">View</h1>
           <img
             src={page14}
             alt="Page 16"

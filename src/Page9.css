@@ -39,12 +39,12 @@
 }
 
 .text9 {
-  font-size: 130px;
+  font-size: 100px;
   font-weight: bold;
   position: absolute;
   color: #3FD1F1;
   left: 680px;
-  top: 30px;
+  top: 60px;
   white-space: nowrap;
   z-index: 2;
   pointer-events: none;
