@@ -42,19 +42,21 @@
 }
 
 .apage1-heading {
-  font-size: 7rem;
+  font-size: 9rem;
   color: rgba(15, 198, 238, 1);
   text-decoration: underline 2px;
   font-weight: 400;
   margin-bottom: -0%;
   font-family: 'Cambo',serif;
+  margin-top: -10%;
 }
 
 .apage1-subheading {
-  font-size: 1.3rem;
+  font-size: 1.8rem;
   font-family: "SF Pro";
   color: black;
-  font-weight: 700;
+  font-weight: 70%;
+
 }
 
 .apage1-image-block {
@@ -110,11 +112,11 @@ padding-left: -20%;
 .apage2-heading {
   text-align: center;
   font-size: 80px;
-  text-decoration: underline 2px;
+  text-decoration: underline 1px;
   margin-bottom: 40px;
   font-family: 'Cambo', serif;
   font-weight: 500;
-  color: #2d2f44;
+  color: black;
 }
 
 .apage2-section {
@@ -199,6 +201,7 @@ padding-left: -20%;
   display: inline-block;
   font-family: 'Cambo',serif;
   /* width: 30%; */
+  color: black;
  
 }
 

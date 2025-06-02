@@ -1,5 +1,29 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  background: #ffffff url('../background-pattern.png') repeat;
+  background-size: 80%;
+  min-height: 100vh;
+  width: 100%;
+  backdrop-filter: blur(20px);
+  opacity: 0.9;
+}
 
+.App {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  padding-top: 80px;
+  background: transparent;
+  width: 100%;
+}
 
+.mainone {
+  width: 100%;
+  height: auto;
+  position: relative;
+  z-index: 2;
+  background: transparent;
+}
 
 .faq-container {
   width: 100%;
@@ -145,15 +169,14 @@
   }
 }
 
-
-
 .page0-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #ffffff url('../background-pattern.png') repeat;
+  background: transparent;
   padding: 100px 120px;
   font-family: "Cambo", serif;
+  height: fit-content;
 }
 
 .page0-text {
@@ -200,17 +223,18 @@
   margin: 0;
   font-family: "Cambo", serif;
   background-color: #fff;
+  padding-top: 50px;
 }
 
 /* Fragment Section */
 .section.fragment {
   position: relative;
   display: flex;
-  background-color: #d8eff4;
+  background-color: #C3F1FB;
   padding: 80px 0;
   margin: 0;
   width: 75%;
-  border-radius: 0 4% 22% 0;
+  border-radius: 8px 10px 75px 8px;
 }
 
 .section.business {
@@ -241,13 +265,13 @@
   content: '';
   position: absolute;
   left: 0;
-  top: -30px;
+  top: -40px;
   width: 60px;
-  height: 100px;
+  height: 150px;
   background-image: url('../logo0.png');
   background-size: contain;
   background-repeat: no-repeat;
-  margin-left: -20%;
+  margin-left: -16%;
 }
 
 /* Business content layout */
@@ -272,8 +296,9 @@
   width: 70px;
   height: 70px;
   background-image: url('../business-logo.png');
-  background-size: contain;
+  background-size: 110%;
   background-repeat: no-repeat;
+  margin-left: 6%;
 }
 
 /* Typography for Fragment */
@@ -289,14 +314,15 @@
 }
 
 .description {
-  font-size: 14px;
-  font-family: 'Cambo', serif;
-  line-height: 1.6;
+  font-size: 18px;
+  font-family: SF Pro Text;
+  line-height: 1.8;
   color: #000000;
   margin: 0;
-  max-width: 450px;
-    margin-left: -20%;
+  max-width: 550px;
+    margin-left: -30%;
     padding-right: 20%;
+    font-weight: normal;
 
 }
 
@@ -311,15 +337,16 @@
 }
 
 .description1 {
-  font-size: 16px;
-  font-family: sans-serif;
+  font-size: 18px;
+  font-family: SF Pro Text;
   line-height: 1.6;
   color: #000000;
   margin: 0;
-  max-width: 450px;
+  /* max-width: 500px; */
   /* margin-right: 30%; */
   padding-left: -10%;
-  margin-left: 30%;
+  margin-left: 35%;
+  width: 420px;
 }
 
 /* Media Queries for Responsiveness */
@@ -369,28 +396,48 @@
     max-width: 100%;
   }
 }
+.mainone{
+  background-color: #ffffff;
+}
 .page-container {
-  background-color: #adebff;
+  background-color: #ABE9FE;
+  margin-top: 40px;
   padding: 4rem 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: fit-content; /* Let content define height */
+  height: fit-content;
   box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+}
+
+/* Add white space between containers */
+.page-container::before {
+  content: '';
+  position: absolute;
+  top: -40px;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background-color: #ffffff;
+  z-index: -1;
 }
 
 .page4-heading {
-  font-size: 3rem;
-  font-weight: 700;
+  font-size: 4rem;
+  font-weight: 550;
   text-align: center;
   margin-bottom: 1rem;
+  font-family: 'Cambo', serif;
 }
 
 .page4-subheading {
   font-size: 1.5rem;
   text-align: center;
   margin-bottom: 2.5rem;
+  font-family: 'Cambo', serif;
 }
 
 .page4-form {

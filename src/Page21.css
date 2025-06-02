@@ -29,14 +29,12 @@
   position: absolute;
   inset: 0;
   background-image: url('./bg3.png');
-  background-size: 130%;
-  /* background-repeat: no-repeat; */
-  /* background-size: cover; */
+  background-size: 100%;
   background-position: center;
-  background-color: rgb(255, 255, 255,0.2);
-  filter: blur(3.5px);
-  opacity: 0.5;
+  filter: blur(2.2px);
+  opacity: 0.4;
   z-index: 0;
+  margin-top: 0%;
 }
 
 .content-overlay {
@@ -44,22 +42,20 @@
   text-align: center;
   padding: 20px;
   z-index: 2;
-  margin-top: -10%;
+  margin-top: -5%;
 }
 
 .content-overlay h1 {
-  font-size: 4.5rem;
+  font-size: 5rem;
   font-weight: normal;
   color: #000;
- font-family: 'Cambo', serif;
-
+  font-family: 'SF Pro';
 }
 
 .content-overlay h1 strong {
   font-weight: bold;
   color: #000;
- font-family: 'Cambo', serif;
-
+  font-family: 'SF Pro';
 }
 
 .content-overlay p {
@@ -67,7 +63,7 @@
   font-weight: 500;
   margin-top: 10px;
   text-align: center;
-  font-family: 'Cambo', serif;
+  font-family: 'SF Pro';
   line-height: 32px;
 }
 

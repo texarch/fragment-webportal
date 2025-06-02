@@ -9,7 +9,7 @@ const Page21 = () => {
       <div className="half-page-banner">
         <div className="content-overlay">
           <h1>
-            Try us on the <b>Desktop !!</b>
+            Try us on your <b>Desktop !!</b>
           </h1>
           <p>
             <strong>Fragment</strong> and <strong>Fragment Business</strong> is also <br />

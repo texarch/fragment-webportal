@@ -21,9 +21,12 @@ const APage1 = () => {
       className="apage1-section-container"
       style={{
         backgroundImage: `url(${page1bg})`,
-        backgroundSize: "200%",
-        opacity: 0.8,
-        backfaceVisibility: "visible"
+        backgroundSize: "120%",
+        backdropFilter: "blur(20px)",
+        WebkitBackdropFilter: "blur(20px)", // for Safari support
+        backgroundColor: "rgba(255, 255, 255, 0.5)", // semi-transparent white background
+        opacity: 0.9,
+        position: "relative"
       }}
     >
       <div className="apage1-section-content">
@@ -31,7 +34,7 @@ const APage1 = () => {
           <h1 className="apage1-heading">Fragment</h1>
           <h3 className="apage1-subheading">
             For personal use or business, we make<br />
-            Scheduling easy
+            Scheduling easy.
           </h3>
         </div>
         <div className="apage1-image-block">

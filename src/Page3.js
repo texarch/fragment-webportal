@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import './Page3.css';
 import DeviceImage from './Device3.png';
-import RobotImage from './robot2.png';
+import RobotImage from './robot3.png';
+
 function Page3() {
   const [checkedItems, setCheckedItems] = useState([true, true, true, true]);
 
@@ -12,10 +13,8 @@ function Page3() {
   };
 
   return (
-    <>
-    <div className="dark-margin1"></div> 
-      <div style={{ paddingTop: '100px', paddingBottom: '100px' }}>
-
+    <div>
+      <div className="dark-margin1"></div>
       <div className="app-background">
         <div className="box teal-box"></div>
         <div className="box gray-box"></div>
@@ -45,8 +44,7 @@ function Page3() {
           </div>
         </div>
       </div>
-      </div>
-          </>
+    </div>
   );
 }
 
