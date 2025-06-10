@@ -103,7 +103,7 @@ const Page2 = () => {
 const Page4 = () => {
   return (
     <>
-    {/* <div className='mainone'> */}
+    <div className='mainone'>
     <div id="demo-section" className="page-container"> {/* <- Add id here */}
       <h1 className="page4-heading">Want a Demo to onboard your Company?</h1>
       <h2 className="page4-subheading">
@@ -118,7 +118,7 @@ const Page4 = () => {
       </form>
       <p className="page4-contact-note">For More Information contact Us!</p>
     </div>
-    {/* </div> */}
+    </div>
     </>
   );
 };

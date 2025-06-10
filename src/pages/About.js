@@ -34,7 +34,7 @@ const APage1 = () => {
           <h1 className="apage1-heading">Fragment</h1>
           <h3 className="apage1-subheading">
             For personal use or business, we make<br />
-            Scheduling easy.
+            Scheduling easy
           </h3>
         </div>
         <div className="apage1-image-block">
