@@ -13,7 +13,7 @@ import Page9 from './Page9.js';
 import Page10 from './Page10.js';
 import Page11 from './Page11.js';
 import Page12 from './Page12.js';
-import Page13 from './Page13.js';
+// import Page13 from './Page13.js';
 import Page14 from './Page14.js';
 import Page16 from './Page16.js';
 import Page17 from './Page17.js';
@@ -54,7 +54,7 @@ function App() {
             <Page10 />
             <Page11 />
             <Page12 />
-            <Page13 />
+            {/* <Page13 /> */}
             <Page14 />
             <Page18 />
             <Page16 />
