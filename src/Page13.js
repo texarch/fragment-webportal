@@ -2,7 +2,6 @@ import React from 'react';
 import './Page13.css';
 import page1bg from './page1bg.png';
 import grey from './page13image.png';
-
 const Page13 = () => {
   return (
     <div className="page13-container">
@@ -16,5 +15,4 @@ const Page13 = () => {
     </div>
   );
 };
-
 export default Page13;
