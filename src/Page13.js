@@ -9,7 +9,7 @@ const Page13 = () => {
       <div className="page13-left-section" style={{ backgroundImage: `url(${page1bg})` }}>
         <div className="page13-image-wrapper">
           <img src={page13image} alt="Page 13" className="page13-image" />
-          <h1 className="page13-plan-text">Plan</h1>
+          <h1 className="page13-plan-text">Plan_AI </h1>
         </div>
       </div>
       <div className="page13-right-section"></div>
