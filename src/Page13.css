@@ -4,6 +4,7 @@
     height: fit-content;
     overflow: visible;
     background-color: rgb(54, 58, 95);
+    box-sizing: border-box;
 }
 
 .page13-left-section {
@@ -15,6 +16,7 @@
   padding-right: 40px;
   overflow: hidden; 
   z-index: 1;
+  box-sizing: border-box;
 }
 
 .page13-left-section::before {
@@ -32,8 +34,9 @@
 }
 
 .page13-right-section {
-    width: 35%;
+    width: 30%;
     background-color: rgb(54, 58, 95);
+    box-sizing: border-box;
 }
 
 .page13-image-wrapper {
@@ -84,12 +87,14 @@
     .page13-container {
         flex-direction: column;
         height: auto;
+        width: 100%;
     }
 
     .page13-left-section,
     .page13-right-section {
         width: 100%;
         height: auto;
+        box-sizing: border-box;
     }
 
     .page13-left-section {
