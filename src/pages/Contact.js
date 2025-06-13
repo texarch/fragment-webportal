@@ -14,7 +14,7 @@ import EmailIcon from '../email.png';
 
 function Contact() {
   return (
-    <div className="App">
+    <div className="contact-page">
       
       <div className="back-image-wrapper">
         <img src={BackImage} alt="Back" className="back-image" />
@@ -63,16 +63,26 @@ function Contact() {
       </div>
 
       <div className="subscribe-section-wrapper">
-        <div className="subscribe-section-c">
+        <div className="subscribe-section">
           <h2 className="subscribe-title">Subscribe Us</h2>
-                <h2 className="subscribe-via">Via </h2>
-<h2 className="suscribe-email">
-       <a href="mailto:hi@thefragment.app">hi@thefragment.app</a></h2>
-          {/* <p className="subscribe-desc">Be the first to know about our new products</p> */}
-          {/* <div className="subscribe-form">
-            <input type="email" placeholder="Enter Email.." />
+          <p className="subscribe-desc">Be the first to know about our new products</p>
+          <form className="subscribe-form" onSubmit={(e) => {
+            e.preventDefault();
+            const email = e.target.elements.email.value;
+            if (!email) {
+              alert('Please enter your email address');
+              return;
+            }
+            // Handle form submission here
+          }}>
+            <input 
+              type="email" 
+              name="email"
+              placeholder="Enter Email.." 
+              required
+            />
             <button type="submit">Subscribe</button>
-            </div> */}
+          </form>
         </div>
       </div>
 
