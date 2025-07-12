@@ -56,8 +56,8 @@ const Navbar = () => {
         </div>
         {/* Auth buttons inside the menu for mobile */}
         <div className="auth-buttons auth-buttons-mobile">
-          <button className="signup" onClick={() => setIsOpen(false)}>Sign Up</button>
-          <button className="login" onClick={() => setIsOpen(false)}>Log In</button>
+          // <button className="signup" onClick={() => setIsOpen(false)}>Sign Up</button>
+          // <button className="login" onClick={() => setIsOpen(false)}>Log In</button>
         </div>
       </div>
 
