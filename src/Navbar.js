@@ -61,11 +61,11 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Auth buttons for desktop */}
+      {/* Auth buttons for desktop 
       /* <div className="auth-buttons auth-buttons-desktop">
          <button className="signup">Sign Up</button>
           <button className="login">Log In</button>
-      </div> */
+      </div> */}
     </nav>
   );
 };
