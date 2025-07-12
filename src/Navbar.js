@@ -63,8 +63,8 @@ const Navbar = () => {
 
       {/* Auth buttons for desktop */}
       <div className="auth-buttons auth-buttons-desktop">
-        <button className="signup">Sign Up</button>
-        <button className="login">Log In</button>
+        // <button className="signup">Sign Up</button>
+        // <button className="login">Log In</button>
       </div>
     </nav>
   );
