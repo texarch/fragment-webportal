@@ -15,6 +15,7 @@ import EmailIcon from '../email.png';
 
 const REACT_APP_API_URL='https://fragment.thefragment.app/website'
 
+
 function Contact() {
   const [formData, setFormData] = useState({
     name: '',
