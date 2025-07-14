@@ -32,9 +32,9 @@ const Login = () => {
                 <img src={YouTube0} alt="YouTube" />
               </a>
             </div>
-            <p>Email.id@email.com</p>
-            <p>Phone number</p>
-            <p>Address</p>
+             <p>Email:<span> hi@thefragment.app</span> </p>
+            {/* <p>Phone number</p>
+            <p>Address</p> */}
           </div>
 
           <div className="footer-column offset-top">

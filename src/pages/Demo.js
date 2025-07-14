@@ -9,7 +9,7 @@ import InstaIcon from '../insta.png';
 import LinkedInIcon from '../linkedin.png';
 import EmailIcon from '../email.png';
 
-
+const REACT_APP_API_URL="https://fragment.thefragment.app/website"
 
 const FAQData = [
   {
@@ -46,7 +46,7 @@ const FAQData = [
 
 const FAQItem = ({ faq, index, toggleFAQ }) => {
   return (
-<div className={`faq-item ${faq.isOpen ? 'open' : ''}`} key={index}>
+    <div className={`faq-item ${faq.isOpen ? 'open' : ''}`} key={index}>
       <div className="faq-question" onClick={() => toggleFAQ(index)}>
         {faq.question}
         <span className="arrow">{faq.isOpen ? '▲' : '▼'}</span>
@@ -64,7 +64,7 @@ const Page1 = () => {
           Curious how it <br />
           <span className="highlight">Works?</span>
         </h1>
-<a href="#demo-section" className="demo-link">Request a Demo</a>
+        <a href="#demo-section" className="demo-link">Request a Demo</a>
       </div>
       <div className="page0-image">
         <img src={curiousImage} alt="Curious character asking a question" />
@@ -101,24 +101,155 @@ const Page2 = () => {
 };
 
 const Page4 = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    company: '',
+    jobTitle: '',
+    country: '',
+    email: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [message, setMessage] = useState('');
+  const [messageType, setMessageType] = useState(''); // 'success' or 'error'
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    
+    setIsSubmitting(true);
+    setMessage('');
+
+    // Validation - all fields including email are required
+    if (!formData.name || !formData.company || !formData.jobTitle || !formData.country || !formData.email) {
+      setMessage('All fields including email are required.');
+      setMessageType('error');
+      setIsSubmitting(false);
+      return;
+    }
+
+    // Email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.email)) {
+      setMessage('Please enter a valid email address.');
+      setMessageType('error');
+      setIsSubmitting(false);
+      return;
+    }
+
+    try {
+      const response = await fetch(`${REACT_APP_API_URL}/demo-request`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setMessage(data.message);
+        setMessageType('success');
+        setFormData({
+          name: '',
+          company: '',
+          jobTitle: '',
+          country: '',
+          email: ''
+        });
+      } else {
+        setMessage(data.error || 'An error occurred');
+        setMessageType('error');
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      setMessage('Network error. Please try again later.');
+      setMessageType('error');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <>
-    <div className='mainone'>
-    <div id="demo-section" className="page-container"> {/* <- Add id here */}
-      <h1 className="page4-heading">Want a Demo to onboard your Company?</h1>
-      <h2 className="page4-subheading">
-        Drop us a mail with date and time suitable for you
-      </h2>
-      <form className="page4-form">
-        <input type="text" placeholder="Your Name" className="page4-input" />
-        <input type="text" placeholder="Company Name" className="page4-input" />
-        <input type="text" placeholder="Job title" className="page4-input" />
-        <input type="text" placeholder="Country" className="page4-input" />
-        <button type="submit" className="page4-button">Watch a Demo</button>
-      </form>
-      <p className="page4-contact-note">For More Information contact Us!</p>
-    </div>
-    </div>
+      <div className='mainone'>
+        <div id="demo-section" className="page-container">
+          <h1 className="page4-heading">Want a Demo to onboard your Company?</h1>
+          <h2 className="page4-subheading">
+            Drop us your details and we'll get back to you soon
+          </h2>
+          
+          {message && (
+            <div className={`message ${messageType}`}>
+              {message}
+            </div>
+          )}
+          
+          <form className="page4-form" onSubmit={handleSubmit}>
+            <input 
+              type="text" 
+              name="name"
+              placeholder="Your Name" 
+              className="page4-input"
+              value={formData.name}
+              onChange={handleInputChange}
+              required
+            />
+            <input 
+              type="text" 
+              name="company"
+              placeholder="Company Name" 
+              className="page4-input"
+              value={formData.company}
+              onChange={handleInputChange}
+              required
+            />
+            <input 
+              type="text" 
+              name="jobTitle"
+              placeholder="Job Title" 
+              className="page4-input"
+              value={formData.jobTitle}
+              onChange={handleInputChange}
+              required
+            />
+            <input 
+              type="text" 
+              name="country"
+              placeholder="Country" 
+              className="page4-input"
+              value={formData.country}
+              onChange={handleInputChange}
+              required
+            />
+            <input 
+              type="email" 
+              name="email"
+              placeholder="Your Email Address" 
+              className="page4-input page4-email-input"
+              value={formData.email}
+              onChange={handleInputChange}
+              required
+            />
+            
+            <button 
+              type="submit"
+              className="page4-button page4-button-primary"
+              disabled={isSubmitting}
+            >
+              {isSubmitting ? 'Submitting...' : 'Request Demo'}
+            </button>
+          </form>
+          <p className="page4-contact-note">For More Information contact Us!</p>
+        </div>
+      </div>
     </>
   );
 };
@@ -156,43 +287,41 @@ const Demo = () => {
       {/* <FAQ /> */}
       <div>
         <footer className="footer">
-        <div className="footer-content">
-          <div className="footer-column social-contact">
-            <div className="social-icons-footer">
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-                <img src={InstaIcon} alt="Instagram" />
-              </a>
-              <a href="www.linkedin.com/company/thefragmentapp/" target="_blank" rel="noopener noreferrer">
-                <img src={LinkedInIcon} alt="LinkedIn" />
-              </a>
-              <a href="https://www.youtube.com/@thefragmentapp" target="_blank" rel="noopener noreferrer">
-                <img src={EmailIcon} alt="YouTube" />
-              </a>
+          <div className="footer-content">
+            <div className="footer-column social-contact">
+              <div className="social-icons-footer">
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                  <img src={InstaIcon} alt="Instagram" />
+                </a>
+                <a href="www.linkedin.com/company/thefragmentapp/" target="_blank" rel="noopener noreferrer">
+                  <img src={LinkedInIcon} alt="LinkedIn" />
+                </a>
+                <a href="https://www.youtube.com/@thefragmentapp" target="_blank" rel="noopener noreferrer">
+                  <img src={EmailIcon} alt="YouTube" />
+                </a>
+              </div>
+              <p>Email:<span> hi@thefragment.app</span></p>
             </div>
-            <p>Email.id@email.com</p>
-            <p>Phone number</p>
-            <p>Address</p>
+
+            <div className="footer-column offset-top">
+              <p>About Us</p>
+              <p>Work with us</p>
+              <p>FAQs</p>
+            </div>
+
+            <div className="footer-column offset-top">
+              <p>Privacy</p>
+              <p>Terms and Conditions</p>
+            </div>
           </div>
 
-          <div className="footer-column offset-top">
-            <p>About Us</p>
-            <p>Work with us</p>
-            <p>FAQs</p>
+          <div className="footer-bottom">
+            <p>CopyRight Info</p>
           </div>
-
-          <div className="footer-column offset-top">
-            <p>Privacy</p>
-            <p>Terms and Conditions</p>
-          </div>
-        </div>
-
-        <div className="footer-bottom">
-          <p>CopyRight Info</p>
-        </div>
-      </footer>
+        </footer>
       </div>
     </>
   );
 };
 
-export default Demo;
+export default Demo;

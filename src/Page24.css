@@ -1,21 +1,21 @@
-.footer {
+  .footer {
     background-color: #f1f1f1;
     padding: 40px 20px 20px;
     width: 100%;
     box-sizing: border-box;
     font-family: sans-serif;
   }
-  
+
   .footer-content {
     display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
+    justify-content: center;
+    gap: 80px;
     flex-wrap: wrap;
     text-align: left;
     max-width: 1000px;
     margin: 0 auto;
   }
-  
+
   .footer-column {
     display: flex;
     flex-direction: column;
@@ -24,32 +24,39 @@
     color: #000;
     min-width: 150px;
   }
-  
+
+  .social-contact {
+    align-items: center;
+    text-align: center;
+  }
+
   .social-icons-footer {
     display: flex;
-    gap: 12px;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 10px;
   }
-  
+
   .social-icons-footer img {
-    width: 22px;
-    height: 22px;
+    width: 28px;
+    height: 28px;
     cursor: pointer;
   }
-  
+
   .footer-column p {
     margin: 0;
   }
-  
+
   .footer-bottom {
     text-align: center;
     font-size: 14px;
     color: #000;
     margin-top: 20px;
   }
-  
-  
+
   .footer-column.offset-top {
     margin-top: 38px;
-}
-
+    align-items: center;
+    text-align: center;
+  }
