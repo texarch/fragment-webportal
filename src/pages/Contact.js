@@ -104,11 +104,11 @@ function Contact() {
         alert(data.message || 'Thank you for subscribing!');
         e.target.reset();
       } else {
-        // Handle different error cases
-        if (response.status === 400 && data.error.includes('already subscribed')) {
+        // Handle different error cases - use data.message instead of data.error
+        if (response.status === 400 && data.message && data.message.includes('already subscribed')) {
           alert('You are already subscribed to our newsletter!');
         } else {
-          alert(data.error || 'Failed to subscribe. Please try again.');
+          alert(data.message || 'Failed to subscribe. Please try again.');
         }
       }
     } catch (error) {
