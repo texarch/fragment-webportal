@@ -19,7 +19,8 @@ html, body {
   margin-top: 0;
   
   height: 740px;
-  /* min-height: 100vh; Optional: keep it full screen on larger screens */
+  min-height: 100vh; 
+  /* Optional: keep it full screen on larger screens */
 }
 
   
@@ -49,7 +50,7 @@ html, body {
   .device-image {
     position: absolute;
    top: 150px;
-    /* left: -0.8px; */
+    left: -0.8px;
     width: 420px;     
     z-index: 3;
     transform: rotate(-1deg);
@@ -164,7 +165,7 @@ html, body {
     position: relative;
     background-color: white;
     flex-shrink: 0;
-    font-weight: ;
+    /* font-weight: ; */
   }
   
   .checkbox.checked::after {
