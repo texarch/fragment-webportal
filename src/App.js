@@ -1,4 +1,3 @@
-import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './Navbar.js';
 import Page1 from './Page1.js';
@@ -20,10 +19,10 @@ import Page17 from './Page17.js';
 import Page18 from './Page18.js';
 import Page19 from './Page19.js';
 import Page20 from './Page20.js';
-import Page21 from './Page21.js';
-import Page23 from './Page23.js';
-import Page24 from './Page24.js';
-import Pagel from './Pagel.js';
+// import Page21 from './Page21.js';
+// import Page23 from './Page23.js';
+// import Page24 from './Page24.js';
+// import Pagel from './Pagel.js';
 import Contact from './pages/Contact.js';
 import { About } from './pages/About.js';
 import Pricing from './pages/Pricing.js';
@@ -56,15 +55,15 @@ function App() {
             <Page12 />
             <Page13 />
             <Page14 />
-            <Page18 />
             <Page16 />
             <Page17 />
-            <Page20 />
+            <Page18 />
             <Page19 />
-            <Pagel />
+            <Page20 />
+            {/* <Pagel />
             <Page21 />
             <Page23 />
-            <Page24 />
+            <Page24 /> */}
           </div>
         } />
         <Route path="/Contact" element={<Contact />} />

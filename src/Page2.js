@@ -1,47 +1,59 @@
-import React from 'react';
-import groupSchedulingImg from './group1.png';
-import './Page2.css';
-import personalPlanningImg from './personal.png';
+import React from "react";
+import ipadMini from "./iPadMini_Page2.png";
+import "./Page2.css";
 
 const Page2 = () => {
   return (
-    <>
-    <div className="dark-margin1"></div> 
+    <div className="Page2-wrapper">
+      <div className="Page2-inner-box">
+        <div className="Page2-header-text">
+          <h2>
+            Build communities around your events, don’t just send invites!
+          </h2>
 
-    <div className="Page2-container">
-      <div className="Page2-text">
-  <h1>
-  <span className="Page2-upper">EXPERIENCE</span><br />
-  <span className="Page2-lower1">the</span>
-  <span className="Page2-lower"> <strong>Perfect</strong></span>
-</h1>
+          <h3 className="available-text">Also Available on</h3>
 
+          <div className="store-buttons">
+            {/* Google Play Button */}
+            <a
+              href="https://play.google.com/store"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                alt="Get it on Google Play"
+                className="store-badge"
+              />
+            </a>
 
+            {/* App Store Button */}
+            <a
+              href="https://www.apple.com/app-store/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+                alt="Download on the App Store"
+                className="store-badge"
+              />
+            </a>
+          </div>
+        </div>
 
-
-        <div className="Page2-ai-powered">AI Powered</div>
+        <div className="Page2-content">
+          <img src={ipadMini} alt="App preview" className="Page2-ipad" />
+          <div className="Page2-text-right">
+            <p>
+              Whether it’s small, big, daily, or recurring — keep every event
+              organized and everyone in sync.
+            </p>
+          </div>
+        </div>
       </div>
-
-      <div className="Page2-graphics">
-  <div className="Page2-graphic-block">
-    <img src={personalPlanningImg} alt="Personal Planning" className='first' />
-  <p>
-  <span className="Page2-main-label">Personal Planning</span><br />
-  <span className="Page2-sub-label1">for</span><span className="Page2-sub-label"> Individuals</span>
-</p>
-  </div>
-
-  <div className="Page2-graphic-block">
-    <img src={groupSchedulingImg} alt="Group Scheduling" />
-    <p>
-  <span className="Page2-main-label">Group Scheduling</span><br />
-  <span className="Page2-sub-label1">for</span><span className="Page2-sub-label"> Organisations</span>
-</p>
-  </div>
-</div>
-</div>
-</>
+    </div>
   );
 };
 
-export default Page2;
+export default Page2;

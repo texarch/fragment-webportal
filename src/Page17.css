@@ -1,4 +1,4 @@
-.page17-container {
+/* .page17-container {
   display: flex;
   width: 100%;
   height: 60vh;
@@ -124,4 +124,116 @@
     right: 10px;
     top: 10px;
   }
+} */
+
+/* Outer section */
+/* Outer section – like the full slide */
+.page17 {
+  width: 100%;
+  max-width: 1728px;          /* similar to your figma width */
+  margin: 0 auto;
+  background-color: #fff8c6;  /* soft yellow */
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 60px;         /* spacing inside, so nothing touches edges */
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro", sans-serif;
 }
+
+/* Left side = PNG that has phone + emojis */
+.page17-left {
+  flex: 0 0 45%;              /* around half, like screenshot */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page17-image {
+  width: 100%;
+  max-width: 420px;           /* control size so it doesn’t go out */
+  height: auto;
+  display: block;
+}
+
+/* Right side = text block */
+.page17-right {
+  flex: 1;
+  padding-left: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+/* Subheading */
+.page17-subheading {
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0.08em;
+  color: #000;
+  margin: 0 0 12px;
+}
+
+/* Heading block */
+.page17-heading-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Common heading style */
+.page17-heading {
+  font-family: "Cambo", "Times New Roman", serif;
+  color: #000;
+  margin: 0;
+  line-height: 1.1;
+  white-space: nowrap;
+}
+
+/* “Our ” + “keep you” */
+.page17-heading.part-1 {
+  font-size: 44px;
+}
+
+/* “To-Do’s” */
+.page17-heading.part-2 {
+  font-size: 52px;
+}
+
+/* “on Track!” – big and right aligned */
+.page17-heading.part-3 {
+  font-size: 56px;
+  text-align: right;
+}
+
+/* Responsive – simple, so it doesn’t break on small screens */
+@media (max-width: 1024px) {
+  .page17 {
+    flex-direction: column;
+    padding: 32px 20px;
+  }
+
+  .page17-left {
+    margin-bottom: 24px;
+  }
+
+  .page17-right {
+    padding-left: 0;
+    align-items: center;
+    text-align: center;
+  }
+
+  .page17-heading.part-3 {
+    text-align: center;
+  }
+
+  .page17-heading.part-1,
+  .page17-heading.part-2,
+  .page17-heading.part-3 {
+    font-size: 34px;
+  }
+}
+ 

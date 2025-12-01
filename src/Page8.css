@@ -1,71 +1,72 @@
 .page8-container {
-  display: flex;
   width: 100%;
-  height: auto; /* Let container grow based on content */
+  height: 100vh;
+  background-color: #ffd6cf;
+  border-radius: 20px;
+  overflow: hidden;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 70px 100px;
   box-sizing: border-box;
 }
 
-.left-section {
-  width: 30%;
-  background-color: white;
-}
+/* TEXT SECTION */
 
-.right-section {
-  width: 70%;
-  background-color: #C3F1FB;
+.text-block {
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  padding: 40px 60px;
-  gap: 20px;
-  position: relative;
-  height: fit-content; /* Match height to image */
+  flex-direction: column;
+  gap: 18px;
 }
 
-.img8 {
-  width: 93%;
-  height: auto;
-  /* top: -80%; */
-  margin-top: -5%;
-  
+.subtitle {
+  font-family: "SF Pro Display", sans-serif;
+  font-size: 18px;
+  letter-spacing: 1px;
+  color: #000;
 }
 
-.com8 {
-  font-size: 90px;
-  font-weight: bold;
-  color: #3FD1F1;
-  font-family: 'Cambo', serif;
-  position: absolute;
-  top: 80px;
-  right: 60px;
-  white-space: nowrap;
-  z-index: 1;
-  pointer-events: none;
+.title-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .page8-container {
-    flex-direction: column;
-    height: auto;
-  }
+.title-line-1,
+.title-line-2 {
+  line-height: 76px;
+  color: #000;
+}
 
-  .left-section,
-  .right-section {
-    width: 100%;
-  }
+.title-line-2 {
+  text-align: right;
+}
 
-  .com8 {
-    font-size: 30px;
-    position: static;
-    margin-top: 20px;
-    margin-left: 0;
-    text-align: center;
-    width: 100%;
-  }
+/* FONT SIZES LIKE FIGMA */
+.text-7xl {
+  font-size: 3.8rem;
+}
 
-  .img8 {
-    width: 100%;
-    height: auto;
-  }
+.text-8xl {
+  font-size: 3.5rem;
+}
+
+/* CAMBO FONT */
+.cambo {
+  font-family: "Cambo", serif !important;
+}
+
+/* PHONE IMAGE FULL HEIGHT */
+.image-wrapper {
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+}
+
+.phone-img {
+  height: 100%;
+  width: auto;
+  transform: translateX(20px);
 }

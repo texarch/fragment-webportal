@@ -1,6 +1,5 @@
 import React from 'react';
 import './Pagel.css';
-import pagelBg from './pagel.png'; // Update the path if needed
 
 const Pagel = () => {
   return (

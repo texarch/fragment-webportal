@@ -79,8 +79,6 @@
       transform: translate(-50%, 0);
     }
   }
-  
-  /* Responsive layout */
   @media (max-width: 768px) {
     .page22-card-container {
       flex-direction: column;

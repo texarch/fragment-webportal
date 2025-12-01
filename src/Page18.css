@@ -1,4 +1,4 @@
-.page18-container {
+/* .page18-container {
     display: flex;
     width: 100%;
     height: fit-content;
@@ -50,7 +50,6 @@
   
   .page18-plan-text {
     position: absolute;
-    /* left: 25%; */
     right:-5%;
     top: 50%;
     transform: translateY(-50%);
@@ -113,4 +112,94 @@
       top: 10px;
     }
   }
-  
+   */
+
+   .page18 {
+  width: 100%;
+  background-color: #c8f1ff; /* Light blue background */
+  background-image: url("https://www.transparenttextures.com/patterns/subtle-dots.png");
+  background-repeat: repeat;
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+.page18-content {
+  max-width: 1200px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Text Section */
+.page18-text {
+  margin-bottom: 50px;
+}
+
+.page18-heading {
+  font-size: 52px;
+  font-weight: 600;
+  color: #000;
+  font-family: "Times New Roman", serif;
+  margin-bottom: 10px;
+}
+
+.page18-heading .highlight {
+  color: #009ecf;
+  font-weight: 800;
+}
+
+.page18-subtext {
+  font-size: 20px;
+  color: #333;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.4;
+}
+
+/* Image Section */
+.page18-image-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.page18-image {
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.page18-image:hover {
+  transform: scale(1.02);
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .page18-heading {
+    font-size: 38px;
+  }
+
+  .page18-subtext {
+    font-size: 18px;
+    padding: 0 15px;
+  }
+
+  .page18-image {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .page18-heading {
+    font-size: 32px;
+  }
+}

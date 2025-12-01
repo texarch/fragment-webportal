@@ -25,22 +25,22 @@
 
 .subscribe-title,
 .subscribe-subtitle {
-    margin-bottom: 20px; /* Keep a consistent margin between title and subtitle */
+    margin-bottom: 20px;
 }
 
 .subscribe-email {
-    margin-top: -10px; /* Pull email closer to "Via" */
+    margin-top: -10px;
     font-size: 2rem;
     font-family: 'Cambo', serif;
     font-weight: 400;
-    padding: 0; /* Remove any extra space */
+    padding: 0;
 }
 
 .subscribe-email a {
     color: black;
     text-decoration: none;
     font-size: 1.5rem;
-    padding: 0; /* Remove unnecessary padding */
+    padding: 0;
 }
 
 
@@ -48,8 +48,6 @@
     text-decoration: underline;
     color: blue;
 }
-
-/* Responsive adjustments */
 @media (max-width: 600px) {
     .subscribe-section-wrapper {
         height: 50vh;

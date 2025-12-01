@@ -1,60 +1,59 @@
 import React, { useState } from "react";
 import "./Page11.css";
-import playstore from './playstore.png';
-import a from './a.png'; 
+import Navbar from "./Navbar";
+import IndividualPage1 from "./Individual_Page1.png";
 
 const Page11 = () => {
-  const [popupPlayVisible, setPopupPlayVisible] = useState(false);
-  const [popupAppVisible, setPopupAppVisible] = useState(false);
-
-  const showPopup = (store) => {
-    if (store === "play") {
-      setPopupPlayVisible(true);
-      setTimeout(() => setPopupPlayVisible(false), 2500);
-    } else {
-      setPopupAppVisible(true);
-      setTimeout(() => setPopupAppVisible(false), 2500);
-    }
-  };
+  const [tab, setTab] = useState("individual");
 
   return (
     <>
-    <div className="white-margin"></div>
-    <div className="page11-container">
-      <h2>
-  <span className="busy-being">Busy being a</span>
-  <span className="goal-setter">Goal-setter</span>
-</h2>
+      <Navbar />
 
-      <p className="fragment0">Fragment makes time feel Kinder !!</p>
-      {/* <p className="website-link">🌐 https://thefragment.app</p>
-      <p className="or-text">or</p> */}
-
-      <div className="store-buttons">
-        <div className="button-wrapper">
-          <button className="store-button" onClick={() => showPopup("play")}>
-            <img src={playstore} alt="Play Store" className="store-icon" />
-            <span>Play Store</span>
-          </button>
-          {popupPlayVisible && (
-            <div className="popup-message">Get it on Google Play</div>
-          )}
+      <div className="page11-container">
+        {/* LEFT SIDE */}
+        <div className="left-content">
+          <div className="text-bar-container">
+            <div className="tabs-container">
+              <div
+                data-status={tab === "organiser" ? "selected" : "Default"}
+                className={`tab-item ${tab === "organiser" ? "active" : ""}`}
+                onClick={() => setTab("organiser")}
+              >
+                <div className="tab-label">Organiser</div>
+              </div>
+              <div
+                data-status={tab === "individual" ? "selected" : "Default"}
+                className={`tab-item ${tab === "individual" ? "active" : ""}`}
+                onClick={() => setTab("individual")}
+              >
+                <div className="tab-label">Individual</div>
+              </div>
+            </div>
+            <div className="text-content-block">
+              <div className="title-text">
+                Stay organized with multi-calendars, to-dos, and automatic event sync.
+              </div>
+              <div className="divider-line" />
+              <div className="subtitle-container">
+                <div className="subtitle-text">
+                  Create calendars, follow organizers, engage, and book events and slots.
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div className="button-wrapper">
-          <button className="store-button" onClick={() => showPopup("app")}>
-            <img src={a} alt="App Store" className="store-icon" />
-            <span>App Store</span>
-
-          </button>
-          {popupAppVisible && (
-            <div className="popup-message">Download on the App Store</div>
-          )}
+        {/* RIGHT SIDE IMAGE */}
+        <div className="right-images">
+          <img
+            src={IndividualPage1}
+            className="main-img"
+            alt="Individual Page"
+          />
         </div>
       </div>
-    </div>
-    
-</>
+    </>
   );
 };
 

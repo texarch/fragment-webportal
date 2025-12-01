@@ -54,18 +54,18 @@ const Navbar = () => {
           <Link to="/contact" onClick={() => setIsOpen(false)}>Contact</Link>
           <Link to="/demo" onClick={() => setIsOpen(false)}>Demo</Link>
         </div>
-        {/* Auth buttons inside the menu for mobile 
+        {/* Auth buttons inside the menu for mobile  */}
         <div className="auth-buttons auth-buttons-mobile">
-          // <button className="signup" onClick={() => setIsOpen(false)}>Sign Up</button>
-          // <button className="login" onClick={() => setIsOpen(false)}>Log In</button>
-        </div> */}
+          <button className="login" onClick={() => setIsOpen(false)}>Log In</button>
+          <button className="signup" onClick={() => setIsOpen(false)}>Start for free</button>
+        </div>
       </div>
 
-      {/* Auth buttons for desktop 
-      /* <div className="auth-buttons auth-buttons-desktop">
-         <button className="signup">Sign Up</button>
+      {/* Auth buttons for desktop  */}
+      <div className="auth-buttons auth-buttons-desktop">
           <button className="login">Log In</button>
-      </div> */}
+          <button className="signup">Start for free</button>
+      </div>
     </nav>
   );
 };

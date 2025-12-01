@@ -1,4 +1,4 @@
-.page13-container {
+/* .page13-container {
   display: flex;
   width: 100%;
   height: fit-content;
@@ -40,7 +40,6 @@
 }
 .page13-plan-text {
   position: absolute;
-  /* left: 25%; */
   right:-5%;
   top: 50%;
   transform: translateY(-50%);
@@ -94,4 +93,166 @@
     right: 10px;
     top: 10px;
   }
+} */
+
+.page13 {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f5fcff;
+  padding: 40px 20px 80px;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+
+  background-image: url("https://www.transparenttextures.com/patterns/doodles.png");
+  background-repeat: repeat;
+  background-size: contain;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
+/* Header */
+.page13-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.page13-logo {
+  width: 45px;
+  height: 45px;
+}
+
+.page13-with {
+  font-size: 22px;
+  color: #000;
+}
+
+.page13-title {
+  font-size: 34px;
+  font-weight: 700;
+  color: #000;
+  font-family: "Times New Roman", serif;
+}
+
+/* Base section layout */
+.page13-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  width: 100%;
+  margin: 60px 0;  /* vertical spacing between sections */
+}
+
+/* swap sides for alternate rows */
+.page13-section.page13-section-reverse {
+  flex-direction: row-reverse;
+}
+
+/* Image */
+.page13-image {
+  flex: 0 0 auto;
+  max-width: 440px;
+  width: 100%;
+  height: auto;
+}
+
+/* Title text */
+.page13-heading {
+  flex: 0 0 auto;
+  font-size: 80px;
+  line-height: 1.05;
+  color: #00a9cf;
+  font-weight: 400;
+  font-family: "Cambo", serif;
+  margin: 0;
+}
+
+.page13-text-right {
+  text-align: left;   /* text itself is short, direction doesn’t matter much */
+}
+
+.page13-text-left {
+  text-align: left;
+}
+
+/* === PER-SECTION HORIZONTAL GAP (your Figma values) === */
+/* For image left, text right → margin-left on heading */
+/* For image right, text left → margin-right on heading */
+
+/* Create – image left, text right → 170.73px */
+.section-create .page13-heading {
+  margin-left: 170.73px;
+}
+
+/* Plan – image right, text left → 233.91px */
+.section-plan .page13-heading {
+  margin-right: 233.91px;
+}
+
+/* Follow – image left, text right → 206.86px */
+.section-follow .page13-heading {
+  margin-left: 206.86px;
+}
+
+/* Get – image right, text left → 336.92px */
+.section-get .page13-heading {
+  margin-right: 336.92px;
+}
+
+/* Book – image left, text right → 118.43px */
+.section-book .page13-heading {
+  margin-left: 118.43px;
+}
+
+/* Comment – image right, text left → 170.55px */
+.section-comment .page13-heading {
+  margin-right: 170.55px;
+}
+
+/* View – image left, text right → 175.75px */
+.section-view .page13-heading {
+  margin-left: 175.75px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .page13 {
+    padding: 24px 16px 40px;
+  }
+
+  .page13-section,
+  .page13-section.page13-section-reverse {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 40px 0;
+  }
+
+  .page13-image {
+    max-width: 80%;
+  }
+
+  .page13-heading,
+  .section-create .page13-heading,
+  .section-plan .page13-heading,
+  .section-follow .page13-heading,
+  .section-get .page13-heading,
+  .section-book .page13-heading,
+  .section-comment .page13-heading,
+  .section-view .page13-heading {
+    margin-left: 0;
+    margin-right: 0;
+    font-size: 48px;
+    text-align: center;
+  }
+}
+
+
+
+

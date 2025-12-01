@@ -1,82 +1,99 @@
-.page10-container {
+/* Outer yellow section */
+.subscribe-section {
+  background-color: #fef7ab;
+  padding: 80px 40px;
+  border-radius: 20px;
   display: flex;
-  width: 100%;
-  height: auto; /* Let content define height */
-  box-sizing: border-box;
-  background-color: #fff;
+  justify-content: center;
+  margin: 50px auto;
+  max-width: 1200px;
 }
 
-.left-section {
-  width: 30%;
-  background-color: white;
+/* Inner container */
+.subscribe-container {
+  text-align: center;
+  font-family: "Cambo", serif;
 }
 
-.right-section1 {
-  width: 70%;
-  background-color: #C3F1FB;
+.subscribe-title {
+  font-size: 4rem;
+  font-weight: normal;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.subscribe-subtitle {
+  font-size: 1.6rem;
+  color: #000;
+  margin-bottom: 40px;
+}
+
+/* White box containing input + button */
+.subscribe-box {
+  width: 768px;
+  max-width: 100%;
+  background: #fff;
   display: flex;
   align-items: center;
-  justify-content: center;
-  position: relative;
-  padding: 40px 60px;
-  flex-wrap: wrap;
-  gap: 20px;
-  border-radius: 0 0 26px 60px;
-  height: fit-content; /* Fit image height */
+  border-radius: 20px;
+  overflow: hidden;            /* IMPORTANT: keeps button flush with input */
+  box-shadow: 1px 4px 15px rgba(0,0,0,0.14);
+  margin: 0 auto;
 }
 
-.img {
-  width: 90%;
-  height: auto;
-  max-width: 100%;
-  object-fit: contain;
-  margin-top: -6%;
+/* Input box */
+.subscribe-input {
+  flex: 1;
+  border: none;
+  padding: 20px;
+  font-size: 1.3rem;
+  font-family: "Cambo", serif;
+  outline: none;
+  color: #444;
+
+  /* REMOVE internal border-radius to prevent gap */
+  border-radius: 0;
 }
 
-.record {
-  font-size: 100px;
-  font-weight: bold;
-  color: #3FD1F1;
-  position: absolute;
-  left: 550px;
-  top: 80px;
-  white-space: nowrap;
-  font-family: 'Cambo', serif;
-  z-index: 2;
+/* Black subscribe button */
+.subscribe-btn {
+  background: #2f333a;
+  color: white;
+  padding: 20px 48px;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  font-family: "SF Pro", sans-serif;
+
+  /* Button fits perfectly inside the white box */
+  border-radius: 0;
+  height: 100%;
+
+  /* Same shadow as in screenshot */
+  box-shadow:
+    1px 2px 4px rgba(0,0,0,0.15),
+    -3px 0px 4px rgba(0,0,0,0.08);
+
+  transition: 0.3s ease;
 }
 
-/* Tablet screens */
-@media (max-width: 768px) {
-  .page10-container {
+.subscribe-btn:hover {
+  background-color: #42464e;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .subscribe-box {
     flex-direction: column;
-    height: auto;
+    border-radius: 20px;
   }
 
-  .left-section,
-  .right-section1 {
+  .subscribe-btn {
     width: 100%;
-    padding: 20px;
+    border-radius: 0 0 20px 20px;
   }
 
-  .img {
-    width: 100%;
-    height: auto;
-  }
-
-  .record {
-    font-size: 60px;
-    left: 50%;
-    top: 40px;
-    transform: translateX(-50%);
-  }
-}
-
-/* Mobile screens */
-@media (max-width: 480px) {
-  .record {
-    font-size: 36px;
-    top: 30px;
-    left: 20px;
-    transform: none;
+  .subscribe-input {
+    border-radius: 20px 20px 0 0;
   }
 }

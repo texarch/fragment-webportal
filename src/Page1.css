@@ -1,135 +1,214 @@
-.page01-container {
-  position: relative;
+/* ===========================
+   MAIN WRAPPER
+=========================== */
+.page1-wrapper {
   width: 100%;
   min-height: 100vh;
+  background-color: rgba(255, 255, 255, 0.4); /* <-- 20% opacity background */
+  background-image: url("./page1bg.png");
   background-size: cover;
-  background-position: center;
+  background-repeat: no-repeat;
+  background-position: center top;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-left: 20px; 
+
+  padding: 80px 40px 20px 40px;
   box-sizing: border-box;
-  background-blend-mode: lighten;
-  margin-top: 20%;
-  overflow: hidden;
-  padding-top: 0%;
-  background-color: rgba(255, 255, 255, 0.8);
-  z-index: 1;
 }
 
-.page01-container::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 110%;
-  background-image: url('./page1bg.png');
-  background-size: 150%;
-  background-position: center;
-  filter: blur(-4px);          
-  opacity: 0.1;              
-  z-index: -1;                
-}
-
-
+/* ===========================
+   CONTENT LAYOUT
+=========================== */
 .page1-content {
   display: flex;
-  flex-direction: column-reverse;
   align-items: center;
   justify-content: space-between;
-  max-width: 1200px;
-  width: 100%;
-  gap: 30px;
+  width: 99%;
+  max-width: 1400px;
+  gap: 80px;
 }
 
-.text-section {
-  width: 100%;
+/* ===========================
+   LEFT SIDE
+=========================== */
+.page1-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* ===========================
+   TABS
+=========================== */
+.page1-tabs {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  margin-bottom: 35px;
+}
+
+.organiser-tab,
+.individual-tab {
+  width: 224px;
+  height: 56px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+}
+
+.organiser-tab.active {
+  background: #404b5e;
+}
+
+.organiser-tab span {
+  font-family: "Cambo", serif;
+  font-weight: 400;
+  font-size: 40px;
+  color: #ffffff;
+  opacity: 0.8;
+}
+
+.individual-tab span {
+  font-family: "Cambo", serif;
+  font-weight: 400;
+  font-size: 36px;
+  color: #000000;
+  opacity: 0.8;
+}
+
+/* ===========================
+   HEADING
+=========================== */
+.page1-heading {
+  width: 682px;
+  font-family: "Cambo", serif;
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 60px;
+  letter-spacing: 2px;
+  color: #000;
+  margin: 10px 0 25px 0;
   text-align: left;
-  padding-left: 20px;
-  font-size: 4rem;
+  word-break: break-word;
 }
 
-/* Updated font styling for Plan, Organise, Connect */
-.text-section h1 {
-  font-family: 'Cambo', serif;
-  margin: 0;
-  line-height: 1.1;
+/* ===========================
+   DIVIDER LINE
+=========================== */
+.page1-divider {
+  width: 600px;
+  height: 2px;
+  background-color: #000; /* <-- full visibility */
+  margin: 0 0 28px 0;
 }
 
-.text-section h1:first-child {
-  color: rgb(15, 189, 233);
-  font-size: 85px;
+/* ===========================
+   SUBTEXT
+=========================== */
+.page1-subtext {
+  width: 600px;
+  font-family: "SF Pro", sans-serif;
+  font-size: 30px;
+  color: #000;
+  margin-bottom: 45px;
   font-weight: 400;
+  line-height: normal;
 }
 
-.text-section h1:nth-child(2) {
-  color: black;
-  font-size: 68px;
-  font-weight: 400;
-}
-
-.text-section h1:nth-child(3) {
-  color: black;
-  font-size: 68px;
-  font-weight: 400;
-}
-
-.text-section p {
-  font-size: 24px;
-  margin-top: 20px;
-  color: black;
-}
-
-.image-section {
+/* ===========================
+   BUTTONS
+=========================== */
+.page1-buttons {
   width: 100%;
   display: flex;
-  justify-content: flex-end;
-  padding: 0;
-  margin: 0;
+  justify-content: center;
 }
 
-.image-section img {
+.demo-btn {
+  width: 250px;
+  height: 64px;
+  background: #5c6371;
+  border-radius: 16px;
+  border: none;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.demo-btn span {
+  font-family: "SF Pro", sans-serif;
+  font-size: 24px;
+  color: #fff;
+}
+
+.demo-btn:hover {
+  background: #4d545f;
+  transform: translateY(-2px);
+}
+
+/* ===========================
+   RIGHT SIDE
+=========================== */
+.page1-right {
+  flex: 1.1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* SINGLE IMAGE - FIXED */
+.page1-single-img {
   width: 100%;
-  max-width: 420px;
+  max-width: 700px;
   height: auto;
-  margin: 0;
-  padding: 0;
   object-fit: contain;
 }
 
-@media (min-width: 768px) {
+/* ===========================
+   RESPONSIVE
+=========================== */
+@media (max-width: 1024px) {
   .page1-content {
-    flex-direction: row;
+    flex-direction: column;
+    text-align: center;
+    gap: 60px;
+    width: 100%;
   }
 
-  .text-section {
-    width: 50%;
-    padding-left: 40px;
+  .page1-left {
+    align-items: center;
   }
 
-  /* Updated font sizing for responsive design */
-  .text-section h1:first-child {
-    font-size: 95px;
+  .page1-heading {
+    width: 90%;
+    font-size: 42px;
+    line-height: 52px;
+    text-align: center;
   }
 
-  .text-section h1:nth-child(2),
-  .text-section h1:nth-child(3) {
-    font-size: 78px;
+  .page1-divider {
+    width: 90%;
   }
 
-  .text-section p {
-    font-size: 20px;
+  .page1-subtext {
+    width: 90%;
+    font-size: 26px;
+    line-height: 34px;
+    text-align: center;
   }
 
-  .image-section {
-    width: 50%;
-    justify-content: flex-end;
-  }
-
-  .image-section img {
-    max-width: 100%;
-    height: auto;
-    max-height: 700px;
+  .page1-single-img {
+    max-width: 420px;
   }
 }
