@@ -1,5 +1,7 @@
 import React from "react";
 import ipadMini from "./iPadMini_Page2.png";
+import Button_download_playstore from "./page2_playstore.png";
+import Button_download_Appstore from "./page2_appstore.png";
 import "./Page2.css";
 
 const Page2 = () => {
@@ -14,31 +16,19 @@ const Page2 = () => {
           <h3 className="available-text">Also Available on</h3>
 
           <div className="store-buttons">
-            {/* Google Play Button */}
-            <a
-              href="https://play.google.com/store"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
-                alt="Get it on Google Play"
-                className="store-badge"
-              />
-            </a>
+            <img
+              src={Button_download_playstore}
+              alt="Download on Play Store"
+              className="store-badge"
+              onClick={() => window.open("https://play.google.com", "_blank")}
+            />
 
-            {/* App Store Button */}
-            <a
-              href="https://www.apple.com/app-store/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
-                alt="Download on the App Store"
-                className="store-badge"
-              />
-            </a>
+            <img
+              src={Button_download_Appstore}
+              alt="Download on App Store"
+              className="store-badge"
+              onClick={() => window.open("https://apps.apple.com", "_blank")}
+            />
           </div>
         </div>
 

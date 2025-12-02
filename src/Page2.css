@@ -32,7 +32,7 @@
   font-family: "SF Pro", sans-serif;
   font-weight: 700;
   font-size:30px;
-  line-height: 100%;
+  line-height: 8px;
   letter-spacing: 0%;
   text-align: center;
   color: #ffffff;
@@ -46,7 +46,8 @@
   font-size: 28px; /* slightly smaller to match screenshot */
   text-decoration: underline;
   color: #ffffff;
-  margin-bottom: 24px;
+  margin-bottom: 8px;
+  
 }
 
 /* === Store buttons === */
@@ -55,16 +56,19 @@
   gap: 16px;
   justify-content: center;
   margin-bottom: 70px; /* more gap like screenshot */
+  
 }
 
 .store-badge {
-  height: 48px;
-  width: auto;
-  transition: 0.25s ease;
+  /* height: 64px; */
+  /* width: 189px; */
+  cursor: pointer;
+  transition: transform 0.2s;
+  /* background-color: #8394AE; */
 }
 
 .store-badge:hover {
-  transform: scale(1.05);
+  transform: translateY(-3px);
 }
 
 /* === Main content === */

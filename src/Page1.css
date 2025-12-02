@@ -1,55 +1,41 @@
-/* ===========================
-   MAIN WRAPPER
-=========================== */
 .page1-wrapper {
   width: 100%;
   min-height: 100vh;
-  background-color: rgba(255, 255, 255, 0.4); /* <-- 20% opacity background */
+  z-index: 1000;
+  background-color: transparent;
+  /* background-color: rgba(255, 255, 255, 0.2); */
   background-image: url("./page1bg.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center top;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   padding: 80px 40px 20px 40px;
   box-sizing: border-box;
 }
-
-/* ===========================
-   CONTENT LAYOUT
-=========================== */
+/* CONTENT */
 .page1-content {
   display: flex;
-  align-items: center;
+  align-items: center;   /* IMPORTANT — vertically align mockup */
   justify-content: space-between;
   width: 99%;
-  max-width: 1400px;
+  max-width: 1500px;
   gap: 80px;
 }
-
-/* ===========================
-   LEFT SIDE
-=========================== */
+/* LEFT SIDE */
 .page1-left {
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
 }
-
-/* ===========================
-   TABS
-=========================== */
+/* TABS */
 .page1-tabs {
   display: flex;
   align-items: center;
   gap: 32px;
   margin-bottom: 35px;
 }
-
 .organiser-tab,
 .individual-tab {
   width: 224px;
@@ -62,153 +48,78 @@
   border: none;
   background: transparent;
 }
-
 .organiser-tab.active {
-  background: #404b5e;
+  background: #404B5E;
 }
-
 .organiser-tab span {
   font-family: "Cambo", serif;
-  font-weight: 400;
   font-size: 40px;
-  color: #ffffff;
-  opacity: 0.8;
+  color: white;
 }
-
 .individual-tab span {
   font-family: "Cambo", serif;
-  font-weight: 400;
   font-size: 36px;
-  color: #000000;
-  opacity: 0.8;
+  color: black;
 }
-
-/* ===========================
-   HEADING
-=========================== */
+/* HEADING */
 .page1-heading {
-  width: 682px;
+  width: 650px;
   font-family: "Cambo", serif;
-  font-weight: 400;
   font-size: 50px;
-  line-height: 60px;
-  letter-spacing: 2px;
-  color: #000;
-  margin: 10px 0 25px 0;
-  text-align: left;
-  word-break: break-word;
+  line-height: 62px;
+  color: black;
+  margin-bottom: 20px;
 }
-
-/* ===========================
-   DIVIDER LINE
-=========================== */
+/* DIVIDER */
 .page1-divider {
-  width: 600px;
+  width: 550px;
   height: 2px;
-  background-color: #000; /* <-- full visibility */
-  margin: 0 0 28px 0;
+  background: black;
+  margin-bottom: 25px;
 }
-
-/* ===========================
-   SUBTEXT
-=========================== */
+/* SUBTEXT */
 .page1-subtext {
   width: 600px;
   font-family: "SF Pro", sans-serif;
   font-size: 30px;
-  color: #000;
-  margin-bottom: 45px;
-  font-weight: 400;
-  line-height: normal;
+  line-height: 36px;
+  margin-bottom: 40px;
+  color: black;
 }
-
-/* ===========================
-   BUTTONS
-=========================== */
-.page1-buttons {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
+/* BUTTON */
 .demo-btn {
-  width: 250px;
+  width: 240px;
   height: 64px;
-  background: #5c6371;
+  background: #5C6371;
   border-radius: 16px;
   border: none;
-  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.15);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  transition: 0.3s ease;
+  color: white;
+  font-size: 22px;
   cursor: pointer;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.15);
+  margin-left: 130px;
 }
-
-.demo-btn span {
-  font-family: "SF Pro", sans-serif;
-  font-size: 24px;
-  color: #fff;
-}
-
-.demo-btn:hover {
-  background: #4d545f;
-  transform: translateY(-2px);
-}
-
-/* ===========================
-   RIGHT SIDE
-=========================== */
+/* RIGHT SIDE */
 .page1-right {
   flex: 1.1;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center;     /* center vertically */
+  padding-top: 40px;       /* adds top spacing */
+  padding-bottom: 30px;    /* adds bottom spacing */
 }
-
-/* SINGLE IMAGE - FIXED */
+/* IMAGE MATCHES THE SCREENSHOT */
 .page1-single-img {
   width: 100%;
-  max-width: 700px;
+  max-width: 820px;        /* match screenshot width */
   height: auto;
+  transform: scale(1.2);  /* slightly enlarge to screenshot size */
   object-fit: contain;
 }
 
-/* ===========================
-   RESPONSIVE
-=========================== */
-@media (max-width: 1024px) {
-  .page1-content {
-    flex-direction: column;
-    text-align: center;
-    gap: 60px;
-    width: 100%;
-  }
 
-  .page1-left {
-    align-items: center;
-  }
 
-  .page1-heading {
-    width: 90%;
-    font-size: 42px;
-    line-height: 52px;
-    text-align: center;
-  }
 
-  .page1-divider {
-    width: 90%;
-  }
 
-  .page1-subtext {
-    width: 90%;
-    font-size: 26px;
-    line-height: 34px;
-    text-align: center;
-  }
 
-  .page1-single-img {
-    max-width: 420px;
-  }
-}
+
