@@ -6,7 +6,7 @@ import "./Page2.css";
 
 const Page2 = () => {
   return (
-    <div className="Page2-wrapper">
+    <section className="Page2-section">
       <div className="Page2-inner-box">
         <div className="Page2-header-text">
           <h2>
@@ -20,14 +20,18 @@ const Page2 = () => {
               src={Button_download_playstore}
               alt="Download on Play Store"
               className="store-badge"
-              onClick={() => window.open("https://play.google.com", "_blank")}
+              onClick={() =>
+                window.open("https://play.google.com", "_blank")
+              }
             />
 
             <img
               src={Button_download_Appstore}
               alt="Download on App Store"
               className="store-badge"
-              onClick={() => window.open("https://apps.apple.com", "_blank")}
+              onClick={() =>
+                window.open("https://apps.apple.com", "_blank")
+              }
             />
           </div>
         </div>
@@ -42,7 +46,7 @@ const Page2 = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

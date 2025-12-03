@@ -4,7 +4,7 @@
   justify-content: space-between;
   background: #CFF9FC;
   text-align: center;
-  padding: 80px 20px;
+  padding: 80px 20px 0;
   position: relative;
   overflow: hidden;
   width: 100%;
@@ -68,7 +68,7 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-top: 40px;
+
 }
 
 .desktop-preview {

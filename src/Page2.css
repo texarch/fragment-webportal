@@ -1,25 +1,25 @@
-.Page2-wrapper {
-  padding: 80px 20px;
+/* Outer wrapper without full background */
+.Page2-section {
+  width: 100%;
   display: flex;
   justify-content: center;
+  padding: 25px;
 }
 
+/* Inner box with 25px radius */
 .Page2-inner-box {
   background-color: #5c6f8d;
-  padding: 60px 40px;     /* less padding like screenshot */
-  border-radius: 20px;
-
-  width: 99%;             /* almost full width */
-  max-width: none;        /* remove width restriction */
-  
-  margin: 0 auto 1px;    /* little space on left-right + bottom margin */
-
+  padding: 50px 35px;
+  border-radius: 25px;
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 }
-/* === HEADER TEXT === */
+
+/* Header area */
 .Page2-header-text {
   display: flex;
   flex-direction: column;
@@ -28,75 +28,74 @@
 
 .Page2-header-text h2 {
   max-width: 1122px;
-  opacity: 1;
   font-family: "SF Pro", sans-serif;
   font-weight: 700;
-  font-size:30px;
-  line-height: 8px;
-  letter-spacing: 0%;
+  font-size: 32px;
   text-align: center;
-  color: #ffffff;
-  margin-bottom: 20px;
+  color: #fff;
+  margin-bottom: 2px; /* ⬅️ EXACT SPACING */
 }
 
-/* === Also Available on === */
 .available-text {
   font-family: "Cambo", serif;
-  font-weight: 400;
-  font-size: 28px; /* slightly smaller to match screenshot */
+  font-size: 26px;
+  color: #fff;
   text-decoration: underline;
-  color: #ffffff;
-  margin-bottom: 8px;
-  
+  margin: 2px 0; /* ⬅️ EXACT SPACING BOTH SIDES */
 }
 
-/* === Store buttons === */
+/* Store Buttons */
 .store-buttons {
   display: flex;
-  gap: 16px;
+  gap: 14px;
   justify-content: center;
-  margin-bottom: 70px; /* more gap like screenshot */
-  
+  margin-bottom: 50px;
 }
 
 .store-badge {
-  /* height: 64px; */
-  /* width: 189px; */
   cursor: pointer;
-  transition: transform 0.2s;
-  /* background-color: #8394AE; */
+  transition: 0.2s;
 }
 
 .store-badge:hover {
   transform: translateY(-3px);
 }
 
-/* === Main content === */
+/* Content Layout */
 .Page2-content {
   display: flex;
+  gap: 30px;
   align-items: center;
   justify-content: space-between;
-  gap: 40px;
   width: 100%;
-  max-width: 1300px;
 }
 
-/* iPad image */
 .Page2-ipad {
-  width: 680px; /* increased to match screenshot */
+  width: 620px;
   border-radius: 12px;
-  margin-left: -50px; /* shifted left just like screenshot */
 }
 
-/* === Right text paragraph === */
 .Page2-text-right p {
-  width: 500px; /* reduced to match screenshot width */
+  width: 480px;
   font-family: "SF Pro", sans-serif;
-  font-weight: 400;
-  font-size: 32px;
+  font-size: 29px;
   line-height: 120%;
-  text-align: left;
-  color: #ffffff;
-  background: transparent;
-  padding-top: 30px;
+  color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .Page2-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .Page2-ipad {
+    width: 90%;
+  }
+
+  .Page2-text-right p {
+    width: 100%;
+    text-align: center;
+  }
 }
