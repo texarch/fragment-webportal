@@ -12,7 +12,7 @@
   width: 99%;             /* almost full width */
   max-width: none;        /* remove width restriction */
   
-  margin: 0 auto 40px;    /* little space on left-right + bottom margin */
+  margin: 0 auto 1px;    /* little space on left-right + bottom margin */
 
   display: flex;
   flex-direction: column;

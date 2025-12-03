@@ -29,14 +29,14 @@
 
 .heading-text {
   font-size: 32px;
-  line-height: 40px;
+  line-height: 10px;
   font-weight: 400;
   color: #000000;
 }
 
 .heading-creator {
   font-size: 56px;
-  line-height: 64px;
+  line-height: 25px;
   font-weight: 400;
   color: #607188;
 }
@@ -47,13 +47,13 @@
   text-align: center;
   font-family: "Cambo", serif;
   font-size: 32px;
-  line-height: 40px;
+  line-height: 20px;
   color: #000;
 }
 
 /* Website Row */
 .website-row {
-  margin-top: 12px;
+  margin-top: -17px;
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -73,7 +73,7 @@
 
 /* OR text */
 .or-row {
-  margin-top: 8px;
+  margin-top: -17px;
 }
 
 .or-text {
@@ -84,7 +84,7 @@
 
 /* Store Buttons */
 .store-row {
-  margin-top: 16px;
+  margin-top: -17px;
   display: flex;
   gap: 24px;
   align-items: center;

@@ -4,14 +4,14 @@
   justify-content: space-between;
   background: #CFF9FC;
   text-align: center;
-  padding: 100px 20px;
+  padding: 80px 20px;
   position: relative;
   overflow: hidden;
-  width: 1728px;
-  height: 976px;
+  width: 100%;
+  min-height: 100vh;
 }
 
-/* Background Icon Pattern */
+/* Background icon pattern */
 .page9::before {
   content: "";
   position: absolute;
@@ -23,41 +23,35 @@
 
 .page9-text {
   z-index: 2;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 
-/* Fonts */
 .cambo {
   font-family: "Cambo", serif;
 }
-
 .sf {
   font-family: "SF Pro", sans-serif;
 }
-
 .sf-bold {
   font-family: "SF Pro", sans-serif;
   font-weight: 700;
 }
-
 .normal {
   font-weight: 400;
 }
 
-/* Title Section */
 .page9-title {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  line-height: 108.74px;
+  line-height: 1.1;
   color: #000;
 }
 
 .text-8xl {
-  font-size: 5rem;
+  font-size: clamp(2.5rem, 5vw + 1rem, 5rem);
 }
 
-/* Subtitle */
 .page9-subtitle {
   max-width: 850px;
   margin: 0 auto;
@@ -66,10 +60,9 @@
 }
 
 .text-3xl {
-  font-size: 1.8rem;
+  font-size: clamp(1.2rem, 2vw + 0.5rem, 1.8rem);
 }
 
-/* ---- FIXED IMAGE SECTION ---- */
 .page9-image {
   z-index: 2;
   width: 100%;
@@ -79,30 +72,17 @@
 }
 
 .desktop-preview {
-  width: 80%;
-  max-width: 1200px;
+  width: 90%;
+  max-width: 1100px;
   height: auto;
   border-radius: 20px;
-
-  /* corrected shadow — only below the image */
-  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.25);
-
   position: relative;
   z-index: 3;
 }
 
-/* Responsive */
+/* Mobile Responsive */
 @media (max-width: 768px) {
-  .text-8xl {
-    font-size: 3rem;
-    line-height: 1.2;
-  }
-  .text-3xl {
-    font-size: 1.2rem;
-  }
-
-  .desktop-preview {
-    width: 100%;
-    max-width: none;
+  .page9 {
+    padding: 60px 10px;
   }
 }

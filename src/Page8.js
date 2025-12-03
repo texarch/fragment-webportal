@@ -8,7 +8,7 @@ const Page8 = () => {
 
       {/* TEXT SECTION */}
       <div className="text-block">
-        <div className="subtitle">
+        <div className="w-[1104.88px] justify-start text-black text-3xl font-['SF_Pro'] leading-9 tracking-wider">
           Our Calendars keep you on time
         </div>
 

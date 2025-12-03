@@ -6,22 +6,18 @@ const Page9 = () => {
   return (
     <div className="page9">
       <div className="page9-text">
-        
-        {/* Main Title */}
         <div className="page9-title">
           <span className="cambo normal text-8xl">Try us on your </span>
           <span className="sf-bold text-8xl">Desktop </span>
           <span className="cambo normal text-8xl">!!</span>
         </div>
 
-        {/* Subtitle */}
         <p className="page9-subtitle">
           <span className="sf-bold text-3xl">Fragment Business </span>
           <span className="sf text-3xl">
             is also available for your Desktop and Website not just your mobile.
           </span>
         </p>
-
       </div>
 
       <div className="page9-image">
