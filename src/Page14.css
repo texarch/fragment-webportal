@@ -17,12 +17,23 @@
 }
 
 .planner-text {
+
   color: #000;
+
   font-family: Cambo;
+
   font-size: 40px;
+
   font-weight: 400;
+
   line-height: 46px;
+
   letter-spacing: -0.8px;
+
+  text-align: center;
+
+  margin-right: 85px;
+
 }
 
 .highlight {

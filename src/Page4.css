@@ -1,60 +1,73 @@
 .page4-wrapper {
   width: 100%;
-  padding: 4vw 0;
-  background-color: #ffffff;
+  background: #ffffff;
   background-image: url("./page1bg.png");
   background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center top;
+  background-repeat: repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 80px 0;
 }
 
-/* EACH SECTION CENTERED */
-.section-center {
+.section-block {
+  width: 100%;
+  max-width: 1300px;
   text-align: center;
-  margin-bottom: 9vw;
+  margin-bottom: 120px;
 }
 
-/* TITLE */
-.title {
-  font-size: 6vw;
-  font-weight: 700;
-  font-family: "Georgia", serif;
+.section-title {
+  font-size: 70px;
+  font-family: "Cambo", serif;
   margin: 0;
-  margin-bottom: 1.2vw; /* spacing before subtitle */
-}
-
-/* SUBTITLE */
-.subtitle {
-  font-size: 1.5vw;
   font-weight: 500;
-  margin-bottom: 2vw; /* spacing before image (built-in line appears) */
-  color: #333;
 }
 
-/* IMAGE HAS BUILT-IN LINE */
+.center-line {
+  width: 65%;
+  height: 2px;
+  background: black;
+  margin: 20px auto 18px auto;
+}
+
+.section-sub {
+  font-size: 22px;
+  font-weight: 400;
+  color: #333;
+  margin-bottom: 30px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .section-image {
-  width: 60%;
-  max-width: 650px;
+  width: 78%;
+  max-width: 950px;
   display: block;
   margin: 0 auto;
-  border-radius: 18px;
 }
 
-/* RESPONSIVE */
+/* 📱 Responsive */
 @media (max-width: 900px) {
-  .title {
+  .section-title {
     font-size: 12vw;
   }
 
-  .subtitle {
+  .section-sub {
     font-size: 4vw;
-  }
-
-  .section-image {
     width: 90%;
   }
 
-  .section-center {
-    margin-bottom: 15vw;
+  .center-line {
+    width: 70%;
+  }
+
+  .section-image {
+    width: 95%;
+  }
+
+  .section-block {
+    margin-bottom: 18vw;
   }
 }

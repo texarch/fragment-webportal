@@ -6,80 +6,85 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 60px 20px;
-  border-radius: 20px;
+  padding: 25px; /* Match Page2 */
   box-sizing: border-box;
   color: #fff;
 }
 
 /* CONTENT WRAPPER */
 .page12-content {
-  max-width: 1200px;
+  max-width: 1300px; /* Match Page2 max width */
   width: 100%;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* ---------- UPDATED TEXT STYLES ---------- */
 
-/* Bring clarity to your day!! */
+/* Heading */
 .page12-heading-custom {
+  max-width: 1122px;
+  font-family: "SF Pro", sans-serif;
+  font-weight: 700;
+  font-size: 32px;
   text-align: center;
-  color: white;
-  font-size: 2.5rem; /* text-4xl */
-  font-weight: 700; /* bold */
-  font-family: 'SF_Pro', sans-serif;
-  margin-bottom: 8px;
+  margin-bottom: 2px; /* Same as Page2 */
+  color: #fff;
 }
 
-/* Also Available on */
+/* Also Available On */
 .page12-subtext-custom {
-  color: white;
-  font-size: 1.9rem; /* text-3xl */
-  font-weight: 400;  /* normal */
-  font-family: 'Cambo', serif;
+  font-family: "Cambo", serif;
+  font-size: 26px;
+  color: #fff;
   text-decoration: underline;
-  margin-bottom: 20px;
+  margin: 2px 0; /* Same as Page2 */
+  text-align: center;
 }
 
-/* Plan better, sync faster... */
+/* Slogan Text */
 .page12-slogan-custom {
   width: 675px;
   max-width: 100%;
   text-align: center;
   color: white;
-  font-size: 3.5rem; /* text-6xl */
+  font-size: 3.5rem;
   font-weight: 400;
   font-family: 'Cambo', serif;
   line-height: 1.3;
+  margin-bottom: 50px; /* Same spacing before buttons as Page2 */
 }
 
 /* ---------- BUTTONS ---------- */
 .page12-buttons {
   display: flex;
-  justify-content: center;
-  align-items: center;
   gap: 14px;
+  justify-content: center;
+  margin-bottom: 50px; /* Same as Page2 */
 }
 
 .store-btn img {
   height: 45px;
+  cursor: pointer;
   transition: transform 0.2s ease-in-out;
 }
 
 .store-btn img:hover {
-  transform: scale(1.05);
+  transform: translateY(-3px); /* Same hover behavior as Page2 */
 }
 
 /* ---------- BOTTOM SECTION ---------- */
 .page12-bottom {
   display: flex;
+  gap: 30px; /* Match Page2 content spacing */
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  width: 100%;
   flex-wrap: wrap;
-  gap: 60px;
-  margin-top: 40px;
 }
 
+/* Image */
 .page12-image-container {
   flex: 1;
   display: flex;
@@ -87,18 +92,16 @@
 }
 
 .page12-image {
-  width: 100%;
-  max-width: 620px;
-  height: auto;
-  border-radius: 20px;
-  box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.3);
-
-  /* FIX: remove blue highlight border */
-  border: none !important;
-  outline: none !important;
+  width: 620px;
+  max-width: 100%;
+  border-radius: 12px;
+  object-fit: contain;
+  border: none !important;  /* Removed blue border */
+  outline: none !important; /* Removed outline */
+  box-shadow: none !important; /* Ensure NO separate highlight */
 }
 
-
+/* Text on right */
 .page12-text {
   flex: 1;
   display: flex;
@@ -108,6 +111,14 @@
 
 /* ---------- Responsive ---------- */
 @media (max-width: 900px) {
+  .page12-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .page12-image {
+    width: 90%;
+  }
 
   .page12-slogan-custom {
     font-size: 2.2rem;
@@ -119,9 +130,5 @@
 
   .page12-subtext-custom {
     font-size: 1.5rem;
-  }
-
-  .page12-image {
-    max-width: 90%;
   }
 }

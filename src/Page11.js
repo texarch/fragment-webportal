@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Page11.css";
-import Navbar from "./Navbar";
+// import Navbar from "./Navbar";
 import IndividualPage1 from "./Individual_Page1.png";
 
 const Page11 = () => {
@@ -8,7 +8,7 @@ const Page11 = () => {
 
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
 
       <div className="page11-container">
         {/* LEFT SIDE */}
@@ -30,11 +30,14 @@ const Page11 = () => {
                 <div className="tab-label">Individual</div>
               </div>
             </div>
+
             <div className="text-content-block">
               <div className="title-text">
                 Stay organized with multi-calendars, to-dos, and automatic event sync.
               </div>
+
               <div className="divider-line" />
+
               <div className="subtitle-container">
                 <div className="subtitle-text">
                   Create calendars, follow organizers, engage, and book events and slots.

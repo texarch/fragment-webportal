@@ -17,27 +17,29 @@ const Page10 = () => {
   };
 
   return (
-    <div className="subscribe-section">
-      <div className="subscribe-container">
-        <h2 className="subscribe-title">Subscribe</h2>
-        <p className="subscribe-subtitle">
-          Be the first to know about our new features
-        </p>
+    <div className="subscribe-bg-layer">
+      <div className="subscribe-section">
+        <div className="subscribe-container">
+          <h2 className="subscribe-title">Subscribe</h2>
+          <p className="subscribe-subtitle">
+            Be the first to know about our new features
+          </p>
 
-        <form className="subscribe-box" onSubmit={handleSubmit}>
-          <input
-            type="email"
-            className="subscribe-input"
-            placeholder="Enter Email.."
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
+          <form className="subscribe-box" onSubmit={handleSubmit}>
+            <input
+              type="email"
+              className="subscribe-input"
+              placeholder="Enter Email.."
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
 
-          <button type="submit" className="subscribe-btn">
-            Subscribe
-          </button>
-        </form>
+            <button type="submit" className="subscribe-btn">
+              Subscribe
+            </button>
+          </form>
+        </div>
       </div>
     </div>
   );

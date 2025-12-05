@@ -1,3 +1,14 @@
+/* Wrapper with white background */
+.subscribe-bg-layer {
+  background-color: white;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /* Outer yellow section */
 .subscribe-section {
   background-color: #fef7ab;
@@ -5,8 +16,8 @@
   border-radius: 20px;
   display: flex;
   justify-content: center;
-  margin: 50px auto;
-  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 /* Inner container */
@@ -36,8 +47,9 @@
   display: flex;
   align-items: center;
   border-radius: 20px;
-  overflow: hidden;            /* IMPORTANT: keeps button flush with input */
-  box-shadow: 1px 4px 15px rgba(0,0,0,0.14);
+  overflow: hidden;
+  /* IMPORTANT: keeps button flush with input */
+  box-shadow: 1px 4px 15px rgba(0, 0, 0, 0.14);
   margin: 0 auto;
 }
 
@@ -71,8 +83,8 @@
 
   /* Same shadow as in screenshot */
   box-shadow:
-    1px 2px 4px rgba(0,0,0,0.15),
-    -3px 0px 4px rgba(0,0,0,0.08);
+    1px 2px 4px rgba(0, 0, 0, 0.15),
+    -3px 0px 4px rgba(0, 0, 0, 0.08);
 
   transition: 0.3s ease;
 }

@@ -8,18 +8,18 @@ const Page8 = () => {
 
       {/* TEXT SECTION */}
       <div className="text-block">
-        <div className="w-[1104.88px] justify-start text-black text-3xl font-['SF_Pro'] leading-9 tracking-wider">
+
+        <div className="small-heading">
           Our Calendars keep you on time
         </div>
 
+        {/* Title Centered Like Screenshot */}
         <div className="title-wrapper">
-          <div className="title-line-1">
-            <span className="cambo text-7xl">Our </span>
-            <span className="cambo text-8xl">To-Do’s</span>
-            <span className="cambo text-7xl"> keep you </span>
+          <div className="title-line-1 cambo">
+            Our <span className="larger">To-Do’s</span> keep you
           </div>
 
-          <div className="title-line-2 cambo text-8xl">
+          <div className="title-line-2 cambo">
             on Track!
           </div>
         </div>
@@ -34,7 +34,7 @@ const Page8 = () => {
         />
       </div>
 
-    </div>
+    </div >
   );
 };
 

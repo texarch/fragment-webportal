@@ -12,7 +12,7 @@ import SeeImg from "./Group 43062 See Image.png";
 
 const sections = [
   { title: "Create", sub: "User Groups", img: CreateImg },
-  { title: "Plan", sub: "Schedules and events for your groups", img: PlanImg },
+  { title: "Plan", sub: "Schedules and events for your groups.", img: PlanImg },
   { title: "Share", sub: "Calendars and events privately or with all Users", img: ShareImg },
   { title: "Know", sub: "Who follows your calendars and gets updates automatically", img: KnowImg },
   { title: "Add", sub: "Tickets to the events", img: AddImg },
@@ -25,15 +25,10 @@ export default function Page4() {
   return (
     <div className="page4-wrapper">
       {sections.map((sec, i) => (
-        <div key={i} className="section-center">
-
-          {/* TITLE */}
-          <h1 className="title">{sec.title}</h1>
-
-          {/* SUBTEXT */}
-          <p className="subtitle">{sec.sub}</p>
-
-          {/* IMAGE (line is inside the image) */}
+        <div key={i} className="section-block">
+          <h1 className="section-title">{sec.title}</h1>
+          <div className="center-line"></div>
+          <p className="section-sub">{sec.sub}</p>
           <img src={sec.img} alt={sec.title} className="section-image" />
         </div>
       ))}

@@ -11,17 +11,17 @@
 
   padding: 70px 100px 0 100px;
   box-sizing: border-box;
+  margin-bottom: 32px;
 }
 
-/* TEXT SECTION */
-
+/* TEXT AREA */
 .text-block {
   display: flex;
   flex-direction: column;
   gap: 18px;
 }
 
-.subtitle {
+.small-heading {
   font-family: "SF Pro Display", sans-serif;
   font-size: 18px;
   letter-spacing: 1px;
@@ -36,21 +36,24 @@
 
 .title-line-1,
 .title-line-2 {
-  line-height: 76px;
+  text-align: left;
   color: #000;
+  line-height: 1.2;
+  font-weight: 400;
+}
+
+.larger {
+  font-size: 4.5vw;
+  /* Responsive To-Do's size */
+  font-weight: 400;
+}
+
+.title-line-1 {
+  font-size: 2.8vw;
 }
 
 .title-line-2 {
-  text-align: right;
-}
-
-/* FONT SIZES LIKE FIGMA */
-.text-7xl {
-  font-size: 3.8rem;
-}
-
-.text-8xl {
-  font-size: 3.5rem;
+  font-size: 3.5vw;
 }
 
 /* CAMBO FONT */

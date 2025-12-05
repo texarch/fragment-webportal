@@ -1,253 +1,109 @@
 .page11-container {
+  width: 100%;
+  min-height: 100vh;
   display: flex;
-  align-items: center;
+  align-items: center; 
   justify-content: space-between;
-  padding: 80px 120px 0 120px;
-  min-height: 90vh;
+  padding: 80px 40px 20px 40px; /* Same as Page1 */
+  box-sizing: border-box;
   background: #fff;
 }
 
 /* LEFT SIDE */
 .left-content {
-  width: 48%;
-  margin-top: -40px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-top: 0; /* matched Page1 */
 }
 
 /* Text bar container */
 .text-bar-container {
-  width: 675px;
-  height: 469.76px;
+  width: 650px; /* match Page1 heading width */
   position: relative;
-}
-
-/* Text content block */
-.text-content-block {
-  height: 320px;
-  display: inline-flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 16px;
 }
 
 /* Title text */
 .title-text {
-  width: 675px;
-  justify-content: flex-start;
+  width: 650px; /* match Page1 heading width */
+  font-family: "Cambo", serif;
+  font-size: 50px;
+  line-height: 62px;
   color: black;
-  font-size: 3rem;
-  /* text-5xl */
-  font-weight: 400;
-  /* font-normal */
-  font-family: 'Cambo', serif;
-  line-height: 60px;
-  /* leading-[60px] */
-  letter-spacing: 0.1em;
-  /* tracking-widest */
+  margin-bottom: 20px; /* align spacing like Page1 */
 }
 
 /* Divider line */
 .divider-line {
-  width: 600px;
-  height: 0;
-  outline: 2px solid black;
-  outline-offset: -1px;
-}
-
-/* Subtitle container */
-.subtitle-container {
-  align-self: stretch;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
+  width: 550px; /* match Page1 divider width */
+  height: 2px;
+  background: black;
+  margin-bottom: 25px;
 }
 
 /* Subtitle text */
 .subtitle-text {
-  flex: 1;
-  justify-content: flex-start;
+  width: 600px; /* match Page1 subtext width */
+  font-family: "SF Pro", sans-serif;
+  font-size: 30px;
+  line-height: 36px;
+  margin-bottom: 35px; /* match Page1 spacing */
   color: black;
-  font-size: 2.25rem;
-  /* text-4xl */
-  font-weight: 400;
-  /* font-normal */
-  font-family: 'SF Pro', sans-serif;
-  /* font-['SF_Pro'] */
-  align-self: stretch;
-  /* self-stretch */
 }
 
 /* Tabs container */
 .tabs-container {
-  height: 80px;
-  padding: 8px 0;
-  display: inline-flex;
-  justify-content: flex-start;
+  display: flex;
   align-items: center;
-  gap: 24px;
-  margin-top: -40px;
+  gap: 32px; /* match Page1 tab gap */
+  margin-bottom: 35px; /* same spacing as in Page1 */
+  padding: 0;
 }
 
 /* Tab item */
 .tab-item {
   width: 224px;
   height: 56px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  cursor: pointer;
-  transition: all 0.3s ease;
   border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+  background: transparent;
 }
 
 .tab-item.active {
-  background-color: #00d4ff;
+  background: #00d4ff;
 }
 
 /* Tab label */
 .tab-label {
-  justify-content: flex-start;
+  font-family: "Cambo", serif;
+  font-size: 36px;
   color: black;
-  font-size: 2.25rem;
-  font-weight: 400;
-  font-family: 'Cambo', serif;
-  opacity: 0.5;
-  transition: opacity 0.3s ease;
+  opacity: 0.7;
 }
 
 .tab-item.active .tab-label {
   opacity: 1;
 }
 
-/* RIGHT SIDE IMAGES */
+/* RIGHT SIDE IMAGE */
 .right-images {
-  width: 52%;
+  flex: 1.1;
   display: flex;
-  justify-content: flex-end;
-  position: relative;
+  justify-content: center;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 30px;
 }
 
+/* Matches Page1 single image styling */
 .main-img {
   width: 100%;
-  max-width: 780px;
+  max-width: 820px;
   height: auto;
+  transform: scale(1.1); /* slightly reduce scale from Page1 to fit better */
   object-fit: contain;
-}
-
-/* Responsive */
-@media (max-width: 1400px) {
-  .page11-container {
-    padding: 60px 80px 0 80px;
-  }
-
-  .text-bar-container {
-    width: 100%;
-    height: auto;
-  }
-
-  .title-text {
-    width: 100%;
-    font-size: 2.5rem;
-    line-height: 50px;
-  }
-
-  .divider-line {
-    width: 90%;
-  }
-
-  .subtitle-text {
-    font-size: 2rem;
-  }
-
-  .tab-label {
-    font-size: 2rem;
-  }
-}
-
-@media (max-width: 900px) {
-  .page11-container {
-    flex-direction: column;
-    padding: 40px 40px 0 40px;
-  }
-
-  .left-content,
-  .right-images {
-    width: 100%;
-  }
-
-  .text-bar-container {
-    position: relative;
-    height: auto;
-  }
-
-  .text-content-block {
-    position: relative;
-    top: 100px;
-    height: auto;
-  }
-
-  .tabs-container {
-    position: relative;
-    left: 0;
-    justify-content: center;
-  }
-
-  .title-text {
-    font-size: 2rem;
-    line-height: 40px;
-    text-align: center;
-  }
-
-  .divider-line {
-    width: 100%;
-  }
-
-  .subtitle-text {
-    font-size: 1.5rem;
-    text-align: center;
-  }
-
-  .tab-item {
-    width: 180px;
-    height: 48px;
-  }
-
-  .tab-label {
-    font-size: 1.5rem;
-  }
-
-  .main-img {
-    max-width: 600px;
-    margin-top: 60px;
-  }
-}
-
-@media (max-width: 600px) {
-  .page11-container {
-    padding: 30px 20px 0 20px;
-  }
-
-  .title-text {
-    font-size: 1.5rem;
-    line-height: 32px;
-  }
-
-  .subtitle-text {
-    font-size: 1.25rem;
-  }
-
-  .tab-item {
-    width: 150px;
-    height: 44px;
-  }
-
-  .tab-label {
-    font-size: 1.25rem;
-  }
-
-  .main-img {
-    max-width: 100%;
-  }
 }
