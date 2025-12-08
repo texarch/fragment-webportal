@@ -1,8 +1,11 @@
 import React from "react";
 import "./Page1.css";
 import page1Image from "./page1(image).png";
+import { useNavigate } from "react-router-dom";
 
 const Page1 = () => {
+  const navigate = useNavigate();
+
   return (
     <>
 
@@ -14,10 +17,10 @@ const Page1 = () => {
 
             {/* Tabs */}
             <div className="page1-tabs">
-              <button className="organiser-tab active" onClick={() => alert("Organiser clicked")}>
+              <button className="organiser-tab active" onClick={() => navigate("/organiser")}>
                 <span>Organiser</span>
               </button>
-              <button className="individual-tab" onClick={() => alert("Individual clicked")}>
+              <button className="individual-tab" onClick={() => navigate("/individual")}>
                 <span>Individual</span>
               </button>
             </div>
