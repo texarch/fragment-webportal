@@ -45,7 +45,7 @@ const Page1 = () => {
             <div className="page1-buttons">
               <button
                 className="demo-btn"
-                onClick={() => alert("Demo booked! Our team will reach out soon.")}
+                onClick={() => navigate("/Demo")}
               >
                 <span>Book a Demo</span>
               </button>

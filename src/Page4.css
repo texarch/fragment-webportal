@@ -69,7 +69,7 @@
 .image-row {
   width: 100%;
   max-width: 1300px;
-  margin: 100px auto;
+  margin: 2px auto;
   display: flex;
   justify-content: center;
 }

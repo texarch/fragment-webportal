@@ -24,18 +24,18 @@ const Page5 = () => {
           Fragment Business helps keep your entire team on the same page!
         </p>
 
-        {/* Website Row */}
-        <div className="website-row">
+        
+        {/* <div className="website-row">
           <img src={Icon_set_Page5} alt="Website icon" className="website-icon-img" />
           <a href="https://www.business.thefragment.app" className="website-link" target="_blank" rel="noopener noreferrer">
             www.business.thefragment.app
           </a>
-        </div>
+        </div> */}
 
         {/* OR */}
-        <div className="or-row">
+        {/* <div className="or-row">
           <span className="or-text">or</span>
-        </div>
+        </div> */}
 
         {/* Store Buttons */}
         <div className="store-row">
