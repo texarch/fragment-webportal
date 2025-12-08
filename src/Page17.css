@@ -1,239 +1,74 @@
-/* .page17-container {
-  display: flex;
+.page17-container {
   width: 100%;
-  height: 60vh;
+  height: 100vh;
+  background-color: #fff8c6;
+  border-radius: 20px;
   overflow: hidden;
-  background-color: rgb(54, 58, 95);
-}
 
-.page17-left-section {
-  width: 70%;
-  position: relative;
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: flex-start;
-  padding-left: 20px;
-  overflow: hidden;
-  z-index: 1;
-  border-radius: 0px 0px 70px 15px;
+
+  padding: 70px 100px 0 100px;
+  box-sizing: border-box;
+  margin-bottom: 32px;
 }
 
-.page17-left-section::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image: url('./page1bg.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  filter: blur(8px);
-  opacity: 0.8;
-  z-index: 0;
-  border-radius: 30px 30px 30px 30px;
-}
-
-.page17-right-section {
-  width: 35%;
-  background-color: rgb(54, 58, 95);
-  border-radius: 0 0 30px 0;
-}
-
+/* IMAGE LEFT */
 .page17-image-wrapper {
-  position: relative;
-  display: inline-block;
-  width: 100%;
-}
-
-.page17-image {
-  width: 100%;
-  height: 250px;
-  object-fit: contain;
-  margin-top:-5%;
-  margin-left: 0%;
-}
-
-.page17-plan-text {
-  position: absolute;
-  right: 15%;
-  top: 35%;
-  transform: translateY(-50%);
-  font-size: 85px;
-  font-weight: 500;
-  color: #7488A8;
-  z-index: 2;
-  white-space: nowrap;
-  font-family: 'Cambo', serif;
-  letter-spacing: 1.5px;
-}
-
-@media (max-width: 1024px) {
-  .page17-plan-text {
-    font-size: 70px;
-    right: -40px;
-  }
-
-  .page17-image {
-    max-height: 70vh;
-  }
-}
-
-@media (max-width: 768px) {
-  .page17-container {
-    flex-direction: column;
-    height: auto;
-  }
-
-  .page17-left-section,
-  .page17-right-section {
-    width: 100%;
-    height: auto;
-  }
-
-  .page17-left-section {
-    padding: 20px;
-    justify-content: center;
-    background-position: top;
-    border-radius: 30px 30px 0 0;
-  }
-
-  .page17-left-section::before {
-    border-radius: 30px 30px 0 0;
-  }
-
-  .page17-right-section {
-    border-radius: 0 0 30px 30px;
-  }
-
-  .page17-plan-text {
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    font-size: 48px;
-    transform: none;
-  }
-
-  .page17-image {
-    max-width: 100%;
-    height: auto;
-  }
-}
-
-@media (max-width: 480px) {
-  .page17-plan-text {
-    font-size: 36px;
-    right: 10px;
-    top: 10px;
-  }
-} */
-
-/* Outer section */
-/* Outer section – like the full slide */
-.page17 {
-  width: 100%;
-  max-width: 1728px;          /* similar to your figma width */
-  margin: 0 auto;
-  background-color: #fff8c6;  /* soft yellow */
-  border-radius: 16px;
-  overflow: hidden;
+  height: 100%;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 40px 60px;         /* spacing inside, so nothing touches edges */
-  box-sizing: border-box;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro", sans-serif;
+  align-items: flex-end;
 }
 
-/* Left side = PNG that has phone + emojis */
-.page17-left {
-  flex: 0 0 45%;              /* around half, like screenshot */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.page17-phone-img {
+  height: 100%;
+  width: auto;
+  transform: translateX(-20px); /* slight shift left like page8 has to right */
 }
 
-.page17-image {
-  width: 100%;
-  max-width: 420px;           /* control size so it doesn’t go out */
-  height: auto;
-  display: block;
-}
-
-/* Right side = text block */
-.page17-right {
-  flex: 1;
-  padding-left: 40px;
+/* TEXT RIGHT */
+.page17-text-block {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  box-sizing: border-box;
+  gap: 18px;
 }
 
-/* Subheading */
-.page17-subheading {
+.page17-small-heading {
+  font-family: "SF Pro Display", sans-serif;
   font-size: 18px;
-  line-height: 24px;
-  letter-spacing: 0.08em;
+  letter-spacing: 1px;
   color: #000;
-  margin: 0 0 12px;
 }
 
-/* Heading block */
-.page17-heading-wrapper {
+.page17-title-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 6px;
 }
 
-/* Common heading style */
-.page17-heading {
-  font-family: "Cambo", "Times New Roman", serif;
+.page17-title-line-1,
+.page17-title-line-2 {
+  text-align: left;
   color: #000;
-  margin: 0;
-  line-height: 1.1;
-  white-space: nowrap;
+  line-height: 1.2;
+  font-weight: 400;
 }
 
-/* “Our ” + “keep you” */
-.page17-heading.part-1 {
-  font-size: 44px;
+.page17-larger {
+  font-size: 4.5vw;
+  font-weight: 400;
 }
 
-/* “To-Do’s” */
-.page17-heading.part-2 {
-  font-size: 52px;
+.page17-title-line-1 {
+  font-size: 2.8vw;
 }
 
-/* “on Track!” – big and right aligned */
-.page17-heading.part-3 {
-  font-size: 56px;
-  text-align: right;
+.page17-title-line-2 {
+  font-size: 3.5vw;
 }
 
-/* Responsive – simple, so it doesn’t break on small screens */
-@media (max-width: 1024px) {
-  .page17 {
-    flex-direction: column;
-    padding: 32px 20px;
-  }
-
-  .page17-left {
-    margin-bottom: 24px;
-  }
-
-  .page17-right {
-    padding-left: 0;
-    align-items: center;
-    text-align: center;
-  }
-
-  .page17-heading.part-3 {
-    text-align: center;
-  }
-
-  .page17-heading.part-1,
-  .page17-heading.part-2,
-  .page17-heading.part-3 {
-    font-size: 34px;
-  }
+/* Cambo font */
+.cambo {
+  font-family: "Cambo", serif !important;
 }
- 

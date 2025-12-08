@@ -50,12 +50,12 @@ const Page14 = () => {
 
         <p className="subtext">Fragment makes time feel Kinder !!</p>
 
-        <div className="website">
+        {/* <div className="website">
           <img src={globeIcon} alt="globe icon" className="globe-img" />
           www.Fragment.com
         </div>
 
-        <p className="or-text">or</p>
+        <p className="or-text">or</p> */}
 
         <div className="store-buttons">
           <img
