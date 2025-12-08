@@ -1,51 +1,47 @@
-import React, { useState } from 'react';
-import googleCal from './googlecal.png';
-import appleCal from './cal.png';
-import './Page19.css';
+import React, { useState } from "react";
+import "./Page19.css";
 
 const Page19 = () => {
-  const [popup1Visible, setPopup1Visible] = useState(false);
-  const [popup2Visible, setPopup2Visible] = useState(false);
+  const [email, setEmail] = useState("");
 
-  const showPopup = (buttonId) => {
-    if (buttonId === 1) {
-      setPopup1Visible(true);
-      setTimeout(() => setPopup1Visible(false), 2500);
-    } else {
-      setPopup2Visible(true);
-      setTimeout(() => setPopup2Visible(false), 2500);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (!email) {
+      alert("Please enter your email.");
+      return;
     }
+
+    alert(`Subscribed with: ${email}`);
+    setEmail(""); // clear input after submit
   };
 
   return (
-  <>
-      <div className="dark-margin"></div> 
-    <div className="page19-container">
-      <h2 className="page19-heading">Sync your calendar with Fragment</h2>
+    <div className="subscribe-bg-layer-19">
+      <div className="subscribe-section-19">
+        <div className="subscribe-container-19">
+          <h2 className="subscribe-title-19">Subscribe</h2>
+          <p className="subscribe-subtitle-19">
+            Be the first to know about our new features
+          </p>
 
-      <div className="page19-button-group">
-        <div className="button-wrapper">
-          <button className="calendar-button" onClick={() => showPopup(1)}>
-            <img src={googleCal} alt="Google Calendar" className="calendar-icon" />
-            <span>Google Calendar</span>
-          </button>
-          {popup1Visible && (
-            <div className="popup-message button-popup">Feature needs to be added</div>
-          )}
-        </div>
+          <form className="subscribe-box-19" onSubmit={handleSubmit}>
+            <input
+              type="email"
+              className="subscribe-input"
+              placeholder="Enter Email.."
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
 
-        <div className="button-wrapper">
-          <button className="calendar-button" onClick={() => showPopup(2)}>
-            <img src={appleCal} alt="Apple Calendar" className="calendar-icon" />
-            <span>Apple Calendar</span>
-          </button>
-          {popup2Visible && (
-            <div className="popup-message button-popup">Feature needs to be added</div>
-          )}
+            <button type="submit" className="subscribe-btn-19">
+              Subscribe
+            </button>
+          </form>
         </div>
       </div>
     </div>
-    </>
   );
 };
 

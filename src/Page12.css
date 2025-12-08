@@ -1,193 +1,134 @@
-.page12-container {
+/* MAIN CONTAINER */
+.page12 {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #02a9ce;
   display: flex;
-  width: 100%; 
-  height: fit-content;
-  overflow: visible; 
-  background-color: rgb(54, 58, 95); 
+  justify-content: center;
+  align-items: center;
+  padding: 25px; /* Match Page2 */
+  box-sizing: border-box;
+  color: #fff;
 }
 
-.dark-margin {
-  height: 20px;
-  background-color: #363a5f;
-}
-
+/* CONTENT WRAPPER */
 .page12-content {
-  width: 70%; 
-  position: relative;
+  max-width: 1300px; /* Match Page2 max width */
+  width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  padding: 20px 20px 20px 20px;
-  overflow: visible;
-  z-index: 1;
-  border-radius: 10px 10px 0 0;
-}
-
-.page12-content::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image: url('./page1bg.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  filter: blur(8px);
-  opacity: 0.8;
-  z-index: 0;
-  clip-path: inset(0 0 0 0 round 10px 10px 0 0);
-}
-
-.page12-right-section {
-  width: 35%; 
-  background-color: rgb(54, 58, 95); 
-  border-radius: 0 0 20px 20px; 
-}
-
-.page12-right-section-inner {
-  width: 100%;
-  height: 100%;
-  background-color: rgb(54, 58, 95); 
-}
-
-.logo-image {
-  top: 30px;
-  position: relative;
-  display: flex;
   align-items: center;
-  gap: -20px; 
-  z-index: 10;
-  width: 100%;
 }
 
-.logo-img12 {
-  height: 55px;
-  width: 150px;
-  object-fit: contain;
-  gap: 0px;
-  margin-right: -15px;
+/* ---------- UPDATED TEXT STYLES ---------- */
+
+/* Heading */
+.page12-heading-custom {
+  max-width: 1122px;
+  font-family: "SF Pro", sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 2px; /* Same as Page2 */
+  color: #fff;
 }
 
-.fragmentb {
-  font-size: 60px;
+/* Also Available On */
+.page12-subtext-custom {
+  font-family: "Cambo", serif;
+  font-size: 26px;
+  color: #fff;
+  text-decoration: underline;
+  margin: 2px 0; /* Same as Page2 */
+  text-align: center;
+}
+
+/* Slogan Text */
+.page12-slogan-custom {
+  width: 675px;
+  max-width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 3.5rem;
   font-weight: 400;
-  color: Black;
   font-family: 'Cambo', serif;
-  letter-spacing: 1px;
-  margin-left: -15px; 
+  line-height: 1.3;
+  margin-bottom: 50px; /* Same spacing before buttons as Page2 */
 }
 
-.page12-image-wrapper {
-  position: relative;
+/* ---------- BUTTONS ---------- */
+.page12-buttons {
   display: flex;
-  margin-top: 20px;
-  padding: 10px 20px;
-  margin-left: 0%;
-  width: 100%;
+  gap: 14px;
   justify-content: center;
-  overflow: hidden;
+  margin-bottom: 50px; /* Same as Page2 */
+}
+
+.store-btn img {
+  height: 45px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.store-btn img:hover {
+  transform: translateY(-3px); /* Same hover behavior as Page2 */
+}
+
+/* ---------- BOTTOM SECTION ---------- */
+.page12-bottom {
+  display: flex;
+  gap: 30px; /* Match Page2 content spacing */
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+/* Image */
+.page12-image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
 }
 
 .page12-image {
-  width: 100%;
-  height: 250px;
+  width: 620px;
+  max-width: 100%;
+  border-radius: 12px;
   object-fit: contain;
-  margin-top: 0%;
-  margin-left: 10%;
+  border: none !important;  /* Removed blue border */
+  outline: none !important; /* Removed outline */
+  box-shadow: none !important; /* Ensure NO separate highlight */
 }
 
+/* Text on right */
 .page12-text {
-  position: absolute;
-  left: 200px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 85px;
-  font-weight: 500;
-  color: #7488A8;
-  z-index: 2;
-  white-space: nowrap;
-  font-family: 'Cambo', serif;
-  letter-spacing: 1.5px;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-@media (max-width: 1024px) {
-  .page12-text {
-    font-size: 60px; 
-    left: 40px;
-  }
-
-  .page12-image {
-    max-height: 60vh;
-    height: 180px; 
-  }
-}
-
-@media (max-width: 768px) {
-  .page12-container {
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .page12-bottom {
     flex-direction: column;
-    height: auto;
-  }
-
-  .page12-content {
-    width: 100%; 
-    padding: 15px 10px 10px 10px; 
-    background-position: top;
-    border-radius: 40px 40px 0 0; 
-  }
-
-  .page12-content::before {
-    border-radius: 40px 40px 0 0; 
-    clip-path: inset(0 0 0 0 round 40px 40px 0 0); 
-  }
-
-  .page12-right-section {
-    width: 100%;
-    height: 60px; 
-    border-radius: 0 0 20px 20px;
-  }
-
-  .page12-right-section-inner {
-    height: 100%;
-  }
-
-  .page12-text {
-    left: 10px;
-    top: 10px;
-    font-size: 40px; 
-    transform: none;
+    text-align: center;
   }
 
   .page12-image {
-    max-width: 100%;
-    height: 150px; 
+    width: 90%;
   }
 
-  .logo-image {
-    flex-direction: column;
-    align-items: flex-start;
+  .page12-slogan-custom {
+    font-size: 2.2rem;
   }
 
-  .fragmentb {
-    font-size: 35px; 
+  .page12-heading-custom {
+    font-size: 2rem;
+  }
+
+  .page12-subtext-custom {
+    font-size: 1.5rem;
   }
 }
-
-@media (max-width: 480px) {
-  .page12-text {
-    font-size: 30px; 
-    left: 10px;
-    top: 10px;
-  }
-
-  .page12-image {
-    height: 120px;
-  }
-
-  .fragmentb {
-    font-size: 25px; 
-  }
-
-  .logo-img12 {
-    height: 30px; 
-    width: 30px;
-  }
-};

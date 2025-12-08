@@ -1,47 +1,53 @@
-import React from 'react';
-import groupSchedulingImg from './group1.png';
-import './Page2.css';
-import personalPlanningImg from './personal.png';
+import React from "react";
+import ipadMini from "./iPadMini_Page2.png";
+import Button_download_playstore from "./page2_playstore.png";
+import Button_download_Appstore from "./page2_appstore.png";
+import "./Page2.css";
 
 const Page2 = () => {
   return (
-    <>
-    <div className="dark-margin1"></div> 
+    <section className="Page2-section">
+      <div className="Page2-inner-box">
+        <div className="Page2-header-text">
+          <h2>
+            Build communities around your events, don’t just send invites!
+          </h2>
 
-    <div className="Page2-container">
-      <div className="Page2-text">
-  <h1>
-  <span className="Page2-upper">EXPERIENCE</span><br />
-  <span className="Page2-lower1">the</span>
-  <span className="Page2-lower"> <strong>Perfect</strong></span>
-</h1>
+          <h3 className="available-text">Also Available on</h3>
 
+          <div className="store-buttons">
+            <img
+              src={Button_download_playstore}
+              alt="Download on Play Store"
+              className="store-badge"
+              onClick={() =>
+                window.open("https://play.google.com", "_blank")
+              }
+            />
 
+            <img
+              src={Button_download_Appstore}
+              alt="Download on App Store"
+              className="store-badge"
+              onClick={() =>
+                window.open("https://apps.apple.com", "_blank")
+              }
+            />
+          </div>
+        </div>
 
-
-        <div className="Page2-ai-powered">AI Powered</div>
+        <div className="Page2-content">
+          <img src={ipadMini} alt="App preview" className="Page2-ipad" />
+          <div className="Page2-text-right">
+            <p>
+              Whether it’s small, big, daily, or recurring — keep every event
+              organized and everyone in sync.
+            </p>
+          </div>
+        </div>
       </div>
-
-      <div className="Page2-graphics">
-  <div className="Page2-graphic-block">
-    <img src={personalPlanningImg} alt="Personal Planning" className='first' />
-  <p>
-  <span className="Page2-main-label">Personal Planning</span><br />
-  <span className="Page2-sub-label1">for</span><span className="Page2-sub-label"> Individuals</span>
-</p>
-  </div>
-
-  <div className="Page2-graphic-block">
-    <img src={groupSchedulingImg} alt="Group Scheduling" />
-    <p>
-  <span className="Page2-main-label">Group Scheduling</span><br />
-  <span className="Page2-sub-label1">for</span><span className="Page2-sub-label"> Organisations</span>
-</p>
-  </div>
-</div>
-</div>
-</>
+    </section>
   );
 };
 
-export default Page2;
+export default Page2;

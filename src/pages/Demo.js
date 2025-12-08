@@ -1,7 +1,5 @@
 import { useState } from 'react';
-import businessIcon from '../business-logo.png';
 import curiousImage from '../curious-illustration.png';
-import logo from '../logo0.png';
 import './Demo.css';
 
 
@@ -10,51 +8,6 @@ import LinkedInIcon from '../linkedin.png';
 import EmailIcon from '../email.png';
 
 const REACT_APP_API_URL="https://fragment.thefragment.app/website"
-
-const FAQData = [
-  {
-    question: 'Question Asked by someone 1?',
-    answer: 'Answer to it Answer to it Answer to it Answer to it Answer to it Answer to it Answer to it Answer to it Answer to it Answer to it Answer to it Answer to it Answer to it Answer to it Answer to it',
-    isOpen: false,
-  },
-  {
-    question: 'Question Asked by someone 2?',
-    answer: 'This is the answer to the second frequently asked question.',
-    isOpen: false,
-  },
-  {
-    question: 'Question Asked by someone 3?',
-    answer: 'Here is a detailed explanation for the third question.',
-    isOpen: false,
-  },
-  {
-    question: 'Question Asked by someone 4?',
-    answer: 'The response to the fourth query goes here.',
-    isOpen: false,
-  },
-  {
-    question: 'Question Asked by someone 5?',
-    answer: 'This is the answer for the fifth frequently asked question.',
-    isOpen: false,
-  },
-  {
-    question: 'Question Asked by someone 6?',
-    answer: 'Explanation for the sixth question.',
-    isOpen: false,
-  },
-];
-
-const FAQItem = ({ faq, index, toggleFAQ }) => {
-  return (
-    <div className={`faq-item ${faq.isOpen ? 'open' : ''}`} key={index}>
-      <div className="faq-question" onClick={() => toggleFAQ(index)}>
-        {faq.question}
-        <span className="arrow">{faq.isOpen ? '▲' : '▼'}</span>
-      </div>
-      {faq.isOpen && <div className="faq-answer">{faq.answer}</div>}
-    </div>
-  );
-};
 
 const Page1 = () => {
   return (

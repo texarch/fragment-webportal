@@ -1,74 +1,85 @@
-.subscribe-section-wrapper {
-    width: 100%;
-    margin: 20px auto 0 auto;
-    padding: 20px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #fff;
+/* Outer wrapper - white background */
+.subscribe-bg-layer-23 {
+  background-color: white;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-
-
-.subscribe-inner-container {
-    width: 80%;
-    padding: 20px 40px;
-    background-color: #FEF7AB;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+/* Yellow section */
+.subscribe-section-23 {
+  background-color: #fef7ab;
+  padding: 80px 40px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
 }
 
-.subscribe-title,
-.subscribe-subtitle {
-    margin-bottom: 20px; /* Keep a consistent margin between title and subtitle */
+/* Content container */
+.subscribe-container-23 {
+  text-align: center;
+  font-family: "Cambo", serif;
 }
 
-.subscribe-email {
-    margin-top: -10px; /* Pull email closer to "Via" */
-    font-size: 2rem;
-    font-family: 'Cambo', serif;
-    font-weight: 400;
-    padding: 0; /* Remove any extra space */
+/* Title & subtitle matching Page 10 */
+.subscribe-title-23 {
+  font-size: 4rem;
+  font-weight: normal;
+  color: #000;
+  margin-bottom: 10px;
 }
 
-.subscribe-email a {
-    color: black;
-    text-decoration: none;
-    font-size: 1.5rem;
-    padding: 0; /* Remove unnecessary padding */
+.subscribe-subtitle-23 {
+  font-size: 1.6rem;
+  color: #000;
+  margin-bottom: 40px;
 }
 
-
-.subscribe-email a:hover {
-    text-decoration: underline;
-    color: blue;
+/* Email box styled like Subscribe input box */
+.subscribe-box-23 {
+  width: 768px;
+  max-width: 100%;
+  background: #fff;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 1px 4px 15px rgba(0, 0, 0, 0.14);
+  margin: 0 auto;
 }
 
-/* Responsive adjustments */
+/* Mailto link styling similar to input text */
+.subscribe-email-23 {
+  display: inline-block;
+  font-size: 1.4rem;
+  font-family: "Cambo", serif;
+  color: black;
+  text-decoration: none;
+}
+
+.subscribe-email-23:hover {
+  text-decoration: underline;
+}
+
+/* Responsive — same as Page 10 */
 @media (max-width: 600px) {
-    .subscribe-section-wrapper {
-        height: 50vh;
-    }
-
-    .subscribe-inner-container {
-        width: 90%;
-        padding: 30px 15px;
-    }
-
-    .subscribe-title {
-        font-size: 2em;
-    }
-
-    .subscribe-subtitle {
-        font-size: 1.2em;
-    }
-
-    .subscribe-email {
-        font-size: 1.8em;
-    }
+  .subscribe-section-23 {
+    padding: 40px 20px;
+  }
+  .subscribe-title-23 {
+    font-size: 2.5rem;
+  }
+  .subscribe-subtitle-23 {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+  }
+  .subscribe-box-23 {
+    padding: 15px;
+  }
+  .subscribe-email-23 {
+    font-size: 1.2rem;
+  }
 }

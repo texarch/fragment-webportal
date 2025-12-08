@@ -97,12 +97,8 @@ const Apage3 = () => {
 
 // Apage4 Component
 const Apage4 = () => {
-  const [showMessage, setShowMessage] = useState(false);
-
-  const handleSubscribe = () => {
-    setShowMessage(true);
-  };
-
+  // const [showMessage, setShowMessage] = useState(false);
+  const [showMessage] = useState(false);
   return (
     <div className="apage4-container">
       <h1 className="apage4-title">Subscribe Us</h1>
@@ -118,7 +114,7 @@ const Apage4 = () => {
           placeholder="Enter your email"
           className="apage4-input"
         />
-        <button className="apage4-button" onClick={handleSubscribe}>
+        <button className="apage4-button" onClick={() => setShowMessage(true)}>
           Subscribe
         </button>
       </div> */}

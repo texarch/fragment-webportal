@@ -1,34 +1,41 @@
-import React from 'react';
-import './Page4.css';
-import logo from './logo3.png';
-import sideImage from './page4c.png';
+import React from "react";
+import "./Page4.css";
+import logo from "./logo0.png";
+import CreateImg from "./Group 43057 Create Image.png";
+import PlanImg from "./Group 650 Plan Image.png";
+import ShareImg from "./Group 578 Share Image.png";
+import KnowImg from "./Group 651 Know Image.png";
+import AddImg from "./Group 43059 Add Image.png";
+import ShowImg from "./Group 43060 Show Image.png";
+import InteractImg from "./Group 43061 Interact Image.png";
+import SeeImg from "./Group 43062 See Image.png";
 
-const Page4 = () => {
+const images = [
+  CreateImg,
+  PlanImg,
+  ShareImg,
+  KnowImg,
+  AddImg,
+  ShowImg,
+  InteractImg,
+  SeeImg
+];
+
+export default function Page4() {
   return (
-    <>
-    <div className="dark-margin1"></div> 
-
-    <div className="page4-container">
-      <div className="page4-content">
-        <div className="left-section4"></div>
-
-        <div className="right-section4">
-          <h1 className="with-text">With</h1>
-
-          <div className="logo-line">
-            <img src={logo} alt="Logo" className="logo-img" />
-            <h2 className="fragment-text">Fragment</h2>
-          </div>
-
-          <div className="create-line">
-            <img src={sideImage} alt="Side" className="side-img" />
-            <h1 className="create-text">Create</h1>
-          </div>
+    <div className="page4-wrapper">
+      <div className="page4-header">
+        <img src={logo} alt="Logo" className="page4-logo" />
+        <div className="page4-header-text">
+          <span className="page4-with-text">with </span>
+          <span className="page4-fragment-text">Fragment</span>
         </div>
       </div>
+      {images.map((img, i) => (
+        <div key={i} className="image-row">
+          <img src={img} className="section-image" alt={`section-${i}`} />
+        </div>
+      ))}
     </div>
-    </>
   );
-};
-
-export default Page4;
+}

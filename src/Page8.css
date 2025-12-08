@@ -1,71 +1,75 @@
 .page8-container {
-  display: flex;
   width: 100%;
-  height: auto; /* Let container grow based on content */
-  box-sizing: border-box;
-}
+  height: 100vh;
+  background-color: #ffd6cf;
+  border-radius: 20px;
+  overflow: hidden;
 
-.left-section {
-  width: 30%;
-  background-color: white;
-}
-
-.right-section {
-  width: 70%;
-  background-color: #C3F1FB;
   display: flex;
-  flex-wrap: wrap;
+  justify-content: space-between;
   align-items: center;
-  padding: 40px 60px;
-  gap: 20px;
-  position: relative;
-  height: fit-content; /* Match height to image */
+
+  padding: 70px 100px 0 100px;
+  box-sizing: border-box;
+  margin-bottom: 32px;
 }
 
-.img8 {
-  width: 93%;
-  height: auto;
-  /* top: -80%; */
-  margin-top: -5%;
-  
+/* TEXT AREA */
+.text-block {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
 }
 
-.com8 {
-  font-size: 90px;
-  font-weight: bold;
-  color: #3FD1F1;
-  font-family: 'Cambo', serif;
-  position: absolute;
-  top: 80px;
-  right: 60px;
-  white-space: nowrap;
-  z-index: 1;
-  pointer-events: none;
+.small-heading {
+  font-family: "SF Pro Display", sans-serif;
+  font-size: 18px;
+  letter-spacing: 1px;
+  color: #000;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .page8-container {
-    flex-direction: column;
-    height: auto;
-  }
+.title-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
 
-  .left-section,
-  .right-section {
-    width: 100%;
-  }
+.title-line-1,
+.title-line-2 {
+  text-align: left;
+  color: #000;
+  line-height: 1.2;
+  font-weight: 400;
+}
 
-  .com8 {
-    font-size: 30px;
-    position: static;
-    margin-top: 20px;
-    margin-left: 0;
-    text-align: center;
-    width: 100%;
-  }
+.larger {
+  font-size: 4.5vw;
+  /* Responsive To-Do's size */
+  font-weight: 400;
+}
 
-  .img8 {
-    width: 100%;
-    height: auto;
-  }
+.title-line-1 {
+  font-size: 2.8vw;
+}
+
+.title-line-2 {
+  font-size: 3.5vw;
+}
+
+/* CAMBO FONT */
+.cambo {
+  font-family: "Cambo", serif !important;
+}
+
+/* PHONE IMAGE FULL HEIGHT */
+.image-wrapper {
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+}
+
+.phone-img {
+  height: 100%;
+  width: auto;
+  transform: translateX(20px);
 }

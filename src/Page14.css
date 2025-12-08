@@ -1,114 +1,168 @@
-.page14-container {
-    display: flex;
-    width: 100%;
-    height: fit-content;
-    overflow: hidden;
+.page14 {
+  width: 100%;
+  font-family: "Inter", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #DBF9FF;
+  text-align: center;
+}
+
+/* Section 1 */
+.planner-section {
+  background-color: #DBF9FF;
+  width: 100%;
+  padding: 60px 20px;
+  border-bottom: 10px solid #ffffff;
+}
+
+.planner-text {
+
+  color: #000;
+
+  font-family: Cambo;
+
+  font-size: 40px;
+
+  font-weight: 400;
+
+  line-height: 46px;
+
+  letter-spacing: -0.8px;
+
+  text-align: center;
+
+  margin-right: 85px;
+
+}
+
+.highlight {
+  color: #0FC6EE;
+  font-family: Cambo;
+  font-size: 72px;
+  font-weight: 400;
+  line-height: 80px;
+  letter-spacing: -1.44px;
+}
+
+.subtext {
+  width: 100%;
+  max-width: 1400px;
+  color: #000;
+  text-align: center;
+  font-family: Cambo;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 46px;
+  letter-spacing: -0.8px;
+  margin: 10px auto;
+}
+
+.website {
+  font-size: 20px;
+  color: #444;
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.globe-img {
+  width: 34px;
+  height: 34px;
+}
+
+.or-text {
+  font-size: 20px;
+  margin-top: 15px;
+  color: #333;
+}
+
+/* Store Buttons */
+.store-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  margin-top: 20px;
+}
+
+.store-badge {
+  height: 60px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.store-badge:hover {
+  transform: translateY(-3px);
+}
+
+/* Section 2 */
+.sync-section {
+  width: 100%;
+  background-color: #B7EEFA;
+  padding: 60px 20px;
+  border-top: 10px solid #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+
+.sync-heading {
+  width: 100%;
+  max-width: 1200px;
+  color: #000;
+  font-family: Cambo;
+  font-size: 48px;
+  font-weight: 400;
+  text-align: center;
+  line-height: 52px;
+  letter-spacing: -0.96px;
+}
+
+/* Calendar Buttons */
+.calendar-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+}
+
+.calendar-download-btn {
+  height: 60px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.calendar-download-btn:hover {
+  transform: translateY(-3px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .highlight {
+    font-size: 36px;
   }
-  
-  .page14-left-section {
-    width: 70%;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    padding-right: 40px;
-    overflow: hidden; 
-    z-index: 1;
+
+  .planner-text {
+    font-size: 26px;
   }
-  
-  .page14-left-section::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-image: url('./page1bg.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    filter: blur(8px);
-    opacity: 0.8;
-    z-index: 0;
+
+  .subtext {
+    font-size: 22px;
+    max-width: 90%;
   }
-  
-  
-  .page14-right-section {
-    width: 35%;
-    background-color:rgb(54, 58, 95);
+
+  .store-badge,
+  .calendar-download-btn {
+    height: 50px;
   }
-  
-  .page14-image-wrapper {
-    position: relative;
-    display: inline-block;
+
+  .sync-heading {
+    font-size: 32px;
+    line-height: 36px;
+    max-width: 90%;
   }
-  
-  .page14-image {
-    width: 100%;
-    height: 250px;
-    /* max-width: 100%; */
-    /* max-height: 90vh; */
-  }
-  
-  .page14-text {
-    position: absolute;
-  /* left: 25%; */
-  right:75%;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 85px;
-  font-weight: 500;
-  color: #7488A8;
-  z-index: 2;
-  white-space: nowrap;
-  font-family: 'Cambo', serif;
-  letter-spacing: 1.5px;
-  }
-  
-  @media (max-width: 1024px) {
-    .page14-text {
-      font-size: 70px;
-      left: -60px;
-    }
-  
-    .page14-image {
-      max-height: 70vh;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .page14-container {
-      flex-direction: column;
-      height: auto;
-    }
-  
-    .page14-left-section,
-    .page14-right-section {
-      width: 100%;
-      height: auto;
-    }
-  
-    .page14-left-section {
-      padding: 20px;
-      justify-content: center;
-      background-position: top;
-    }
-  
-    .page14-text {
-      left: 10px;
-      top: 10px;
-      font-size: 48px;
-      transform: none;
-    }
-  
-    .page14-image {
-      max-width: 100%;
-      height: auto;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .page14-text {
-      font-size: 36px;
-      left: 10px;
-      top: 10px;
-    }
-  }
-  
+}

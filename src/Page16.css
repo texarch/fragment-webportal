@@ -1,114 +1,99 @@
-.page16-container {
-    display: flex;
-    width: 100%;
-    height: fit-content;
-    overflow: hidden;
+.page16-section {
+  width: 100%;
+  height: 100vh;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "SF Pro Display", "Poppins", sans-serif;
+}
+
+.page16-content {
+  display: flex;
+  width: 80%;
+  max-width: 1400px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/******** LEFT ********/
+.page16-left {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.page16-image {
+  width: 450px;
+  animation: float 3s ease-in-out infinite;
+}
+
+/******** RIGHT ********/
+.page16-right {
+  flex: 1;
+  color: #000;
+}
+
+.page16-title {
+  font-size: 8rem;
+  font-weight: 400;
+  font-family: 'Cambo', serif;
+  line-height: 115.69px;
+  color: black;
+  margin-bottom: 0.2rem;
+}
+
+.page16-highlight {
+  font-weight: 600;
+}
+
+.page16-subtitle {
+  font-size: 3rem;
+  font-weight: 300;
+  margin-top: 0;
+}
+
+.page16-to {
+  font-size: 1.6rem;
+  font-style: italic;
+  color: #777;
+  margin: 20px 0 30px;
+}
+
+/******** LIST ********/
+.page16-list {
+  list-style: none;
+  padding: 0;
+}
+
+.page16-list li {
+  display: flex;
+  align-items: center;
+  font-size: 1.45rem;
+  margin-bottom: 18px;
+  gap: 15px;
+}
+
+.tick-img {
+  width: 34px;
+  height: auto;
+}
+
+/******** Bubble Floating ********/
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0); }
+}
+
+/******** RESPONSIVE ********/
+@media (max-width: 980px) {
+  .page16-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 50px;
   }
-  
-  .page16-left-section {
-    width: 70%;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    padding-right: 40px;
-    overflow: hidden;
-    z-index: 1;
-  }
-  
-  .page16-left-section::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-image: url('./page1bg.png'); 
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    filter: blur(8px);
-    opacity: 0.8; 
-    z-index: 0;
-  }
-  
-  
-  .page16-right-section {
-    width: 35%;
-    background-color:rgb(54, 58, 95);
-  }
-  
-  .page16-image-wrapper {
-    position: relative;
-    display: inline-block;
-  }
-  
   .page16-image {
-    width: 100%;
-    height: 250px;
-    object-fit: contain;
-    margin-top: 0%;
-    margin-left:-5%;
+    width: 300px;
   }
-  
-  .page16-text {
-    position: absolute;
-    left:55px;
-    top: 45%;
-    transform: translateY(-50%);
-    font-size: 85px;
-    font-weight: 500;
-    color: #7488A8;
-    z-index: 2;
-    white-space: nowrap;
-    font-family: 'Cambo', serif;
-    letter-spacing: 1.5px;
-  }
-  
-  @media (max-width: 1024px) {
-    .page16-text {
-      font-size: 70px;
-      left: -60px;
-    }
-  
-    .page16-image {
-      max-height: 70vh;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .page16-container {
-      flex-direction: column;
-      height: auto;
-    }
-  
-    .page16-left-section,
-    .page16-right-section {
-      width: 100%;
-      height: auto;
-    }
-  
-    .page16-left-section {
-      padding: 20px;
-      justify-content: center;
-      background-position: top;
-    }
-  
-    .page16-text {
-      left: 10px;
-      top: 10px;
-      font-size: 48px;
-      transform: none;
-    }
-  
-    .page16-image {
-      max-width: 100%;
-      height: auto;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .page16-text {
-      font-size: 36px;
-      left: 10px;
-      top: 10px;
-    }
-  }
-  
+}
