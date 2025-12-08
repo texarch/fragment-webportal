@@ -1,115 +1,35 @@
-/* .page13-container {
-  display: flex;
-  width: 100%;
-  height: fit-content;
-  overflow: hidden;
-}
-.page13-left-section {
-  width: 70%;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  padding-right: 40px;
-  overflow: hidden;
-  z-index: 1;
-}
-.page13-left-section::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image: url('./page1bg.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  filter: blur(8px);
-  opacity: 0.8;
-  z-index: 0;
-}
-.page13-right-section {
-  width: 35%;
-  background-color:rgb(54, 58, 95);
-}
-.page13-image-wrapper {
-  position: relative;
-  display: inline-block;
-}
-.page13-image {
-  width: 100%;
-  height: 250px;
-}
-.page13-plan-text {
-  position: absolute;
-  right:-5%;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 85px;
-  font-weight: 500;
-  color: #7488A8;
-  z-index: 2;
-  white-space: nowrap;
-  font-family: 'Cambo', serif;
-  letter-spacing: 1.5px;
-}
-@media (max-width: 1024px) {
-  .page13-plan-text {
-    font-size: 70px;
-    right: -40px;
-  }
-  .page13-image {
-    max-height: 70vh;
-  }
-}
-@media (max-width: 768px) {
-  .page13-container {
-    flex-direction: column;
-    height: auto;
-  }
-  .page18-left-section,
-  .page18-right-section {
-    width: 100%;
-    height: auto;
-  }
-  .page18-left-section {
-    padding: 20px;
-    justify-content: center;
-    background-position: top;
-  }
-  .page18-plan-text {
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    font-size: 48px;
-    transform: none;
-  }
-  .page18-image {
-    max-width: 100%;
-    height: auto;
-  }
-}
-@media (max-width: 480px) {
-  .page18-plan-text {
-    font-size: 36px;
-    right: 10px;
-    top: 10px;
-  }
-} */
-
 .page13 {
   width: 100%;
   min-height: 100vh;
-  background-color: #f5fcff;
+  background-color: #F7FEFF;
   padding: 40px 20px 80px;
   box-sizing: border-box;
   font-family: "Inter", sans-serif;
 
-  background-image: url("https://www.transparenttextures.com/patterns/doodles.png");
-  background-repeat: repeat;
-  background-size: contain;
-
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.page13::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("./page1bg.png");
+  background-size: contain;
+  background-repeat: repeat;
+  opacity: 0.3;
+  z-index: 1;
+}
+
+.page13 > * {
+  position: relative;
+  z-index: 2;
 }
 
 /* Header */
@@ -117,142 +37,71 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 40px;
-  flex-wrap: wrap;
-  gap: 12px;
+  gap: 22px; /* Increased gap like reference */
+  margin-bottom: 60px;
+}
+
+.page13-header-text {
+  display: flex;
+  align-items: baseline;
+  gap: 26px; /* tiny spacing between "with" & "Fragment" */
 }
 
 .page13-logo {
-  width: 45px;
-  height: 45px;
+  width: 65px;
+  height: 65px;
+  object-fit: contain;
 }
 
-.page13-with {
-  font-size: 22px;
-  color: #000;
-}
-
-.page13-title {
-  font-size: 34px;
-  font-weight: 700;
-  color: #000;
-  font-family: "Times New Roman", serif;
-}
-
-/* Base section layout */
-.page13-section {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  max-width: 1200px;
-  width: 100%;
-  margin: 60px 0;  /* vertical spacing between sections */
-}
-
-/* swap sides for alternate rows */
-.page13-section.page13-section-reverse {
-  flex-direction: row-reverse;
-}
-
-/* Image */
-.page13-image {
-  flex: 0 0 auto;
-  max-width: 440px;
-  width: 100%;
-  height: auto;
-}
-
-/* Title text */
-.page13-heading {
-  flex: 0 0 auto;
-  font-size: 80px;
-  line-height: 1.05;
-  color: #00a9cf;
+.page13-with-text {
+  font-size: 32px;
   font-weight: 400;
   font-family: "Cambo", serif;
-  margin: 0;
+  color: #000;
 }
 
-.page13-text-right {
-  text-align: left;   /* text itself is short, direction doesn’t matter much */
+.page13-fragment-text {
+  font-size: 62px;
+  font-weight: 400;
+  font-family: "Cambo", serif;
+  color: #000;
 }
 
-.page13-text-left {
-  text-align: left;
+/* Sections */
+.page13-section {
+  width: 100%;
+  max-width: 1300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 90px 0;
 }
 
-/* === PER-SECTION HORIZONTAL GAP (your Figma values) === */
-/* For image left, text right → margin-left on heading */
-/* For image right, text left → margin-right on heading */
-
-/* Create – image left, text right → 170.73px */
-.section-create .page13-heading {
-  margin-left: 170.73px;
-}
-
-/* Plan – image right, text left → 233.91px */
-.section-plan .page13-heading {
-  margin-right: 233.91px;
-}
-
-/* Follow – image left, text right → 206.86px */
-.section-follow .page13-heading {
-  margin-left: 206.86px;
-}
-
-/* Get – image right, text left → 336.92px */
-.section-get .page13-heading {
-  margin-right: 336.92px;
-}
-
-/* Book – image left, text right → 118.43px */
-.section-book .page13-heading {
-  margin-left: 118.43px;
-}
-
-/* Comment – image right, text left → 170.55px */
-.section-comment .page13-heading {
-  margin-right: 170.55px;
-}
-
-/* View – image left, text right → 175.75px */
-.section-view .page13-heading {
-  margin-left: 175.75px;
+.page13-image {
+  width: 100%;
+  max-width: 780px;
+  height: auto;
 }
 
 /* Responsive */
 @media (max-width: 900px) {
-  .page13 {
-    padding: 24px 16px 40px;
+  .page13-header {
+    margin-bottom: 40px;
   }
 
-  .page13-section,
-  .page13-section.page13-section-reverse {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 40px 0;
+  .page13-fragment-text {
+    font-size: 48px;
+  }
+
+  .page13-with-text {
+    font-size: 26px;
+  }
+
+  .page13-section {
+    margin: 60px 0;
   }
 
   .page13-image {
-    max-width: 80%;
-  }
-
-  .page13-heading,
-  .section-create .page13-heading,
-  .section-plan .page13-heading,
-  .section-follow .page13-heading,
-  .section-get .page13-heading,
-  .section-book .page13-heading,
-  .section-comment .page13-heading,
-  .section-view .page13-heading {
-    margin-left: 0;
-    margin-right: 0;
-    font-size: 48px;
-    text-align: center;
+    max-width: 90%;
   }
 }
-
-
-
-

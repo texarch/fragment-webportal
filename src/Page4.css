@@ -3,6 +3,10 @@
   width: 100%;
   padding: 80px 0;
   overflow: hidden;
+  font-family: "Inter", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* Background with 30% opacity */
@@ -17,7 +21,6 @@
   background-size: contain;
   background-repeat: repeat;
   opacity: 0.3;
-  /* 👈 EXACTLY 30% */
   z-index: 1;
 }
 
@@ -26,10 +29,39 @@
   z-index: 2;
 }
 
-.title-image {
-  width: 45%;
-  max-width: 500px;
-  margin-bottom: 32px;
+/* Header */
+.page4-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 22px; /* Increased gap like reference */
+  margin-bottom: 60px;
+}
+
+.page4-header-text {
+  display: flex;
+  align-items: baseline;
+  gap: 26px; /* tiny spacing between "with" & "Fragment" */
+}
+
+.page4-logo {
+  width: 65px;
+  height: 65px;
+  object-fit: contain;
+}
+
+.page4-with-text {
+  font-size: 32px;
+  font-weight: 400;
+  font-family: "Cambo", serif;
+  color: #000;
+}
+
+.page4-fragment-text {
+  font-size: 62px;
+  font-weight: 400;
+  font-family: "Cambo", serif;
+  color: #000;
 }
 
 
@@ -50,22 +82,22 @@
   display: block;
 }
 
-/* top logo should be smaller */
-.title-image {
-  width: 45%;
-  max-width: 500px;
-  margin-bottom: 80px;
-}
-
 /* responsive */
 @media (max-width: 900px) {
-  .section-image {
-    width: 95%;
+  .page4-header {
+    margin-bottom: 40px;
   }
 
-  .title-image {
-    width: 70%;
-    margin-bottom: 50px;
+  .page4-fragment-text {
+    font-size: 48px;
+  }
+
+  .page4-with-text {
+    font-size: 26px;
+  }
+
+  .section-image {
+    width: 95%;
   }
 
   .image-row {
