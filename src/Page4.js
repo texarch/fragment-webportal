@@ -27,8 +27,8 @@ export default function Page4() {
       <div className="page4-header">
         <img src={logo} alt="Logo" className="page4-logo" />
         <div className="page4-header-text">
-          <span className="page4-with-text">For </span>
-          <span className="page4-fragment-text">Business</span>
+          <span className="page4-with-text">with </span>
+          <span className="page4-fragment-text">Fragment</span>
         </div>
       </div>
       {images.map((img, i) => (

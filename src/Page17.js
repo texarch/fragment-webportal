@@ -35,11 +35,13 @@ const Page17 = () => {
     <div className="page17">
       {/* LEFT: full image (phone + emojis + droplets all inside this PNG) */}
       <div className="page17-left">
-        <img
-          src={Individual_Page17}
-          alt="Calendars and To-Do's"
-          className="page17-image"
-        />
+        <div className="page17-image-container">
+          <img
+            src={Individual_Page17}
+            alt="Calendars and To-Do's"
+            className="page17-image"
+          />
+        </div>
       </div>
 
       {/* RIGHT: text content */}
