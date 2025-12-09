@@ -1,6 +1,6 @@
 import React from "react";
 import "./Page20.css";
-import connections_page11 from "./connections_page11.png";
+import connections_page11 from "./assets/connections_page11.png";
 
 const Page20 = () => {
   return (
@@ -36,3 +36,5 @@ const Page20 = () => {
 };
 
 export default Page20;
+
+

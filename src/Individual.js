@@ -26,3 +26,5 @@ const Individual = ({ setView }) => {
 };
 
 export default Individual;
+
+

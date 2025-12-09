@@ -1,6 +1,6 @@
 import React from "react";
 import "./Page1.css";
-import page1Image from "./page1(image).png";
+import page1Image from "./assets/page1(image).png";
 import { useNavigate } from "react-router-dom";
 
 const Page1 = ({ setView }) => {
@@ -73,3 +73,4 @@ const Page1 = ({ setView }) => {
 };
 
 export default Page1;
+

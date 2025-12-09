@@ -1,6 +1,6 @@
 import React from "react";
 import "./Page9.css";
-import LaptopPage9 from "./laptop_page9.png";
+import LaptopPage9 from "./assets/laptop_page9.png";
 
 const Page9 = () => {
   return (
@@ -32,3 +32,5 @@ const Page9 = () => {
 };
 
 export default Page9;
+
+

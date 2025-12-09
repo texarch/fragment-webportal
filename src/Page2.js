@@ -1,7 +1,7 @@
 import React from "react";
-import ipadMini from "./iPadMini_Page2.png";
-import Button_download_playstore from "./page2_playstore.png";
-import Button_download_Appstore from "./page2_appstore.png";
+import ipadMini from "./assets/iPadMini_Page2.png";
+import Button_download_playstore from "./assets/page2_playstore.png";
+import Button_download_Appstore from "./assets/page2_appstore.png";
 import "./Page2.css";
 
 const Page2 = () => {
@@ -51,3 +51,5 @@ const Page2 = () => {
 };
 
 export default Page2;
+
+

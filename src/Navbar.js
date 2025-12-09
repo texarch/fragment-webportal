@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
-import logo from './logo2.png';
+import logo from './assets/logo2.png';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -71,3 +71,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+

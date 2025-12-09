@@ -1,14 +1,14 @@
 import React from "react";
 import "./Page4.css";
-import logo from "./blogo.png";
-import CreateImg from "./Group 43057 Create Image.png";
-import PlanImg from "./Group 650 Plan Image.png";
-import ShareImg from "./Group 578 Share Image.png";
-import KnowImg from "./Group 651 Know Image.png";
-import AddImg from "./Group 43059 Add Image.png";
-import ShowImg from "./Group 43060 Show Image.png";
-import InteractImg from "./Group 43061 Interact Image.png";
-import SeeImg from "./Group 43062 See Image.png";
+import logo from "./assets/blogo.png";
+import CreateImg from "./assets/Group 43057 Create Image.png";
+import PlanImg from "./assets/Group 650 Plan Image.png";
+import ShareImg from "./assets/Group 578 Share Image.png";
+import KnowImg from "./assets/Group 651 Know Image.png";
+import AddImg from "./assets/Group 43059 Add Image.png";
+import ShowImg from "./assets/Group 43060 Show Image.png";
+import InteractImg from "./assets/Group 43061 Interact Image.png";
+import SeeImg from "./assets/Group 43062 See Image.png";
 
 const images = [
   CreateImg,
@@ -39,3 +39,4 @@ export default function Page4() {
     </div>
   );
 }
+

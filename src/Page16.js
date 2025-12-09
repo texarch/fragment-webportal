@@ -1,7 +1,7 @@
 import React from "react";
 import "./Page16.css";
-import winkEni from "./Eni_Page16.png";
-import blueTick from "./blue_tick_box.png";
+import winkEni from "./assets/Eni_Page16.png";
+import blueTick from "./assets/blue_tick_box.png";
 
 const Page16 = () => {
   return (
@@ -45,3 +45,4 @@ const Page16 = () => {
 };
 
 export default Page16;
+

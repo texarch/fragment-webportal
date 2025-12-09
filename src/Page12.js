@@ -1,8 +1,8 @@
 // import React from 'react';
 // import './Page12.css';
-// import page1bg from './page1bg.png';
-// import page12 from './page12.png';
-// import blogo from './blogo.png';
+// import page1bg from './assets/page1bg.png';
+// import page12 from './assets/page12.png';
+// import blogo from './assets/blogo.png';
 
 // // Page12 component renders a section with a logo, text, and image, styled with Page12.css
 // const Page12 = () => {
@@ -36,11 +36,11 @@
 
 import React from "react";
 import "./Page12.css";
-import IndividualPage2 from "./Individual_Page2.png";
+import IndividualPage2 from "./assets/Individual_Page2.png";
 
 // Local buttons
-import PlayStoreButton from "./playstore_button.png";
-import AppStoreButton from "./Appstore_button.png";
+import PlayStoreButton from "./assets/playstore_button.png";
+import AppStoreButton from "./assets/Appstore_button.png";
 
 const Page12 = () => {
   return (
@@ -96,5 +96,7 @@ const Page12 = () => {
 };
 
 export default Page12;
+
+
 
 

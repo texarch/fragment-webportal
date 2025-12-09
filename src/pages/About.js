@@ -1,18 +1,18 @@
 import React, { useState } from "react";
 import "./Aboutus.css";
-import page1bg from "../page1bg.jpg"; // Fixed: removed the dot before filename
-import apg1image from "../apg00image.png";
-import apg2a from "../apg2a.jpg";
-import apg2b from "../apg2b.jpg";
+import page1bg from "../assets/page1bg.jpg"; // Fixed: removed the dot before filename
+import apg1image from "../assets/apg00image.png";
+import apg2a from "../assets/apg2a.jpg";
+import apg2b from "../assets/apg2b.jpg";
 
-import Insta from "../insta.png";
-import LinkedIn from "../linkedin.png";
-import YouTube from "../email.png";
+import Insta from "../assets/insta.png";
+import LinkedIn from "../assets/linkedin.png";
+import YouTube from "../assets/email.png";
 
-import pg3a from "../pg3a.png";
-import pg3b from "../pg3b.png";
-import pg3c from "../pg3c.png";
-import pg3d from "../pg3d.png";
+import pg3a from "../assets/pg3a.png";
+import pg3b from "../assets/pg3b.png";
+import pg3c from "../assets/pg3c.png";
+import pg3d from "../assets/pg3d.png";
 
 // APage1 Component
 const APage1 = () => {
@@ -177,3 +177,5 @@ const About = () => {
 };
 
 export { APage1, Apage2, Apage3, Apage4, Apage5, About };
+
+

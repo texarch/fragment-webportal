@@ -27,7 +27,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  background-image: url('./bg3.png');
+  background-image: url('./assets/bg3.png');
   background-size: 100%;
   background-position: center;
   filter: blur(2.2px);
@@ -138,3 +138,5 @@
     height: auto;
   }
 }
+
+

@@ -1,6 +1,6 @@
 .pricing-container {
   position: relative;
-  background-image: url('../page1bg.png'); 
+  background-image: url('../assets/page1bg.png'); 
   background-size: cover;
   background-position: center;
   min-height: 100vh;
@@ -127,3 +127,5 @@
 .footer-column.offset-top {
   margin-top: 38px;
 }
+
+

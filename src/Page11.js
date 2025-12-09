@@ -1,7 +1,7 @@
 import React from "react";
 import "./Page11.css";
 // import Navbar from "./Navbar";
-import IndividualPage1 from "./Individual_Page1.png";
+import IndividualPage1 from "./assets/Individual_Page1.png";
 import { useNavigate } from "react-router-dom";
 
 const Page11 = ({ setView }) => {
@@ -55,3 +55,5 @@ const Page11 = ({ setView }) => {
 };
 
 export default Page11;
+
+

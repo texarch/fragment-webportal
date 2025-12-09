@@ -1,6 +1,6 @@
 import React from "react";
 import "./Page7.css";
-import buildWithoutChaos from "./Buildwithoutchaos_Page7.png";
+import buildWithoutChaos from "./assets/Buildwithoutchaos_Page7.png";
 
 const Page7 = () => {
   return (
@@ -49,3 +49,5 @@ const Page7 = () => {
 };
 
 export default Page7;
+
+

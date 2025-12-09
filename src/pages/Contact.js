@@ -3,15 +3,15 @@ import PhoneInput from 'react-phone-number-input';
 import 'react-phone-number-input/style.css';
 import './Contact.css';
 
-import BackImage from '../main2.png'; 
-import Insta from '../insta2.jpg';
-import LinkedIn from '../linkedin2.jpg';
-import YouTube from '../youtube.jpg';
-import Facebook from '../facebook.jpg';
+import BackImage from '../assets/main2.png'; 
+import Insta from '../assets/insta2.jpg';
+import LinkedIn from '../assets/linkedin2.jpg';
+import YouTube from '../assets/youtube.jpg';
+import Facebook from '../assets/facebook.jpg';
 
-import InstaIcon from '../insta.png';       
-import LinkedInIcon from '../linkedin.png';
-import EmailIcon from '../email.png';
+import InstaIcon from '../assets/insta.png';       
+import LinkedInIcon from '../assets/linkedin.png';
+import EmailIcon from '../assets/email.png';
 
 const REACT_APP_API_URL='https://fragment.thefragment.app/website'
 
@@ -269,3 +269,4 @@ function Contact() {
 }
 
 export default Contact;
+
