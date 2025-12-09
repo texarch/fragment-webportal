@@ -11,10 +11,10 @@ import Page9 from './Page9';
 import Page10 from './Page10';
 import Page20 from './Page20';
 
-const Organiser = () => {
+const Organiser = ({ setView }) => {
   return (
     <div>
-      <Page1 />
+      <Page1 setView={setView} />
       <Page2 />
       <Page3 />
       <Page4 />

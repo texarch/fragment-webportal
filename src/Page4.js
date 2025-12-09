@@ -1,6 +1,6 @@
 import React from "react";
 import "./Page4.css";
-import logo from "./logo0.png";
+import logo from "./blogo.png";
 import CreateImg from "./Group 43057 Create Image.png";
 import PlanImg from "./Group 650 Plan Image.png";
 import ShareImg from "./Group 578 Share Image.png";
@@ -28,7 +28,7 @@ export default function Page4() {
         <img src={logo} alt="Logo" className="page4-logo" />
         <div className="page4-header-text">
           <span className="page4-with-text">with </span>
-          <span className="page4-fragment-text">Fragment</span>
+          <span className="page4-fragment-text">Fragment Business</span>
         </div>
       </div>
       {images.map((img, i) => (

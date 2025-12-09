@@ -3,7 +3,7 @@ import "./Page1.css";
 import page1Image from "./page1(image).png";
 import { useNavigate } from "react-router-dom";
 
-const Page1 = () => {
+const Page1 = ({ setView }) => {
   const navigate = useNavigate();
 
   return (
@@ -17,10 +17,10 @@ const Page1 = () => {
 
             {/* Tabs */}
             <div className="page1-tabs">
-              <button className="organiser-tab active" onClick={() => navigate("/organiser")}>
+              <button className="organiser-tab active" onClick={() => setView('organiser')}>
                 <span>Organiser</span>
               </button>
-              <button className="individual-tab" onClick={() => navigate("/individual")}>
+              <button className="individual-tab" onClick={() => setView('individual')}>
                 <span>Individual</span>
               </button>
             </div>
