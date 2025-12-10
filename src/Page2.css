@@ -46,19 +46,6 @@
   /* ⬅️ EXACT SPACING BOTH SIDES */
 }
 
-/* Store Buttons */
-.store-buttons {
-  display: flex;
-  gap: 14px;
-  justify-content: center;
-  margin-bottom: 50px;
-}
-
-.store-badge {
-  cursor: pointer;
-  transition: 0.2s;
-}
-
 .store-badge:hover {
   transform: translateY(-3px);
 }

@@ -23,7 +23,7 @@ const images = [
 
 export default function Page4() {
   return (
-    <div className="page4-wrapper">
+    <div className="page4-wrapper" style={{ position: "relative" }}>
       <div className="page4-header">
         <img src={logo} alt="Logo" className="page4-logo" />
         <div className="page4-header-text">

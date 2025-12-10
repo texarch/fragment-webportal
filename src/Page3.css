@@ -13,14 +13,14 @@
    BLUE CONTAINER (1678 × 925)
 ================================ */
 .page3-content {
-  width: 1678px;
-  height: 925px;
+  width: 1200px;
+  height: 600px;
   background: #E8F6FB;
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-radius: 12px;
-  padding: 60px;
+  padding: 40px;
   box-sizing: border-box;
 }
 
