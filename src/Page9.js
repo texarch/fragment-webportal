@@ -32,5 +32,3 @@ const Page9 = () => {
 };
 
 export default Page9;
-
-

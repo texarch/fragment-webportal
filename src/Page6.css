@@ -1,12 +1,11 @@
 /* Main section layout */
 .page6-section {
   width: 100%;
-  height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center;
+  padding-top: 50px; /* Adjust as needed */
   background-color: #fff;
-  font-family: "Poppins", "Helvetica Neue", sans-serif;
+  font-family: "SF Pro Display", "Poppins", sans-serif;
 }
 
 /* Inner content layout */
@@ -28,10 +27,11 @@
 
 /* Heading */
 .page6-title {
-  font-size: 4.5rem;
-  font-weight: 500;
+  font-size: 8rem;
+  font-weight: 400;
   font-family: "Cambo", serif;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.2rem;
+  line-height: 115.69px;
   color: #000;
 }
 
@@ -43,16 +43,16 @@
   font-size: 3rem;
   font-weight: 300;
   font-family: "SF Pro Display", sans-serif;
-  margin: 0;
+  margin-top: 0;
   color: #000;
 }
 
 /* Center aligned "to" */
 .page6-to {
   font-style: italic;
-  color: #888;
-  font-size: 1.8rem;
-  margin: 1rem 0;
+  color: #777;
+  font-size: 1.6rem;
+  margin: 20px 0 30px;
 }
 
 /* LIST */
@@ -67,15 +67,15 @@
   align-items: center;
   gap: 15px;
   margin-bottom: 18px;
-  font-size: 1.5rem;
+  font-size: 1.45rem;
   font-family: "SF Pro Display", sans-serif;
   color: #000;
 }
 
 /* LIST ITEM ICON */
 .list-tick-icon {
-  width: 35px;
-  height: 25px;
+  width: 34px;
+  height: auto;
   vertical-align: middle;
 }
 
@@ -88,7 +88,7 @@
 }
 
 .page6-image {
-  width: 380px;
+  width: 450px;
   height: auto;
   animation: float 3s ease-in-out infinite;
   filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.15));
@@ -101,7 +101,7 @@
   }
 
   50% {
-    transform: translateY(-10px);
+    transform: translateY(-12px);
   }
 
   100% {
@@ -110,21 +110,23 @@
 }
 
 /* Responsive */
-@media (max-width: 900px) {
+@media (max-width: 980px) {
   .page6-section {
     height: auto;
-    padding: 60px 0;
+    padding-top: 30px;
+    padding-bottom: 30px;
   }
 
   .page6-content {
     flex-direction: column;
     text-align: center;
-    gap: 40px;
+    gap: 50px;
     width: 90%;
   }
 
   .page6-title {
-    font-size: 3rem;
+    font-size: 4rem;
+    line-height: normal;
   }
 
   .page6-subtitle {
@@ -132,7 +134,7 @@
   }
 
   .page6-to {
-    margin: 15px auto;
+    margin: 15px 0 20px;
     font-size: 1.5rem;
   }
 
@@ -143,11 +145,14 @@
   .page6-list li {
     font-size: 1.2rem;
     text-align: left;
+    width: 100%;
+    max-width: 400px;
+    justify-content: center;
   }
 
   .page6-image {
     width: 100%;
-    max-width: 300px;
+    max-width: 350px;
   }
 }
 

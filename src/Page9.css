@@ -4,9 +4,9 @@
   justify-content: space-between;
   background: #CFF9FC;
   text-align: center;
-  padding: 80px 20px 0;
+  padding: 80px 0 0;
   position: relative;
-  overflow: hidden;
+  /* overflow: hidden; Removed to allow image breakout */
   width: 100%;
   min-height: 100vh;
 }
@@ -24,6 +24,7 @@
 .page9-text {
   z-index: 2;
   margin-bottom: 40px;
+  padding: 0 20px;
 }
 
 .cambo {
@@ -68,17 +69,21 @@
 
 .page9-image {
   z-index: 2;
-  width: 100%;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
   display: flex;
   justify-content: center;
-
 }
 
 .desktop-preview {
-  width: 90%;
-  max-width: 1100px;
+  width: 100%;
+  max-width: none;
   height: auto;
-  border-radius: 20px;
+  border-radius: 0;
   position: relative;
   z-index: 3;
 }
@@ -86,7 +91,7 @@
 /* Mobile Responsive */
 @media (max-width: 768px) {
   .page9 {
-    padding: 60px 10px;
+    padding: 60px 0;
     height: auto;
     min-height: auto;
   }
