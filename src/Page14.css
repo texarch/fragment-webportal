@@ -142,17 +142,33 @@
 
 /* Responsive */
 @media (max-width: 768px) {
+
+  .planner-section,
+  .sync-section {
+    padding: 40px 20px;
+  }
+
   .highlight {
     font-size: 36px;
+    line-height: 42px;
   }
 
   .planner-text {
     font-size: 26px;
+    line-height: 32px;
+    margin-right: 0;
   }
 
   .subtext {
     font-size: 22px;
-    max-width: 90%;
+    line-height: 28px;
+    max-width: 100%;
+  }
+
+  .store-buttons,
+  .calendar-buttons {
+    flex-direction: column;
+    gap: 16px;
   }
 
   .store-badge,
@@ -163,8 +179,6 @@
   .sync-heading {
     font-size: 32px;
     line-height: 36px;
-    max-width: 90%;
+    max-width: 100%;
   }
 }
-
-

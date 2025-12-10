@@ -29,13 +29,16 @@
 .cambo {
   font-family: "Cambo", serif;
 }
+
 .sf {
   font-family: "SF Pro", sans-serif;
 }
+
 .sf-bold {
   font-family: "SF Pro", sans-serif;
   font-weight: 700;
 }
+
 .normal {
   font-weight: 400;
 }
@@ -84,7 +87,20 @@
 @media (max-width: 768px) {
   .page18 {
     padding: 60px 10px;
+    height: auto;
+    min-height: auto;
+  }
+
+  .page18-title {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .text-8xl {
+    font-size: 3rem;
+  }
+
+  .text-3xl {
+    font-size: 1.2rem;
   }
 }
-
-

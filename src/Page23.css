@@ -65,23 +65,43 @@
 }
 
 /* Responsive — same as Page 10 */
+@media (max-width: 768px) {
+  .subscribe-section-23 {
+    padding: 60px 20px;
+  }
+
+  .subscribe-title-23 {
+    font-size: 3rem;
+  }
+
+  .subscribe-subtitle-23 {
+    font-size: 1.4rem;
+  }
+
+  .subscribe-box-23 {
+    width: 100%;
+  }
+}
+
 @media (max-width: 600px) {
   .subscribe-section-23 {
     padding: 40px 20px;
   }
+
   .subscribe-title-23 {
     font-size: 2.5rem;
   }
+
   .subscribe-subtitle-23 {
     font-size: 1.2rem;
     margin-bottom: 30px;
   }
+
   .subscribe-box-23 {
     padding: 15px;
   }
+
   .subscribe-email-23 {
     font-size: 1.2rem;
   }
 }
-
-

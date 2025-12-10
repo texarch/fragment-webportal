@@ -27,7 +27,7 @@
   z-index: 1;
 }
 
-.page13 > * {
+.page13>* {
   position: relative;
   z-index: 2;
 }
@@ -37,14 +37,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 22px; /* Increased gap like reference */
+  gap: 22px;
+  /* Increased gap like reference */
   margin-bottom: 60px;
 }
 
 .page13-header-text {
   display: flex;
   align-items: baseline;
-  gap: 26px; /* tiny spacing between "with" & "Fragment" */
+  gap: 26px;
+  /* tiny spacing between "with" & "Fragment" */
 }
 
 .page13-logo {
@@ -87,14 +89,23 @@
 @media (max-width: 900px) {
   .page13-header {
     margin-bottom: 40px;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .page13-header-text {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    text-align: center;
   }
 
   .page13-fragment-text {
-    font-size: 48px;
+    font-size: 40px;
   }
 
   .page13-with-text {
-    font-size: 26px;
+    font-size: 24px;
   }
 
   .page13-section {
@@ -102,8 +113,16 @@
   }
 
   .page13-image {
-    max-width: 90%;
+    max-width: 100%;
   }
 }
 
+@media (max-width: 480px) {
+  .page13-fragment-text {
+    font-size: 32px;
+  }
 
+  .page13-with-text {
+    font-size: 20px;
+  }
+}

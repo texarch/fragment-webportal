@@ -34,14 +34,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 22px; /* Increased gap like reference */
+  gap: 22px;
+  /* Increased gap like reference */
   margin-bottom: 60px;
 }
 
 .page4-header-text {
   display: flex;
   align-items: baseline;
-  gap: 26px; /* tiny spacing between "with" & "Fragment" */
+  gap: 26px;
+  /* tiny spacing between "with" & "Fragment" */
 }
 
 .page4-logo {
@@ -86,14 +88,23 @@
 @media (max-width: 900px) {
   .page4-header {
     margin-bottom: 40px;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .page4-header-text {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    text-align: center;
   }
 
   .page4-fragment-text {
-    font-size: 48px;
+    font-size: 40px;
   }
 
   .page4-with-text {
-    font-size: 26px;
+    font-size: 24px;
   }
 
   .section-image {
@@ -101,8 +112,16 @@
   }
 
   .image-row {
-    margin: 14vw auto;
+    margin: 40px auto;
   }
 }
 
+@media (max-width: 480px) {
+  .page4-fragment-text {
+    font-size: 32px;
+  }
 
+  .page4-with-text {
+    font-size: 20px;
+  }
+}

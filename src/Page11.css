@@ -104,8 +104,76 @@
   width: 100%;
   max-width: 820px;
   height: auto;
-  transform: scale(1.2); /* SAME AS PAGE1 */
+  transform: scale(1.2);
+  /* SAME AS PAGE1 */
   object-fit: contain;
 }
 
+@media (max-width: 768px) {
+  .page11-container {
+    padding: 40px 20px;
+    height: auto;
+    min-height: auto;
+  }
 
+  .page11-content {
+    flex-direction: column;
+    gap: 40px;
+    width: 100%;
+  }
+
+  .left-content {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .tabs-container {
+    gap: 16px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .tab-item {
+    width: auto;
+    padding: 0 20px;
+    height: 48px;
+  }
+
+  .tab-label {
+    font-size: 24px;
+  }
+
+  .tab-item.active .tab-label {
+    font-size: 28px;
+  }
+
+  .title-text {
+    width: 100%;
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .divider-line {
+    width: 100%;
+    margin: 0 auto 20px auto;
+  }
+
+  .subtitle-text {
+    width: 100%;
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
+
+  .right-images {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .main-img {
+    transform: none;
+    max-width: 100%;
+  }
+}

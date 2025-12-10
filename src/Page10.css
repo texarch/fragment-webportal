@@ -94,7 +94,29 @@
 }
 
 /* Responsive */
+@media (max-width: 768px) {
+  .subscribe-section {
+    padding: 60px 20px;
+  }
+
+  .subscribe-title {
+    font-size: 3rem;
+  }
+
+  .subscribe-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .subscribe-box {
+    width: 100%;
+  }
+}
+
 @media (max-width: 600px) {
+  .subscribe-title {
+    font-size: 2.5rem;
+  }
+
   .subscribe-box {
     flex-direction: column;
     border-radius: 20px;
@@ -103,10 +125,12 @@
   .subscribe-btn {
     width: 100%;
     border-radius: 0 0 20px 20px;
+    padding: 16px;
   }
 
   .subscribe-input {
     border-radius: 20px 20px 0 0;
+    width: 100%;
+    text-align: center;
   }
 }
-
