@@ -1,164 +1,157 @@
-/* MAIN CONTAINER */
-.page12 {
+/* Outer wrapper without full background (same as Page2) */
+.Page12-section {
   width: 100%;
-  min-height: 100vh;
-  background-color: #02a9ce;
   display: flex;
   justify-content: center;
-  align-items: center;
   padding: 25px;
-  /* Match Page2 */
   box-sizing: border-box;
-  color: #fff;
 }
 
-/* CONTENT WRAPPER */
-.page12-content {
-  max-width: 1300px;
-  /* Match Page2 max width */
+/* Inner box with 25px radius (same layout as Page2) */
+.Page12-inner-box {
+  background-color: #02a9ce;
+  /* Original Page12 color */
+  padding: 50px 35px;
+  border-radius: 25px;
   width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+  box-sizing: border-box;
 }
 
-/* ---------- UPDATED TEXT STYLES ---------- */
+/* Header area */
+.Page12-header-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
 
-/* Heading */
-.page12-heading-custom {
+.Page12-heading-custom {
   max-width: 1122px;
   font-family: "SF Pro", sans-serif;
   font-weight: 700;
   font-size: 32px;
   text-align: center;
-  margin-bottom: 2px;
-  /* Same as Page2 */
   color: #fff;
+  margin-bottom: 2px;
 }
 
-/* Also Available On */
-.page12-subtext-custom {
+.Page12-subtext-custom {
   font-family: "Cambo", serif;
   font-size: 26px;
   color: #fff;
   text-decoration: underline;
   margin: 2px 0;
-  /* Same as Page2 */
   text-align: center;
 }
 
-/* Slogan Text */
-.page12-slogan-custom {
-  width: 675px;
-  max-width: 100%;
-  text-align: center;
-  color: white;
-  font-size: 2.5rem;
-  font-weight: 400;
-  font-family: 'Cambo', serif;
-  line-height: 1.3;
-  margin-bottom: 50px;
-  /* Same spacing before buttons as Page2 */
-}
-
-/* ---------- BUTTONS ---------- */
-.page12-buttons {
+/* Store Buttons */
+.store-buttons {
   display: flex;
   gap: 14px;
   justify-content: center;
   margin-bottom: 50px;
-  /* Same as Page2 */
+  /* Same as Page2's implied spacing or Page12 original */
 }
 
 .store-btn img {
   height: 45px;
+  /* Adjust if needed to match Page2's button size if distinct, else keep Page12's */
   cursor: pointer;
-  transition: transform 0.2s ease-in-out;
+
 }
 
-.store-btn img:hover {
+.store-badge {
+  height: 45px;
+  cursor: pointer;
+}
+
+.store-btn img:hover,
+.store-badge:hover {
   transform: translateY(-3px);
-  /* Same hover behavior as Page2 */
 }
 
-/* ---------- BOTTOM SECTION ---------- */
-.page12-bottom {
+/* Content Layout (Matches Page2-content) */
+.Page12-content {
   display: flex;
   gap: 30px;
-  /* Match Page2 content spacing */
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  flex-wrap: wrap;
 }
 
-/* Image */
-.page12-image-container {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-}
-
-.page12-image {
-  width: 505px;
-  /* max-width: 100%; */
+/* Image (Matches Page2-ipad) */
+.Page12-ipad {
+  width: 620px;
   border-radius: 12px;
   object-fit: contain;
-  border: none !important;
-  /* Removed blue border */
-  outline: none !important;
-  /* Removed outline */
-  box-shadow: none !important;
-  /* Ensure NO separate highlight */
 }
 
-/* Text on right */
-.page12-text {
-  flex: 1;
+/* Text on right (Matches Page2-text-right p) */
+.Page12-text-right {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-end;
+  /* Or center depending on exact need */
 }
 
-/* ---------- Responsive ---------- */
+.Page12-slogan-custom {
+  width: 480px;
+  /* Matches Page2 text width */
+  font-family: "Cambo", serif;
+  /* Keep Page12 font or switch to SF Pro if exact Page2 copy desired? User said 'properties of layout' */
+  font-size: 2.5rem;
+  /* Page12 original size */
+  line-height: 1.3;
+  color: #fff;
+  text-align: left;
+  /* Page2 text is left aligned in the right block usually? No, Page2 text-right p was just text. Let's check alignment. Page2 text-right p has no text-align set, defaults left. */
+}
+
+/* Note: Page2 text-right p font-size is 29px. Page12 was 2.5rem (~40px). 
+   User said "similar ... in terms of the properties of layout". 
+   I will keep Page12 font size but respect the WIDTH constraint (480px). 
+*/
+
+
+/* Responsive (Matches Page2 media queries) */
 @media (max-width: 900px) {
-  .page12-bottom {
+  .Page12-inner-box {
+    padding: 30px 20px;
+  }
+
+  .Page12-content {
     flex-direction: column;
     text-align: center;
     gap: 40px;
   }
 
-  .page12-image {
-    width: 100%;
-    max-width: 400px;
+  .Page12-heading-custom {
+    font-size: 24px;
+    line-height: 32px;
   }
 
-  .page12-slogan-custom {
-    font-size: 2rem;
-    width: 100%;
+  .Page12-subtext-custom {
+    font-size: 20px;
   }
 
-  .page12-heading-custom {
-    font-size: 2rem;
-  }
-
-  .page12-subtext-custom {
-    font-size: 1.5rem;
-  }
-
-  .page12-buttons {
+  .store-buttons {
     flex-direction: column;
     align-items: center;
     gap: 16px;
   }
-}
 
-@media (max-width: 480px) {
-  .page12-heading-custom {
-    font-size: 1.8rem;
+  .Page12-ipad {
+    width: 100%;
+    max-width: 400px;
   }
 
-  .page12-slogan-custom {
-    font-size: 1.5rem;
+  .Page12-slogan-custom {
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
   }
 }

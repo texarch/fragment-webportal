@@ -1,5 +1,5 @@
 /* Wrapper with white background */
-.subscribe-bg-layer {
+.subscribe-bg-layer-10 {
   background-color: white;
   padding: 20px;
   width: 100%;
@@ -10,8 +10,8 @@
 }
 
 /* Outer yellow section */
-.subscribe-section {
-  background-color: #fef7ab;
+.subscribe-section-10 {
+  background-color: #FEF7AB;
   padding: 80px 40px;
   border-radius: 20px;
   display: flex;
@@ -21,26 +21,26 @@
 }
 
 /* Inner container */
-.subscribe-container {
+.subscribe-container-10 {
   text-align: center;
   font-family: "Cambo", serif;
 }
 
-.subscribe-title {
+.subscribe-title-10 {
   font-size: 4rem;
   font-weight: normal;
   color: #000;
   margin-bottom: 10px;
 }
 
-.subscribe-subtitle {
+.subscribe-subtitle-10 {
   font-size: 1.6rem;
   color: #000;
   margin-bottom: 40px;
 }
 
 /* White box containing input + button */
-.subscribe-box {
+.subscribe-box-10 {
   width: 768px;
   max-width: 100%;
   background: #fff;
@@ -54,7 +54,7 @@
 }
 
 /* Input box */
-.subscribe-input {
+.subscribe-input-10 {
   flex: 1;
   border: none;
   padding: 20px;
@@ -68,7 +68,7 @@
 }
 
 /* Black subscribe button */
-.subscribe-btn {
+.subscribe-btn-10 {
   background: #2f333a;
   color: white;
   padding: 20px 48px;
@@ -89,46 +89,46 @@
   transition: 0.3s ease;
 }
 
-.subscribe-btn:hover {
+.subscribe-btn-10:hover {
   background-color: #42464e;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-  .subscribe-section {
+  .subscribe-section-10 {
     padding: 60px 20px;
   }
 
-  .subscribe-title {
+  .subscribe-title-10 {
     font-size: 3rem;
   }
 
-  .subscribe-subtitle {
+  .subscribe-subtitle-10 {
     font-size: 1.2rem;
   }
 
-  .subscribe-box {
+  .subscribe-box-10 {
     width: 100%;
   }
 }
 
 @media (max-width: 600px) {
-  .subscribe-title {
+  .subscribe-title-10 {
     font-size: 2.5rem;
   }
 
-  .subscribe-box {
+  .subscribe-box-10 {
     flex-direction: column;
     border-radius: 20px;
   }
 
-  .subscribe-btn {
+  .subscribe-btn-10 {
     width: 100%;
     border-radius: 0 0 20px 20px;
     padding: 16px;
   }
 
-  .subscribe-input {
+  .subscribe-input-10 {
     border-radius: 20px 20px 0 0;
     width: 100%;
     text-align: center;

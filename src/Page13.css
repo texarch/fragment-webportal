@@ -39,7 +39,7 @@
   justify-content: center;
   gap: 22px;
   /* Increased gap like reference */
-  margin-bottom: 60px;
+  margin-bottom: 10px;
 }
 
 .page13-header-text {
@@ -76,12 +76,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 40px 0;
+  margin: 5px 0;
 }
 
 .page13-image {
   width: 100%;
-  max-width: 780px;
+  max-width: 1200px;
   height: auto;
 }
 

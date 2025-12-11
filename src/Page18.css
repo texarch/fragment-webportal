@@ -4,7 +4,7 @@
   justify-content: space-between;
   background: #CFF9FC;
   text-align: center;
-  padding: 80px 20px 0;
+  padding: 80px 0 0;
   position: relative;
   overflow: hidden;
   width: 100%;
@@ -75,8 +75,7 @@
 }
 
 .desktop-preview {
-  width: 90%;
-  max-width: 1100px;
+  width: 100%;
   height: auto;
   border-radius: 20px;
   position: relative;
@@ -86,7 +85,7 @@
 /* Mobile Responsive */
 @media (max-width: 768px) {
   .page18 {
-    padding: 60px 10px;
+    padding: 60px 0;
     height: auto;
     min-height: auto;
   }
