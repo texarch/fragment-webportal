@@ -1,11 +1,11 @@
 import { useState } from 'react';
-import curiousImage from '../curious-illustration.png';
+import curiousImage from '../assets/curious-illustration.png';
 import './Demo.css';
 
 
-import InstaIcon from '../insta.png';       
-import LinkedInIcon from '../linkedin.png';
-import EmailIcon from '../email.png';
+import InstaIcon from '../assets/insta.png';       
+import LinkedInIcon from '../assets/linkedin.png';
+import EmailIcon from '../assets/email.png';
 
 const REACT_APP_API_URL="https://fragment.thefragment.app/website"
 
@@ -278,3 +278,4 @@ const Demo = () => {
 };
 
 export default Demo;
+

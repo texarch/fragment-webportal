@@ -1,7 +1,7 @@
 // import React from 'react';
 // import './Page14.css';
-// import page1bg from './page1bg.png';
-// import page14 from './page14a.png';
+// import page1bg from './assets/page1bg.png';
+// import page14 from './assets/page14a.png';
 
 
 // const Page14 = () => {
@@ -32,12 +32,12 @@
 import React from "react";
 import "./Page14.css";
 
-import playBadge from "./playstore_button.png";
-import appBadge from "./Appstore_button.png";
-import globeIcon from "./Icon set_Page5.png";
+import playBadge from "./assets/playstore_button.png";
+import appBadge from "./assets/Appstore_button.png";
+import globeIcon from "./assets/Icon set_Page5.png";
 
-import googleCalBtn from "./Button_download_Googlecalendars.png";
-import appleCalBtn from "./Button_download_Applecalendar.png";
+import googleCalBtn from "./assets/Button_download_Googlecalendars.png";
+import appleCalBtn from "./assets/Button_download_Applecalendar.png";
 
 const Page14 = () => {
   return (
@@ -118,5 +118,7 @@ const Page14 = () => {
 };
 
 export default Page14;
+
+
 
 

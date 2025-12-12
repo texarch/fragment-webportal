@@ -28,7 +28,7 @@ const Page19 = () => {
           <form className="subscribe-box-19" onSubmit={handleSubmit}>
             <input
               type="email"
-              className="subscribe-input"
+              className="subscribe-input-19"
               placeholder="Enter Email.."
               value={email}
               onChange={(e) => setEmail(e.target.value)}
@@ -46,3 +46,4 @@ const Page19 = () => {
 };
 
 export default Page19;
+

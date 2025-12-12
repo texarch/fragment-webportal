@@ -149,12 +149,29 @@
 
 /* Responsive */
 @media (max-width: 768px) {
+  .fragment-card {
+    padding: 24px;
+  }
+
+  .heading-row {
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+
   .heading-creator {
     font-size: 38px;
+    line-height: 48px;
   }
 
   .sub-text {
     font-size: 24px;
+    line-height: 32px;
+  }
+
+  .store-row {
+    flex-direction: column;
+    gap: 16px;
   }
 
   .store-image,
@@ -162,7 +179,21 @@
     height: 46px;
   }
 
+  .calendar-sync-container {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    border-radius: 16px;
+    padding: 24px 16px;
+  }
+
   .calendar-sync-heading {
-    font-size: 28px;
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .calendar-sync-buttons {
+    flex-direction: column;
+    gap: 16px;
   }
 }

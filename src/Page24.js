@@ -1,7 +1,7 @@
 // import React from 'react';
-// import Insta from './insta.png';       
-// import LinkedIn from './linkedin.png';
-// import email from './email.png';   
+// import Insta from './assets/insta.png';       
+// import LinkedIn from './assets/linkedin.png';
+// import email from './assets/email.png';   
 // import './Page24.css'; 
 
 // const Page24 = () => {
@@ -45,8 +45,8 @@
 // export default Page24;
 // import React, { useState } from "react";
 // import "./Page11.css";
-// import playstore from './playstore.png';
-// import a from './a.png'; 
+// import playstore from './assets/playstore.png';
+// import a from './assets/a.png'; 
 
 // const Page11 = () => {
 //   const [popupPlayVisible, setPopupPlayVisible] = useState(false);
@@ -107,7 +107,7 @@
 
 // import React from "react";
 // import "./Page24.css";
-// import connections_page11 from "./connections_page11.png";
+// import connections_page11 from "./assets/connections_page11.png";
 
 // const Page24 = () => {
 //   return (
@@ -143,4 +143,6 @@
 // };
 
 // export default Page24;
+
+
 

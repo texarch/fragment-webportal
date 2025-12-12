@@ -81,19 +81,72 @@
 
 /******** Bubble Floating ********/
 @keyframes float {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-12px); }
-  100% { transform: translateY(0); }
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
 }
 
 /******** RESPONSIVE ********/
 @media (max-width: 980px) {
+  .page16-section {
+    height: auto;
+    padding: 60px 0;
+  }
+
   .page16-content {
     flex-direction: column;
     text-align: center;
     gap: 50px;
+    width: 90%;
   }
+
   .page16-image {
-    width: 300px;
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .page16-title {
+    font-size: 4rem;
+    line-height: normal;
+  }
+
+  .page16-subtitle {
+    font-size: 2rem;
+  }
+
+  .page16-to {
+    margin: 15px 0 20px;
+  }
+
+  .page16-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .page16-list li {
+    font-size: 1.2rem;
+    text-align: left;
+    width: 100%;
+    max-width: 400px;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .page16-title {
+    font-size: 3rem;
+  }
+
+  .page16-subtitle {
+    font-size: 1.8rem;
   }
 }

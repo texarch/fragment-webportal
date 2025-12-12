@@ -6,24 +6,29 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 80px 40px 20px 40px;
+  /* padding: 80px 40px 20px 40px; */
+  padding: 0px 40px 20px 40px;
   box-sizing: border-box;
 }
+
 /* CONTENT */
 .page1-content {
   display: flex;
-  align-items: center;   /* IMPORTANT — vertically align mockup */
+  align-items: center;
+  /* IMPORTANT — vertically align mockup */
   justify-content: space-between;
   width: 99%;
   max-width: 1500px;
   gap: 80px;
 }
+
 /* LEFT SIDE */
 .page1-left {
   flex: 1;
   display: flex;
   flex-direction: column;
 }
+
 /* TABS */
 .page1-tabs {
   display: flex;
@@ -31,6 +36,7 @@
   gap: 32px;
   margin-bottom: 35px;
 }
+
 .organiser-tab,
 .individual-tab {
   width: 224px;
@@ -43,28 +49,33 @@
   border: none;
   background: transparent;
 }
+
 .organiser-tab.active {
   background: #404B5E;
 }
+
 .organiser-tab span {
   font-family: "Cambo", serif;
   font-size: 40px;
   color: white;
 }
+
 .individual-tab span {
   font-family: "Cambo", serif;
   font-size: 36px;
   color: black;
 }
+
 /* HEADING */
 .page1-heading {
   width: 650px;
   font-family: "Cambo", serif;
-  font-size: 50px;
-  line-height: 62px;
+  font-size: 40px;
+  line-height: 50px;
   color: black;
   margin-bottom: 20px;
 }
+
 /* DIVIDER */
 .page1-divider {
   width: 550px;
@@ -72,6 +83,7 @@
   background: black;
   margin-bottom: 25px;
 }
+
 /* SUBTEXT */
 .page1-subtext {
   width: 600px;
@@ -81,6 +93,7 @@
   margin-bottom: 40px;
   color: black;
 }
+
 /* BUTTON */
 .demo-btn {
   width: 240px;
@@ -94,20 +107,115 @@
   box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.15);
   margin-left: 130px;
 }
+
 /* RIGHT SIDE */
 .page1-right {
   flex: 1.1;
   display: flex;
-  justify-content: center;
-  align-items: center;     /* center vertically */
-  padding-top: 40px;       /* adds top spacing */
-  padding-bottom: 30px;    /* adds bottom spacing */
+  justify-content: flex-start;
+  align-items: center;
+  /* center vertically */
+  padding-top: 40px;
+  /* adds top spacing */
+  padding-bottom: 30px;
+  margin-left: -100px;
+  /* adds bottom spacing */
 }
+
 /* IMAGE MATCHES THE SCREENSHOT */
 .page1-single-img {
   width: 100%;
-  max-width: 820px;        /* match screenshot width */
+  max-width: 820px;
+  /* match screenshot width */
   height: auto;
-  transform: scale(1.2);  /* slightly enlarge to screenshot size */
+  transform: scale(1.2);
+  /* slightly enlarge to screenshot size */
   object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .page1-wrapper {
+    padding: 40px 20px;
+    height: auto;
+    min-height: auto;
+  }
+
+  .page1-content {
+    flex-direction: column;
+    gap: 40px;
+    width: 100%;
+  }
+
+  .page1-left {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .page1-tabs {
+    gap: 16px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .organiser-tab,
+  .individual-tab {
+    width: auto;
+    padding: 0 20px;
+    height: 48px;
+  }
+
+  .organiser-tab span {
+    font-size: 28px;
+  }
+
+  .individual-tab span {
+    font-size: 24px;
+  }
+
+  .page1-heading {
+    width: 100%;
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .page1-divider {
+    width: 100%;
+    margin: 0 auto 20px auto;
+  }
+
+  .page1-subtext {
+    width: 100%;
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
+
+  .demo-btn {
+    margin-left: 0;
+    width: 100%;
+    max-width: 300px;
+    height: 56px;
+    font-size: 18px;
+  }
+
+  .page1-right {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .mockup-wrapper {
+    width: 100%;
+  }
+
+  .w-\[959px\] {
+    width: 100%;
+    height: auto;
+  }
+
+  .page1-single-img {
+    transform: none;
+    max-width: 100%;
+  }
 }

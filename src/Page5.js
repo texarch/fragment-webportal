@@ -1,12 +1,12 @@
 import React from "react";
 import "./Page5.css";
 
-import Button_download_playstore from "./Button_download_playstore.png";
-import Button_download_Appstore from "./Button_download_Appstore.png";
-import Icon_set_Page5 from "./Icon set_Page5.png";
+import Button_download_playstore from "./assets/Button_download_playstore.png";
+import Button_download_Appstore from "./assets/Button_download_Appstore.png";
+import Icon_set_Page5 from "./assets/Icon set_Page5.png";
 
-import Button_download_Googlecalendars from "./Button_download_Googlecalendars.png";
-import Button_download_Applecalendar from "./Button_download_Applecalendar.png";
+import Button_download_Googlecalendars from "./assets/Button_download_Googlecalendars.png";
+import Button_download_Applecalendar from "./assets/Button_download_Applecalendar.png";
 
 const Page5 = () => {
   return (
@@ -85,3 +85,5 @@ const Page5 = () => {
 };
 
 export default Page5;
+
+

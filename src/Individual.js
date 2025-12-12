@@ -9,10 +9,10 @@ import Page18 from './Page18';
 import Page19 from './Page19';
 import Page20 from './Page20';
 
-const Individual = () => {
+const Individual = ({ setView }) => {
   return (
     <div>
-      <Page11 />
+      <Page11 setView={setView} />
       <Page12 />
       <Page13 />
       <Page14 />
@@ -26,3 +26,5 @@ const Individual = () => {
 };
 
 export default Individual;
+
+

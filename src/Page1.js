@@ -1,9 +1,9 @@
 import React from "react";
 import "./Page1.css";
-import page1Image from "./page1(image).png";
+import page1Image from "./assets/page1(image).png";
 import { useNavigate } from "react-router-dom";
 
-const Page1 = () => {
+const Page1 = ({ setView }) => {
   const navigate = useNavigate();
 
   return (
@@ -17,10 +17,10 @@ const Page1 = () => {
 
             {/* Tabs */}
             <div className="page1-tabs">
-              <button className="organiser-tab active" onClick={() => navigate("/organiser")}>
+              <button className="organiser-tab active" onClick={() => setView('organiser')}>
                 <span>Organiser</span>
               </button>
-              <button className="individual-tab" onClick={() => navigate("/individual")}>
+              <button className="individual-tab" onClick={() => setView('individual')}>
                 <span>Individual</span>
               </button>
             </div>
@@ -56,7 +56,7 @@ const Page1 = () => {
           {/* RIGHT SIDE */}
           <div className="page1-right">
             <div className="mockup-wrapper">
-              <div className="w-[959px] h-[596px] relative">
+              <div className="w-[1000px] relative">
                 <img
                   src={page1Image}
                   alt="Page 1 Visual"
@@ -73,3 +73,4 @@ const Page1 = () => {
 };
 
 export default Page1;
+

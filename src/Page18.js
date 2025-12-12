@@ -1,6 +1,6 @@
 import React from "react";
 import "./Page18.css";
-import LaptopPage18 from "./Individual_Page18.png";
+import LaptopPage18 from "./assets/Individual_Page18.png";
 
 const Page18 = () => {
   return (
@@ -32,3 +32,5 @@ const Page18 = () => {
 };
 
 export default Page18;
+
+

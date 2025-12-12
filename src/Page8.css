@@ -73,3 +73,56 @@
   width: auto;
   transform: translateX(20px);
 }
+
+@media (max-width: 900px) {
+  .page8-container {
+    height: auto;
+    flex-direction: column;
+    padding: 40px 20px 0 20px;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .text-block {
+    align-items: center;
+  }
+
+  .title-wrapper {
+    align-items: center;
+  }
+
+  .title-line-1,
+  .title-line-2 {
+    text-align: center;
+    font-size: 32px;
+  }
+
+  .larger {
+    font-size: 40px;
+  }
+
+  .image-wrapper {
+    width: 100%;
+    height: auto;
+    justify-content: center;
+  }
+
+  .phone-img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    transform: none;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .title-line-1,
+  .title-line-2 {
+    font-size: 24px;
+  }
+
+  .larger {
+    font-size: 32px;
+  }
+}

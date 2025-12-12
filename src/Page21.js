@@ -1,7 +1,7 @@
 import React from 'react';
 import './Page21.css';
-import page21a from './page21a.png';
-import page21b from './page21b.png'; 
+import page21a from './assets/page21a.png';
+import page21b from './assets/page21b.png'; 
 
 const Page21 = () => {
   return (
@@ -30,3 +30,5 @@ const Page21 = () => {
 };
 
 export default Page21;
+
+

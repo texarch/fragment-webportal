@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import imgA from './22a.png';
-import imgB from './22b.png';
-import imgC from './22c.png';
+import imgA from './assets/22a.png';
+import imgB from './assets/22b.png';
+import imgC from './assets/22c.png';
 import './Page22.css';
 
 const Page22 = () => {
@@ -47,3 +47,5 @@ const Page22 = () => {
 };
 
 export default Page22;
+
+

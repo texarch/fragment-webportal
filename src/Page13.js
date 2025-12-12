@@ -1,15 +1,15 @@
 import React from "react";
 import "./Page13.css";
 
-import logo from "./logo0.png";
+import logo from "./assets/logo0.png";
 
-import Page13_Create from "./Page13_Create.png";
-import Page13_Plan from "./Page13_Plan.png";
-import Page13_Follow from "./Page13_Follow.png";
-import Page13_Get from "./Page13_Get.png";
-import Page13_Book from "./Page13_Book.png";
-import Page13_Comment from "./Page13_Comment.png";
-import Page13_View from "./page13_View.png";
+import Page13_Create from "./assets/Page13_Create.png";
+import Page13_Plan from "./assets/Page13_Plan.png";
+import Page13_Follow from "./assets/Page13_Follow.png";
+import Page13_Get from "./assets/Page13_Get.png";
+import Page13_Book from "./assets/Page13_Book.png";
+import Page13_Comment from "./assets/Page13_Comment.png";
+import Page13_View from "./assets/page13_View.png";
 
 const Page13 = () => {
   return (
@@ -36,3 +36,5 @@ const Page13 = () => {
 };
 
 export default Page13;
+
+

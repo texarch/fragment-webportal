@@ -1,9 +1,9 @@
 import React from 'react';
 import './Pricing.css';
-import comingSoonImg from '../comingsoon.jpg';
-import Insta0 from '../insta.png';       
-import LinkedIn0 from '../linkedin.png';
-import YouTube0 from '../email.png';
+import comingSoonImg from '../assets/comingsoon.jpg';
+import Insta0 from '../assets/insta.png';       
+import LinkedIn0 from '../assets/linkedin.png';
+import YouTube0 from '../assets/email.png';
 
 const Pricing = () => {
   return (
@@ -58,3 +58,5 @@ const Pricing = () => {
 };
 
 export default Pricing;
+
+

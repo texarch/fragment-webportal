@@ -1,7 +1,7 @@
 import React from "react";
 import "./Page6.css";
-import winkEni from "./winkEni_Page6.png";
-import blueTickBoxImg from "./blue_tick_box.png";
+import winkEni from "./assets/winkEni_Page6.png";
+import blueTickBoxImg from "./assets/blue_tick_box.png";
 
 const Page6 = () => {
   return (
@@ -52,3 +52,5 @@ const Page6 = () => {
 };
 
 export default Page6;
+
+

@@ -13,14 +13,14 @@
    BLUE CONTAINER (1678 × 925)
 ================================ */
 .page3-content {
-  width: 1678px;
-  height: 925px;
+  width: 1200px;
+  height: 600px;
   background: #E8F6FB;
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-radius: 12px;
-  padding: 60px;
+  padding: 40px;
   box-sizing: border-box;
 }
 
@@ -28,7 +28,8 @@
    LEFT TEXT SECTION
 ================================ */
 .page3-text-section {
-  width: 730px;     /* Your exact text block size */
+  width: 730px;
+  /* Your exact text block size */
   height: 268px;
   display: flex;
   flex-direction: column;
@@ -79,7 +80,52 @@
 
 .page3-laptop-image {
   width: 976.77px;
-  height: auto; /* keeps proportions */
+  height: auto;
+  /* keeps proportions */
   max-width: 100%;
-  filter: drop-shadow(0px 8px 18px rgba(0,0,0,0.25));
+  filter: drop-shadow(0px 8px 18px rgba(0, 0, 0, 0.25));
+}
+
+@media (max-width: 1024px) {
+  .page3-content {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    padding: 40px 20px;
+    gap: 40px;
+  }
+
+  .page3-text-section {
+    width: 100%;
+    height: auto;
+    align-items: center;
+    text-align: center;
+  }
+
+  .page3-heading-bar {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .page3-heading {
+    font-size: 40px;
+    line-height: 50px;
+  }
+
+  .page3-subtext {
+    font-size: 18px;
+    max-width: 500px;
+  }
+
+  .page3-laptop-image {
+    width: 100%;
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 480px) {
+  .page3-heading {
+    font-size: 32px;
+    line-height: 40px;
+  }
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import "./Page8.css";
-import phoneEmojiImage from "./phone_emoji_image_page8.png";
+import phoneEmojiImage from "./assets/phone_emoji_image_page8.png";
 
 const Page8 = () => {
   return (
@@ -39,3 +39,4 @@ const Page8 = () => {
 };
 
 export default Page8;
+

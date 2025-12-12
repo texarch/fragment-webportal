@@ -24,7 +24,8 @@
 .page17-phone-img {
   height: 100%;
   width: auto;
-  transform: translateX(-20px); /* slight shift left like page8 has to right */
+  transform: translateX(-20px);
+  /* slight shift left like page8 has to right */
 }
 
 /* TEXT RIGHT */
@@ -71,4 +72,57 @@
 /* Cambo font */
 .cambo {
   font-family: "Cambo", serif !important;
+}
+
+@media (max-width: 900px) {
+  .page17-container {
+    height: auto;
+    flex-direction: column-reverse;
+    padding: 40px 20px 0 20px;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .page17-text-block {
+    align-items: center;
+  }
+
+  .page17-title-wrapper {
+    align-items: center;
+  }
+
+  .page17-title-line-1,
+  .page17-title-line-2 {
+    text-align: center;
+    font-size: 32px;
+  }
+
+  .page17-larger {
+    font-size: 40px;
+  }
+
+  .page17-image-wrapper {
+    width: 100%;
+    height: auto;
+    justify-content: center;
+  }
+
+  .page17-phone-img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    transform: none;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .page17-title-line-1,
+  .page17-title-line-2 {
+    font-size: 24px;
+  }
+
+  .page17-larger {
+    font-size: 32px;
+  }
 }

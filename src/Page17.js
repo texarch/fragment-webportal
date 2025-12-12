@@ -1,6 +1,6 @@
 import React from "react";
 import "./Page17.css";
-import Individual_Page17 from "./Individual_Page17.png";
+import Individual_Page17 from "./assets/Individual_Page17.png";
 
 const Page17 = () => {
   return (
@@ -38,3 +38,5 @@ const Page17 = () => {
 };
 
 export default Page17;
+
+
