@@ -28,6 +28,7 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
+  text-align: center;
 }
 
 .Page12-heading-custom {
@@ -94,7 +95,7 @@
 /* Text on right (Matches Page2-text-right p) */
 .Page12-text-right {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   /* Or center depending on exact need */
 }
 
@@ -107,7 +108,7 @@
   /* Page12 original size */
   line-height: 1.3;
   color: #fff;
-  text-align: left;
+  text-align: center;
   /* Page2 text is left aligned in the right block usually? No, Page2 text-right p was just text. Let's check alignment. Page2 text-right p has no text-align set, defaults left. */
 }
 

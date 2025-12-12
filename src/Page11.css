@@ -66,8 +66,8 @@
 .title-text {
   width: 650px;
   font-family: "Cambo", serif;
-  font-size: 50px;
-  line-height: 62px;
+  font-size: 40px;
+  line-height: 50px;
   color: black;
   margin-bottom: 20px;
 }
@@ -94,10 +94,11 @@
 .right-images {
   flex: 1.1;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   padding-top: 40px;
   padding-bottom: 30px;
+  margin-left: -100px;
 }
 
 .main-img {
@@ -170,6 +171,7 @@
   .right-images {
     padding-top: 0;
     padding-bottom: 0;
+    margin-left: -50px;
   }
 
   .main-img {

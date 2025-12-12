@@ -56,7 +56,7 @@ const Page1 = ({ setView }) => {
           {/* RIGHT SIDE */}
           <div className="page1-right">
             <div className="mockup-wrapper">
-              <div className="w-[959px] h-[596px] relative">
+              <div className="w-[1000px] relative">
                 <img
                   src={page1Image}
                   alt="Page 1 Visual"

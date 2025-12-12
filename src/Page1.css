@@ -70,8 +70,8 @@
 .page1-heading {
   width: 650px;
   font-family: "Cambo", serif;
-  font-size: 50px;
-  line-height: 62px;
+  font-size: 40px;
+  line-height: 50px;
   color: black;
   margin-bottom: 20px;
 }
@@ -112,12 +112,13 @@
 .page1-right {
   flex: 1.1;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   /* center vertically */
   padding-top: 40px;
   /* adds top spacing */
   padding-bottom: 30px;
+  margin-left: -100px;
   /* adds bottom spacing */
 }
 
