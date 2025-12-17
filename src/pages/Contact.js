@@ -13,7 +13,7 @@ import InstaIcon from '../assets/insta.png';
 import LinkedInIcon from '../assets/linkedin.png';
 import EmailIcon from '../assets/email.png';
 
-const REACT_APP_API_URL='https://fragment.thefragment.app/website'
+const REACT_APP_API_URL='https://fragment.thefragment.app/dev/website'
 
 
 function Contact() {

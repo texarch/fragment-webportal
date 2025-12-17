@@ -1,9 +1,12 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./Blog.css";
 import BlogImage from "../../assets/Blog_Page_Image.png";
 import BgPattern from "../../assets/background-pattern.png";
 
 const Blog = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="blog-wrapper">
       {/* Navbar spacing */}
@@ -28,7 +31,12 @@ const Blog = () => {
             sit amet, consectetur vitae sollicitudin massa ......
           </p>
 
-          <button className="read-more-btn">Read More</button>
+          <button
+            className="read-more-btn"
+            onClick={() => navigate('/blog/post')}
+          >
+            Read More
+          </button>
         </div>
 
         {/* Right image */}
