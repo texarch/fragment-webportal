@@ -3,9 +3,12 @@ import { useNavigate } from "react-router-dom";
 import "./Blog.css";
 import BlogImage from "../../assets/Blog_Page_Image.png";
 import BgPattern from "../../assets/background-pattern.png";
+import { blogData } from "./blogData";
 
 const BlogHero = () => {
     const navigate = useNavigate();
+
+    const latestBlog = blogData[0];
 
     return (
         <div className="blog-wrapper">
@@ -23,17 +26,15 @@ const BlogHero = () => {
 
                 {/* Left content */}
                 <div className="blog-content">
-                    <h1>Title of the most recent Blog?!</h1>
+                    <h1>{latestBlog.title}</h1>
 
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec
-                        nisi elit. Pellentesque vitae sollicitudin massa Lorem ipsum dolor
-                        sit amet, consectetur vitae sollicitudin massa ......
+                        {latestBlog.summary}
                     </p>
 
                     <button
                         className="read-more-btn"
-                        onClick={() => navigate('/blog/post')}
+                        onClick={() => navigate(`/blog/post/${latestBlog.id}`)}
                     >
                         Read More
                     </button>
@@ -41,7 +42,7 @@ const BlogHero = () => {
 
                 {/* Right image */}
                 <div className="blog-image">
-                    <img src={BlogImage} alt="Blog" />
+                    <img src={latestBlog.image} alt="Blog" />
                 </div>
             </section>
         </div>

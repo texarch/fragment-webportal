@@ -1,48 +1,44 @@
 import React from "react";
 import "./blog_page2.css";
 import blogImage from "../../assets/Blog_Page_Image.png";
+import { blogData } from "./blogData";
+import { useNavigate } from "react-router-dom";
 
 const BlogPage2 = () => {
+  const navigate = useNavigate();
+  // We want the 2nd latest blog (index 1)
+  const secondLatestBlog = blogData.length > 1 ? blogData[1] : null;
+
+
+
+  if (!secondLatestBlog) {
+    return null; // or some placeholder if no previous blog exists
+  }
+
   return (
     <div className="blog-page-wrapper">
-      {/* CURRENT BLOG */}
+      {/* CURRENT BLOG (Actually 2nd Latest in this flow) */}
       <div className="blog-card">
         <div className="blog-image-section">
-          <img src={blogImage} alt="Blog" />
+          <img src={secondLatestBlog.image} alt="Blog" />
         </div>
 
         <div className="blog-content-section">
-          <h2>Tips / tricks to use</h2>
+          <h2>{secondLatestBlog.title}</h2>
 
-          <ul>
-            <li>trick 1</li>
-            <li>trick 1</li>
-            <li>trick 1</li>
-            <li>trick 1</li>
-            <li>trick 1</li>
-          </ul>
+          <p>{secondLatestBlog.summary}</p>
 
-          <button className="read-more-btn">Read More</button>
+          <button
+            className="read-more-btn"
+            onClick={() => navigate(`/blog/post/${secondLatestBlog.id}`)}
+          >
+            Read More
+          </button>
         </div>
       </div>
 
-      {/* PREVIOUS BLOG */}
-      <div className="previous-blog">
-        <h3>Previous Blog</h3>
+      {/* PREVIOUS BLOG (Actually 3rd Latest in this flow) */}
 
-        <div className="previous-blog-card">
-          <img src={blogImage} alt="Previous Blog" />
-
-          <div className="previous-blog-content">
-            <h4>Previous blog title</h4>
-            <p>
-              Short description of the previous blog goes here so users can
-              quickly understand what it is about.
-            </p>
-            <button className="read-more-btn small">Read More</button>
-          </div>
-        </div>
-      </div>
     </div>
   );
 };
