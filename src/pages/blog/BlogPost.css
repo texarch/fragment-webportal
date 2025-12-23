@@ -48,3 +48,28 @@
     padding-left: 16px;
     margin: 20px 0;
 }
+
+.back-button-container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 20px;
+    align-self: center;
+    margin-top: -40px;
+}
+
+.back-button {
+    background: none;
+    border: none;
+    color: #555;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    font-family: "SF Pro Display", sans-serif;
+    transition: color 0.2s ease;
+}
+
+.back-button:hover {
+    color: #000;
+}

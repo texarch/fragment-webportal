@@ -70,5 +70,65 @@ export const blogData = [
       <h3>Best Practices</h3>
       <p>Use Flexbox for alignment within a container, and Grid for the overall page structure.</p>
     `
+  },
+  {
+    id: 4,
+    title: "The Rise of TypeScript",
+    date: "September 15, 2025",
+    author: "Michael Brown",
+    image: BlogImage,
+    summary: "Why TypeScript has become the industry standard for large-scale JavaScript applications.",
+    content: `
+      <h2>Type Safety Matters</h2>
+      <p>TypeScript adds static typing to JavaScript, catching errors at compile time rather than runtime. This leads to more robust and maintainable codebases.</p>
+      <h3>Adoption</h3>
+      <p>Major frameworks like React, Angular, and Vue have embraced TypeScript, making it an essential skill for modern developers.</p>
+    `
+  },
+  {
+    id: 5,
+    title: "Optimizing Web Performance",
+    date: "August 20, 2025",
+    author: "Sarah Wilson",
+    image: BlogImage,
+    summary: "Techniques and strategies to make your web applications load faster and run smoother.",
+    content: `
+      <h2>Speed is Key</h2>
+      <p>User experience is directly tied to performance. Slow websites lead to higher bounce rates and lower conversion.</p>
+      <h3>Tips</h3>
+      <ul>
+        <li>Lazy load images and components</li>
+        <li>Minimize bundle sizes</li>
+        <li>Use CDNs</li>
+      </ul>
+    `
+  },
+  {
+    id: 6,
+    title: "Introduction to GraphQL",
+    date: "July 05, 2025",
+    author: "David Lee",
+    image: BlogImage,
+    summary: "A beginner's look at GraphQL and how it compares to traditional REST APIs.",
+    content: `
+      <h2>What is GraphQL?</h2>
+      <p>GraphQL is a query language for your API. It allows clients to request exactly the data they need, nothing more, nothing less.</p>
+      <h3>Benefits</h3>
+      <p>Avoids over-fetching and under-fetching data, providing a more efficient way to manage data in your applications.</p>
+    `
+  },
+  {
+    id: 7,
+    title: "Modern UI Design Trends",
+    date: "June 12, 2025",
+    author: "Emma Davis",
+    image: BlogImage,
+    summary: "Exploring the latest aesthetic trends in web design for 2025.",
+    content: `
+      <h2>User-Centric Design</h2>
+      <p>Modern design focuses on usability and accessibility while maintaining a visually stunning aesthetic.</p>
+      <h3>Trends</h3>
+      <p>Glassmorphism, dark mode, and micro-interactions continue to dominate the landscape.</p>
+    `
   }
 ];
