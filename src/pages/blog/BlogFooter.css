@@ -9,18 +9,18 @@
 }
 
 .blog-footer-content {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-areas:
+    "connect . ."
+    "contact middle right";
   justify-content: center;
-  gap: 80px;
-  flex-wrap: wrap;
+  gap: 0px 80px;
   margin-bottom: 30px;
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
   text-align: left;
-  /* Restored to left */
-  align-items: flex-start;
-  /* Restored to flex-start */
 }
 
 .blog-footer-column {
@@ -29,11 +29,23 @@
   gap: 10px;
 }
 
-.blog-footer-left {
+.blog-footer-connect {
+  grid-area: connect;
   align-items: flex-start;
-  /* Restored to left */
+}
+
+.blog-footer-left {
+  grid-area: contact;
+  align-items: flex-start;
   gap: 2px;
-  /* Set gap to 2px to match other columns for contact info */
+}
+
+.blog-footer-middle {
+  grid-area: middle;
+}
+
+.blog-footer-right {
+  grid-area: right;
 }
 
 .blog-connect-text {
@@ -65,11 +77,6 @@
   gap: 2px;
 }
 
-/* Restored .blog-offset-top */
-.blog-offset-top {
-  margin-top: 85px;
-}
-
 .blog-footer-middle a,
 .blog-footer-right a {
   color: #111;
@@ -92,6 +99,7 @@
 
 @media (max-width: 768px) {
   .blog-footer-content {
+    display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
@@ -102,8 +110,9 @@
     align-items: center;
   }
 
-  /* Reset offset for mobile */
-  .blog-offset-top {
-    margin-top: 0;
+  /* Reset alignment for connection block on mobile */
+  .blog-footer-connect,
+  .blog-footer-left {
+    align-items: center;
   }
 }
