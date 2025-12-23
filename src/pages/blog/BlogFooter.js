@@ -12,7 +12,21 @@ const BlogFooter = () => {
                         src={connections_page11}
                         alt="Social media icons"
                         className="blog-social-icons"
+                        useMap="#social-map"
                     />
+                    <map name="social-map">
+                        {/* Instagram (0-40px) */}
+                        <area shape="rect" coords="0,0,40,40" href="https://www.instagram.com/thefragment.app/" target="_blank" rel="noopener noreferrer" alt="Instagram" />
+
+                        {/* LinkedIn (40-80px) */}
+                        <area shape="rect" coords="40,0,80,40" href="https://www.linkedin.com/company/thefragmentapp/" target="_blank" rel="noopener noreferrer" alt="LinkedIn" />
+
+                        {/* Facebook (80-120px) - No link */}
+                        <area shape="rect" coords="80,0,120,40" alt="Facebook" />
+
+                        {/* YouTube (120-160px) */}
+                        <area shape="rect" coords="120,0,160,40" href="https://www.youtube.com/@thefragmentapp" target="_blank" rel="noopener noreferrer" alt="YouTube" />
+                    </map>
                     <p className="blog-email">hi@fragment.com</p>
                     <p className="blog-contact-info">Phone number</p>
                     <p className="blog-contact-info">Address</p>
