@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import "./Page19.css";
 
+const REACT_APP_API_URL = 'http://localhost:4000/website';
+
 const Page19 = () => {
   const [email, setEmail] = useState("");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     if (!email) {
@@ -12,8 +14,39 @@ const Page19 = () => {
       return;
     }
 
-    alert(`Subscribed with: ${email}`);
-    setEmail(""); // clear input after submit
+    const submitButton = e.target.querySelector('button[type="submit"]');
+    const originalText = submitButton.textContent;
+    submitButton.disabled = true;
+    submitButton.textContent = 'Subscribing...';
+
+    try {
+      const response = await fetch(`${REACT_APP_API_URL}/subscribe`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        alert(data.message || 'Thank you for subscribing!');
+        setEmail(""); // clear input after submit
+      } else {
+        if (response.status === 400 && data.message && data.message.includes('already subscribed')) {
+          alert('You are already subscribed to our newsletter!');
+        } else {
+          alert(data.message || 'Failed to subscribe. Please try again.');
+        }
+      }
+    } catch (error) {
+      console.error('Network error:', error);
+      alert('Network error. Please check your connection and try again.');
+    } finally {
+      submitButton.disabled = false;
+      submitButton.textContent = originalText;
+    }
   };
 
   return (

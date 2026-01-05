@@ -24,7 +24,7 @@ const Page5 = () => {
           Fragment Business helps keep your entire team on the same page!
         </p>
 
-        
+
         {/* <div className="website-row">
           <img src={Icon_set_Page5} alt="Website icon" className="website-icon-img" />
           <a href="https://www.business.thefragment.app" className="website-link" target="_blank" rel="noopener noreferrer">
@@ -65,16 +65,12 @@ const Page5 = () => {
               src={Button_download_Googlecalendars}
               alt="Google Calendars"
               className="calendar-sync-img"
-              onClick={() => window.open("https://calendar.google.com", "_blank")}
             />
 
             <img
               src={Button_download_Applecalendar}
               alt="Apple Calendars"
               className="calendar-sync-img"
-              onClick={() =>
-                window.open("https://support.apple.com/guide/calendar/welcome/mac", "_blank")
-              }
             />
           </div>
         </div>

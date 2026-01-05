@@ -22,7 +22,7 @@ const BlogFooter = () => {
                         <area shape="rect" coords="40,0,80,40" href="https://www.linkedin.com/company/thefragmentapp/" target="_blank" rel="noopener noreferrer" alt="LinkedIn" />
 
                         {/* Facebook (80-120px) - No link */}
-                        <area shape="rect" coords="80,0,120,40" alt="Facebook" />
+                        {/* <area shape="rect" coords="80,0,120,40" alt="Facebook" /> */}
 
                         {/* YouTube (120-160px) */}
                         <area shape="rect" coords="120,0,160,40" href="https://www.youtube.com/@thefragmentapp" target="_blank" rel="noopener noreferrer" alt="YouTube" />
