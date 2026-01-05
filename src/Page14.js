@@ -21,7 +21,7 @@
 //         </div>
 //       </div>
 //       <div className="page14-right-section">
-    
+
 //       </div>
 //     </div>
 //   );
@@ -62,24 +62,14 @@ const Page14 = () => {
             src={playBadge}
             alt="Play Store"
             className="store-badge"
-            onClick={() =>
-              window.open(
-                "https://play.google.com/store/apps/details?id=com.example.fragment",
-                "_blank"
-              )
-            }
+            onClick={() => window.open("https://play.google.com", "_blank")}
           />
 
           <img
             src={appBadge}
             alt="App Store"
             className="store-badge"
-            onClick={() =>
-              window.open(
-                "https://apps.apple.com/app/example-fragment/id00000000",
-                "_blank"
-              )
-            }
+            onClick={() => window.open("https://apps.apple.com", "_blank")}
           />
         </div>
       </div>
@@ -95,21 +85,12 @@ const Page14 = () => {
             src={googleCalBtn}
             alt="Google Calendars"
             className="calendar-download-btn"
-            onClick={() =>
-              window.open("https://calendar.google.com", "_blank")
-            }
           />
 
           <img
             src={appleCalBtn}
             alt="Apple Calendars"
             className="calendar-download-btn"
-            onClick={() =>
-              window.open(
-                "https://support.apple.com/guide/calendar/welcome/mac",
-                "_blank"
-              )
-            }
           />
         </div>
       </div>

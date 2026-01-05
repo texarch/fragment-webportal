@@ -59,11 +59,11 @@
   /* Same as Page2's implied spacing or Page12 original */
 }
 
-.store-btn img {
+.store-btn {
   height: 45px;
   /* Adjust if needed to match Page2's button size if distinct, else keep Page12's */
   cursor: pointer;
-
+  transition: transform 0.2s;
 }
 
 .store-badge {
@@ -71,7 +71,7 @@
   cursor: pointer;
 }
 
-.store-btn img:hover,
+.store-btn:hover,
 .store-badge:hover {
   transform: translateY(-3px);
 }

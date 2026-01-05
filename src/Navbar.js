@@ -50,7 +50,7 @@ const Navbar = () => {
         <div className="nav-links">
           <Link to="/about" onClick={() => setIsOpen(false)}>About</Link>
           <Link to="/pricing" onClick={() => setIsOpen(false)}>Pricing</Link>
-          <Link to="/blog" onClick={() => setIsOpen(false)}>Blog</Link>
+          {/* <Link to="/blog" onClick={() => setIsOpen(false)}>Blog</Link> */}
           <Link to="/contact" onClick={() => setIsOpen(false)}>Contact</Link>
           <Link to="/demo" onClick={() => setIsOpen(false)}>Demo</Link>
         </div>

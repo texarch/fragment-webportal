@@ -22,12 +22,18 @@ const Page12 = () => {
           </div>
 
           <div className="store-buttons">
-            <a href="#" className="store-btn">
-              <img src={PlayStoreButton} alt="Play Store" />
-            </a>
-            <a href="#" className="store-btn">
-              <img src={AppStoreButton} alt="App Store" />
-            </a>
+            <img
+              src={PlayStoreButton}
+              alt="Play Store"
+              className="store-btn"
+              onClick={() => window.open("https://play.google.com", "_blank")}
+            />
+            <img
+              src={AppStoreButton}
+              alt="App Store"
+              className="store-btn"
+              onClick={() => window.open("https://apps.apple.com", "_blank")}
+            />
           </div>
         </div>
 

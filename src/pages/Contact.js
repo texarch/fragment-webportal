@@ -3,18 +3,18 @@ import PhoneInput from 'react-phone-number-input';
 import 'react-phone-number-input/style.css';
 import './Contact.css';
 
-import BackImage from '../assets/main2.png'; 
+import BackImage from '../assets/main2.png';
 import Insta from '../assets/insta2.jpg';
 import LinkedIn from '../assets/linkedin2.jpg';
 import YouTube from '../assets/youtube.jpg';
 import Facebook from '../assets/facebook.jpg';
 
-import InstaIcon from '../assets/insta.png';       
+import InstaIcon from '../assets/insta.png';
 import LinkedInIcon from '../assets/linkedin.png';
 import EmailIcon from '../assets/email.png';
 
-const REACT_APP_API_URL='https://fragment.thefragment.app/website'
-
+// const REACT_APP_API_URL='https://fragment.thefragment.app/dev/website'
+const REACT_APP_API_URL = 'http://localhost:4000/website';
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -77,7 +77,7 @@ function Contact() {
   const handleSubscribe = async (e) => {
     e.preventDefault();
     const email = e.target.elements.email.value;
-    
+
     if (!email) {
       alert('Please enter your email address');
       return;
@@ -123,7 +123,7 @@ function Contact() {
 
   return (
     <div className="contact-page">
-      
+
       <div className="back-image-wrapper">
         <img src={BackImage} alt="Back" className="back-image" />
       </div>
@@ -131,38 +131,38 @@ function Contact() {
       <div className="form-container">
         <h2 className="first-heading">Email your Question!</h2>
         <h3 className="second-heading">Our Calendars keep you on time</h3>
-        
+
         {message && (
           <div className={`message ${messageType}`}>
             {message}
           </div>
         )}
-        
+
         <form onSubmit={handleSubmit}>
           <div className="form-group">
             <label htmlFor="name">Name</label>
-            <input 
-              type="text" 
-              id="name" 
+            <input
+              type="text"
+              id="name"
               name="name"
               value={formData.name}
               onChange={handleInputChange}
               required
             />
           </div>
-          
+
           <div className="form-group">
             <label htmlFor="email">Email ID</label>
-            <input 
-              type="email" 
-              id="email" 
+            <input
+              type="email"
+              id="email"
               name="email"
               value={formData.email}
               onChange={handleInputChange}
               required
             />
           </div>
-          
+
           <div className="form-group">
             <label htmlFor="phone">Phone Number (Optional)</label>
             <PhoneInput
@@ -176,11 +176,11 @@ function Contact() {
               className="phone-input-custom"
             />
           </div>
-          
+
           <div className="form-group">
             <label htmlFor="question">Question</label>
-            <textarea 
-              id="question" 
+            <textarea
+              id="question"
               name="question"
               rows="5"
               value={formData.question}
@@ -188,7 +188,7 @@ function Contact() {
               required
             ></textarea>
           </div>
-          
+
           <button type="submit" disabled={isSubmitting}>
             {isSubmitting ? 'Sending...' : 'Submit'}
           </button>
@@ -218,10 +218,10 @@ function Contact() {
           <h2 className="subscribe-title">Subscribe Us</h2>
           <p className="subscribe-desc">Be the first to know about our new products</p>
           <form className="subscribe-form" onSubmit={handleSubscribe}>
-            <input 
-              type="email" 
+            <input
+              type="email"
               name="email"
-              placeholder="Enter Email.." 
+              placeholder="Enter Email.."
               required
             />
             <button type="submit">Subscribe</button>

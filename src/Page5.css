@@ -138,7 +138,6 @@
 
 .calendar-sync-img {
   height: 52px;
-  cursor: pointer;
   object-fit: contain;
   transition: transform 0.2s;
 }

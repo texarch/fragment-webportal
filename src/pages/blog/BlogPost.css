@@ -1,0 +1,75 @@
+.blog-post-wrapper {
+    width: 100%;
+    min-height: 100vh;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.blog-navbar-placeholder {
+    height: 80px;
+    width: 100%;
+}
+
+.blog-post-container {
+    max-width: 800px;
+    width: 90%;
+    padding: 40px 20px;
+    font-family: "SF Pro Display", sans-serif;
+    color: #333;
+}
+
+.blog-post-container h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.blog-post-container h2 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 32px;
+    margin-top: 40px;
+    margin-bottom: 16px;
+    color: #000;
+}
+
+.blog-post-container p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+
+.blog-post-container .quote {
+    font-style: italic;
+    color: #555;
+    border-left: 4px solid #eee;
+    padding-left: 16px;
+    margin: 20px 0;
+}
+
+.back-button-container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 20px;
+    align-self: center;
+    margin-top: -40px;
+}
+
+.back-button {
+    background: none;
+    border: none;
+    color: #555;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    font-family: "SF Pro Display", sans-serif;
+    transition: color 0.2s ease;
+}
+
+.back-button:hover {
+    color: #000;
+}

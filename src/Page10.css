@@ -134,3 +134,12 @@
     text-align: center;
   }
 }
+
+.subscribe-btn-10:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.subscribe-btn-10:disabled:hover {
+  background-color: #2f333a;
+}
