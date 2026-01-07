@@ -12,7 +12,7 @@ const BlogPage2 = () => {
 
   // 2. The "You might like these" grid (posts after the 2nd one)
   // Slicing from 2 to 6 to show next 4 posts
-  const relatedPosts = blogData.slice(2, 6);
+  const relatedPosts = blogData.slice(2, 18);
 
   if (!secondLatestBlog) {
     return null;

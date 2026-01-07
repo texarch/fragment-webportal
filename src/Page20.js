@@ -27,15 +27,17 @@ const Page20 = () => {
           <p className="email">hi@fragment.com</p>
         </div>
 
-        <div className="footer-middle">
-          <a href="/">About Us</a>
-          <a href="/">Work with us</a>
-          <a href="/">FAQ's</a>
-        </div>
+        <div className="footer-links-wrapper">
+          <div className="footer-middle">
+            <a href="/">About Us</a>
+            <a href="/">Work with us</a>
+            <a href="/">FAQ's</a>
+          </div>
 
-        <div className="footer-right">
-          <a href="/">Privacy</a>
-          <a href="/">Terms and Conditions</a>
+          <div className="footer-right">
+            <a href="/">Privacy</a>
+            <a href="/">Terms and Conditions</a>
+          </div>
         </div>
       </div>
 

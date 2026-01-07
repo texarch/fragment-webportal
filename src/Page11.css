@@ -130,24 +130,34 @@
   }
 
   .tabs-container {
-    gap: 16px;
+    gap: 3vw;
+    /* Responsive gap */
     margin-bottom: 24px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    /* Keep on one line if possible */
     justify-content: center;
+    width: 100%;
   }
 
   .tab-item {
     width: auto;
-    padding: 0 20px;
+    padding: 0 4vw;
+    /* Responsive padding */
     height: 48px;
+    flex: 1;
+    /* Distribute space evenly */
+    max-width: 200px;
+    /* Prevent becoming too wide */
   }
 
   .tab-label {
-    font-size: 24px;
+    font-size: clamp(16px, 4vw, 24px);
+    /* Responsive font size */
   }
 
   .tab-item.active .tab-label {
-    font-size: 28px;
+    font-size: clamp(20px, 5vw, 28px);
+    /* Responsive font size for active state */
   }
 
   .title-text {
@@ -171,11 +181,17 @@
   .right-images {
     padding-top: 0;
     padding-bottom: 0;
-    margin-left: -50px;
+    margin-left: 0;
+    /* Removing negative margin */
+    display: flex;
+    justify-content: center;
+    /* Center horizontally */
+    width: 100%;
   }
 
   .main-img {
     transform: none;
     max-width: 100%;
+    height: auto;
   }
 }

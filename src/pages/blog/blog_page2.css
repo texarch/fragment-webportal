@@ -1,6 +1,7 @@
 .blog-page-wrapper {
   width: 100%;
-  padding: 60px 80px;
+  padding: 40px 80px;
+  margin-top: 30px;
   background-color: #f1f3f5;
   /* Changed back to light gray to match original if needed, or keep white? Original was #f1f3f5 */
   display: flex;
@@ -82,7 +83,7 @@
 
 .blog-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   gap: 30px;
   width: 100%;
   max-width: 1200px;
@@ -96,6 +97,13 @@
   transition: transform 0.2s;
   display: flex;
   flex-direction: column;
+  grid-column: span 2;
+}
+
+/* First 2 items span 3 columns each (giving 2 items in the first row) */
+.blog-card-new:nth-child(1),
+.blog-card-new:nth-child(2) {
+  grid-column: span 3;
 }
 
 .blog-card-new:hover {
@@ -132,6 +140,12 @@
   .blog-grid {
     grid-template-columns: 1fr;
     padding: 0 20px;
+  }
+
+  .blog-card-new,
+  .blog-card-new:nth-child(1),
+  .blog-card-new:nth-child(2) {
+    grid-column: auto;
   }
 
   .blog-page-wrapper {

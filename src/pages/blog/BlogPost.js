@@ -19,7 +19,7 @@ const BlogPost = () => {
             <div className="blog-navbar-placeholder"></div>
 
             <div className="back-button-container">
-                <button className="back-button" onClick={() => navigate('/Blog')}>
+                <button className="back-button" onClick={() => navigate(-1)}>
                     &larr; <strong>Back</strong>
                 </button>
             </div>
