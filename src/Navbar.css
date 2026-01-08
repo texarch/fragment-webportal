@@ -125,7 +125,7 @@ body {
 
 @media (max-width: 991px) {
   .nav-links-wrapper {
-    background-color: #E6F7FA;
+    background-color: white;
     /* Light blue-gray background */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     /* Subtle shadow */
@@ -186,10 +186,7 @@ body {
     /* Add spacing between buttons */
   }
 
-  /* Hide Blog link on mobile */
-  .blog-link {
-    display: none !important;
-  }
+
 
   .auth-buttons-mobile button {
     width: 100%;
