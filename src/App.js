@@ -11,6 +11,7 @@ import SignUp from './pages/SignUp';
 import Login from './pages/Login';
 import Demo from './pages/Demo.js';
 import Blog from './pages/blog/Blog.js';
+import BlogList from './pages/blog/BlogList.js';
 import BlogPost from './pages/blog/BlogPost.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
@@ -45,8 +46,9 @@ function App() {
         <Route path="/About" element={<About />} />
         <Route path="/pricing" element={<Pricing />} />
         <Route path="/Demo" element={<Demo />} />
-        {/* <Route path="/Blog" element={<Blog />} /> */}
-        {/* <Route path="/blog/post/:id" element={<BlogPost />} /> */}
+        <Route path="/Blog" element={<Blog />} />
+        <Route path="/blog/all" element={<BlogList />} />
+        <Route path="/blog/post/:id" element={<BlogPost />} />
         <Route path="/signup" element={<SignUp />} />   {/* Route for Sign Up */}
         <Route path="/login" element={<Login />} />     {/* Route for Log In */}
       </Routes>

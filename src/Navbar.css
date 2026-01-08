@@ -186,6 +186,11 @@ body {
     /* Add spacing between buttons */
   }
 
+  /* Hide Blog link on mobile */
+  .blog-link {
+    display: none !important;
+  }
+
   .auth-buttons-mobile button {
     width: 100%;
     /* Make buttons full width like nav links */
@@ -226,4 +231,3 @@ body {
     display: flex;
   }
 }
-

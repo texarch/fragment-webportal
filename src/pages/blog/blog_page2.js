@@ -54,6 +54,14 @@ const BlogPage2 = () => {
                 </div>
               </div>
             ))}
+
+            {/* Mobile "See More" Card */}
+            <div className="blog-see-more-card" onClick={() => navigate('/blog/all')}> {/* Adjust route as needed */}
+              <div className="see-more-content">
+                <span className="arrow-icon">&rarr;</span>
+                <p>See More</p>
+              </div>
+            </div>
           </div>
         </>
       )}
