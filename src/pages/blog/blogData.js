@@ -130,5 +130,104 @@ export const blogData = [
       <h3>Trends</h3>
       <p>Glassmorphism, dark mode, and micro-interactions continue to dominate the landscape.</p>
     `
+  },
+  {
+    id: 8,
+    title: "Understanding Asynchronous JavaScript",
+    date: "May 28, 2025",
+    author: "Chris Evans",
+    image: BlogImage,
+    summary: "Deep dive into Promises, Async/Await, and the Event Loop.",
+    content: "<h2>Async JS</h2><p>Mastering asynchronous patterns is crucial for modern web apps.</p>"
+  },
+  {
+    id: 9,
+    title: "State Management in 2025",
+    date: "May 15, 2025",
+    author: "Patricia Moore",
+    image: BlogImage,
+    summary: "Comparing Redux, Recoil, Zustand, and Context API.",
+    content: "<h2>Managing State</h2><p>Choosing the right state management library can make or break your app's scalability.</p>"
+  },
+  {
+    id: 10,
+    title: "Accessibility Standards (WCAG)",
+    date: "April 30, 2025",
+    author: "Robert Taylor",
+    image: BlogImage,
+    summary: "How to ensure your website is usable by everyone.",
+    content: "<h2>Inclusive Design</h2><p>Web accessibility is not just a requirement; it's a moral imperative.</p>"
+  },
+  {
+    id: 11,
+    title: "The Power of Server-Side Rendering",
+    date: "April 10, 2025",
+    author: "Jennifer White",
+    image: BlogImage,
+    summary: "Benefits of SSR for SEO and initial load performance.",
+    content: "<h2>SSR vs CSR</h2><p>Server-side rendering provides faster first pleasant paint and better search engine visibility.</p>"
+  },
+  {
+    id: 12,
+    title: "Securing Your Web Application",
+    date: "March 25, 2025",
+    author: "James Harris",
+    image: BlogImage,
+    summary: "Common vulnerabilities and how to protect against them.",
+    content: "<h2>Web Security</h2><p>From XSS to CSRF, understanding security threats is essential for every developer.</p>"
+  },
+  {
+    id: 13,
+    title: "Deploying with Docker and Kubernetes",
+    date: "March 12, 2025",
+    author: "Linda Martin",
+    image: BlogImage,
+    summary: "Containerization strategies for scalable deployments.",
+    content: "<h2>DevOps Basics</h2><p>Docker and Kubernetes have revolutionized how we deploy and manage applications at scale.</p>"
+  },
+  {
+    id: 14,
+    title: "Introduction to Next.js",
+    date: "February 28, 2025",
+    author: "Michael Thompson",
+    image: BlogImage,
+    summary: "Getting started with the popular React framework for production.",
+    content: "<h2>Why Next.js?</h2><p>Next.js offers the best developer experience with all the features you need for production: hybrid static & server rendering.</p>"
+  },
+  {
+    id: 15,
+    title: "Mobile-First Design Principles",
+    date: "February 15, 2025",
+    author: "Elizabeth Garcia",
+    image: BlogImage,
+    summary: "Designing for smaller screens before scaling up.",
+    content: "<h2>Responsive Design</h2><p>Starting with mobile ensures your core content and functionality are prioritized.</p>"
+  },
+  {
+    id: 16,
+    title: "Working with REST APIs",
+    date: "January 30, 2025",
+    author: "William Martinez",
+    image: BlogImage,
+    summary: "Best practices for consuming and building RESTful services.",
+    content: "<h2>API Design</h2><p>REST remains the standard for web APIs. Learn how to design clean and predictable endpoints.</p>"
+  },
+  {
+    id: 17,
+    title: "Git Version Control Mastery",
+    date: "January 15, 2025",
+    author: "Barbara Robinson",
+    image: BlogImage,
+    summary: "Advanced Git commands and workflows for teams.",
+    content: "<h2>Version Control</h2><p>Mastering Git is fundamental for collaboration and code management in any development team.</p>"
+  },
+  {
+    id: 18,
+    title: "Introduction to Svelte",
+    date: "January 05, 2025",
+    author: "Daniel Clark",
+    image: BlogImage,
+    summary: "Why Svelte is gaining popularity among frontend developers.",
+    content: "<h2>Rethinking Reactivity</h2><p>Svelte shifts the work from the browser to the compile step, resulting in highly optimized vanilla JavaScript.</p>"
   }
 ];

@@ -12,7 +12,7 @@ const BlogPage2 = () => {
 
   // 2. The "You might like these" grid (posts after the 2nd one)
   // Slicing from 2 to 6 to show next 4 posts
-  const relatedPosts = blogData.slice(2, 6);
+  const relatedPosts = blogData.slice(2, 18);
 
   if (!secondLatestBlog) {
     return null;
@@ -54,6 +54,14 @@ const BlogPage2 = () => {
                 </div>
               </div>
             ))}
+
+            {/* Mobile "See More" Card */}
+            <div className="blog-see-more-card" onClick={() => navigate('/blog/all')}> {/* Adjust route as needed */}
+              <div className="see-more-content">
+                <span className="arrow-icon">&rarr;</span>
+                <p>See More</p>
+              </div>
+            </div>
           </div>
         </>
       )}

@@ -127,7 +127,7 @@
     90% { opacity: 1; }
     100% { opacity: 0; transform: translateX(-50%) translateY(10px); }
   } */
-  .page20 {
+.page20 {
   background-color: #f1f2f5;
   box-shadow: 0 -14px 28px 2px rgba(0, 0, 0, 0.15);
   padding: 60px 40px 30px;
@@ -141,6 +141,7 @@
   flex-wrap: wrap;
   margin-bottom: 30px;
 }
+
 .footer-left {
   display: flex;
   flex-direction: column;
@@ -162,6 +163,7 @@
   font-size: 0.95rem;
   color: #111;
   margin-top: 5px;
+  margin-bottom: 0;
 }
 
 
@@ -198,27 +200,93 @@
 .footer-right a:hover {
   color: #007aff;
 }
+
 .copyright {
   text-align: center;
   font-size: 0.9rem;
   color: #222;
 }
+
+.footer-links-wrapper {
+  display: contents;
+}
+
 @media (max-width: 768px) {
-  .footer-content {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 25px;
+  .page20 {
+    padding: 40px 20px 30px;
+    /* Reduced side padding */
   }
 
-  .footer-left,
-  .footer-middle,
-  .footer-right {
+  .footer-content {
+    flex-direction: row;
+    /* Allow wrapping */
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    /* Top align */
+    text-align: left;
+    /* requested left aligned */
+    gap: 0;
+    /* Let width handle spacing */
+    width: 100%;
+  }
+
+  .footer-links-wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .footer-left {
+    width: 100%;
+    /* Full width for social icons/top part */
     align-items: center;
+    /* Keep centered */
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  /* Make links side-by-side */
+  .footer-middle {
+    flex: 0 0 50%;
+    /* Force 50% width */
+    width: 50%;
+    align-items: flex-start;
+    /* Left align items */
+    padding-left: 10px;
+    /* Align with container edge */
+    padding-right: 10px;
+    /* Space between columns */
+    box-sizing: border-box;
+  }
+
+  .footer-right {
+    flex: 0 0 50%;
+    /* Force 50% width */
+    width: 50%;
+    align-items: flex-start;
+    /* Left align items */
+    padding-left: 10px;
+    /* Offset for second column */
+    box-sizing: border-box;
+  }
+
+  /* Ensure links are left aligned */
+  .footer-middle a,
+  .footer-right a {
+    text-align: left;
+    width: 100%;
+    padding: 5px 0;
+    display: block;
+    font-size: 1rem;
+    /* Slightly larger text for mobile */
   }
 
   .social-icons {
     width: 140px;
+    margin: 10px 0;
   }
 }
-

@@ -1,6 +1,7 @@
 .blog-page-wrapper {
   width: 100%;
-  padding: 60px 80px;
+  padding: 40px 80px;
+  margin-top: 30px;
   background-color: #f1f3f5;
   /* Changed back to light gray to match original if needed, or keep white? Original was #f1f3f5 */
   display: flex;
@@ -82,7 +83,7 @@
 
 .blog-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   gap: 30px;
   width: 100%;
   max-width: 1200px;
@@ -96,6 +97,13 @@
   transition: transform 0.2s;
   display: flex;
   flex-direction: column;
+  grid-column: span 2;
+}
+
+/* First 2 items span 3 columns each (giving 2 items in the first row) */
+.blog-card-new:nth-child(1),
+.blog-card-new:nth-child(2) {
+  grid-column: span 3;
 }
 
 .blog-card-new:hover {
@@ -128,13 +136,88 @@
   line-height: 1.4;
 }
 
+/* Default: Hide "See More" card on desktop */
+.blog-see-more-card {
+  display: none;
+}
+
 @media (max-width: 768px) {
   .blog-grid {
-    grid-template-columns: 1fr;
-    padding: 0 20px;
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 15px;
+    padding-bottom: 20px;
+    /* Space for scrollbar */
+    grid-template-columns: none;
+    /* Override grid */
+  }
+
+  .blog-card-new {
+    min-width: 250px;
+    max-width: 250px;
+    scroll-snap-align: start;
+    flex-shrink: 0;
+  }
+
+  /* Hide items from the 5th onwards on mobile */
+  .blog-card-new:nth-of-type(n+5) {
+    display: none;
+  }
+
+  /* Show "See More" card on mobile */
+  .blog-see-more-card {
+    display: flex;
+    min-width: 120px;
+    background: #e9ecef;
+    border-radius: 20px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    scroll-snap-align: start;
+    flex-shrink: 0;
+  }
+
+  .see-more-content {
+    text-align: center;
+    color: #555;
+  }
+
+  .arrow-icon {
+    font-size: 24px;
+    display: block;
+    margin-bottom: 5px;
   }
 
   .blog-page-wrapper {
-    padding: 40px 0;
+    padding: 20px;
+    margin-top: 20px;
+    overflow-x: hidden;
+    /* Prevent page scroll */
+  }
+
+  .blog-card {
+    margin-top: 40px;
+    flex-direction: row;
+    /* Image left, content right */
+    text-align: left;
+    align-items: stretch;
+    /* Stretch image to content height */
+    gap: 15px;
+  }
+
+  .blog-image-section {
+    display: flex;
+    /* Ensure image expands */
+  }
+
+  .blog-image-section img {
+    width: 140px;
+    /* Fixed width */
+    height: 100%;
+    /* Full height */
+    object-fit: cover;
+    margin-bottom: 0;
+    max-width: none;
   }
 }
