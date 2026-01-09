@@ -74,6 +74,11 @@ body {
   color: black;
 }
 
+/* Hide blog link from navigation */
+.nav-links a.blog-link {
+  display: none;
+}
+
 .auth-buttons {
   display: flex;
   align-items: center;
