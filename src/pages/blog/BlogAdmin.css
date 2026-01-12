@@ -514,3 +514,341 @@
         width: 100%;
     }
 }
+
+/* ========================================
+   Login Screen Styles
+   ======================================== */
+
+.login-container {
+    min-height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #1a2028 0%, #2C3440 50%, #1a2028 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.login-container::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(74, 144, 217, 0.1) 0%, transparent 50%);
+    animation: pulse 15s ease-in-out infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+
+    50% {
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+}
+
+.login-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    border-radius: 24px;
+    padding: 50px 40px;
+    width: 100%;
+    max-width: 420px;
+    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.4);
+    position: relative;
+    z-index: 1;
+    animation: slideUp 0.5s ease;
+}
+
+.login-header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.login-icon {
+    font-size: 56px;
+    margin-bottom: 20px;
+    animation: bounce 2s ease infinite;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.login-header h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 32px;
+    font-weight: 400;
+    color: #2C3440;
+    margin: 0 0 10px 0;
+}
+
+.login-header p {
+    font-family: "SF Pro Display", sans-serif;
+    font-size: 15px;
+    color: #666;
+    margin: 0;
+}
+
+.login-form {
+    margin-bottom: 25px;
+}
+
+.login-form-group {
+    margin-bottom: 22px;
+}
+
+.login-form-group label {
+    display: block;
+    font-family: "SF Pro Display", sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: #495057;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.login-form-group input {
+    width: 100%;
+    padding: 16px 20px;
+    font-family: "SF Pro Display", sans-serif;
+    font-size: 15px;
+    border: 2px solid #e9ecef;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    background: #f8f9fa;
+}
+
+.login-form-group input:focus {
+    outline: none;
+    border-color: #4A90D9;
+    background: #fff;
+    box-shadow: 0 0 0 4px rgba(74, 144, 217, 0.1);
+}
+
+.login-form-group input::placeholder {
+    color: #adb5bd;
+}
+
+.login-error {
+    background: linear-gradient(135deg, #fff5f5 0%, #ffe3e3 100%);
+    border: 1px solid #ffc9c9;
+    border-radius: 10px;
+    padding: 14px 18px;
+    margin-bottom: 20px;
+    font-family: "SF Pro Display", sans-serif;
+    font-size: 14px;
+    color: #c92a2a;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    animation: shake 0.4s ease;
+}
+
+@keyframes shake {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    20% {
+        transform: translateX(-8px);
+    }
+
+    40% {
+        transform: translateX(8px);
+    }
+
+    60% {
+        transform: translateX(-8px);
+    }
+
+    80% {
+        transform: translateX(8px);
+    }
+}
+
+.login-submit-btn {
+    width: 100%;
+    padding: 16px 28px;
+    background: linear-gradient(135deg, #4A90D9 0%, #357ABD 100%);
+    color: #fff;
+    font-family: "SF Pro", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(74, 144, 217, 0.4);
+}
+
+.login-submit-btn:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(74, 144, 217, 0.5);
+}
+
+.login-submit-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.back-to-blog-btn {
+    width: 100%;
+    padding: 14px 20px;
+    background: transparent;
+    color: #666;
+    font-family: "SF Pro", sans-serif;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.back-to-blog-btn:hover {
+    color: #4A90D9;
+}
+
+/* Header buttons container */
+.header-buttons {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.logout-btn {
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #e53935 0%, #c62828 100%);
+    border: none;
+    color: #fff;
+    font-family: "SF Pro", sans-serif;
+    font-size: 14px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(229, 57, 53, 0.3);
+}
+
+.logout-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(229, 57, 53, 0.4);
+}
+
+/* Responsive Login */
+@media (max-width: 768px) {
+    .login-card {
+        padding: 40px 25px;
+        margin: 20px;
+    }
+
+    .login-icon {
+        font-size: 48px;
+    }
+
+    .login-header h1 {
+        font-size: 26px;
+    }
+
+    .header-buttons {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .logout-btn {
+        width: 100%;
+    }
+}
+
+/* Image Upload Styles */
+.image-upload-container {
+    border: 2px solid #e9ecef;
+    border-radius: 12px;
+    padding: 20px;
+    background: #f8f9fa;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.image-controls {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.file-input {
+    display: none;
+}
+
+.file-input-label {
+    display: inline-block;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #4A90D9 0%, #357ABD 100%);
+    color: #fff;
+    font-family: "SF Pro", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(74, 144, 217, 0.3);
+}
+
+.remove-image-btn {
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #e53935 0%, #c62828 100%);
+    color: #fff;
+    font-family: "SF Pro", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(229, 57, 53, 0.3);
+}
+
+.remove-image-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(229, 57, 53, 0.4);
+}
+
+.file-input-label:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(74, 144, 217, 0.4);
+}
+
+.image-preview {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.image-preview img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}

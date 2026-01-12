@@ -3,11 +3,12 @@ import { useNavigate } from "react-router-dom";
 import "./Blog.css";
 import BlogImage from "../../assets/Blog_Page_Image.png";
 import BgPattern from "../../assets/background-pattern.png";
-import { blogData } from "./blogData";
+import { getBlogs } from "./blogStorage";
 
 const BlogHero = () => {
     const navigate = useNavigate();
 
+    const blogData = getBlogs();
     const latestBlog = blogData[0];
 
     return (

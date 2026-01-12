@@ -1,10 +1,15 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { blogData } from './blogData';
+import { getBlogs } from './blogStorage';
 import './blog_page2.css'; // Reusing existing grid styles
 
 const BlogList = () => {
     const navigate = useNavigate();
+    const [blogData, setBlogData] = useState([]);
+
+    useEffect(() => {
+        setBlogData(getBlogs());
+    }, []);
 
     return (
         <div className="blog-page-wrapper">

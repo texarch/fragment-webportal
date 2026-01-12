@@ -21,7 +21,7 @@ const Page2 = () => {
               alt="Download on Play Store"
               className="store-badge"
               onClick={() =>
-                window.open("https://play.google.com", "_blank")
+                window.open("https://play.google.com/store/apps/details?id=com.thefragmentbusinessapp&pcampaignid=web_share", "_blank")
               }
             />
 
@@ -30,7 +30,7 @@ const Page2 = () => {
               alt="Download on App Store"
               className="store-badge"
               onClick={() =>
-                window.open("https://apps.apple.com", "_blank")
+                window.open("https://apps.apple.com/us/app/fragment-business/id6479656621", "_blank")
               }
             />
           </div>

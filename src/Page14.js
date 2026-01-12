@@ -62,14 +62,14 @@ const Page14 = () => {
             src={playBadge}
             alt="Play Store"
             className="store-badge"
-            onClick={() => window.open("https://play.google.com", "_blank")}
+            onClick={() => window.open("https://play.google.com/store/apps/details?id=com.thefragmentapp&pcampaignid=web_share", "_blank")}
           />
 
           <img
             src={appBadge}
             alt="App Store"
             className="store-badge"
-            onClick={() => window.open("https://apps.apple.com", "_blank")}
+            onClick={() => window.open("https://apps.apple.com/us/app/fragment-app/id6476188267", "_blank")}
           />
         </div>
       </div>

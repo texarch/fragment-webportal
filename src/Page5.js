@@ -43,14 +43,14 @@ const Page5 = () => {
             src={Button_download_playstore}
             alt="Download on Play Store"
             className="store-image"
-            onClick={() => window.open("https://play.google.com", "_blank")}
+            onClick={() => window.open("https://play.google.com/store/apps/details?id=com.thefragmentbusinessapp&pcampaignid=web_share", "_blank")}
           />
 
           <img
             src={Button_download_Appstore}
             alt="Download on App Store"
             className="store-image"
-            onClick={() => window.open("https://apps.apple.com", "_blank")}
+            onClick={() => window.open("https://apps.apple.com/us/app/fragment-business/id6479656621", "_blank")}
           />
         </div>
 

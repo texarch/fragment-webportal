@@ -47,10 +47,10 @@ function App() {
         <Route path="/About" element={<About />} />
         <Route path="/pricing" element={<Pricing />} />
         <Route path="/Demo" element={<Demo />} />
-        <Route path="/Blog" element={<Blog />} />
-        <Route path="/blog/all" element={<BlogList />} />
-        <Route path="/blog/post/:id" element={<BlogPost />} />
-        <Route path="/blog/admin" element={<BlogAdmin />} />
+        {/* <Route path="/Blog" element={<Blog />} /> */}
+        {/* <Route path="/blog/all" element={<BlogList />} /> */}
+        {/* <Route path="/blog/post/:id" element={<BlogPost />} /> */}
+        {/* <Route path="/blog/admin" element={<BlogAdmin />} /> */}
         <Route path="/signup" element={<SignUp />} />   {/* Route for Sign Up */}
         <Route path="/login" element={<Login />} />     {/* Route for Log In */}
       </Routes>
