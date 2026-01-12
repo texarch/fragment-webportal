@@ -1,11 +1,12 @@
 import React from "react";
 import "./blog_page2.css";
 import blogImage from "../../assets/Blog_Page_Image.png";
-import { blogData } from "./blogData";
+import { getBlogs } from "./blogStorage";
 import { useNavigate } from "react-router-dom";
 
 const BlogPage2 = () => {
   const navigate = useNavigate();
+  const blogData = getBlogs();
 
   // 1. The "Second Page" content (2nd latest blog)
   const secondLatestBlog = blogData.length > 1 ? blogData[1] : null;

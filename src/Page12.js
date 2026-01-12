@@ -26,13 +26,13 @@ const Page12 = () => {
               src={PlayStoreButton}
               alt="Play Store"
               className="store-btn"
-              onClick={() => window.open("https://play.google.com", "_blank")}
+              onClick={() => window.open("https://play.google.com/store/apps/details?id=com.thefragmentapp&pcampaignid=web_share", "_blank")}
             />
             <img
               src={AppStoreButton}
               alt="App Store"
               className="store-btn"
-              onClick={() => window.open("https://apps.apple.com", "_blank")}
+              onClick={() => window.open("https://apps.apple.com/us/app/fragment-app/id6476188267", "_blank")}
             />
           </div>
         </div>
