@@ -4,15 +4,16 @@ import blogImage from "../../assets/Blog_Page_Image.png";
 import { getBlogs } from "./blogStorage";
 import { useNavigate } from "react-router-dom";
 
-const BlogPage2 = () => {
+const BlogPage2 = ({ selectedCategory }) => {
   const navigate = useNavigate();
-  const blogData = getBlogs();
+  const allBlogs = getBlogs();
+  const blogData = allBlogs.filter(blog => blog.category === selectedCategory);
 
-  // 1. The "Second Page" content (2nd latest blog)
+  // 1. The "Second Page" content (2nd latest blog of this category)
+  // We assume index 0 is used by BlogHero, so we start from index 1
   const secondLatestBlog = blogData.length > 1 ? blogData[1] : null;
 
-  // 2. The "You might like these" grid (posts after the 2nd one)
-  // Slicing from 2 to 6 to show next 4 posts
+  // 2. The "You might like these" grid
   const relatedPosts = blogData.slice(2, 18);
 
   if (!secondLatestBlog) {

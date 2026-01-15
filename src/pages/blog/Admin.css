@@ -723,6 +723,37 @@
     color: #adb5bd;
 }
 
+/* Remember Me Checkbox Styles */
+.remember-me-group {
+    margin-bottom: 20px;
+}
+
+.remember-me-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-family: "SF Pro Display", sans-serif;
+    font-size: 14px;
+    color: #495057;
+    user-select: none;
+    gap: 10px;
+}
+
+.remember-me-checkbox {
+    width: 18px;
+    height: 18px;
+    accent-color: #4A90D9;
+    cursor: pointer;
+}
+
+.remember-me-label:hover {
+    color: #4A90D9;
+}
+
+.remember-me-checkbox:checked {
+    background-color: #4A90D9;
+}
+
 .login-error {
     background: linear-gradient(135deg, #fff5f5 0%, #ffe3e3 100%);
     border: 1px solid #ffc9c9;
@@ -826,6 +857,24 @@
 .logout-btn:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(229, 57, 53, 0.4);
+}
+
+.forget-me-btn {
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #6c757d 0%, #495057 100%);
+    border: none;
+    color: #fff;
+    font-family: "SF Pro", sans-serif;
+    font-size: 14px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(108, 117, 125, 0.3);
+}
+
+.forget-me-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(108, 117, 125, 0.4);
 }
 
 /* Responsive Login */

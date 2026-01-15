@@ -5,7 +5,7 @@ import LikeImage from '../../assets/like.png';
 import UnlikeImage from '../../assets/unlike.png';
 
 import { useParams, useNavigate } from 'react-router-dom';
-import { getBlogs, getReaction, saveReaction } from './blogStorage';
+import { getBlogs, getReaction, saveReaction, getCounts } from './blogStorage';
 import './BlogPost.css';
 
 const BlogPost = () => {
@@ -14,18 +14,23 @@ const BlogPost = () => {
     const blogData = getBlogs();
     const post = blogData.find(p => p.id === parseInt(id));
     const [feedback, setFeedback] = useState(null);
+    const [counts, setCounts] = useState({ up: 0, down: 0 });
 
     useEffect(() => {
         if (post) {
             const savedReaction = getReaction(post.id);
+            const savedCounts = getCounts(post.id);
             setFeedback(savedReaction);
+            setCounts(savedCounts);
         }
     }, [post]);
 
     const handleReaction = (type) => {
         const newFeedback = feedback === type ? null : type;
+        const oldFeedback = feedback;
         setFeedback(newFeedback);
-        saveReaction(post.id, newFeedback);
+        const newCounts = saveReaction(post.id, newFeedback, oldFeedback);
+        setCounts(newCounts);
     };
 
     if (!post) {
@@ -45,7 +50,7 @@ const BlogPost = () => {
             <div className="blog-post-container">
                 <h1>{post.title}</h1>
 
-                <p className="blog-date">{post.date} by {post.author}</p>
+                <p className="blog-date">{post.date}</p>
                 <img src={post.image} alt={post.title} style={{ maxWidth: '100%', borderRadius: '10px', margin: '20px 0' }} />
 
                 <div dangerouslySetInnerHTML={{ __html: post.content }} />
@@ -54,16 +59,18 @@ const BlogPost = () => {
                     <img src={DidItHelpImage} alt="Did it help?" className="feedback-question-img" />
                     <div className="feedback-buttons">
                         <button
-                            className={`feedback-btn ${feedback === 'up' ? 'active' : ''}`}
+                            className="feedback-btn"
                             onClick={() => handleReaction('up')}
                         >
                             <img src={LikeImage} alt="Yes" />
+                            <span>{counts.up}</span>
                         </button>
                         <button
-                            className={`feedback-btn ${feedback === 'down' ? 'active' : ''}`}
+                            className="feedback-btn"
                             onClick={() => handleReaction('down')}
                         >
                             <img src={UnlikeImage} alt="No" />
+                            <span>{counts.down}</span>
                         </button>
                     </div>
                 </div>

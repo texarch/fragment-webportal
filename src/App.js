@@ -13,7 +13,7 @@ import Demo from './pages/Demo.js';
 import Blog from './pages/blog/Blog.js';
 import BlogList from './pages/blog/BlogList.js';
 import BlogPost from './pages/blog/BlogPost.js';
-import BlogAdmin from './pages/blog/BlogAdmin.js';
+import Admin from './pages/blog/Admin.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import ScrollToTop from './ScrollToTop.js';
@@ -47,10 +47,10 @@ function App() {
         <Route path="/About" element={<About />} />
         <Route path="/pricing" element={<Pricing />} />
         <Route path="/Demo" element={<Demo />} />
-        {/* <Route path="/Blog" element={<Blog />} /> */}
-        {/* <Route path="/blog/all" element={<BlogList />} /> */}
-        {/* <Route path="/blog/post/:id" element={<BlogPost />} /> */}
-        {/* <Route path="/blog/admin" element={<BlogAdmin />} /> */}
+        <Route path="/Blog" element={<Blog />} />
+        <Route path="/blog/all" element={<BlogList />} />
+        <Route path="/blog/post/:id" element={<BlogPost />} />
+        <Route path="/blog/admin" element={<Admin />} />
         <Route path="/signup" element={<SignUp />} />   {/* Route for Sign Up */}
         <Route path="/login" element={<Login />} />     {/* Route for Log In */}
       </Routes>

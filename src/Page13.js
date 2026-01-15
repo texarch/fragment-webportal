@@ -16,11 +16,9 @@ const Page13 = () => {
     <div className="page13">
       {/* Header */}
       <div className="page13-header">
+        <span className="page13-with-text">with </span>
         <img src={logo} alt="Logo" className="page13-logo" />
-        <div className="page13-header-text">
-          <span className="page13-with-text">with </span>
-          <span className="page13-fragment-text">Fragment</span>
-        </div>
+        <span className="page13-fragment-text">Fragment</span>
       </div>
 
       {/* Sections */}

@@ -11,7 +11,23 @@ export const getBlogs = () => {
     try {
         const stored = localStorage.getItem(STORAGE_KEY);
         if (stored) {
-            return JSON.parse(stored);
+            let parsedData = JSON.parse(stored);
+
+            // Migration: Ensure all blogs have a category
+            let hasChanges = false;
+            parsedData = parsedData.map(blog => {
+                if (!blog.category) {
+                    hasChanges = true;
+                    return { ...blog, category: 'Individual' };
+                }
+                return blog;
+            });
+
+            if (hasChanges) {
+                saveBlogs(parsedData);
+            }
+
+            return parsedData;
         }
     } catch (error) {
         console.error('Error reading from localStorage', error);
@@ -37,6 +53,7 @@ export const saveBlogs = (blogs) => {
 };
 
 const REACTIONS_KEY = 'fragment_blog_reactions';
+const COUNTS_KEY = 'fragment_blog_counts';
 
 /**
  * Get reaction for a specific blog post.
@@ -57,23 +74,61 @@ export const getReaction = (blogId) => {
 };
 
 /**
- * Save reaction for a blog post.
+ * Get counts for a specific blog post.
  * @param {number} blogId The ID of the blog post
- * @param {string|null} reaction 'up', 'down', or null
+ * @returns {object} { up: number, down: number }
  */
-export const saveReaction = (blogId, reaction) => {
+export const getCounts = (blogId) => {
     try {
-        const stored = localStorage.getItem(REACTIONS_KEY);
-        const reactions = stored ? JSON.parse(stored) : {};
+        const stored = localStorage.getItem(COUNTS_KEY);
+        if (stored) {
+            const counts = JSON.parse(stored);
+            return counts[blogId] || { up: 0, down: 0 };
+        }
+    } catch (error) {
+        console.error('Error reading counts', error);
+    }
+    return { up: 0, down: 0 };
+};
 
-        if (reaction) {
-            reactions[blogId] = reaction;
+/**
+ * Save reaction for a blog post and update counts.
+ * @param {number} blogId The ID of the blog post
+ * @param {string|null} newReaction 'up', 'down', or null
+ * @param {string|null} oldReaction Previous reaction
+ */
+export const saveReaction = (blogId, newReaction, oldReaction) => {
+    try {
+        // 1. Update User Reaction
+        const storedReactions = localStorage.getItem(REACTIONS_KEY);
+        const reactions = storedReactions ? JSON.parse(storedReactions) : {};
+
+        if (newReaction) {
+            reactions[blogId] = newReaction;
         } else {
             delete reactions[blogId];
         }
-
         localStorage.setItem(REACTIONS_KEY, JSON.stringify(reactions));
+
+        // 2. Update Global Counts
+        const storedCounts = localStorage.getItem(COUNTS_KEY);
+        const allCounts = storedCounts ? JSON.parse(storedCounts) : {};
+        const currentCounts = allCounts[blogId] || { up: 0, down: 0 };
+
+        // Decrement old reaction
+        if (oldReaction === 'up') currentCounts.up = Math.max(0, currentCounts.up - 1);
+        if (oldReaction === 'down') currentCounts.down = Math.max(0, currentCounts.down - 1);
+
+        // Increment new reaction
+        if (newReaction === 'up') currentCounts.up++;
+        if (newReaction === 'down') currentCounts.down++;
+
+        allCounts[blogId] = currentCounts;
+        localStorage.setItem(COUNTS_KEY, JSON.stringify(allCounts));
+
+        return currentCounts;
     } catch (error) {
         console.error('Error saving reaction', error);
+        return { up: 0, down: 0 };
     }
 };

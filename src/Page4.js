@@ -25,11 +25,9 @@ export default function Page4() {
   return (
     <div className="page4-wrapper" style={{ position: "relative" }}>
       <div className="page4-header">
+        <span className="page4-with-text">with </span>
         <img src={logo} alt="Logo" className="page4-logo" />
-        <div className="page4-header-text">
-          <span className="page4-with-text">with </span>
-          <span className="page4-fragment-text">Fragment Business</span>
-        </div>
+        <span className="page4-fragment-text">Fragment Business</span>
       </div>
       {images.map((img, i) => (
         <div key={i} className="image-row">

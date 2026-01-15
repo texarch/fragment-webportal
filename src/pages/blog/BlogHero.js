@@ -5,11 +5,24 @@ import BlogImage from "../../assets/Blog_Page_Image.png";
 import BgPattern from "../../assets/background-pattern.png";
 import { getBlogs } from "./blogStorage";
 
-const BlogHero = () => {
+const BlogHero = ({ selectedCategory }) => {
     const navigate = useNavigate();
 
-    const blogData = getBlogs();
+    const allBlogs = getBlogs();
+    const blogData = allBlogs.filter(blog => blog.category === selectedCategory);
     const latestBlog = blogData[0];
+
+    if (!latestBlog) {
+        return (
+            <div className="blog-wrapper">
+                <div className="blog-navbar"></div>
+                <section className="blog-hero-section" style={{ minHeight: '50vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                    <h2>No blogs found in {selectedCategory} category.</h2>
+                </section>
+            </div>
+        );
+    }
+
 
     return (
         <div className="blog-wrapper">

@@ -26,6 +26,22 @@ const Admin = () => {
     const [loginData, setLoginData] = useState({ email: '', password: '' });
     const [loginError, setLoginError] = useState('');
     const [isLoggingIn, setIsLoggingIn] = useState(false);
+    const [rememberMe, setRememberMe] = useState(false);
+
+    // Check localStorage for saved authentication on mount
+    useEffect(() => {
+        const savedAuth = localStorage.getItem('adminAuth');
+        if (savedAuth) {
+            try {
+                const authData = JSON.parse(savedAuth);
+                if (authData.isAuthenticated && authData.email === ADMIN_CREDENTIALS.email) {
+                    setIsAuthenticated(true);
+                }
+            } catch (e) {
+                localStorage.removeItem('adminAuth');
+            }
+        }
+    }, []);
 
     // Blog management state
     const [blogs, setBlogs] = useState([]);
@@ -89,6 +105,13 @@ const Admin = () => {
                 loginData.password === ADMIN_CREDENTIALS.password) {
                 setIsAuthenticated(true);
                 setLoginError('');
+                // Save to localStorage if "Keep me logged in" is checked
+                if (rememberMe) {
+                    localStorage.setItem('adminAuth', JSON.stringify({
+                        isAuthenticated: true,
+                        email: loginData.email
+                    }));
+                }
             } else {
                 setLoginError('Invalid email or password');
             }
@@ -96,10 +119,20 @@ const Admin = () => {
         }, 800);
     };
 
-    // Handle logout
+    // Handle logout - only ends session, keeps "Remember me" credentials
     const handleLogout = () => {
         setIsAuthenticated(false);
         setLoginData({ email: '', password: '' });
+        // Note: We DON'T clear adminAuth from localStorage here
+        // This allows "Remember me" to work across sessions
+        // The admin will be auto-logged in next time they visit
+    };
+
+    // Handle full logout - clears all saved credentials
+    const handleForgetMe = () => {
+        setIsAuthenticated(false);
+        setLoginData({ email: '', password: '' });
+        localStorage.removeItem('adminAuth');
     };
 
     // Reset form
@@ -269,7 +302,7 @@ const Admin = () => {
                         <div className="login-header">
                             <div className="login-icon">🔐</div>
                             <h1>Admin Login</h1>
-                            <p>SSign in to manage content</p>
+                            <p>Sign in to manage content</p>
                         </div>
                         <form className="login-form" onSubmit={handleLogin}>
                             <div className="login-form-group">
@@ -294,6 +327,18 @@ const Admin = () => {
                                     required
                                 />
                             </div>
+                            <div className="remember-me-group">
+                                <label className="remember-me-label">
+                                    <input
+                                        type="checkbox"
+                                        checked={rememberMe}
+                                        onChange={(e) => setRememberMe(e.target.checked)}
+                                        className="remember-me-checkbox"
+                                    />
+                                    <span className="checkmark"></span>
+                                    Remember me
+                                </label>
+                            </div>
                             {loginError && (
                                 <div className="login-error">
                                     <span>⚠️</span> {loginError}
@@ -307,9 +352,6 @@ const Admin = () => {
                                 {isLoggingIn ? 'Signing in...' : 'Sign In'}
                             </button>
                         </form>
-                        <button className="back-to-blog-btn" onClick={() => navigate('/blog')}>
-                            ← Back to Blog
-                        </button>
                     </div>
                 </div>
             </div>
@@ -333,6 +375,11 @@ const Admin = () => {
                     <button className="logout-btn" onClick={handleLogout}>
                         Logout
                     </button>
+                    {localStorage.getItem('adminAuth') && (
+                        <button className="forget-me-btn" onClick={handleForgetMe} title="Clear saved credentials">
+                            Forget me
+                        </button>
+                    )}
                 </div>
             </header>
 
