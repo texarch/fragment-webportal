@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { getBlogs, saveBlogs } from './blogStorage';
-import { getFAQs, answerQuestion, deleteQuestion } from './faqStorage';
+import { getFAQs, answerQuestion, deleteQuestion, addFAQ, updateFAQ } from './faqStorage';
 import BlogImage from '../../assets/Blog_Page_Image.png';
 import RichTextEditor from '../../components/RichTextEditor';
 import './Admin.css';
@@ -53,6 +53,16 @@ const Admin = () => {
     const [selectedFAQCategory, setSelectedFAQCategory] = useState('Organiser'); // FAQ specific filter
     const [answeringId, setAnsweringId] = useState(null);
     const [answerText, setAnswerText] = useState('');
+
+    // FAQ Form State
+    const [isAddingFAQ, setIsAddingFAQ] = useState(false);
+    const [isEditingFAQ, setIsEditingFAQ] = useState(false);
+    const [selectedFAQ, setSelectedFAQ] = useState(null);
+    const [faqFormData, setFaqFormData] = useState({
+        question: '',
+        answer: '',
+        category: 'Organiser'
+    });
 
     // Load blogs and FAQs on mount
     useEffect(() => {
@@ -293,6 +303,64 @@ const Admin = () => {
         }
     };
 
+    // FAQ Form Handlers
+    const resetFAQForm = () => {
+        setFaqFormData({
+            question: '',
+            answer: '',
+            category: selectedFAQCategory
+        });
+        setSelectedFAQ(null);
+        setIsAddingFAQ(false);
+        setIsEditingFAQ(false);
+    };
+
+    const handleFAQInputChange = (e) => {
+        const { name, value } = e.target;
+        setFaqFormData(prev => ({
+            ...prev,
+            [name]: value
+        }));
+    };
+
+    const handleFAQContentChange = (htmlContent) => {
+        setFaqFormData(prev => ({
+            ...prev,
+            answer: htmlContent
+        }));
+    };
+
+    const handleAddFAQClick = () => {
+        setFaqFormData({
+            question: '',
+            answer: '',
+            category: selectedFAQCategory
+        });
+        setIsAddingFAQ(true);
+        setIsEditingFAQ(false);
+    };
+
+    const handleEditFAQClick = (faq) => {
+        setSelectedFAQ(faq);
+        setFaqFormData({
+            question: faq.question,
+            answer: faq.answer || '',
+            category: faq.category || 'Organiser'
+        });
+        setIsEditingFAQ(true);
+        setIsAddingFAQ(false);
+    };
+
+    const handleSaveFAQ = () => {
+        if (isAddingFAQ) {
+            addFAQ(faqFormData);
+        } else if (isEditingFAQ && selectedFAQ) {
+            updateFAQ(selectedFAQ.id, faqFormData);
+        }
+        setFaqs(getFAQs().sort((a, b) => b.id - a.id));
+        resetFAQForm();
+    };
+
     // If not authenticated, show login screen
     if (!isAuthenticated) {
         return (
@@ -447,9 +515,9 @@ const Admin = () => {
                                                     checked={formData.category === 'Individual'}
                                                     onChange={handleInputChange}
                                                 />
-                                                Individual
+                                                <span>Individual</span>
                                             </label>
-                                            <label className="radio-label" style={{ marginLeft: '20px' }}>
+                                            <label className="radio-label">
                                                 <input
                                                     type="radio"
                                                     name="category"
@@ -457,7 +525,7 @@ const Admin = () => {
                                                     checked={formData.category === 'Organiser'}
                                                     onChange={handleInputChange}
                                                 />
-                                                Organiser
+                                                <span>Organiser</span>
                                             </label>
                                         </div>
                                     </div>
@@ -624,13 +692,81 @@ const Admin = () => {
                     </div>
 
                     <div className="admin-actions">
-                        <div className="admin-header-content">
-                            <h2>Frequently Asked Questions</h2>
-                            <p style={{ margin: 0, color: '#666' }}>Answer questions from your users to populate the FAQ section.</p>
-                        </div>
-                        {/* Show all count for now as content is synced */}
-                        <span className="blog-count">{faqs.length} questions</span>
+                        <button
+                            className="add-btn"
+                            onClick={handleAddFAQClick}
+                        >
+                            + Add New FAQ
+                        </button>
+                        <span className="blog-count">{faqs.filter(f => f.category === selectedFAQCategory).length} FAQs</span>
                     </div>
+
+                    {/* Add/Edit FAQ Modal */}
+                    {(isAddingFAQ || isEditingFAQ) && (
+                        <div className="modal-overlay">
+                            <div className="blog-modal-content">
+                                <div className="modal-header">
+                                    <h2>{isAddingFAQ ? 'Add New FAQ' : 'Edit FAQ'}</h2>
+                                    <button className="close-btn" onClick={resetFAQForm}>×</button>
+                                </div>
+                                <form className="blog-form" onSubmit={(e) => {
+                                    e.preventDefault();
+                                    handleSaveFAQ();
+                                }}>
+                                    <div className="form-group">
+                                        <label>Question *</label>
+                                        <input
+                                            type="text"
+                                            name="question"
+                                            value={faqFormData.question}
+                                            onChange={handleFAQInputChange}
+                                            placeholder="Enter the FAQ question"
+                                            required
+                                        />
+                                    </div>
+                                    <div className="form-group">
+                                        <label>Category *</label>
+                                        <div className="category-selection">
+                                            <label className="radio-label">
+                                                <input
+                                                    type="radio"
+                                                    name="category"
+                                                    value="Individual"
+                                                    checked={faqFormData.category === 'Individual'}
+                                                    onChange={handleFAQInputChange}
+                                                />
+                                                <span>Individual</span>
+                                            </label>
+                                            <label className="radio-label">
+                                                <input
+                                                    type="radio"
+                                                    name="category"
+                                                    value="Organiser"
+                                                    checked={faqFormData.category === 'Organiser'}
+                                                    onChange={handleFAQInputChange}
+                                                />
+                                                <span>Organiser</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div className="form-group">
+                                        <label>Answer</label>
+                                        <RichTextEditor
+                                            value={faqFormData.answer}
+                                            onChange={handleFAQContentChange}
+                                            placeholder="Enter the answer (optional - can be added later)"
+                                        />
+                                    </div>
+                                    <div className="form-actions">
+                                        <button type="button" className="cancel-btn" onClick={resetFAQForm}>Cancel</button>
+                                        <button type="submit" className="submit-btn">
+                                            {isAddingFAQ ? 'Add FAQ' : 'Save Changes'}
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    )}
 
                     <div className="blog-table-container">
                         <table className="blog-table">
@@ -676,7 +812,7 @@ const Admin = () => {
                                                 )}
                                             </td>
                                             <td className="actions-cell">
-                                                <button className="action-btn edit-btn" onClick={() => handleAnswerClick(faq)} title="Answer">✏️</button>
+                                                <button className="action-btn edit-btn" onClick={() => handleEditFAQClick(faq)} title="Edit">✏️</button>
                                                 <button className="action-btn delete-btn" onClick={() => handleDeleteFAQ(faq.id)} title="Delete">🗑️</button>
                                             </td>
                                         </tr>

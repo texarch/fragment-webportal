@@ -23,7 +23,7 @@ const BlogPost = () => {
             setFeedback(savedReaction);
             setCounts(savedCounts);
         }
-    }, [post]);
+    }, [id]);
 
     const handleReaction = (type) => {
         const newFeedback = feedback === type ? null : type;

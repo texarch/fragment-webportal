@@ -406,6 +406,58 @@
     min-height: 100px;
 }
 
+/* Category Selection Radio Buttons */
+.category-selection {
+    display: flex;
+    gap: 30px;
+    padding: 10px 0;
+}
+
+.radio-label,
+.form-group .radio-label,
+.category-selection .radio-label {
+    display: flex !important;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    font-family: "SF Pro Display", sans-serif;
+    font-size: 15px;
+    color: #333;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    background: #f8f9fa;
+    border: 2px solid #e9ecef;
+    text-transform: none;
+    font-weight: normal;
+    margin-bottom: 0;
+}
+
+.radio-label:hover {
+    background: #e9ecef;
+    border-color: #4A90D9;
+}
+
+.radio-label input[type="radio"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #4A90D9;
+    cursor: pointer;
+    margin: 0;
+    flex-shrink: 0;
+}
+
+.radio-label span {
+    line-height: 1;
+}
+
+.radio-label input[type="radio"]:checked+span,
+.radio-label:has(input[type="radio"]:checked) {
+    color: #4A90D9;
+    font-weight: 500;
+}
+
 .form-actions {
     display: flex;
     gap: 15px;

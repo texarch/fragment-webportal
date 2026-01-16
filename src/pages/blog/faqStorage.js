@@ -564,3 +564,36 @@ export const deleteQuestion = (id) => {
     saveFAQs(updatedFAQs);
     return updatedFAQs;
 };
+
+export const addFAQ = (faqData) => {
+    const faqs = getFAQs();
+    const newFAQ = {
+        id: Date.now(),
+        question: faqData.question,
+        answer: faqData.answer || '',
+        date: new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }),
+        status: faqData.answer ? 'answered' : 'pending',
+        likes: 0,
+        dislikes: 0,
+        category: faqData.category || 'Individual'
+    };
+    saveFAQs([newFAQ, ...faqs]);
+    return newFAQ;
+};
+
+export const updateFAQ = (id, faqData) => {
+    const faqs = getFAQs();
+    const updatedFAQs = faqs.map(faq =>
+        faq.id === id
+            ? {
+                ...faq,
+                question: faqData.question,
+                answer: faqData.answer,
+                status: faqData.answer ? 'answered' : 'pending',
+                category: faqData.category
+            }
+            : faq
+    );
+    saveFAQs(updatedFAQs);
+    return updatedFAQs;
+};
