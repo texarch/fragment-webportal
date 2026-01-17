@@ -8,7 +8,11 @@ const BlogList = () => {
     const [blogData, setBlogData] = useState([]);
 
     useEffect(() => {
-        setBlogData(getBlogs());
+        const fetchBlogs = async () => {
+            const data = await getBlogs();
+            setBlogData(data);
+        };
+        fetchBlogs();
     }, []);
 
     return (
@@ -29,7 +33,7 @@ const BlogList = () => {
 
             <div className="blog-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', overflowX: 'visible' }}>
                 {blogData.map(post => (
-                    <div key={post.id} className="blog-card-new" onClick={() => navigate(`/blog/post/${post.id}`)} style={{ gridColumn: 'auto' }}>
+                    <div key={post._id} className="blog-card-new" onClick={() => navigate(`/blog/post/${post._id}`)} style={{ gridColumn: 'auto' }}>
                         <img src={post.image} alt={post.title} className="blog-card-image" />
                         <div className="blog-card-content">
                             <h3>{post.title}</h3>

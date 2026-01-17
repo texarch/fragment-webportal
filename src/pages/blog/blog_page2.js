@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./blog_page2.css";
 import blogImage from "../../assets/Blog_Page_Image.png";
 import { getBlogs } from "./blogStorage";
@@ -6,15 +6,25 @@ import { useNavigate } from "react-router-dom";
 
 const BlogPage2 = ({ selectedCategory }) => {
   const navigate = useNavigate();
-  const allBlogs = getBlogs();
-  const blogData = allBlogs.filter(blog => blog.category === selectedCategory);
+  const [secondLatestBlog, setSecondLatestBlog] = useState(null);
+  const [relatedPosts, setRelatedPosts] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-  // 1. The "Second Page" content (2nd latest blog of this category)
-  // We assume index 0 is used by BlogHero, so we start from index 1
-  const secondLatestBlog = blogData.length > 1 ? blogData[1] : null;
+  useEffect(() => {
+    const fetchData = async () => {
+      const allBlogs = await getBlogs();
+      const blogData = allBlogs.filter(blog => blog.category === selectedCategory);
 
-  // 2. The "You might like these" grid
-  const relatedPosts = blogData.slice(2, 18);
+      // 2nd latest
+      setSecondLatestBlog(blogData.length > 1 ? blogData[1] : null);
+      // Related posts
+      setRelatedPosts(blogData.slice(2, 18));
+      setLoading(false);
+    };
+    fetchData();
+  }, [selectedCategory]);
+
+  if (loading) return <div style={{ height: '20px' }}></div>;
 
   if (!secondLatestBlog) {
     return null;
@@ -32,7 +42,7 @@ const BlogPage2 = ({ selectedCategory }) => {
           <p>{secondLatestBlog.summary}</p>
           <button
             className="read-more-btn"
-            onClick={() => navigate(`/blog/post/${secondLatestBlog.id}`)}
+            onClick={() => navigate(`/blog/post/${secondLatestBlog._id}`)}
           >
             Read More
           </button>
@@ -48,7 +58,7 @@ const BlogPage2 = ({ selectedCategory }) => {
           <h2 className="related-title">You might like these</h2>
           <div className="blog-grid">
             {relatedPosts.map(post => (
-              <div key={post.id} className="blog-card-new" onClick={() => navigate(`/blog/post/${post.id}`)}>
+              <div key={post._id} className="blog-card-new" onClick={() => navigate(`/blog/post/${post._id}`)}>
                 <img src={post.image} alt={post.title} className="blog-card-image" />
                 <div className="blog-card-content">
                   <h3>{post.title}</h3>

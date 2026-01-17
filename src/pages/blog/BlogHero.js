@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Blog.css";
 import BlogImage from "../../assets/Blog_Page_Image.png";
@@ -8,9 +8,20 @@ import { getBlogs } from "./blogStorage";
 const BlogHero = ({ selectedCategory }) => {
     const navigate = useNavigate();
 
-    const allBlogs = getBlogs();
-    const blogData = allBlogs.filter(blog => blog.category === selectedCategory);
-    const latestBlog = blogData[0];
+    const [latestBlog, setLatestBlog] = useState(null);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        const fetchLatest = async () => {
+            const allBlogs = await getBlogs();
+            const blogData = allBlogs.filter(blog => blog.category === selectedCategory);
+            setLatestBlog(blogData[0]);
+            setLoading(false);
+        };
+        fetchLatest();
+    }, [selectedCategory]);
+
+    if (loading) return null; // Or a spinner
 
     if (!latestBlog) {
         return (
@@ -48,7 +59,7 @@ const BlogHero = ({ selectedCategory }) => {
 
                     <button
                         className="read-more-btn"
-                        onClick={() => navigate(`/blog/post/${latestBlog.id}`)}
+                        onClick={() => navigate(`/blog/post/${latestBlog._id}`)}
                     >
                         Read More
                     </button>

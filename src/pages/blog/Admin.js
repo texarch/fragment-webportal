@@ -1,16 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { getBlogs, saveBlogs } from './blogStorage';
+import { getBlogs } from './blogStorage';
 import { getFAQs, answerQuestion, deleteQuestion, addFAQ, updateFAQ } from './faqStorage';
 import BlogImage from '../../assets/Blog_Page_Image.png';
 import RichTextEditor from '../../components/RichTextEditor';
 import './Admin.css';
 
 // Admin credentials - TODO: Replace with database authentication later
-const ADMIN_CREDENTIALS = {
-    email: 'admin@fragment.com',
-    password: 'admin123'
-};
+// Admin credentials - using backend API now
+const API_URL = 'http://localhost:4000/api/admin';
+const BLOG_API_URL = 'http://localhost:4000/website/admin/blogs';
+
+
 
 const getCurrentFormattedDate = () => {
     const date = new Date();
@@ -34,7 +35,7 @@ const Admin = () => {
         if (savedAuth) {
             try {
                 const authData = JSON.parse(savedAuth);
-                if (authData.isAuthenticated && authData.email === ADMIN_CREDENTIALS.email) {
+                if (authData.isAuthenticated && authData.email) {
                     setIsAuthenticated(true);
                 }
             } catch (e) {
@@ -65,12 +66,17 @@ const Admin = () => {
     });
 
     // Load blogs and FAQs on mount
-    useEffect(() => {
-        setBlogs(getBlogs());
+    const fetchBlogs = async () => {
+        const data = await getBlogs();
+        setBlogs(data);
+    };
 
-        const loadFAQs = () => {
-            const loadedFAQs = getFAQs();
-            setFaqs(loadedFAQs.sort((a, b) => b.id - a.id));
+    useEffect(() => {
+        fetchBlogs();
+
+        const loadFAQs = async () => {
+            const loadedFAQs = await getFAQs();
+            setFaqs(loadedFAQs); // Backend sorts by date already
         };
         loadFAQs();
 
@@ -85,7 +91,6 @@ const Admin = () => {
     const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
     const [formData, setFormData] = useState({
         title: '',
-        author: '',
         date: getCurrentFormattedDate(),
 
         summary: '',
@@ -104,15 +109,23 @@ const Admin = () => {
     };
 
     // Handle login submission
-    const handleLogin = (e) => {
+    const handleLogin = async (e) => {
         e.preventDefault();
         setIsLoggingIn(true);
         setLoginError('');
 
-        // Simulate API call delay
-        setTimeout(() => {
-            if (loginData.email === ADMIN_CREDENTIALS.email &&
-                loginData.password === ADMIN_CREDENTIALS.password) {
+        try {
+            const response = await fetch(`${API_URL}/login`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(loginData),
+            });
+
+            const data = await response.json();
+
+            if (data.success) {
                 setIsAuthenticated(true);
                 setLoginError('');
                 // Save to localStorage if "Keep me logged in" is checked
@@ -123,10 +136,14 @@ const Admin = () => {
                     }));
                 }
             } else {
-                setLoginError('Invalid email or password');
+                setLoginError(data.message || 'Invalid email or password');
             }
+        } catch (error) {
+            console.error('Login error:', error);
+            setLoginError('Server error. Please try again later.');
+        } finally {
             setIsLoggingIn(false);
-        }, 800);
+        }
     };
 
     // Handle logout - only ends session, keeps "Remember me" credentials
@@ -149,7 +166,6 @@ const Admin = () => {
     const resetForm = () => {
         setFormData({
             title: '',
-            author: '',
             date: getCurrentFormattedDate(),
 
             summary: '',
@@ -205,21 +221,32 @@ const Admin = () => {
     };
 
     // Add new blog
-    const handleAddBlog = () => {
+    const handleAddBlog = async () => {
         const newBlog = {
-            id: Math.max(...blogs.map(b => b.id), 0) + 1,
             title: formData.title,
-            author: formData.author,
             date: formData.date,
             summary: formData.summary,
-            content: formData.content, // Content is already HTML from rich text editor
-            image: formData.image || BlogImage, // Use uploaded image or default
+            content: formData.content,
+            image: formData.image || BlogImage,
             category: formData.category
         };
-        const updatedBlogs = [newBlog, ...blogs];
-        setBlogs(updatedBlogs);
-        saveBlogs(updatedBlogs);
-        resetForm();
+
+        try {
+            const response = await fetch(BLOG_API_URL, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(newBlog)
+            });
+            if (response.ok) {
+                await fetchBlogs();
+                resetForm();
+            } else {
+                alert('Failed to add blog');
+            }
+        } catch (error) {
+            console.error('Error adding blog:', error);
+            alert('Error adding blog');
+        }
     };
 
     // Edit existing blog
@@ -227,7 +254,6 @@ const Admin = () => {
         setSelectedBlog(blog);
         setFormData({
             title: blog.title,
-            author: blog.author,
             date: getCurrentFormattedDate(),
             summary: blog.summary,
             content: blog.content, // Keep HTML content for rich text editor
@@ -239,24 +265,32 @@ const Admin = () => {
     };
 
     // Save edited blog
-    const handleSaveEdit = () => {
-        const updatedBlogs = blogs.map(blog =>
-            blog.id === selectedBlog.id
-                ? {
-                    ...blog,
-                    title: formData.title,
-                    author: formData.author,
-                    date: formData.date,
-                    summary: formData.summary,
-                    content: formData.content, // Content is already HTML from rich text editor
-                    image: formData.image || blog.image, // Update image if changed, else keep old
-                    category: formData.category
-                }
-                : blog
-        );
-        setBlogs(updatedBlogs);
-        saveBlogs(updatedBlogs);
-        resetForm();
+    const handleSaveEdit = async () => {
+        const updatedBlog = {
+            title: formData.title,
+            date: formData.date,
+            summary: formData.summary,
+            content: formData.content,
+            image: formData.image || selectedBlog.image,
+            category: formData.category
+        };
+
+        try {
+            const response = await fetch(`${BLOG_API_URL}/${selectedBlog._id}`, {
+                method: 'PUT',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(updatedBlog)
+            });
+            if (response.ok) {
+                await fetchBlogs();
+                resetForm();
+            } else {
+                alert('Failed to update blog');
+            }
+        } catch (error) {
+            console.error('Error updating blog:', error);
+            alert('Error updating blog');
+        }
     };
 
     // Delete blog
@@ -265,11 +299,21 @@ const Admin = () => {
         setShowDeleteConfirm(true);
     };
 
-    const confirmDelete = () => {
-        const updatedBlogs = blogs.filter(blog => blog.id !== selectedBlog.id);
-        setBlogs(updatedBlogs);
-        saveBlogs(updatedBlogs);
-        resetForm();
+    const confirmDelete = async () => {
+        try {
+            const response = await fetch(`${BLOG_API_URL}/${selectedBlog._id}`, {
+                method: 'DELETE'
+            });
+            if (response.ok) {
+                await fetchBlogs();
+                resetForm();
+            } else {
+                alert('Failed to delete blog');
+            }
+        } catch (error) {
+            console.error('Error deleting blog:', error);
+            alert('Error deleting blog');
+        }
     };
 
     // View blog
@@ -279,16 +323,17 @@ const Admin = () => {
 
     // FAQ Handlers
     const handleAnswerClick = (faq) => {
-        setAnsweringId(faq.id);
+        setAnsweringId(faq._id);
         setAnswerText(faq.answer || '');
     };
 
-    const handleSaveAnswer = (id) => {
-        answerQuestion(id, answerText);
+    const handleSaveAnswer = async (id) => {
+        await answerQuestion(id, answerText);
         setAnsweringId(null);
         setAnswerText('');
         // Re-fetch to update state
-        setFaqs(getFAQs().sort((a, b) => b.id - a.id));
+        const updated = await getFAQs();
+        setFaqs(updated);
     };
 
     const handleCancelAnswer = () => {
@@ -296,10 +341,11 @@ const Admin = () => {
         setAnswerText('');
     };
 
-    const handleDeleteFAQ = (id) => {
+    const handleDeleteFAQ = async (id) => {
         if (window.confirm('Are you sure you want to delete this question?')) {
-            deleteQuestion(id);
-            setFaqs(getFAQs().sort((a, b) => b.id - a.id));
+            await deleteQuestion(id);
+            const updated = await getFAQs();
+            setFaqs(updated);
         }
     };
 
@@ -351,13 +397,16 @@ const Admin = () => {
         setIsAddingFAQ(false);
     };
 
-    const handleSaveFAQ = () => {
+    const handleSaveFAQ = async () => {
         if (isAddingFAQ) {
-            addFAQ(faqFormData);
+            // Ensure status is 'answered' so it shows up on Demo page
+            const payload = { ...faqFormData, status: 'answered' };
+            await addFAQ(payload);
         } else if (isEditingFAQ && selectedFAQ) {
-            updateFAQ(selectedFAQ.id, faqFormData);
+            await updateFAQ(selectedFAQ._id, faqFormData);
         }
-        setFaqs(getFAQs().sort((a, b) => b.id - a.id));
+        const updated = await getFAQs();
+        setFaqs(updated);
         resetFAQForm();
     };
 
@@ -634,8 +683,8 @@ const Admin = () => {
                             <tbody>
                                 {/* Show all blogs regardless of category for now */}
                                 {blogs.filter(blog => blog.category === selectedCategory).map((blog) => (
-                                    <tr key={blog.id}>
-                                        <td className="id-cell">{blog.id}</td>
+                                    <tr key={blog._id || Math.random()}>
+                                        <td className="id-cell">{(blog._id || 'N/A').substring(0, 8)}...</td>
                                         <td className="title-cell">
                                             <div className="title-wrapper">
                                                 <img src={blog.image} alt="" className="blog-thumbnail" />
@@ -646,7 +695,7 @@ const Admin = () => {
                                         <td className="actions-cell">
                                             <button
                                                 className="action-btn view-btn"
-                                                onClick={() => handleViewBlog(blog.id)}
+                                                onClick={() => handleViewBlog(blog._id)}
                                                 title="View"
                                             >
                                                 👁️
@@ -784,7 +833,7 @@ const Admin = () => {
                                 {faqs
                                     .filter(faq => faq.category === selectedFAQCategory)
                                     .map(faq => (
-                                        <tr key={faq.id}>
+                                        <tr key={faq._id}>
                                             <td>
                                                 <span className={`status-badge ${faq.status}`}>
                                                     {faq.status === 'answered' ? 'Answered' : 'Pending'}
@@ -793,7 +842,7 @@ const Admin = () => {
                                             <td className="question-cell" title={faq.question}>{faq.question}</td>
                                             <td>{faq.date}</td>
                                             <td className="answer-cell">
-                                                {answeringId === faq.id ? (
+                                                {answeringId === faq._id ? (
                                                     <div className="answer-edit-box">
                                                         <RichTextEditor
                                                             value={answerText}
@@ -801,7 +850,7 @@ const Admin = () => {
                                                             placeholder="Type your answer here..."
                                                         />
                                                         <div className="answer-actions">
-                                                            <button className="save-mini-btn" onClick={() => handleSaveAnswer(faq.id)}>Save</button>
+                                                            <button className="save-mini-btn" onClick={() => handleSaveAnswer(faq._id)}>Save</button>
                                                             <button className="cancel-mini-btn" onClick={handleCancelAnswer}>Cancel</button>
                                                         </div>
                                                     </div>
@@ -813,7 +862,7 @@ const Admin = () => {
                                             </td>
                                             <td className="actions-cell">
                                                 <button className="action-btn edit-btn" onClick={() => handleEditFAQClick(faq)} title="Edit">✏️</button>
-                                                <button className="action-btn delete-btn" onClick={() => handleDeleteFAQ(faq.id)} title="Delete">🗑️</button>
+                                                <button className="action-btn delete-btn" onClick={() => handleDeleteFAQ(faq._id)} title="Delete">🗑️</button>
                                             </td>
                                         </tr>
                                     ))}

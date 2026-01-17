@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import curiousImage from '../assets/curious-illustration.png';
 import './Demo.css';
 
@@ -212,7 +212,7 @@ const Page4 = () => {
 };
 
 
-import { getFAQs, saveQuestion, getReaction, getCounts, saveFAQReaction } from './blog/faqStorage';
+import { getFAQs, saveQuestion, getReaction, getCounts, saveFAQReaction, saveUserReactionLocal } from './blog/faqStorage';
 
 const FAQItem = ({ faq, index, toggleFAQ, onReaction }) => {
   return (
@@ -245,27 +245,37 @@ const FAQItem = ({ faq, index, toggleFAQ, onReaction }) => {
 
 const FAQ = ({ selectedCategory }) => {
   // Use function to initialize state so it runs once
-  const [faqs, setFaqs] = useState(() => {
-    const allFaqs = getFAQs();
-    // Filter to only show answered FAQs in the public list
-    return allFaqs.filter(f => f.status === 'answered' && f.answer).map(f => {
-      const counts = getCounts(f.id);
-      const userReaction = getReaction(f.id);
-      return {
-        ...f,
-        isOpen: false,
-        likes: counts.likes,
-        dislikes: counts.dislikes,
-        userReaction: userReaction
-      };
-    });
-  });
+  /* Refactored for Async loading */
+  const [faqs, setFaqs] = useState([]);
+
+  useEffect(() => {
+    const loadData = async () => {
+      const allFaqs = await getFAQs();
+      // Filter to only show answered FAQs in the public list
+      const mappedFaqs = allFaqs
+        .filter(f => f.status === 'answered' && f.answer)
+        .map(f => {
+          // const counts = getCounts(f._id); // Deprecated, use f.likes/dislikes
+          const userReaction = getReaction(f._id);
+          return {
+            ...f,
+            id: f._id, // Ensure we use _id as id for frontend logic compatibility if needed
+            isOpen: false,
+            likes: f.likes || 0,
+            dislikes: f.dislikes || 0,
+            userReaction: userReaction
+          };
+        });
+      setFaqs(mappedFaqs);
+    };
+    loadData();
+  }, []);
 
   // Effect to update FAQs if storage changes (optional, but good for sync)
   // For now, we rely on the initial load or local updates, but if we want it to be reactive to the Admin panel changes immediately without reload, we might need a listener.
   // Kept simple as per original code.
 
-  const handleReaction = (id, type) => {
+  const handleReaction = async (id, type) => {
     // Find current FAQ to get old reaction
     const currentFaq = faqs.find(f => f.id === id);
     if (!currentFaq) return;
@@ -274,10 +284,13 @@ const FAQ = ({ selectedCategory }) => {
     const oldReaction = currentFaq.userReaction;
     const newReaction = oldReaction === type ? null : type;
 
-    // Update storage
-    const newCounts = saveFAQReaction(id, newReaction, oldReaction);
+    // Update storage/API
+    const newCounts = await saveFAQReaction(id, newReaction, oldReaction);
 
-    // Update local state
+    // Save local user reaction state
+    saveUserReactionLocal(id, newReaction);
+
+    // Re-update local state
     setFaqs(faqs.map(faq =>
       faq.id === id
         ? {
@@ -289,6 +302,8 @@ const FAQ = ({ selectedCategory }) => {
         : faq
     ));
   };
+
+
 
   const toggleFAQ = (id) => {
     setFaqs(
@@ -326,12 +341,12 @@ const AskModal = ({ isOpen, onClose, category }) => {
 
   if (!isOpen) return null;
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
 
     // Use storage function with category
-    saveQuestion(question, category);
+    await saveQuestion(question, category);
 
     setTimeout(() => {
       setIsSubmitting(false);

@@ -11,27 +11,47 @@ import './BlogPost.css';
 const BlogPost = () => {
     const { id } = useParams();
     const navigate = useNavigate();
-    const blogData = getBlogs();
-    const post = blogData.find(p => p.id === parseInt(id));
+    // Use state for post data since we need to fetch it
+    const [post, setPost] = useState(null);
+    const [loading, setLoading] = useState(true);
     const [feedback, setFeedback] = useState(null);
     const [counts, setCounts] = useState({ up: 0, down: 0 });
 
     useEffect(() => {
-        if (post) {
-            const savedReaction = getReaction(post.id);
-            const savedCounts = getCounts(post.id);
-            setFeedback(savedReaction);
-            setCounts(savedCounts);
-        }
+        const fetchPost = async () => {
+            setLoading(true);
+            const allBlogs = await getBlogs();
+            // ID from params is string, and _id from DB is string, so direct comparison works
+            // If using separate getBlogById API, we could use that too. 
+            // For simplicity and to match previous logic of getting all:
+            const foundPost = allBlogs.find(p => p._id === id);
+
+            // Fallback: Check if ID was still passed as int (legacy)? Not needed if we switched everywhere.
+
+            if (foundPost) {
+                setPost(foundPost);
+                const savedReaction = getReaction(foundPost._id);
+                const savedCounts = getCounts(foundPost._id);
+                setFeedback(savedReaction);
+                setCounts(savedCounts);
+            }
+            setLoading(false);
+        };
+        fetchPost();
     }, [id]);
 
     const handleReaction = (type) => {
+        if (!post) return;
         const newFeedback = feedback === type ? null : type;
         const oldFeedback = feedback;
         setFeedback(newFeedback);
-        const newCounts = saveReaction(post.id, newFeedback, oldFeedback);
+        const newCounts = saveReaction(post._id, newFeedback, oldFeedback);
         setCounts(newCounts);
     };
+
+    if (loading) {
+        return <div className="blog-post-wrapper"><h2>Loading...</h2></div>;
+    }
 
     if (!post) {
         return <div className="blog-post-wrapper"><h2>Post not found</h2></div>;
