@@ -1,9 +1,15 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import './Navbar.css';
 import logo from './assets/logo2.png';
+import loginBtn from './assets/editor/Log in.png';
+import startBtnOrganiser from './assets/editor/Start for free_Organiser.png';
+import startBtnIndividual from './assets/editor/Start for free_Individual.png';
+// New Home Page Specific Images
 
-const Navbar = () => {
+
+const Navbar = ({ currentView }) => {
+  const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
   const navRef = useRef(null);
 
@@ -24,6 +30,13 @@ const Navbar = () => {
       document.removeEventListener('click', handleClickOutside);
     };
   }, []);
+
+  // Determine destination routes based on Page and View
+  // Determine destination routes based on Page and View
+  // const isOrganiserAuthContext = ... (removed)
+
+  const loginRoute = '/login';
+  const signupRoute = '/signup';
 
   return (
     <nav className="navbar" ref={navRef}>
@@ -61,11 +74,29 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Auth buttons for desktop  */}
-      {/* <div className="auth-buttons auth-buttons-desktop">
-          <button className="login">Log In</button>
-          <button className="signup">Start for free</button>
-      </div> */}
+      {/* Auth buttons for desktop */}
+      {/* Auth buttons for desktop */}
+      <div className="auth-buttons auth-buttons-desktop">
+        <div className="organiser-auth-btns">
+          <Link to={loginRoute} className="login-link">
+            <span className="login-text-btn">Log in</span>
+          </Link>
+
+          {/* Logic: Show Individual button ONLY if on tabbed pages and view is 'individual'.
+              Otherwise (non-tabbed pages or organiser view), show Organiser button.
+              Tabbed pages: Home (/), Blog (/blog), Demo (/demo) AND Blog Posts (/blog/post/...)
+          */}
+          {((['/', '/blog', '/demo', '/Blog', '/Demo'].includes(location.pathname) || location.pathname.startsWith('/blog/post/')) && currentView === 'individual') ? (
+            <Link to={signupRoute}>
+              <img src={startBtnIndividual} alt="Start for free" className="nav-img-btn start-img-btn" />
+            </Link>
+          ) : (
+            <Link to={signupRoute}>
+              <img src={startBtnOrganiser} alt="Start for free" className="nav-img-btn start-img-btn" />
+            </Link>
+          )}
+        </div>
+      </div>
     </nav>
   );
 };

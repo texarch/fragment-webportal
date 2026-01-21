@@ -4,21 +4,30 @@ import BlogPage2 from './blog_page2';
 import BlogFooter from './BlogFooter';
 import './Blog.css'; // Ensure CSS is imported
 
-const Blog = () => {
-  const [selectedCategory, setSelectedCategory] = useState('Organiser');
+const Blog = ({ currentView, setView }) => {
+  // Map global state (lowercase) to local component expectation (Capitalized)
+  // Default to 'Organiser' if currentView is undefined or 'organiser'
+  const selectedCategory = currentView === 'individual' ? 'Individual' : 'Organiser';
+
+  const handleCategoryChange = (category) => {
+    // Map Capitalized back to lowercase for global state
+    if (setView) {
+      setView(category.toLowerCase());
+    }
+  };
 
   return (
     <div>
       <div className="blog-tabs">
         <button
           className={`organiser-tab ${selectedCategory === 'Organiser' ? 'active' : ''}`}
-          onClick={() => setSelectedCategory('Organiser')}
+          onClick={() => handleCategoryChange('Organiser')}
         >
           <span>Organiser</span>
         </button>
         <button
           className={`individual-tab ${selectedCategory === 'Individual' ? 'active' : ''}`}
-          onClick={() => setSelectedCategory('Individual')}
+          onClick={() => handleCategoryChange('Individual')}
         >
           <span>Individual</span>
         </button>

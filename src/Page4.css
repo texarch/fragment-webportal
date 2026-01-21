@@ -131,6 +131,26 @@
     margin: 10px 0;
   }
 
+  /* Alternating shifts to "bring images inside" */
+
+  /* Even rows (Odd divs due to header) -> "Right" images -> shift Left */
+  .image-row:nth-of-type(odd) .section-image {
+    width: 75vw;
+    max-width: none;
+    margin: 10px auto;
+    object-fit: contain;
+    transform: scale(1.2) translateX(-20px);
+  }
+
+  /* Odd rows (Even divs due to header) -> "Left" images -> shift Right */
+  .image-row:nth-of-type(even) .section-image {
+    width: 75vw;
+    max-width: none;
+    margin: 10px auto;
+    object-fit: contain;
+    transform: scale(1.2) translateX(20px);
+  }
+
   .page4-wrapper {
     overflow-x: hidden;
   }

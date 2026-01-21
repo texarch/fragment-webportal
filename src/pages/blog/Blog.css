@@ -198,10 +198,12 @@
   align-items: center;
   justify-content: center;
   gap: 32px;
-  margin-top: 80px;
-  /* Account for navbar */
-  margin-bottom: 35px;
-  padding: 20px 0;
+  margin-top: 10px;
+  /* Reduced further */
+  margin-bottom: 15px;
+  /* Reduced from 35px */
+  padding: 5px 0;
+  /* Reduced from 20px 0 */
   background-color: transparent;
 }
 

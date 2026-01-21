@@ -8,7 +8,7 @@ import Contact from './pages/Contact.js';
 import { About } from './pages/About.js';
 import Pricing from './pages/Pricing.js';
 import SignUp from './pages/SignUp';
-import Login from './pages/Login';
+// import Login from './pages/Login';
 import Demo from './pages/Demo.js';
 import Blog from './pages/blog/Blog.js';
 import BlogList from './pages/blog/BlogList.js';
@@ -38,7 +38,7 @@ function App() {
   return (
     <Router>
       <ScrollToTop />
-      <Navbar />
+      <Navbar currentView={currentView} />
       <Routes>
         <Route path="/" element={<Home />} />
         {/* <Route path="/organiser" element={<Organiser />} /> */}
@@ -46,13 +46,11 @@ function App() {
         <Route path="/Contact" element={<Contact />} />
         <Route path="/About" element={<About />} />
         <Route path="/pricing" element={<Pricing />} />
-        <Route path="/Demo" element={<Demo />} />
-        <Route path="/Blog" element={<Blog />} />
+        <Route path="/Demo" element={<Demo currentView={currentView} setView={setCurrentView} />} />
+        <Route path="/Blog" element={<Blog currentView={currentView} setView={setCurrentView} />} />
         <Route path="/blog/all" element={<BlogList />} />
-        <Route path="/blog/post/:id" element={<BlogPost />} />
+        <Route path="/blog/post/:id" element={<BlogPost setView={setCurrentView} />} />
         <Route path="/blog/admin" element={<Admin />} />
-        <Route path="/signup" element={<SignUp />} />   {/* Route for Sign Up */}
-        <Route path="/login" element={<Login />} />     {/* Route for Log In */}
       </Routes>
     </Router>
   );

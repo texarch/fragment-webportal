@@ -402,9 +402,23 @@ const AskQuestionSection = ({ onOpenModal }) => {
   );
 };
 
-const Demo = () => {
+const Demo = ({ currentView, setView }) => {
   const [showAskModal, setShowAskModal] = useState(false);
-  const [selectedCategory, setSelectedCategory] = useState("Organiser");
+  // Map global state (lowercase) to local component expectation (Capitalized)
+  const selectedCategory = currentView === 'individual' ? 'Individual' : 'Organiser';
+
+  const handleCategoryChange = (category) => {
+    if (setView) {
+      setView(category.toLowerCase());
+    }
+  };
+
+  // Reset to Organiser view when Demo page loads, as per user request
+  useEffect(() => {
+    if (setView) {
+      setView('organiser');
+    }
+  }, [setView]);
 
   return (
     <>
@@ -416,13 +430,13 @@ const Demo = () => {
       <div className="faq-tabs" style={{ marginTop: '20px' }}>
         <button
           className={`organiser-tab ${selectedCategory === 'Organiser' ? 'active' : ''}`}
-          onClick={() => setSelectedCategory('Organiser')}
+          onClick={() => handleCategoryChange('Organiser')}
         >
           <span>Organiser</span>
         </button>
         <button
           className={`individual-tab ${selectedCategory === 'Individual' ? 'active' : ''}`}
-          onClick={() => setSelectedCategory('Individual')}
+          onClick={() => handleCategoryChange('Individual')}
         >
           <span>Individual</span>
         </button>

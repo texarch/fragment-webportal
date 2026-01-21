@@ -130,12 +130,23 @@
     margin: 10px 0;
   }
 
-  .page13-image {
-    width: 100vw;
+  /* "Left" images (Even divs due to header) -> shift Right */
+  .page13-section:nth-of-type(even) .page13-image {
+    width: 75vw;
     max-width: none;
     height: auto;
     object-fit: contain;
-    margin-left: calc(50% - 50vw);
-    transform: none;
+    margin: 10px auto;
+    transform: scale(1.2) translateX(20px);
+  }
+
+  /* "Right" images (Odd divs due to header) -> shift Left */
+  .page13-section:nth-of-type(odd) .page13-image {
+    width: 75vw;
+    max-width: none;
+    height: auto;
+    object-fit: contain;
+    margin: 10px auto;
+    transform: scale(1.2) translateX(-20px);
   }
 }

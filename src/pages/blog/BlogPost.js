@@ -8,7 +8,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { getBlogs, getReaction, saveReaction, getCounts } from './blogStorage';
 import './BlogPost.css';
 
-const BlogPost = () => {
+const BlogPost = ({ setView }) => {
     const { id } = useParams();
     const navigate = useNavigate();
     // Use state for post data since we need to fetch it
@@ -30,6 +30,12 @@ const BlogPost = () => {
 
             if (foundPost) {
                 setPost(foundPost);
+
+                // Update global view based on post category
+                if (setView && foundPost.category) {
+                    setView(foundPost.category.toLowerCase());
+                }
+
                 const savedReaction = getReaction(foundPost._id);
                 const savedCounts = getCounts(foundPost._id);
                 setFeedback(savedReaction);
@@ -38,7 +44,7 @@ const BlogPost = () => {
             setLoading(false);
         };
         fetchPost();
-    }, [id]);
+    }, [id, setView]);
 
     const handleReaction = (type) => {
         if (!post) return;
