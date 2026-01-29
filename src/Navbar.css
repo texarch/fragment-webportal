@@ -276,3 +276,18 @@ body {
   opacity: 0.9;
   transform: translateY(-1px);
 }
+
+/* Login Button Modal Trigger */
+.login-btn-modal {
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-btn-modal:hover .login-text-btn {
+  opacity: 0.8;
+}

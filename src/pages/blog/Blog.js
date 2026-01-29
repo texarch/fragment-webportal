@@ -20,13 +20,13 @@ const Blog = ({ currentView, setView }) => {
     <div>
       <div className="blog-tabs">
         <button
-          className={`organiser-tab ${selectedCategory === 'Organiser' ? 'active' : ''}`}
+          className={`home-organiser-tab ${selectedCategory === 'Organiser' ? 'active' : ''}`}
           onClick={() => handleCategoryChange('Organiser')}
         >
           <span>Organiser</span>
         </button>
         <button
-          className={`individual-tab ${selectedCategory === 'Individual' ? 'active' : ''}`}
+          className={`home-individual-tab ${selectedCategory === 'Individual' ? 'active' : ''}`}
           onClick={() => handleCategoryChange('Individual')}
         >
           <span>Individual</span>

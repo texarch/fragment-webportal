@@ -5,13 +5,20 @@ import logo from './assets/logo2.png';
 import loginBtn from './assets/editor/Log in.png';
 import startBtnOrganiser from './assets/editor/Start for free_Organiser.png';
 import startBtnIndividual from './assets/editor/Start for free_Individual.png';
+import RoleSelectionModal from './components/RoleSelectionModal';
 // New Home Page Specific Images
 
 
 const Navbar = ({ currentView }) => {
   const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
+  const [showRoleModal, setShowRoleModal] = useState(false);
+  const [modalMode, setModalMode] = useState('login');
   const navRef = useRef(null);
+
+  // Pages where login button should show role selection modal
+  const modalPages = ['/about', '/pricing', '/contact', '/demo', '/About', '/Pricing', '/Contact', '/Demo'];
+  const isModalPage = modalPages.includes(location.pathname);
 
   // Toggle menu open/close
   const toggleMenu = () => {
@@ -78,25 +85,83 @@ const Navbar = ({ currentView }) => {
       {/* Auth buttons for desktop */}
       <div className="auth-buttons auth-buttons-desktop">
         <div className="organiser-auth-btns">
-          <Link to={loginRoute} className="login-link">
-            <span className="login-text-btn">Log in</span>
-          </Link>
+          {isModalPage ? (
+            <button
+              className="login-link login-btn-modal"
+              onClick={() => {
+                setModalMode('login');
+                setShowRoleModal(true);
+              }}
+            >
+              <span className="login-text-btn">Log in</span>
+            </button>
+          ) : (
+            <a
+              // href={currentView === 'individual' ? 'https://my.thefragment.app/login' : 'https://business.thefragment.app/login'}
+              href={currentView === 'individual' ? 'http://localhost:5173/login' : 'http://localhost:5174/login'}
+              className="login-link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span className="login-text-btn">Log in</span>
+            </a>
+          )}
 
           {/* Logic: Show Individual button ONLY if on tabbed pages and view is 'individual'.
               Otherwise (non-tabbed pages or organiser view), show Organiser button.
-              Tabbed pages: Home (/), Blog (/blog), Demo (/demo) AND Blog Posts (/blog/post/...)
           */}
-          {((['/', '/blog', '/demo', '/Blog', '/Demo'].includes(location.pathname) || location.pathname.startsWith('/blog/post/')) && currentView === 'individual') ? (
-            <Link to={signupRoute}>
-              <img src={startBtnIndividual} alt="Start for free" className="nav-img-btn start-img-btn" />
-            </Link>
+          {isModalPage ? (
+            /* On Modal Pages (About, Pricing, etc.), show generic "Start for free" that opens modal */
+            <button
+              className="nav-img-btn login-btn-modal"
+              style={{ background: 'transparent', padding: 0, border: 'none' }}
+              onClick={() => {
+                setModalMode('signup');
+                setShowRoleModal(true);
+              }}
+            >
+              {/* Default to Organiser image or generic? Request implies same button but opens modal. 
+                   Since we need to pick an image, let's use the one matching the current view logic or just default.
+                   Actually, user said "Do the same thing (left right sides) for 'Start for Free'".
+                   The original code swapped images based on currentView. Let's keep that visual but change behavior.
+               */}
+              <img
+                src={currentView === 'individual' ? startBtnIndividual : startBtnOrganiser}
+                alt="Start for free"
+                className="nav-img-btn start-img-btn"
+              />
+            </button>
           ) : (
-            <Link to={signupRoute}>
-              <img src={startBtnOrganiser} alt="Start for free" className="nav-img-btn start-img-btn" />
-            </Link>
+            /* On other pages, keep original behavior */
+            ((['/', '/blog', '/demo', '/Blog', '/Demo'].includes(location.pathname) || location.pathname.startsWith('/blog/post/')) && currentView === 'individual') ? (
+              <a
+                // href="https://my.thefragment.app/signup" 
+                href="http://localhost:5173/signup"
+                target="_blank" rel="noopener noreferrer">
+                <img src={startBtnIndividual} alt="Start for free" className="nav-img-btn start-img-btn" />
+              </a>
+            ) : (
+              <a
+                // href="https://business.thefragment.app/signup" 
+                href="http://localhost:5174/signup"
+                target="_blank" rel="noopener noreferrer">
+                <img src={startBtnOrganiser} alt="Start for free" className="nav-img-btn start-img-btn" />
+              </a>
+            )
           )}
         </div>
       </div>
+
+      {/* Role Selection Modal */}
+      <RoleSelectionModal
+        isOpen={showRoleModal}
+        onClose={() => setShowRoleModal(false)}
+        prefixText={modalMode === 'login' ? 'Log-in as' : 'Sign-in as'}
+        // onIndividualClick={() => window.open(modalMode === 'login' ? 'https://my.thefragment.app/login' : 'https://my.thefragment.app/signup', '_blank')}
+        onIndividualClick={() => window.open(modalMode === 'login' ? 'http://localhost:5173/login' : 'http://localhost:5173/signup', '_blank')}
+        // onOrganiserClick={() => window.open(modalMode === 'login' ? 'https://business.thefragment.app/login' : 'https://business.thefragment.app/signup', '_blank')}
+        onOrganiserClick={() => window.open(modalMode === 'login' ? 'http://localhost:5174/login' : 'http://localhost:5174/signup', '_blank')}
+      />
     </nav>
   );
 };

@@ -429,13 +429,13 @@ const Demo = ({ currentView, setView }) => {
       {/* TABS Moved Here */}
       <div className="faq-tabs" style={{ marginTop: '20px' }}>
         <button
-          className={`organiser-tab ${selectedCategory === 'Organiser' ? 'active' : ''}`}
+          className={`home-organiser-tab ${selectedCategory === 'Organiser' ? 'active' : ''}`}
           onClick={() => handleCategoryChange('Organiser')}
         >
           <span>Organiser</span>
         </button>
         <button
-          className={`individual-tab ${selectedCategory === 'Individual' ? 'active' : ''}`}
+          className={`home-individual-tab ${selectedCategory === 'Individual' ? 'active' : ''}`}
           onClick={() => handleCategoryChange('Individual')}
         >
           <span>Individual</span>
