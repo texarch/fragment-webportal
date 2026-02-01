@@ -252,8 +252,10 @@ const FAQ = ({ selectedCategory }) => {
     const loadData = async () => {
       const allFaqs = await getFAQs();
       // Filter to only show answered FAQs in the public list
+      // Reverse the array so newest FAQs appear first
       const mappedFaqs = allFaqs
         .filter(f => f.status === 'answered' && f.answer)
+        .reverse()
         .map(f => {
           // const counts = getCounts(f._id); // Deprecated, use f.likes/dislikes
           const userReaction = getReaction(f._id);

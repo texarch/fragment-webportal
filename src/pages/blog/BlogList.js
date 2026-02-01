@@ -34,7 +34,9 @@ const BlogList = () => {
             <div className="blog-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', overflowX: 'visible' }}>
                 {blogData.map(post => (
                     <div key={post._id} className="blog-card-new" onClick={() => navigate(`/blog/post/${post._id}`)} style={{ gridColumn: 'auto' }}>
-                        <img src={post.image} alt={post.title} className="blog-card-image" />
+                        {post.image && post.image.trim() !== '' && !post.image.includes('UExBQ0VIT0xERVJfSU1BR0') && (
+                            <img src={post.image} alt={post.title} className="blog-card-image" />
+                        )}
                         <div className="blog-card-content">
                             <h3>{post.title}</h3>
                             <p>{post.summary}</p>

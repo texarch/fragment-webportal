@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './Navbar.js';
 import Organiser from './Organiser.js';
 import Individual from './Individual.js';
@@ -18,7 +18,14 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import ScrollToTop from './ScrollToTop.js';
 
-
+const ConditionalNavbar = ({ currentView }) => {
+  const location = useLocation();
+  // Hide Navbar only on the exact admin path
+  if (location.pathname === '/blog/admin') {
+    return null;
+  }
+  return <Navbar currentView={currentView} />;
+};
 
 function App() {
   const [currentView, setCurrentView] = React.useState('organiser');
@@ -38,7 +45,7 @@ function App() {
   return (
     <Router>
       <ScrollToTop />
-      <Navbar currentView={currentView} />
+      <ConditionalNavbar currentView={currentView} />
       <Routes>
         <Route path="/" element={<Home />} />
         {/* <Route path="/organiser" element={<Organiser />} /> */}

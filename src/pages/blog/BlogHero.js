@@ -66,9 +66,11 @@ const BlogHero = ({ selectedCategory }) => {
                 </div>
 
                 {/* Right image */}
-                <div className="blog-image">
-                    <img src={latestBlog.image} alt="Blog" />
-                </div>
+                {latestBlog.image && latestBlog.image.trim() !== '' && !latestBlog.image.includes('UExBQ0VIT0xERVJfSU1BR0') && (
+                    <div className="blog-image">
+                        <img src={latestBlog.image} alt="Blog" />
+                    </div>
+                )}
             </section>
         </div>
     );

@@ -77,7 +77,9 @@ const BlogPost = ({ setView }) => {
                 <h1>{post.title}</h1>
 
                 <p className="blog-date">{post.date}</p>
-                <img src={post.image} alt={post.title} style={{ maxWidth: '100%', borderRadius: '10px', margin: '20px 0' }} />
+                {post.image && post.image.trim() !== '' && !post.image.includes('UExBQ0VIT0xERVJfSU1BR0') && (
+                    <img src={post.image} alt={post.title} style={{ maxWidth: '100%', borderRadius: '10px', margin: '20px 0' }} />
+                )}
 
                 <div dangerouslySetInnerHTML={{ __html: post.content }} />
 

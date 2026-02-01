@@ -34,9 +34,11 @@ const BlogPage2 = ({ selectedCategory }) => {
     <div className="blog-page-wrapper">
       {/* ORIGINAL CONTENT: Second Latest Blog */}
       <div className="blog-card">
-        <div className="blog-image-section">
-          <img src={secondLatestBlog.image} alt={secondLatestBlog.title} />
-        </div>
+        {secondLatestBlog.image && secondLatestBlog.image.trim() !== '' && !secondLatestBlog.image.includes('UExBQ0VIT0xERVJfSU1BR0') && (
+          <div className="blog-image-section">
+            <img src={secondLatestBlog.image} alt={secondLatestBlog.title} />
+          </div>
+        )}
         <div className="blog-content-section">
           <h2>{secondLatestBlog.title}</h2>
           <p>{secondLatestBlog.summary}</p>
@@ -59,7 +61,9 @@ const BlogPage2 = ({ selectedCategory }) => {
           <div className="blog-grid">
             {relatedPosts.map(post => (
               <div key={post._id} className="blog-card-new" onClick={() => navigate(`/blog/post/${post._id}`)}>
-                <img src={post.image} alt={post.title} className="blog-card-image" />
+                {post.image && post.image.trim() !== '' && !post.image.includes('UExBQ0VIT0xERVJfSU1BR0') && (
+                  <img src={post.image} alt={post.title} className="blog-card-image" />
+                )}
                 <div className="blog-card-content">
                   <h3>{post.title}</h3>
                   <p>{post.summary}</p>
