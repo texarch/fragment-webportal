@@ -75,14 +75,17 @@ const Navbar = ({ currentView }) => {
           <Link to="/demo" onClick={() => setIsOpen(false)}>Demo</Link>
         </div>
         {/* Auth buttons inside the menu for mobile  */}
+        {/* Commented out login and start for free buttons
         <div className="auth-buttons auth-buttons-mobile">
           <button className="login" onClick={() => setIsOpen(false)}>Log In</button>
           <button className="signup" onClick={() => setIsOpen(false)}>Start for free</button>
         </div>
+        */}
       </div>
 
       {/* Auth buttons for desktop */}
       {/* Auth buttons for desktop */}
+      {/* Commented out login and start for free buttons (desktop)
       <div className="auth-buttons auth-buttons-desktop">
         <div className="organiser-auth-btns">
           {isModalPage ? (
@@ -107,11 +110,7 @@ const Navbar = ({ currentView }) => {
             </a>
           )}
 
-          {/* Logic: Show Individual button ONLY if on tabbed pages and view is 'individual'.
-              Otherwise (non-tabbed pages or organiser view), show Organiser button.
-          */}
           {isModalPage ? (
-            /* On Modal Pages (About, Pricing, etc.), show generic "Start for free" that opens modal */
             <button
               className="nav-img-btn login-btn-modal"
               style={{ background: 'transparent', padding: 0, border: 'none' }}
@@ -120,11 +119,6 @@ const Navbar = ({ currentView }) => {
                 setShowRoleModal(true);
               }}
             >
-              {/* Default to Organiser image or generic? Request implies same button but opens modal. 
-                   Since we need to pick an image, let's use the one matching the current view logic or just default.
-                   Actually, user said "Do the same thing (left right sides) for 'Start for Free'".
-                   The original code swapped images based on currentView. Let's keep that visual but change behavior.
-               */}
               <img
                 src={currentView === 'individual' ? startBtnIndividual : startBtnOrganiser}
                 alt="Start for free"
@@ -132,7 +126,6 @@ const Navbar = ({ currentView }) => {
               />
             </button>
           ) : (
-            /* On other pages, keep original behavior */
             ((['/', '/blog', '/demo', '/Blog', '/Demo'].includes(location.pathname) || location.pathname.startsWith('/blog/post/')) && currentView === 'individual') ? (
               <a
                 // href="https://my.thefragment.app/signup" 
@@ -151,6 +144,7 @@ const Navbar = ({ currentView }) => {
           )}
         </div>
       </div>
+      */}
 
       {/* Role Selection Modal */}
       <RoleSelectionModal
