@@ -1,0 +1,402 @@
+/* Role Selection Modal Styles */
+
+.role-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.role-modal-back-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: transparent;
+    border: none;
+    font-family: "SF Pro", "Inter", sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: #5F6368;
+    cursor: pointer;
+    z-index: 10001;
+    /* Ensure it's above the overlay/container */
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px;
+    transition: color 0.3s ease;
+}
+
+.role-modal-back-btn:hover {
+    color: #000;
+}
+
+
+
+.role-modal-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    max-width: 100vw;
+    max-height: 100vh;
+}
+
+/* Base Section Styles */
+.role-section {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease, transform 0.2s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.role-section:hover {
+    box-shadow: inset 0 0 60px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Hover effect removed to match left side */
+
+.role-section-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+    z-index: 1;
+}
+
+/* Individual Section (Left - White) */
+.individual-section {
+    background-color: #FFFFFF;
+    position: relative;
+    /* Ensure stacking context */
+}
+
+.individual-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../assets/page1bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.25;
+    z-index: 0;
+}
+
+.individual-section .role-section-content {
+    gap: 0;
+}
+
+/* Organiser Section (Right - Dark) */
+.organiser-section {
+    background: var(--b-prime-500, #404B5E);
+    position: relative;
+}
+
+.organiser-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../assets/page1bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.25;
+    mix-blend-mode: multiply;
+    z-index: 0;
+}
+
+.organiser-section .role-section-content {
+    gap: 0;
+}
+
+/* Title Styles */
+.role-title {
+    font-family: "SF Pro", -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 590;
+    font-size: 72px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    margin: 0;
+}
+
+.individual-title {
+    color: var(--black, #000);
+    font-family: "SF Pro", -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 590;
+    line-height: normal;
+    width: auto;
+    height: auto;
+    margin-bottom: 32px;
+}
+
+.organiser-title {
+    color: #FFFFFF;
+    font-family: "SF Pro", -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 590;
+    line-height: normal;
+    width: auto;
+    height: auto;
+    margin-bottom: 32px;
+}
+
+/* Login Text Styles */
+.role-login-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.login-prefix {
+    font-family: "SF Pro", -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 120%;
+    letter-spacing: -2%;
+    text-align: center;
+    color: #000000;
+}
+
+.individual-section .login-prefix {
+    color: var(--black, #000);
+    text-align: center;
+    font-family: "SF Pro", -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.5px;
+}
+
+.login-role {
+    font-family: "SF Pro", -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 100%;
+    letter-spacing: -2%;
+    text-align: center;
+    box-shadow: none;
+}
+
+.individual-role {
+    color: var(--black, #000);
+    font-family: "SF Pro", -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.8px;
+}
+
+.organiser-prefix {
+    color: #FFFFFF;
+    text-align: center;
+    font-family: "SF Pro", -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.5px;
+}
+
+.organiser-role {
+    color: #FFFFFF;
+    font-family: "SF Pro", -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.8px;
+}
+
+/* Card Styles */
+.role-card {
+    width: 320px;
+    height: 320px;
+    border-radius: 36.34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    overflow: hidden;
+}
+
+.individual-card {
+    display: flex;
+    width: 300px;
+    height: 300px;
+    padding: 36px;
+    box-sizing: border-box;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15.573px;
+    border-radius: 36.34px;
+    background: transparent;
+    box-shadow: none;
+}
+
+.organiser-card {
+    display: flex;
+    width: 300px;
+    height: 300px;
+    padding: 36px;
+    box-sizing: border-box;
+    /* Adjusted padding */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15.573px;
+    border-radius: 36.34px;
+    border-radius: 36.34px;
+    /* Restored border radius */
+    background: transparent;
+    /* Dark background to match UI */
+    mix-blend-mode: normal;
+    box-shadow: none;
+    /* Added shadow for depth */
+}
+
+.role-card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .role-modal-container {
+        flex-direction: column;
+    }
+
+    .role-title {
+        font-size: 36px;
+        width: auto !important;
+        height: auto !important;
+    }
+
+    .login-prefix {
+        font-size: 24px;
+    }
+
+    .login-role {
+        font-size: 32px;
+    }
+
+    .role-card {
+        width: 180px;
+        height: 180px;
+        border-radius: 20px;
+        padding: 20px !important;
+    }
+
+    .role-modal-close {
+        top: 10px;
+        right: 15px;
+        font-size: 36px;
+    }
+
+    .role-modal-back-btn {
+        top: 10px;
+        left: 10px;
+        font-size: 20px;
+    }
+}
+
+/* Inner Card Graphics & Text */
+.role-card-logo {
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+    margin-bottom: 8px;
+}
+
+.role-card-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    line-height: 1.1;
+}
+
+/* Individual Card Text */
+.card-text-main,
+.card-text-sub {
+    font-family: "SF Pro", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    color: #000;
+    margin: 0;
+}
+
+.card-text-highlight {
+    font-family: "SF Pro", sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: #000;
+    margin: 0;
+}
+
+.card-text-brand {
+    font-family: "SF Pro", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: #000;
+    margin-top: 12px;
+}
+
+/* Organiser Card Text */
+.card-text-main-bu {
+    font-family: "SF Pro", sans-serif;
+    font-size: 28px;
+    font-weight: 400;
+    color: #FFF;
+    margin: 0;
+}
+
+.card-text-highlight-bu {
+    font-family: "SF Pro", sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+    color: #FFF;
+    margin: 0;
+}
+
+.card-text-highlight-large-bu {
+    font-family: "SF Pro", sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    color: #FFF;
+    margin: 0;
+}
+
+.card-text-brand-light-bu {
+    font-family: "SF Pro", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: #FFF;
+    margin-top: 12px;
+}

@@ -34,17 +34,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 22px;
-  /* Increased gap like reference */
+  gap: 16px;
   margin-bottom: 20px;
+  flex-wrap: wrap;
+  /* Allow wrapping on small screens */
 }
 
-.page4-header-text {
-  display: flex;
-  align-items: baseline;
-  gap: 26px;
-  /* tiny spacing between "with" & "Fragment" */
-}
+/* Removed page4-header-text styles as element was removed */
 
 .page4-logo {
   width: 65px;
@@ -65,7 +61,6 @@
   font-family: "Cambo", serif;
   color: #000;
 }
-
 
 /* For all image rows except the first one */
 .image-row {
@@ -88,16 +83,13 @@
 @media (max-width: 900px) {
   .page4-header {
     margin-bottom: 40px;
-    flex-direction: column;
-    gap: 16px;
-  }
-
-  .page4-header-text {
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
     text-align: center;
   }
+
+  /* Removed page4-header-text specific media queries */
 
   .page4-fragment-text {
     font-size: 40px;
@@ -116,12 +108,50 @@
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .page4-fragment-text {
     font-size: 32px;
   }
 
   .page4-with-text {
     font-size: 20px;
+  }
+
+  /* Make images bigger for mobile preview */
+  .section-image {
+    width: 100vw;
+    max-width: none;
+    transform: none;
+    margin: 10px 0 10px calc(50% - 50vw);
+    object-fit: contain;
+  }
+
+  .image-row {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  /* Alternating shifts to "bring images inside" */
+
+  /* Even rows (Odd divs due to header) -> "Right" images -> shift Left */
+  .image-row:nth-of-type(odd) .section-image {
+    width: 75vw;
+    max-width: none;
+    margin: 10px auto;
+    object-fit: contain;
+    transform: scale(1.2) translateX(-20px);
+  }
+
+  /* Odd rows (Even divs due to header) -> "Left" images -> shift Right */
+  .image-row:nth-of-type(even) .section-image {
+    width: 75vw;
+    max-width: none;
+    margin: 10px auto;
+    object-fit: contain;
+    transform: scale(1.2) translateX(20px);
+  }
+
+  .page4-wrapper {
+    overflow-x: hidden;
   }
 }

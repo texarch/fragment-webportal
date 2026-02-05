@@ -17,19 +17,19 @@ const Page11 = ({ setView }) => {
           {/* LEFT */}
           <div className="left-content">
             <div className="tabs-container">
-              <div
-                className="tab-item"
+              <button
+                className="home-organiser-tab"
                 onClick={() => setView('organiser')}
               >
-                <div className="tab-label">Organiser</div>
-              </div>
+                <span>Organiser</span>
+              </button>
 
-              <div
-                className="tab-item active"
+              <button
+                className="home-individual-tab active"
                 onClick={() => setView('individual')}
               >
-                <div className="tab-label">Individual</div>
-              </div>
+                <span>Individual</span>
+              </button>
             </div>
 
             <div className="title-text">

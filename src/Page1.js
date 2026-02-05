@@ -17,10 +17,10 @@ const Page1 = ({ setView }) => {
 
             {/* Tabs */}
             <div className="page1-tabs">
-              <button className="organiser-tab active" onClick={() => setView('organiser')}>
+              <button className="home-organiser-tab active" onClick={() => setView('organiser')}>
                 <span>Organiser</span>
               </button>
-              <button className="individual-tab" onClick={() => setView('individual')}>
+              <button className="home-individual-tab" onClick={() => setView('individual')}>
                 <span>Individual</span>
               </button>
             </div>

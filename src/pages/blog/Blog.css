@@ -50,7 +50,7 @@
 .blog-content h1 {
   font-family: 'Times New Roman', Times, serif;
   /* Classic Serif */
-  font-size: 64px;
+  font-size: 50px;
   font-weight: 400;
   line-height: 1.1;
   color: #000;
@@ -156,4 +156,112 @@
     margin-bottom: 30px;
     /* Space between image and content */
   }
+}
+
+/* Filter Buttons */
+.blog-filter-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px 0;
+  margin-top: 80px;
+  /* Account for navbar */
+  background-color: #fff;
+  /* Or match page bg */
+}
+
+.filter-btn {
+  padding: 10px 24px;
+  border: 2px solid #ddd;
+  border-radius: 30px;
+  background: transparent;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  color: #666;
+  transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+  border-color: #666;
+}
+
+.filter-btn.active {
+  background-color: #000;
+  color: #fff;
+  border-color: #000;
+}
+
+/* Filter Tabs - Matching Page1.js styling */
+.blog-tabs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  margin-top: 10px;
+  /* Reduced further */
+  margin-bottom: 15px;
+  /* Reduced from 35px */
+  padding: 5px 0;
+  /* Reduced from 20px 0 */
+  background-color: transparent;
+}
+
+.home-organiser-tab,
+.home-individual-tab {
+  width: 224px;
+  height: 56px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  gap: 10px;
+  transition: all 0.3s ease;
+}
+
+/* Hover State */
+.home-organiser-tab:hover,
+.home-individual-tab:hover {
+  background: #f0f0f0;
+  /* Slight hover effect for transparent */
+}
+
+/* Active State for BOTH tabs */
+.home-organiser-tab.active {
+  background: #404B5E;
+  color: white !important;
+}
+
+.home-individual-tab.active {
+  background: #00bff3;
+  color: black !important;
+}
+
+/* Ensure text color adapts */
+.home-organiser-tab span,
+.home-individual-tab span {
+  color: black;
+}
+
+.home-organiser-tab.active span {
+  color: white !important;
+}
+
+.home-individual-tab.active span {
+  color: black !important;
+}
+
+.home-organiser-tab.active span,
+.home-individual-tab.active span {
+  font-size: 40px;
+}
+
+.home-organiser-tab span,
+.home-individual-tab span {
+  font-family: "Cambo", serif;
+  font-size: 36px;
 }

@@ -37,17 +37,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 22px;
-  /* Increased gap like reference */
+  gap: 16px;
   margin-bottom: 10px;
+  flex-wrap: wrap;
+  /* Allow wrapping */
 }
 
-.page13-header-text {
-  display: flex;
-  align-items: baseline;
-  gap: 26px;
-  /* tiny spacing between "with" & "Fragment" */
-}
+/* Removed page13-header-text styles */
 
 .page13-logo {
   width: 65px;
@@ -89,16 +85,13 @@
 @media (max-width: 900px) {
   .page13-header {
     margin-bottom: 40px;
-    flex-direction: column;
-    gap: 16px;
-  }
-
-  .page13-header-text {
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
     text-align: center;
   }
+
+  /* Removed page13-header-text media queries */
 
   .page13-fragment-text {
     font-size: 40px;
@@ -117,12 +110,43 @@
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .page13-fragment-text {
     font-size: 32px;
   }
 
   .page13-with-text {
     font-size: 20px;
+  }
+
+  .page13 {
+    padding-left: 0;
+    padding-right: 0;
+    overflow-x: hidden;
+  }
+
+  .page13-section {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  /* "Left" images (Even divs due to header) -> shift Right */
+  .page13-section:nth-of-type(even) .page13-image {
+    width: 75vw;
+    max-width: none;
+    height: auto;
+    object-fit: contain;
+    margin: 10px auto;
+    transform: scale(1.2) translateX(20px);
+  }
+
+  /* "Right" images (Odd divs due to header) -> shift Left */
+  .page13-section:nth-of-type(odd) .page13-image {
+    width: 75vw;
+    max-width: none;
+    height: auto;
+    object-fit: contain;
+    margin: 10px auto;
+    transform: scale(1.2) translateX(-20px);
   }
 }

@@ -1,26 +1,27 @@
 /* ================================
-   MAIN WRAPPER
+   MAIN WRAPPER (matches Page2-section)
 ================================ */
 .page3-wrapper {
   width: 100%;
   display: flex;
   justify-content: center;
-  padding: 1px 0;
+  padding: 25px;
   box-sizing: border-box;
 }
 
 /* ================================
-   BLUE CONTAINER (1678 × 925)
+   INNER BOX (matches Page2-inner-box)
 ================================ */
 .page3-content {
-  width: 1200px;
-  height: 600px;
   background: #E8F6FB;
+  padding: 50px 35px;
+  border-radius: 25px;
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-radius: 12px;
-  padding: 40px;
   box-sizing: border-box;
 }
 
@@ -89,9 +90,8 @@
 @media (max-width: 1024px) {
   .page3-content {
     width: 100%;
-    height: auto;
+    padding: 30px 20px;
     flex-direction: column;
-    padding: 40px 20px;
     gap: 40px;
   }
 

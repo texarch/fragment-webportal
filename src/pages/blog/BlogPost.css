@@ -136,13 +136,16 @@
     transform: scale(1.1);
 }
 
-.feedback-btn.active {
-    background: #e3f2fd;
-    border-color: #90caf9;
-}
-
 .feedback-btn img {
     height: 22px;
     width: auto;
     display: block;
+}
+
+.feedback-btn span {
+    font-size: 16px;
+    font-weight: 500;
+    margin-left: 8px;
+    color: #555;
+    font-family: inherit;
 }

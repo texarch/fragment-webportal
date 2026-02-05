@@ -1,15 +1,39 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Blog.css";
 import BlogImage from "../../assets/Blog_Page_Image.png";
 import BgPattern from "../../assets/background-pattern.png";
 import { getBlogs } from "./blogStorage";
 
-const BlogHero = () => {
+const BlogHero = ({ selectedCategory }) => {
     const navigate = useNavigate();
 
-    const blogData = getBlogs();
-    const latestBlog = blogData[0];
+    const [latestBlog, setLatestBlog] = useState(null);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        const fetchLatest = async () => {
+            const allBlogs = await getBlogs();
+            const blogData = allBlogs.filter(blog => blog.category === selectedCategory);
+            setLatestBlog(blogData[0]);
+            setLoading(false);
+        };
+        fetchLatest();
+    }, [selectedCategory]);
+
+    if (loading) return null; // Or a spinner
+
+    if (!latestBlog) {
+        return (
+            <div className="blog-wrapper">
+                <div className="blog-navbar"></div>
+                <section className="blog-hero-section" style={{ minHeight: '50vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                    <h2>No blogs found in {selectedCategory} category.</h2>
+                </section>
+            </div>
+        );
+    }
+
 
     return (
         <div className="blog-wrapper">
@@ -35,16 +59,18 @@ const BlogHero = () => {
 
                     <button
                         className="read-more-btn"
-                        onClick={() => navigate(`/blog/post/${latestBlog.id}`)}
+                        onClick={() => navigate(`/blog/post/${latestBlog._id}`)}
                     >
                         Read More
                     </button>
                 </div>
 
                 {/* Right image */}
-                <div className="blog-image">
-                    <img src={latestBlog.image} alt="Blog" />
-                </div>
+                {latestBlog.image && latestBlog.image.trim() !== '' && !latestBlog.image.includes('UExBQ0VIT0xERVJfSU1BR0') && (
+                    <div className="blog-image">
+                        <img src={latestBlog.image} alt="Blog" />
+                    </div>
+                )}
             </section>
         </div>
     );

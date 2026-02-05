@@ -2,6 +2,7 @@ import BlogImage from "../../assets/Blog_Page_Image.png";
 
 export const blogData = [
   {
+    category: 'Individual',
     id: 1,
     title: "The Future of Web Development",
     date: "December 18, 2025",
@@ -28,6 +29,7 @@ export const blogData = [
     `
   },
   {
+    category: 'Organiser',
     id: 2,
     title: "Mastering React Hooks",
     date: "November 25, 2025",
@@ -58,6 +60,7 @@ export const blogData = [
     `
   },
   {
+    category: 'Organiser',
     id: 3,
     title: "CSS Grid vs. Flexbox",
     date: "October 10, 2025",
@@ -72,6 +75,7 @@ export const blogData = [
     `
   },
   {
+    category: 'Individual',
     id: 4,
     title: "The Rise of TypeScript",
     date: "September 15, 2025",
@@ -86,6 +90,7 @@ export const blogData = [
     `
   },
   {
+    category: 'Individual',
     id: 5,
     title: "Optimizing Web Performance",
     date: "August 20, 2025",
@@ -104,6 +109,7 @@ export const blogData = [
     `
   },
   {
+    category: 'Individual',
     id: 6,
     title: "Introduction to GraphQL",
     date: "July 05, 2025",
@@ -118,6 +124,7 @@ export const blogData = [
     `
   },
   {
+    category: 'Individual',
     id: 7,
     title: "Modern UI Design Trends",
     date: "June 12, 2025",
@@ -132,6 +139,7 @@ export const blogData = [
     `
   },
   {
+    category: 'Individual',
     id: 8,
     title: "Understanding Asynchronous JavaScript",
     date: "May 28, 2025",
@@ -141,6 +149,7 @@ export const blogData = [
     content: "<h2>Async JS</h2><p>Mastering asynchronous patterns is crucial for modern web apps.</p>"
   },
   {
+    category: 'Individual',
     id: 9,
     title: "State Management in 2025",
     date: "May 15, 2025",
@@ -150,6 +159,7 @@ export const blogData = [
     content: "<h2>Managing State</h2><p>Choosing the right state management library can make or break your app's scalability.</p>"
   },
   {
+    category: 'Individual',
     id: 10,
     title: "Accessibility Standards (WCAG)",
     date: "April 30, 2025",
@@ -159,6 +169,7 @@ export const blogData = [
     content: "<h2>Inclusive Design</h2><p>Web accessibility is not just a requirement; it's a moral imperative.</p>"
   },
   {
+    category: 'Individual',
     id: 11,
     title: "The Power of Server-Side Rendering",
     date: "April 10, 2025",
@@ -168,6 +179,7 @@ export const blogData = [
     content: "<h2>SSR vs CSR</h2><p>Server-side rendering provides faster first pleasant paint and better search engine visibility.</p>"
   },
   {
+    category: 'Individual',
     id: 12,
     title: "Securing Your Web Application",
     date: "March 25, 2025",
@@ -177,6 +189,7 @@ export const blogData = [
     content: "<h2>Web Security</h2><p>From XSS to CSRF, understanding security threats is essential for every developer.</p>"
   },
   {
+    category: 'Individual',
     id: 13,
     title: "Deploying with Docker and Kubernetes",
     date: "March 12, 2025",
@@ -186,6 +199,7 @@ export const blogData = [
     content: "<h2>DevOps Basics</h2><p>Docker and Kubernetes have revolutionized how we deploy and manage applications at scale.</p>"
   },
   {
+    category: 'Individual',
     id: 14,
     title: "Introduction to Next.js",
     date: "February 28, 2025",
@@ -195,6 +209,7 @@ export const blogData = [
     content: "<h2>Why Next.js?</h2><p>Next.js offers the best developer experience with all the features you need for production: hybrid static & server rendering.</p>"
   },
   {
+    category: 'Individual',
     id: 15,
     title: "Mobile-First Design Principles",
     date: "February 15, 2025",
@@ -204,6 +219,7 @@ export const blogData = [
     content: "<h2>Responsive Design</h2><p>Starting with mobile ensures your core content and functionality are prioritized.</p>"
   },
   {
+    category: 'Individual',
     id: 16,
     title: "Working with REST APIs",
     date: "January 30, 2025",
@@ -213,6 +229,7 @@ export const blogData = [
     content: "<h2>API Design</h2><p>REST remains the standard for web APIs. Learn how to design clean and predictable endpoints.</p>"
   },
   {
+    category: 'Individual',
     id: 17,
     title: "Git Version Control Mastery",
     date: "January 15, 2025",
@@ -222,6 +239,7 @@ export const blogData = [
     content: "<h2>Version Control</h2><p>Mastering Git is fundamental for collaboration and code management in any development team.</p>"
   },
   {
+    category: 'Individual',
     id: 18,
     title: "Introduction to Svelte",
     date: "January 05, 2025",
