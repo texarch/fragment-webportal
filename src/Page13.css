@@ -110,7 +110,305 @@
   }
 }
 
+/* Desktop view - visible by default */
+.page13-desktop {
+  display: block;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Mobile view - hidden by default */
+.page13-mobile {
+  display: none;
+  width: 100%;
+}
+
+.page13-mobile-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.page13-mobile-text {
+  font-family: "Cambo", serif;
+  font-size: 36px;
+  font-weight: 400;
+  color: #000;
+  margin-bottom: 15px;
+}
+
+.page13-mobile-text-create {
+  color: var(--prim-4, #3FD1F1);
+  font-family: "Cambo", serif;
+  font-size: 135px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -6.031px;
+  margin-bottom: 10px;
+}
+
+.page13-mobile-subtitle {
+  color: #60656E;
+  font-family: "SF Pro Display", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 69.812px;
+  letter-spacing: -0.8px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.page13-mobile-text-plan {
+  color: var(--prim-4, #3FD1F1);
+  font-family: "Cambo", serif;
+  font-size: 176.919px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -7.077px;
+  margin-bottom: 5px;
+}
+
+.page13-mobile-subtitle-plan {
+  color: #60656E;
+  text-align: center;
+  font-family: "SF Pro Display", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 44px;
+  letter-spacing: -0.8px;
+  margin-bottom: 20px;
+  width: 90%;
+  max-width: 450px;
+}
+
+.page13-mobile-text-follow {
+  color: var(--prim-4, #3FD1F1);
+  font-family: "Cambo", serif;
+  font-size: 135px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -5.449px;
+  margin-bottom: 5px;
+}
+
+.page13-mobile-subtitle-follow {
+  color: #60656E;
+  text-align: center;
+  font-family: "SF Pro Display", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 44px;
+  letter-spacing: -0.8px;
+  margin-bottom: 20px;
+  width: 90%;
+  max-width: 450px;
+}
+
+.page13-mobile-text-get {
+  color: var(--prim-4, #3FD1F1);
+  font-family: "Cambo", serif;
+  font-size: 183.815px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -7.353px;
+  margin-bottom: 5px;
+}
+
+.page13-mobile-subtitle-get {
+  color: #60656E;
+  text-align: center;
+  font-family: "SF Pro Display", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 44px;
+  letter-spacing: -0.8px;
+  margin-bottom: 20px;
+  width: 90%;
+  max-width: 450px;
+}
+
+.page13-mobile-text-book {
+  color: var(--prim-4, #3FD1F1);
+  font-family: "Cambo", serif;
+  font-size: 152.657px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -6.106px;
+  margin-bottom: 5px;
+}
+
+.page13-mobile-subtitle-book {
+  color: #60656E;
+  text-align: center;
+  font-family: "SF Pro Display", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 44px;
+  letter-spacing: -0.8px;
+  margin-bottom: 20px;
+  width: 90%;
+  max-width: 450px;
+}
+
+.page13-mobile-text-comment {
+  color: var(--prim-4, #3FD1F1);
+  font-family: "Cambo", serif;
+  font-size: 98px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -5.417px;
+  margin-bottom: 5px;
+}
+
+.page13-mobile-subtitle-comment {
+  color: #60656E;
+  text-align: center;
+  font-family: "SF Pro Display", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 44px;
+  letter-spacing: -0.8px;
+  margin-bottom: 20px;
+  width: 90%;
+  max-width: 450px;
+}
+
+.page13-mobile-text-view {
+  color: var(--prim-4, #3FD1F1);
+  font-family: "Cambo", serif;
+  font-size: 160.208px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -6.408px;
+  margin-bottom: 5px;
+}
+
+.page13-mobile-subtitle-view {
+  color: #60656E;
+  text-align: center;
+  font-family: "SF Pro Display", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 44px;
+  letter-spacing: -0.8px;
+  margin-bottom: 20px;
+  width: 90%;
+  max-width: 450px;
+}
+
+.page13-mobile-image {
+  width: 90%;
+  max-width: 450px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  object-fit: contain;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  -webkit-font-smoothing: antialiased;
+}
+
+.page13-mobile-vector {
+  width: 922.26px !important;
+  min-width: 922.26px !important;
+  /* Ensure it doesn't shrink */
+  flex-shrink: 0 !important;
+  /* Ensure it doesn't shrink */
+  height: auto;
+  max-width: none !important;
+  display: block;
+}
+
+.page13-vector-wrapper {
+  width: 100vw;
+  /* Use viewport width to be sure */
+  display: flex;
+  margin-top: 50px;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+
+.wrapper-left {
+  justify-content: flex-start;
+  padding-left: 0;
+}
+
+
+.wrapper-left .page13-mobile-vector {
+  transform: translateX(-70%);
+  /* Pull left to show right end of vector on screen */
+  margin-left: 0;
+}
+
+.wrapper-right {
+  justify-content: flex-end;
+  padding-right: 0;
+}
+
+.wrapper-right .page13-mobile-vector {
+  transform: translateX(70%);
+  /* Pull right to show left end of vector on screen */
+  margin-right: 0;
+}
+
+/* Header specific styles for mobile if needed */
+.page13-header-mobile {
+  margin-bottom: 30px;
+}
+
+.page13-header-mobile .page13-fragment-text {
+  font-size: 28px;
+}
+
+.page13-header-mobile .page13-with-text {
+  font-size: 18px;
+}
+
+.page13-header-mobile .page13-logo {
+  width: 45px;
+  height: 45px;
+}
+
+
 @media (max-width: 768px) {
+
+  /* Hide desktop view on mobile */
+  .page13-desktop {
+    display: none;
+  }
+
+  /* Show mobile view on mobile */
+  .page13-mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+  }
+
   .page13-fragment-text {
     font-size: 32px;
   }
@@ -125,28 +423,32 @@
     overflow-x: hidden;
   }
 
-  .page13-section {
+  /* Vector 1609 - Mobile divider lines (alternating left/right) */
+  .page13-mobile-divider-line {
     width: 100%;
-    margin: 10px 0;
+    display: flex !important;
+    margin: 20px 0;
   }
 
-  /* "Left" images (Even divs due to header) -> shift Right */
-  .page13-section:nth-of-type(even) .page13-image {
-    width: 75vw;
-    max-width: none;
-    height: auto;
-    object-fit: contain;
-    margin: 10px auto;
-    transform: scale(1.2) translateX(20px);
+  .page13-mobile-divider-line.p13-line-left {
+    justify-content: flex-start;
+    padding-left: 0;
+    margin-left: -20px;
   }
 
-  /* "Right" images (Odd divs due to header) -> shift Left */
-  .page13-section:nth-of-type(odd) .page13-image {
-    width: 75vw;
-    max-width: none;
-    height: auto;
-    object-fit: contain;
-    margin: 10px auto;
-    transform: scale(1.2) translateX(-20px);
+  .page13-mobile-divider-line.p13-line-right {
+    justify-content: flex-end;
+    padding-right: 0;
+    margin-right: -20px;
   }
+
+  .page13-mobile-divider-line svg {
+    width: 50%;
+    height: 4px;
+  }
+}
+
+/* Hide mobile divider lines on desktop */
+.page13-mobile-divider-line {
+  display: none;
 }

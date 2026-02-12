@@ -1,5 +1,5 @@
 
-const API_URL = 'http://localhost:4000/website/admin/blogs'; // Use the new API base
+const API_URL = 'http://localhost:4000/website/admin/blogs'; // Local backend
 
 /**
  * Get all blog posts from API.

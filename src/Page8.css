@@ -109,9 +109,10 @@
 
   .phone-img {
     width: 100%;
-    max-width: 300px;
+    max-width: none;
     height: auto;
-    transform: none;
+    transform: scale(1.17);
+    margin: 20px 0;
   }
 }
 

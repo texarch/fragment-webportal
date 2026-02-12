@@ -1,29 +1,29 @@
 .pagel-container {
-    height: 100vh;
-    width: 100%;
-    background-image: url('./assets/pagel.png'); 
-    background-size: cover;
-    background-position: right center;
-    background-repeat: no-repeat;
-    display: flex;
-    align-items: center;
-    /* justify-content: flex-start; */
-    padding-left: 80px;              
-    /* box-sizing: border-box; */
-    /* background-color: #FFF9E7; */
-    border: none;
-  }
-  
-  .pagel-content {
-    background: none;
-    padding: 0;
-    border-radius: 0;
-    box-shadow: none;
-    width: 500px;
-  }
-  
-  
- .pagel-subtitle {
+  height: 100vh;
+  width: 100%;
+  background-image: url('./assets/pagel.png');
+  background-size: cover;
+  background-position: right center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  /* justify-content: flex-start; */
+  padding-left: 80px;
+  /* box-sizing: border-box; */
+  /* background-color: #FFF9E7; */
+  border: none;
+}
+
+.pagel-content {
+  background: none;
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
+  width: 500px;
+}
+
+
+.pagel-subtitle {
   font-size: 20px;
   color: #000000;
   margin-bottom: 10px;
@@ -45,27 +45,28 @@
   font-family: 'Cambo', serif;
 }
 
-  .pagel-button {
-    padding: 10px 22px;
-    background-color: #1f2937;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-  }
-  
-  .pagel-button:hover {
-    background-color: #374151;
-  }
-  @media screen and (max-width: 768px) {
+.pagel-button {
+  padding: 10px 22px;
+  background-color: #1f2937;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.pagel-button:hover {
+  background-color: #374151;
+}
+
+@media screen and (max-width: 768px) {
   .pagel-container {
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
     padding: 20px;
-    background-position: center top; 
+    background-position: center top;
     background-size: contain;
     height: auto;
   }
@@ -88,5 +89,3 @@
     padding: 8px 18px;
   }
 }
-
-

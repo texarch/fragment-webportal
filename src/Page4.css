@@ -108,50 +108,145 @@
   }
 }
 
+/* Mobile header specific styles */
+.page4-header-mobile {
+  margin-bottom: 30px;
+}
+
+.page4-header-mobile .page4-fragment-text {
+  font-size: 28px;
+}
+
+.page4-header-mobile .page4-with-text {
+  font-size: 18px;
+}
+
+.page4-header-mobile .page4-logo {
+  width: 45px;
+  height: 45px;
+}
+
+/* Desktop view - visible by default */
+.page4-desktop {
+  display: block;
+  width: 100%;
+}
+
+/* Mobile view - hidden by default */
+.page4-mobile {
+  display: none;
+  width: 100%;
+}
+
+.mobile-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.mobile-item-text {
+  font-family: "Cambo", serif;
+  font-size: 36px;
+  font-weight: 400;
+  color: #000;
+  margin-bottom: 15px;
+}
+
+.mobile-item-subtitle {
+  color: var(--neutrals-black, #000);
+  text-align: center;
+  font-family: "SF Pro Display", sans-serif;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 44px;
+  letter-spacing: -0.8px;
+  margin-bottom: 15px;
+}
+
+.mobile-item-image {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  object-fit: contain;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  -webkit-font-smoothing: antialiased;
+}
+
 @media (max-width: 768px) {
-  .page4-fragment-text {
-    font-size: 32px;
+
+  /* Hide desktop view on mobile */
+  .page4-desktop {
+    display: none;
   }
 
-  .page4-with-text {
-    font-size: 20px;
-  }
-
-  /* Make images bigger for mobile preview */
-  .section-image {
-    width: 100vw;
-    max-width: none;
-    transform: none;
-    margin: 10px 0 10px calc(50% - 50vw);
-    object-fit: contain;
-  }
-
-  .image-row {
-    width: 100%;
-    margin: 10px 0;
-  }
-
-  /* Alternating shifts to "bring images inside" */
-
-  /* Even rows (Odd divs due to header) -> "Right" images -> shift Left */
-  .image-row:nth-of-type(odd) .section-image {
-    width: 75vw;
-    max-width: none;
-    margin: 10px auto;
-    object-fit: contain;
-    transform: scale(1.2) translateX(-20px);
-  }
-
-  /* Odd rows (Even divs due to header) -> "Left" images -> shift Right */
-  .image-row:nth-of-type(even) .section-image {
-    width: 75vw;
-    max-width: none;
-    margin: 10px auto;
-    object-fit: contain;
-    transform: scale(1.2) translateX(20px);
+  /* Show mobile view on mobile */
+  .page4-mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
   }
 
   .page4-wrapper {
     overflow-x: hidden;
+    padding: 0;
   }
+
+  .mobile-item {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .mobile-item-text {
+    font-size: 65px;
+    margin-bottom: 4px;
+  }
+
+  .mobile-item-subtitle {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 10px;
+  }
+
+  .mobile-item-image {
+    width: 100%;
+    max-width: 450px;
+  }
+
+  /* Mobile divider lines - alternating left/right */
+  .mobile-divider-line {
+    width: 100%;
+    display: flex !important;
+    margin: 20px 0;
+  }
+
+  .mobile-divider-line.line-left {
+    justify-content: flex-start;
+    padding-left: 0;
+    margin-left: -20px;
+  }
+
+  .mobile-divider-line.line-right {
+    justify-content: flex-end;
+    padding-right: 0;
+    margin-right: -20px;
+  }
+
+  .mobile-divider-line svg {
+    width: 50%;
+    height: 4px;
+  }
+}
+
+/* Hide mobile divider lines on desktop */
+.mobile-divider-line {
+  display: none;
 }

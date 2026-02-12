@@ -1,93 +1,93 @@
 .page22-container {
-    background-color: #ffffff;
-    padding: 60px 20px;
-    text-align: center;
-  }
-  
-  .page22-heading {
-    font-size: 50px;
-    font-weight: bold;
-    margin-bottom: 40px;
-    margin-top: -20px;
-  }
-  
-  .page22-card-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 30px;
-  }
-  
-  .subscription-card {
-    position: relative;
-    width: 300px;
-    max-width: 100%;
-  }
-  
-  .subscription-img {
-    width: 100%;
-    height: auto;
-    border-radius: 12px;
-    display: block;
-  }
-  
-  .subscribe-btn {
-    position: absolute;
-    bottom: 50px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #2563eb;
-    color: black;
-    border: none;
-    border-radius: 10px;
-    padding: 10px 20px;
-    font-weight: 600;
-    cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
-    transition: transform 0.2s ease;
-  }
-  
-  .subscribe-btn:hover {
-    transform: translateX(-50%) scale(1.05);
-  }
-  
-  .popup-msg {
-    position: absolute;
-    bottom: 65px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: white;
-    color: #2563eb;
-    border: 1px solid #93c5fd;
-    padding: 10px 16px;
-    border-radius: 8px;
-    font-weight: 600;
-    font-size: 14px;
-    white-space: nowrap;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    animation: fadeIn 0.3s ease-in-out;
-    z-index: 10;
-  }
-  
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translate(-50%, 10px);
-    }
-    to {
-      opacity: 1;
-      transform: translate(-50%, 0);
-    }
-  }
-  @media (max-width: 768px) {
-    .page22-card-container {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .subscription-card {
-      width: 90%;
-    }
-  }
-  
+  background-color: #ffffff;
+  padding: 60px 20px;
+  text-align: center;
+}
 
+.page22-heading {
+  font-size: 50px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  margin-top: -20px;
+}
+
+.page22-card-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.subscription-card {
+  position: relative;
+  width: 300px;
+  max-width: 100%;
+}
+
+.subscription-img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+}
+
+.subscribe-btn {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #2563eb;
+  color: black;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s ease;
+}
+
+.subscribe-btn:hover {
+  transform: translateX(-50%) scale(1.05);
+}
+
+.popup-msg {
+  position: absolute;
+  bottom: 65px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  color: #2563eb;
+  border: 1px solid #93c5fd;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  animation: fadeIn 0.3s ease-in-out;
+  z-index: 10;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+@media (max-width: 768px) {
+  .page22-card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .subscription-card {
+    width: 90%;
+  }
+}

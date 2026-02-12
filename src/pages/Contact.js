@@ -14,7 +14,7 @@ import LinkedInIcon from '../assets/linkedin.png';
 import EmailIcon from '../assets/email.png';
 
 // const REACT_APP_API_URL='https://fragment.thefragment.app/dev/website'
-const REACT_APP_API_URL = 'http://localhost:4000/website';
+const REACT_APP_API_URL = 'https://fragment.thefragment.app/dev/website';
 
 function Contact() {
   const [formData, setFormData] = useState({
