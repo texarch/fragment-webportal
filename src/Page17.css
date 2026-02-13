@@ -108,8 +108,9 @@
   }
 
   .page17-phone-img {
-    width: 100%;
-    max-width: 300px;
+    width: 115%;
+    max-width: 500px;
+    /* Increased from 300px */
     height: auto;
     transform: none;
   }

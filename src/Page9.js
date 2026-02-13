@@ -27,6 +27,17 @@ const Page9 = () => {
           className="desktop-preview"
         />
       </div>
+
+      {/* Mobile Images (Triangle Layout) */}
+      <div className="page9-mobile-images">
+        <div className="page9-mobile-top">
+          <img src={require("./assets/Page9_mobile(2).png")} alt="Mobile View 2" />
+        </div>
+        <div className="page9-mobile-bottom">
+          <img src={require("./assets/Page9_mobile(1).png")} alt="Mobile View 1" />
+          <img src={require("./assets/Page9_mobile(3).png")} alt="Mobile View 3" />
+        </div>
+      </div>
     </div>
   );
 };

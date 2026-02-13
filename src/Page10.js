@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Page10.css";
 
 // const REACT_APP_API_URL = 'https://fragment.thefragment.app/dev/website';
-const REACT_APP_API_URL = 'http://localhost:4000/website';
+const REACT_APP_API_URL = 'https://fragment.thefragment.app/dev/website';
 const Page10 = () => {
   const [email, setEmail] = useState("");
 

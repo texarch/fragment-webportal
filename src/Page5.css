@@ -150,6 +150,7 @@
 @media (max-width: 768px) {
   .fragment-card {
     padding: 24px;
+    gap: 14px;
   }
 
   .heading-row {
@@ -182,6 +183,7 @@
     width: 100%;
     margin-left: 0;
     margin-right: 0;
+    margin-top: 16px;
     border-radius: 16px;
     padding: 24px 16px;
   }
@@ -194,5 +196,9 @@
   .calendar-sync-buttons {
     flex-direction: column;
     gap: 16px;
+  }
+
+  .fragment-container {
+    margin-bottom: 10px;
   }
 }

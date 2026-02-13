@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './Navbar.js';
 import Organiser from './Organiser.js';
 import Individual from './Individual.js';
@@ -13,17 +13,11 @@ import Demo from './pages/Demo.js';
 import Blog from './pages/blog/Blog.js';
 import BlogList from './pages/blog/BlogList.js';
 import BlogPost from './pages/blog/BlogPost.js';
-import Admin from './pages/blog/Admin.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import ScrollToTop from './ScrollToTop.js';
 
 const ConditionalNavbar = ({ currentView }) => {
-  const location = useLocation();
-  // Hide Navbar only on the exact admin path
-  if (location.pathname === '/blog/admin') {
-    return null;
-  }
   return <Navbar currentView={currentView} />;
 };
 
@@ -54,10 +48,9 @@ function App() {
         <Route path="/About" element={<About />} />
         <Route path="/pricing" element={<Pricing />} />
         <Route path="/Demo" element={<Demo currentView={currentView} setView={setCurrentView} />} />
-        <Route path="/Blog" element={<Blog currentView={currentView} setView={setCurrentView} />} />
-        <Route path="/blog/all" element={<BlogList />} />
-        <Route path="/blog/post/:id" element={<BlogPost setView={setCurrentView} />} />
-        <Route path="/blog/admin" element={<Admin />} />
+        {/* <Route path="/Blog" element={<Blog currentView={currentView} setView={setCurrentView} />} /> */}
+        {/* <Route path="/blog/all" element={<BlogList />} /> */}
+        {/* <Route path="/blog/post/:id" element={<BlogPost setView={setCurrentView} />} /> */}
       </Routes>
     </Router>
   );

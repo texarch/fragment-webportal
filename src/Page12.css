@@ -120,14 +120,18 @@
 
 /* Responsive (Matches Page2 media queries) */
 @media (max-width: 900px) {
+  .Page12-section {
+    padding: 10px;
+  }
+
   .Page12-inner-box {
-    padding: 30px 20px;
+    padding: 30px 10px;
   }
 
   .Page12-content {
     flex-direction: column;
     text-align: center;
-    gap: 40px;
+    gap: 15px;
   }
 
   .Page12-heading-custom {
@@ -143,11 +147,12 @@
     flex-direction: column;
     align-items: center;
     gap: 16px;
+    margin-bottom: 20px;
   }
 
   .Page12-ipad {
-    width: 100%;
-    max-width: 400px;
+    width: 115%;
+    max-width: 150%;
   }
 
   .Page12-slogan-custom {

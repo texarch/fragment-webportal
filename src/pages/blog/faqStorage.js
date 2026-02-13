@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:4000/website/admin/faqs';
+const API_URL = 'http://localhost:4000/website/admin/faqs'; // Local backend
 
 // Get all FAQs
 export const getFAQs = async () => {

@@ -15,7 +15,7 @@ const Page18 = () => {
         <p className="page18-subtitle">
           <span className="sf-bold text-3xl">Fragment </span>
           <span className="sf text-3xl">
-          is also available for your Desktop and Website not just your mobile..
+            is also available for your Desktop and Website not just your mobile..
           </span>
         </p>
       </div>
@@ -26,6 +26,17 @@ const Page18 = () => {
           alt="Fragment Business Desktop Preview"
           className="desktop-preview"
         />
+      </div>
+
+      {/* Mobile Images (Triangle Layout) */}
+      <div className="page18-mobile-images">
+        <div className="page18-mobile-top">
+          <img src={require("./assets/Page18_mobile(2).png")} alt="Mobile View 2" />
+        </div>
+        <div className="page18-mobile-bottom">
+          <img src={require("./assets/Page18_mobile(1).png")} alt="Mobile View 1" />
+          <img src={require("./assets/Page18_mobile(3).png")} alt="Mobile View 3" />
+        </div>
       </div>
     </div>
   );

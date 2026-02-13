@@ -150,7 +150,7 @@
 
   .page11-content {
     flex-direction: column;
-    gap: 40px;
+    gap: 15px;
     width: 100%;
   }
 
@@ -170,25 +170,28 @@
     width: 100%;
   }
 
-  .tab-item {
-    width: auto;
-    padding: 0 4vw;
-    /* Responsive padding */
-    height: 48px;
+  .home-organiser-tab,
+  .home-individual-tab {
+    width: auto !important;
+    min-width: 100px;
+    max-width: 140px;
+    padding: 0 12px !important;
+    height: 40px !important;
     flex: 1;
-    /* Distribute space evenly */
-    max-width: 200px;
-    /* Prevent becoming too wide */
+    overflow: hidden;
   }
 
-  .tab-label {
-    font-size: clamp(16px, 4vw, 24px);
-    /* Responsive font size */
+  .home-organiser-tab span,
+  .home-individual-tab span {
+    font-size: 16px !important;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
-  .tab-item.active .tab-label {
-    font-size: clamp(20px, 5vw, 28px);
-    /* Responsive font size for active state */
+  .home-organiser-tab.active span,
+  .home-individual-tab.active span {
+    font-size: 18px !important;
   }
 
   .title-text {
@@ -206,7 +209,7 @@
     width: 100%;
     font-size: 18px;
     line-height: 24px;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
   }
 
   .right-images {
@@ -221,8 +224,10 @@
   }
 
   .main-img {
-    transform: none;
+    transform: scale(1.2);
     max-width: 100%;
     height: auto;
+    margin-top: 5px;
+    margin-bottom: 20px;
   }
 }
