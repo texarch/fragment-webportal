@@ -48,9 +48,9 @@ function App() {
         <Route path="/About" element={<About />} />
         <Route path="/pricing" element={<Pricing />} />
         <Route path="/Demo" element={<Demo currentView={currentView} setView={setCurrentView} />} />
-        {/* <Route path="/Blog" element={<Blog currentView={currentView} setView={setCurrentView} />} /> */}
-        {/* <Route path="/blog/all" element={<BlogList />} /> */}
-        {/* <Route path="/blog/post/:id" element={<BlogPost setView={setCurrentView} />} /> */}
+        <Route path="/Blog" element={<Blog currentView={currentView} setView={setCurrentView} />} />
+        <Route path="/blog/all" element={<BlogList />} />
+        <Route path="/blog/post/:id" element={<BlogPost setView={setCurrentView} />} />
       </Routes>
     </Router>
   );
