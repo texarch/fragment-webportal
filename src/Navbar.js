@@ -69,8 +69,8 @@ const Navbar = ({ currentView }) => {
       <div className={`nav-links-wrapper collapse ${isOpen ? 'show' : ''}`} id="navbarNav">
         <div className="nav-links">
           <Link to="/about" onClick={() => setIsOpen(false)}>About</Link>
-          <Link to="/pricing" onClick={() => setIsOpen(false)}>Pricing</Link>
-          {/* <Link to="/blog" className="blog-link" onClick={() => setIsOpen(false)}>Blog</Link> */}
+          {/* <Link to="/pricing" onClick={() => setIsOpen(false)}>Pricing</Link> */}
+          <Link to="/blog" className="blog-link" onClick={() => setIsOpen(false)}>Blog</Link>
           <Link to="/contact" onClick={() => setIsOpen(false)}>Contact</Link>
           <Link to="/demo" onClick={() => setIsOpen(false)}>Demo</Link>
         </div>

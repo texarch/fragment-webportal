@@ -429,7 +429,7 @@ const Demo = ({ currentView, setView }) => {
       <Page4 />
 
       {/* TABS Moved Here */}
-      {/* <div className="faq-tabs" style={{ marginTop: '20px' }}>
+      <div className="faq-tabs" style={{ marginTop: '20px' }}>
         <button
           className={`home-organiser-tab ${selectedCategory === 'Organiser' ? 'active' : ''}`}
           onClick={() => handleCategoryChange('Organiser')}
@@ -442,11 +442,11 @@ const Demo = ({ currentView, setView }) => {
         >
           <span>Individual</span>
         </button>
-      </div> */}
+      </div>
 
-      {/* <AskQuestionSection onOpenModal={() => setShowAskModal(true)} /> */}
-      {/* <FAQ selectedCategory={selectedCategory} /> */}
-      {/* <AskModal isOpen={showAskModal} onClose={() => setShowAskModal(false)} category={selectedCategory} /> */}
+      <AskQuestionSection onOpenModal={() => setShowAskModal(true)} />
+      <FAQ selectedCategory={selectedCategory} />
+      <AskModal isOpen={showAskModal} onClose={() => setShowAskModal(false)} category={selectedCategory} />
       <div>
         <footer className="footer">
           <div className="footer-content">
