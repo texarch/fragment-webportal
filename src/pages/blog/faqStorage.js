@@ -1,5 +1,5 @@
 // const API_URL = 'http://localhost:4000/website/admin/faqs'; // Local backend
-const API_URL = 'https://fragment.thefragment.app/dev/website/admin/blogs'
+const API_URL = 'https://fragment.thefragment.app/dev/website/admin/faqs'
 // Get all FAQs
 export const getFAQs = async () => {
     try {

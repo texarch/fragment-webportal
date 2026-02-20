@@ -1,10 +1,7 @@
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './Navbar.css';
 import logo from './assets/logo2.png';
-import loginBtn from './assets/editor/Log in.png';
-import startBtnOrganiser from './assets/editor/Start for free_Organiser.png';
-import startBtnIndividual from './assets/editor/Start for free_Individual.png';
 import RoleSelectionModal from './components/RoleSelectionModal';
 // New Home Page Specific Images
 
