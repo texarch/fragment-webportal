@@ -1,6 +1,6 @@
 
-const API_URL = 'http://localhost:4000/website/admin/blogs'; // Local backend
-
+// const API_URL = 'http://localhost:4000/website/admin/blogs'; // Local backend
+const API_URL = 'https://fragment.thefragment.app/dev/website/admin/blogs'
 /**
  * Get all blog posts from API.
  * @returns {Promise<Array>} Array of blog post objects
