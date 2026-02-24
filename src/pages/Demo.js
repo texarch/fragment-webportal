@@ -405,22 +405,21 @@ const AskQuestionSection = ({ onOpenModal }) => {
 };
 
 const Demo = ({ currentView, setView }) => {
-  const [showAskModal, setShowAskModal] = useState(false);
-  // Map global state (lowercase) to local component expectation (Capitalized)
-  const selectedCategory = currentView === 'individual' ? 'Individual' : 'Organiser';
+  /* FAQ section moved to separate FAQs page - commented out, not deleted */
+  // const [showAskModal, setShowAskModal] = useState(false);
+  // const selectedCategory = currentView === 'individual' ? 'Individual' : 'Organiser';
 
-  const handleCategoryChange = (category) => {
-    if (setView) {
-      setView(category.toLowerCase());
-    }
-  };
+  // const handleCategoryChange = (category) => {
+  //   if (setView) {
+  //     setView(category.toLowerCase());
+  //   }
+  // };
 
-  // Reset to Organiser view when Demo page loads, as per user request
-  useEffect(() => {
-    if (setView) {
-      setView('organiser');
-    }
-  }, [setView]);
+  // useEffect(() => {
+  //   if (setView) {
+  //     setView('organiser');
+  //   }
+  // }, [setView]);
 
   return (
     <>
@@ -428,7 +427,8 @@ const Demo = ({ currentView, setView }) => {
       <Page2 />
       <Page4 />
 
-      {/* TABS Moved Here */}
+      {/* FAQ section moved to separate FAQs page - commented out, not deleted */}
+      {/*
       <div className="faq-tabs" style={{ marginTop: '20px' }}>
         <button
           className={`home-organiser-tab ${selectedCategory === 'Organiser' ? 'active' : ''}`}
@@ -447,6 +447,7 @@ const Demo = ({ currentView, setView }) => {
       <AskQuestionSection onOpenModal={() => setShowAskModal(true)} />
       <FAQ selectedCategory={selectedCategory} />
       <AskModal isOpen={showAskModal} onClose={() => setShowAskModal(false)} category={selectedCategory} />
+      */}
       <div>
         <footer className="footer">
           <div className="footer-content">

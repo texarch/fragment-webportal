@@ -236,7 +236,7 @@ html {
   justify-content: space-between;
   align-items: center;
   background: transparent;
-  padding: 100px 120px;
+  padding: 20px 120px 30px;
   font-family: "Cambo", serif;
   height: fit-content;
 }
@@ -285,7 +285,7 @@ html {
   margin: 0;
   font-family: "Cambo", serif;
   background-color: #fff;
-  padding-top: 50px;
+  padding-top: 10px;
 }
 
 /* Fragment Section */
