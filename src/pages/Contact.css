@@ -387,13 +387,34 @@ body {
 
 
 @media (max-width: 768px) {
+  .back-image-wrapper {
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+
   .form-container {
     padding: 30px 20px;
-    margin: 30px auto;
+    margin: -40px auto 30px;
+    width: 85%;
+  }
+
+  .first-heading {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+
+  .second-heading {
+    font-size: 16px;
+    margin-bottom: 20px;
   }
 
   .form-container h2 {
     font-size: 28px;
+    margin-left: 0;
+  }
+
+  .form-container label {
+    margin-right: 0;
   }
 
   .form-container input,
