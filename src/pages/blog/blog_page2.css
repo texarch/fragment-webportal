@@ -198,26 +198,157 @@
 
   .blog-card {
     margin-top: 40px;
-    flex-direction: row;
-    /* Image left, content right */
-    text-align: left;
-    align-items: stretch;
-    /* Stretch image to content height */
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
     gap: 15px;
   }
 
   .blog-image-section {
     display: flex;
-    /* Ensure image expands */
+    width: 100%;
+    justify-content: center;
   }
 
   .blog-image-section img {
-    width: 140px;
-    /* Fixed width */
-    height: 100%;
-    /* Full height */
+    width: 100%;
+    max-width: 100%;
+    height: 220px;
     object-fit: cover;
     margin-bottom: 0;
-    max-width: none;
+  }
+}
+
+/* Large screen responsiveness */
+@media (min-width: 1440px) {
+  .blog-page-wrapper {
+    padding: 50px 100px;
+  }
+
+  .blog-grid {
+    max-width: 1400px;
+    gap: 35px;
+  }
+
+  .blog-card-image {
+    height: 300px;
+  }
+
+  .blog-card-content h3 {
+    font-size: 20px;
+  }
+
+  .blog-card-content p {
+    font-size: 16px;
+  }
+
+  .related-title {
+    font-size: 42px;
+  }
+
+  .blog-image-section img {
+    width: 420px;
+  }
+
+  .blog-content-section h2 {
+    font-size: 40px;
+  }
+
+  .blog-content-section p {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .blog-page-wrapper {
+    padding: 60px 140px;
+  }
+
+  .blog-grid {
+    max-width: 1600px;
+    gap: 40px;
+  }
+
+  .blog-card-image {
+    height: 350px;
+  }
+
+  .blog-card-content h3 {
+    font-size: 22px;
+  }
+
+  .blog-card-content p {
+    font-size: 17px;
+  }
+
+  .related-title {
+    font-size: 48px;
+    margin-bottom: 50px;
+  }
+
+  .blog-image-section img {
+    width: 480px;
+  }
+
+  .blog-content-section h2 {
+    font-size: 44px;
+  }
+
+  .blog-content-section p {
+    font-size: 20px;
+  }
+
+  .blog-card {
+    gap: 80px;
+    max-width: 1400px;
+  }
+}
+
+@media (min-width: 2560px) {
+  .blog-page-wrapper {
+    padding: 80px 200px;
+  }
+
+  .blog-grid {
+    max-width: 2000px;
+    gap: 50px;
+  }
+
+  .blog-card-image {
+    height: 420px;
+  }
+
+  .blog-card-content {
+    padding: 28px 8px;
+  }
+
+  .blog-card-content h3 {
+    font-size: 26px;
+  }
+
+  .blog-card-content p {
+    font-size: 20px;
+  }
+
+  .related-title {
+    font-size: 56px;
+    margin-bottom: 60px;
+  }
+
+  .blog-image-section img {
+    width: 560px;
+  }
+
+  .blog-content-section h2 {
+    font-size: 52px;
+  }
+
+  .blog-content-section p {
+    font-size: 24px;
+  }
+
+  .blog-card {
+    gap: 100px;
+    max-width: 1800px;
   }
 }

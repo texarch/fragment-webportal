@@ -10,6 +10,7 @@ import Pricing from './pages/Pricing.js';
 import SignUp from './pages/SignUp';
 // import Login from './pages/Login';
 import Demo from './pages/Demo.js';
+import FAQs from './pages/FAQs.js';
 import Blog from './pages/blog/Blog.js';
 import BlogList from './pages/blog/BlogList.js';
 import BlogPost from './pages/blog/BlogPost.js';
@@ -48,6 +49,7 @@ function App() {
         <Route path="/About" element={<About />} />
         <Route path="/pricing" element={<Pricing />} />
         <Route path="/Demo" element={<Demo currentView={currentView} setView={setCurrentView} />} />
+        <Route path="/FAQs" element={<FAQs currentView={currentView} setView={setCurrentView} />} />
         <Route path="/Blog" element={<Blog currentView={currentView} setView={setCurrentView} />} />
         <Route path="/blog/all" element={<BlogList />} />
         <Route path="/blog/post/:id" element={<BlogPost setView={setCurrentView} />} />

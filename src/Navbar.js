@@ -14,7 +14,7 @@ const Navbar = ({ currentView }) => {
   const navRef = useRef(null);
 
   // Pages where login button should show role selection modal
-  const modalPages = ['/about', '/pricing', '/contact', '/demo', '/About', '/Pricing', '/Contact', '/Demo'];
+  const modalPages = ['/about', '/pricing', '/contact', '/demo', '/faqs', '/About', '/Pricing', '/Contact', '/Demo', '/FAQs'];
   const isModalPage = modalPages.includes(location.pathname);
 
   // Toggle menu open/close
@@ -70,6 +70,7 @@ const Navbar = ({ currentView }) => {
           <Link to="/blog" className="blog-link" onClick={() => setIsOpen(false)}>Blog</Link>
           <Link to="/contact" onClick={() => setIsOpen(false)}>Contact</Link>
           <Link to="/demo" onClick={() => setIsOpen(false)}>Demo</Link>
+          <Link to="/faqs" onClick={() => setIsOpen(false)}>FAQs</Link>
         </div>
         {/* Auth buttons inside the menu for mobile  */}
         {/* Commented out login and start for free buttons
