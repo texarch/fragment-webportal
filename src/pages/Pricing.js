@@ -1,24 +1,57 @@
 import React from 'react';
 import './Pricing.css';
 import comingSoonImg from '../assets/comingsoon.jpg';
-import Insta0 from '../assets/insta.png';       
+import Insta0 from '../assets/insta.png';
 import LinkedIn0 from '../assets/linkedin.png';
 import YouTube0 from '../assets/email.png';
 
 const Pricing = () => {
   return (
     <div>
-    <div className="pricing-container">
-      <div className="pricing-overlay"></div>
-      <div className="pricing-content">
-        <h1 className="pricing-heading">Coming Soon...</h1>
-        <img src={comingSoonImg} alt="Coming Soon" className="pricing-image" />
-        <p className="pricing-subtext">
-          We are piecing our Fragments together, one event at a Time
-        </p>
+      <div className="pricing-container">
+        <div className="pricing-overlay"></div>
+        <div className="pricing-content">
+          <div className="pricing-cards-wrapper">
+            {/* Organiser Card */}
+            <div className="pricing-card">
+              <div className="card-header">
+                <h2 className="card-title organiser-title">Organiser</h2>
+                <h3 className="card-subtitle">Experience the zero set<br />up scheduling platform</h3>
+              </div>
+              <div className="card-body">
+                <ul className="card-features">
+                  <li>Create unlimited groups</li>
+                  <li>Onboard users instantly</li>
+                  <li>Interact directly on events</li>
+                  <li>Add bookings to any event</li>
+                  <li>Share your availability for 1:1 sessions</li>
+                  <li>No ads. No distractions — for you or your users</li>
+                </ul>
+                <button className="btn-signup organiser-btn">Start for Free</button>
+              </div>
+            </div>
+
+            {/* Individual Card */}
+            <div className="pricing-card">
+              <div className="card-header">
+                <h2 className="card-title individual-title">Individual</h2>
+                <h3 className="card-subtitle">Your zen space for<br />what's happening next.</h3>
+              </div>
+              <div className="card-body">
+                <ul className="card-features">
+                  <li>Create your personal planning space</li>
+                  <li>Organize with multiple calendars</li>
+                  <li>Stay on top of your to-dos</li>
+                  <li>Follow schedules that matter to you</li>
+                  <li>Book events and 1:1 sessions</li>
+                </ul>
+                <button className="btn-signup individual-btn">Start for Free</button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-    <footer className="footer">
+      <footer className="footer">
         <div className="footer-content">
           <div className="footer-column social-contact">
             <div className="social-icons-footer">
@@ -57,6 +90,6 @@ const Pricing = () => {
   );
 };
 
-export default Pricing;
+export default Pricing;
 
 

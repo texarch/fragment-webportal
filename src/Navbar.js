@@ -66,7 +66,7 @@ const Navbar = ({ currentView }) => {
       <div className={`nav-links-wrapper collapse ${isOpen ? 'show' : ''}`} id="navbarNav">
         <div className="nav-links">
           <Link to="/about" onClick={() => setIsOpen(false)}>About</Link>
-          {/* <Link to="/pricing" onClick={() => setIsOpen(false)}>Pricing</Link> */}
+          <Link to="/pricing" onClick={() => setIsOpen(false)}>Pricing</Link>
           <Link to="/blog" className="blog-link" onClick={() => setIsOpen(false)}>Blog</Link>
           <Link to="/contact" onClick={() => setIsOpen(false)}>Contact</Link>
           <Link to="/demo" onClick={() => setIsOpen(false)}>Demo</Link>
@@ -108,41 +108,40 @@ const Navbar = ({ currentView }) => {
             </a>
           )}
 
-          {isModalPage ? (
-            <button
-              className="nav-img-btn login-btn-modal"
-              style={{ background: 'transparent', padding: 0, border: 'none' }}
-              onClick={() => {
-                setModalMode('signup');
-                setShowRoleModal(true);
-              }}
-            >
-              <img
-                src={currentView === 'individual' ? startBtnIndividual : startBtnOrganiser}
-                alt="Start for free"
-                className="nav-img-btn start-img-btn"
-              />
-            </button>
+          <button
+            className="nav-img-btn login-btn-modal"
+            style={{ background: 'transparent', padding: 0, border: 'none' }}
+            onClick={() => {
+              setModalMode('signup');
+              setShowRoleModal(true);
+            }}
+          >
+            <img
+              src={currentView === 'individual' ? startBtnIndividual : startBtnOrganiser}
+              alt="Start for free"
+              className="nav-img-btn start-img-btn"
+            />
+          </button>
+          : (
+          ((['/', '/blog', '/demo', '/Blog', '/Demo'].includes(location.pathname) || location.pathname.startsWith('/blog/post/')) && currentView === 'individual') ? (
+          <a
+            // href="https://my.thefragment.app/signup" 
+            href="http://localhost:5173/signup"
+            target="_blank" rel="noopener noreferrer">
+            <img src={startBtnIndividual} alt="Start for free" className="nav-img-btn start-img-btn" />
+          </a>
           ) : (
-            ((['/', '/blog', '/demo', '/Blog', '/Demo'].includes(location.pathname) || location.pathname.startsWith('/blog/post/')) && currentView === 'individual') ? (
-              <a
-                // href="https://my.thefragment.app/signup" 
-                href="http://localhost:5173/signup"
-                target="_blank" rel="noopener noreferrer">
-                <img src={startBtnIndividual} alt="Start for free" className="nav-img-btn start-img-btn" />
-              </a>
-            ) : (
-              <a
-                // href="https://business.thefragment.app/signup" 
-                href="http://localhost:5174/signup"
-                target="_blank" rel="noopener noreferrer">
-                <img src={startBtnOrganiser} alt="Start for free" className="nav-img-btn start-img-btn" />
-              </a>
-            )
-          )}
+          <a
+            // href="https://business.thefragment.app/signup" 
+            href="http://localhost:5174/signup"
+            target="_blank" rel="noopener noreferrer">
+            <img src={startBtnOrganiser} alt="Start for free" className="nav-img-btn start-img-btn" />
+          </a>
+          )
+          )
         </div>
       </div>
-      */}
+
 
       {/* Role Selection Modal */}
       <RoleSelectionModal

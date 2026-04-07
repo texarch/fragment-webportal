@@ -7,7 +7,7 @@ import Page1 from './Page1.js';
 import Contact from './pages/Contact.js';
 import { About } from './pages/About.js';
 import Pricing from './pages/Pricing.js';
-import SignUp from './pages/SignUp';
+// import SignUp from './pages/SignUp';
 // import Login from './pages/Login';
 import Demo from './pages/Demo.js';
 import FAQs from './pages/FAQs.js';
@@ -28,11 +28,11 @@ function App() {
   const Home = () => {
     return (
       <>
-        {currentView === 'organiser' ? (
+        {/* {currentView === 'organiser' ? (
           <Organiser setView={setCurrentView} />
         ) : (
           <Individual setView={setCurrentView} />
-        )}
+        )} */}
       </>
     );
   };

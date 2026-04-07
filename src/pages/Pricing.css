@@ -1,6 +1,6 @@
 .pricing-container {
   position: relative;
-  background-image: url('../assets/page1bg.png'); 
+  background-image: url('../assets/page1bg.png');
   background-size: cover;
   background-position: center;
   min-height: 100vh;
@@ -17,7 +17,7 @@
   left: 0;
   height: 100%;
   width: 100%;
-  
+
   background-color: rgba(255, 255, 255, 0.3);
   z-index: 1;
 }
@@ -26,44 +26,149 @@
   position: relative;
   z-index: 2;
   text-align: center;
-  padding: 20px;
-  max-width: 800px;
-  width: 90%;
-}
-
-.pricing-heading {
-  font-size: 6rem;
-  color: rgba(15, 198, 238, 1); 
-  margin-bottom: 20px;
-}
-
-.pricing-image {
+  padding: 20px 10px;
+  max-width: 1100px;
+  /* adjusted slightly for standard sizes */
   width: 100%;
-  max-width: 300px;
-  height: auto;
-  margin-bottom: 20px;
 }
 
-.pricing-subtext {
-  font-size: 1.2rem;
-  color: rgba(0, 0, 0, 1);
-  font-weight: bold;
+.pricing-cards-wrapper {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  align-items: stretch;
+  margin-top: 20px;
+}
+
+.pricing-card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pricing-card:hover {
+  transform: translateY(-5px);
+}
+
+.card-header {
+  text-align: center;
+  margin-bottom: 20px;
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.card-title {
+  font-family: 'Cambo', serif;
+  font-weight: normal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px auto;
+  width: 224px;
+  height: 56px;
+  border-radius: 8px;
+  font-size: 36px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  transform: translateY(-25px);
+}
+
+.organiser-title {
+  background: #404B5E;
+  color: white !important;
+}
+
+.individual-title {
+  background: #00bff3;
+  color: black !important;
+}
+
+.card-subtitle {
+  font-family: 'SF Pro Text', sans-serif;
+  font-size: 1.4rem;
+  font-weight: normal;
+  line-height: 1.4;
+  color: #555;
+  margin: 0;
+}
+
+.card-body {
+  background: white;
+  border: 1px solid #eaeaea;
+  border-radius: 20px;
+  padding: 40px 30px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin-top: 25px;
+}
+
+.card-features {
+  list-style-type: none;
+  padding: 30px 20px 0 20px;
+  margin: 0 0 40px 0;
+  text-align: left;
+  flex: 1;
+}
+
+.card-features li {
+  font-family: 'SF Pro Display', sans-serif;
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 25px;
+  line-height: 1.5;
+}
+
+.btn-signup {
+  width: 180px;
+  padding: 12px 0;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-family: 'SF Pro Display', sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  margin: auto auto 0 auto;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn-signup:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.organiser-btn {
+  background-color: #333C4B;
+  /* darker, matching About Us button */
+  color: white;
+}
+
+.individual-btn {
+  background-color: #1FC9ED;
+  /* cyan */
+  color: #000;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-  .pricing-heading {
-    font-size: 2.2rem;
+  .pricing-cards-wrapper {
+    flex-direction: column;
+    gap: 30px;
   }
 
-  .pricing-subtext {
-    font-size: 1rem;
+  .card-header {
+    min-height: auto;
   }
 
-  .pricing-image {
-    max-width: 220px;
+  .card-subtitle {
+    font-size: 1.4rem;
   }
 }
+
 .pricing-overlay {
   position: absolute;
   top: 0;
@@ -73,6 +178,7 @@
   background-color: rgba(255, 255, 255, 0.7);
   z-index: 1;
 }
+
 .footer {
   background-color: #f1f1f1;
   padding: 40px 20px 20px;
@@ -127,5 +233,3 @@
 .footer-column.offset-top {
   margin-top: 38px;
 }
-
-
