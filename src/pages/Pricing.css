@@ -75,12 +75,12 @@
   transform: translateY(-25px);
 }
 
-.organiser-title {
+.pricing-card .organiser-title {
   background: #404B5E;
   color: white !important;
 }
 
-.individual-title {
+.pricing-card .individual-title {
   background: #00bff3;
   color: black !important;
 }
