@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Pricing.css';
 import comingSoonImg from '../assets/comingsoon.jpg';
 import Insta0 from '../assets/insta.png';
 import LinkedIn0 from '../assets/linkedin.png';
 import YouTube0 from '../assets/email.png';
+import RoleSelectionModal from '../components/RoleSelectionModal';
 
 const Pricing = () => {
+  const [showRoleModal, setShowRoleModal] = useState(false);
+
   return (
     <div>
       <div className="pricing-container">
@@ -27,7 +30,7 @@ const Pricing = () => {
                   <li>Share your availability for 1:1 sessions</li>
                   <li>No ads. No distractions — for you or your users</li>
                 </ul>
-                <button className="btn-signup organiser-btn">Start for Free</button>
+                <button className="btn-signup organiser-btn" onClick={() => setShowRoleModal(true)}>Start for Free</button>
               </div>
             </div>
 
@@ -44,8 +47,9 @@ const Pricing = () => {
                   <li>Stay on top of your to-dos</li>
                   <li>Follow schedules that matter to you</li>
                   <li>Book events and 1:1 sessions</li>
+                  <li>Interact with Organisers directly</li>
                 </ul>
-                <button className="btn-signup individual-btn">Start for Free</button>
+                <button className="btn-signup individual-btn" onClick={() => setShowRoleModal(true)}>Start for Free</button>
               </div>
             </div>
           </div>
@@ -86,6 +90,14 @@ const Pricing = () => {
           <p>CopyRight Info</p>
         </div>
       </footer>
+
+      <RoleSelectionModal
+        isOpen={showRoleModal}
+        onClose={() => setShowRoleModal(false)}
+        prefixText="Sign-in as"
+        onIndividualClick={() => window.open('http://localhost:5173/signup', '_blank')}
+        onOrganiserClick={() => window.open('http://localhost:5174/signup', '_blank')}
+      />
     </div>
   );
 };

@@ -1,5 +1,5 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './Navbar.js';
 import Organiser from './Organiser.js';
 import Individual from './Individual.js';
@@ -22,6 +22,20 @@ const ConditionalNavbar = ({ currentView }) => {
   return <Navbar currentView={currentView} />;
 };
 
+const PageTracker = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', 'page_view', {
+        page_path: location.pathname + location.search,
+      });
+    }
+  }, [location]);
+
+  return null;
+};
+
 function App() {
   const [currentView, setCurrentView] = React.useState('organiser');
 
@@ -40,6 +54,7 @@ function App() {
   return (
     <Router>
       <ScrollToTop />
+      <PageTracker />
       <ConditionalNavbar currentView={currentView} />
       <Routes>
         <Route path="/" element={<Home />} />
