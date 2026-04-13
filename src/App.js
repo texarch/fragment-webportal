@@ -11,6 +11,8 @@ import SignUp from './pages/SignUp';
 // import Login from './pages/Login';
 import Demo from './pages/Demo.js';
 import FAQs from './pages/FAQs.js';
+import TermsAndConditions from './pages/TermsAndConditions.js';
+import PrivacyPolicy from './pages/PrivacyPolicy.js';
 import Blog from './pages/blog/Blog.js';
 import BlogList from './pages/blog/BlogList.js';
 import BlogPost from './pages/blog/BlogPost.js';
@@ -53,6 +55,8 @@ function App() {
         <Route path="/Blog" element={<Blog currentView={currentView} setView={setCurrentView} />} />
         <Route path="/blog/all" element={<BlogList />} />
         <Route path="/blog/post/:id" element={<BlogPost setView={setCurrentView} />} />
+        <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
       </Routes>
     </Router>
   );

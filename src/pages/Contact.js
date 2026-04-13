@@ -255,8 +255,12 @@ function Contact() {
           </div>
 
           <div className="footer-column offset-top">
-            <p>Privacy</p>
-            <p>Terms and Conditions</p>
+            <p>
+              <a href="/privacy-policy">Privacy</a>
+            </p>
+            <p>
+              <a href="/terms-and-conditions">Terms and Conditions</a>
+            </p>
           </div>
         </div>
 
