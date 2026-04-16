@@ -15,7 +15,7 @@ const Navbar = ({ currentView }) => {
   const [showRoleModal, setShowRoleModal] = useState(false);
   const [modalMode, setModalMode] = useState('login');
   const navRef = useRef(null);
-  const modalPages = ['/about', '/pricing', '/contact', '/demo', '/About', '/Pricing', '/Contact', '/Demo'];
+  const modalPages = ['/about', '/pricing', '/contact', '/demo', '/individual', '/About', '/Pricing', '/Contact', '/Demo', '/Individual'];
   // Pages where login button should show role selection modal
   // const modalPages = ['/about', '/pricing', '/contact', '/demo', '/About', '/Pricing', '/Contact', '/Demo'];
   const isModalPage = modalPages.includes(location.pathname);
@@ -71,9 +71,9 @@ const Navbar = ({ currentView }) => {
           <Link to="/about" onClick={() => setIsOpen(false)}>About</Link>
           <Link to="/blog" className="blog-link" onClick={() => setIsOpen(false)}>Blog</Link>
           <Link to="/contact" onClick={() => setIsOpen(false)}>Contact</Link>
-          <Link to="/demo" onClick={() => setIsOpen(false)}>Demo</Link>
           <Link to="/faqs" onClick={() => setIsOpen(false)}>FAQs</Link>
           <Link to="/pricing" onClick={() => setIsOpen(false)}>Pricing</Link>
+          <Link to="/individual" className="individual-link" onClick={() => setIsOpen(false)}>Individual</Link>
         </div>
         {/* Auth buttons inside the menu for mobile  */}
         <div className="auth-buttons auth-buttons-mobile">

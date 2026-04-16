@@ -3,7 +3,7 @@ import "./Page1.css";
 import page1Image from "./assets/page1(image).png";
 import { useNavigate } from "react-router-dom";
 
-const Page1 = ({ setView }) => {
+const Page1 = () => {
   const navigate = useNavigate();
 
   return (
@@ -15,15 +15,7 @@ const Page1 = ({ setView }) => {
           {/* LEFT SIDE */}
           <div className="page1-left">
 
-            {/* Tabs */}
-            <div className="page1-tabs">
-              <button className="home-organiser-tab active" onClick={() => setView('organiser')}>
-                <span>Organiser</span>
-              </button>
-              <button className="home-individual-tab" onClick={() => setView('individual')}>
-                <span>Individual</span>
-              </button>
-            </div>
+
 
             {/* Heading */}
             <h1 className="page1-heading">

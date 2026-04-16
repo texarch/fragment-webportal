@@ -13,7 +13,7 @@ import UnlikeImage from '../assets/unlike.png';
 
 const REACT_APP_API_URL = "https://fragment.thefragment.app/website"
 
-const Page1 = () => {
+export const DemoPage1 = () => {
   return (
     <div className="page0-container">
       <div className="page0-text">
@@ -30,7 +30,7 @@ const Page1 = () => {
   );
 };
 
-const Page2 = () => {
+export const DemoPage2 = () => {
   return (
     <div className="page2-wrapper">
       <div className="section fragment">
@@ -57,7 +57,7 @@ const Page2 = () => {
   );
 };
 
-const Page4 = () => {
+export const DemoPage4 = () => {
   const [formData, setFormData] = useState({
     name: '',
     company: '',
@@ -423,9 +423,9 @@ const Demo = ({ currentView, setView }) => {
 
   return (
     <>
-      <Page1 />
-      <Page2 />
-      <Page4 />
+      <DemoPage1 />
+      <DemoPage2 />
+      <DemoPage4 />
 
       {/* FAQ section moved to separate FAQs page - commented out, not deleted */}
       {/*
