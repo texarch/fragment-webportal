@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import PhoneInput from 'react-phone-number-input';
 import 'react-phone-number-input/style.css';
 import './Contact.css';
+import './Demo.css';
+import { DemoPage1, DemoPage2, DemoPage4 } from './Demo';
 
 import BackImage from '../assets/main2.png';
 import Insta from '../assets/insta2.jpg';
@@ -123,6 +125,11 @@ function Contact() {
 
   return (
     <div className="contact-page">
+
+      {/* Demo sections embedded at the top of Contact */}
+      <DemoPage1 />
+      <DemoPage2 />
+      <DemoPage4 />
 
       <div className="back-image-wrapper">
         <img src={BackImage} alt="Back" className="back-image" />

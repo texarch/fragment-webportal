@@ -16,21 +16,7 @@ const Page11 = ({ setView }) => {
 
           {/* LEFT */}
           <div className="left-content">
-            <div className="tabs-container">
-              <button
-                className="home-organiser-tab"
-                onClick={() => setView('organiser')}
-              >
-                <span>Organiser</span>
-              </button>
 
-              <button
-                className="home-individual-tab active"
-                onClick={() => setView('individual')}
-              >
-                <span>Individual</span>
-              </button>
-            </div>
 
             <div className="title-text">
               Stay organized with multi-calendars, to-dos, and automatic event sync.

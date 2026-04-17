@@ -27,74 +27,10 @@
   flex: 1;
   display: flex;
   flex-direction: column;
+  margin-top: -60px;
 }
 
-/* TABS */
-.page1-tabs {
-  display: flex;
-  align-items: center;
-  gap: 32px;
-  margin-bottom: 35px;
-}
 
-.home-organiser-tab,
-.home-individual-tab {
-  width: 224px;
-  height: 56px;
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  border: none;
-  background: #FFFFFF;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  gap: 10px;
-  transition: all 0.3s ease;
-}
-
-/* Hover State */
-.home-organiser-tab:hover,
-.home-individual-tab:hover {
-  background: #f0f0f0;
-  /* Slight hover effect for transparent */
-}
-
-/* Active State for BOTH tabs */
-.home-organiser-tab.active {
-  background: #404B5E;
-  color: white !important;
-}
-
-.home-individual-tab.active {
-  background: #00bff3;
-  color: black !important;
-}
-
-/* Ensure text color adapts */
-.home-organiser-tab span,
-.home-individual-tab span {
-  color: black;
-}
-
-.home-organiser-tab.active span {
-  color: white !important;
-}
-
-.home-individual-tab.active span {
-  color: black !important;
-}
-
-.home-organiser-tab.active span,
-.home-individual-tab.active span {
-  font-size: 40px;
-}
-
-.home-organiser-tab span,
-.home-individual-tab span {
-  font-family: "Cambo", serif;
-  font-size: 36px;
-}
 
 /* HEADING */
 .page1-heading {
@@ -182,40 +118,6 @@
     text-align: center;
   }
 
-  .page1-tabs {
-    gap: 3vw;
-    /* Responsive gap */
-    margin-bottom: 24px;
-    flex-wrap: nowrap;
-    /* Keep on one line if possible, or wrap if very small */
-    justify-content: center;
-    width: 100%;
-  }
-
-  .home-organiser-tab,
-  .home-individual-tab {
-    width: auto !important;
-    min-width: 160px !important;
-    max-width: 200px !important;
-    padding: 0 24px !important;
-    height: 56px !important;
-    flex: 1;
-    overflow: hidden;
-    border-radius: 10px !important;
-  }
-
-  .home-organiser-tab span,
-  .home-individual-tab span {
-    font-size: 20px !important;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-
-  .home-organiser-tab.active span,
-  .home-individual-tab.active span {
-    font-size: 22px !important;
-  }
 
 
   .page1-heading {

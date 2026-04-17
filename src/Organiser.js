@@ -14,7 +14,7 @@ import Page20 from './Page20';
 const Organiser = ({ setView }) => {
   return (
     <div>
-      <Page1 setView={setView} />
+      <Page1 />
       <Page2 />
       <Page3 />
       <Page4 />
