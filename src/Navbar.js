@@ -15,10 +15,12 @@ const Navbar = ({ currentView }) => {
   const [showRoleModal, setShowRoleModal] = useState(false);
   const [modalMode, setModalMode] = useState('login');
   const navRef = useRef(null);
-  const modalPages = ['/about', '/pricing', '/contact', '/demo', '/individual', '/About', '/Pricing', '/Contact', '/Demo', '/Individual'];
+  const modalPages = ['/about', '/pricing', '/contact', '/demo', '/About', '/Pricing', '/Contact', '/Demo'];
   // Pages where login button should show role selection modal
   // const modalPages = ['/about', '/pricing', '/contact', '/demo', '/About', '/Pricing', '/Contact', '/Demo'];
   const isModalPage = modalPages.includes(location.pathname);
+  // True when the user is in individual context — either via tab toggle or direct /individual route
+  const isIndividualView = currentView === 'individual' || ['/individual', '/Individual'].includes(location.pathname);
 
   // Toggle menu open/close
   const toggleMenu = () => {
@@ -98,8 +100,8 @@ const Navbar = ({ currentView }) => {
             </button>
           ) : (
             <a
-              // href={currentView === 'individual' ? 'https://my.thefragment.app/login' : 'https://business.thefragment.app/login'}
-              href={currentView === 'individual' ? 'http://localhost:5173/login' : 'http://localhost:5174/login'}
+              href={isIndividualView ? 'https://my.thefragment.app/login' : 'https://business.thefragment.app/login'}
+              // href={isIndividualView ? 'http://localhost:5173/login' : 'http://localhost:5174/login'}
               className="login-link"
               target="_blank"
               rel="noopener noreferrer"
@@ -133,18 +135,18 @@ const Navbar = ({ currentView }) => {
               />
             </button>
           ) : (
-            /* On other pages, keep original behavior */
-            ((['/', '/blog', '/demo', '/faqs', '/Blog', '/Demo', '/FAQs'].includes(location.pathname) || location.pathname.startsWith('/blog/post/')) && currentView === 'individual') ? (
+            /* On other pages, use isIndividualView to pick the right button/link */
+            isIndividualView ? (
               <a
-                // href="https://my.thefragment.app/signup" 
-                href="http://localhost:5173/signup"
+                href="https://my.thefragment.app/signup"
+                // href="http://localhost:5173/signup"
                 target="_blank" rel="noopener noreferrer">
                 <img src={startBtnIndividual} alt="Start for free" className="nav-img-btn start-img-btn" />
               </a>
             ) : (
               <a
-                // href="https://business.thefragment.app/signup" 
-                href="http://localhost:5174/signup"
+                href="https://business.thefragment.app/signup"
+                // href="http://localhost:5174/signup"
                 target="_blank" rel="noopener noreferrer">
                 <img src={startBtnOrganiser} alt="Start for free" className="nav-img-btn start-img-btn" />
               </a>
@@ -158,10 +160,10 @@ const Navbar = ({ currentView }) => {
         isOpen={showRoleModal}
         onClose={() => setShowRoleModal(false)}
         prefixText={modalMode === 'login' ? 'Log-in as' : 'Sign-in as'}
-        // onIndividualClick={() => window.open(modalMode === 'login' ? 'https://my.thefragment.app/login' : 'https://my.thefragment.app/signup', '_blank')}
-        onIndividualClick={() => window.open(modalMode === 'login' ? 'http://localhost:5173/login' : 'http://localhost:5173/signup', '_blank')}
-        // onOrganiserClick={() => window.open(modalMode === 'login' ? 'https://business.thefragment.app/login' : 'https://business.thefragment.app/signup', '_blank')}
-        onOrganiserClick={() => window.open(modalMode === 'login' ? 'http://localhost:5174/login' : 'http://localhost:5174/signup', '_blank')}
+        onIndividualClick={() => window.open(modalMode === 'login' ? 'https://my.thefragment.app/login' : 'https://my.thefragment.app/signup', '_blank')}
+        // onIndividualClick={() => window.open(modalMode === 'login' ? 'http://localhost:5173/login' : 'http://localhost:5173/signup', '_blank')}
+        onOrganiserClick={() => window.open(modalMode === 'login' ? 'https://business.thefragment.app/login' : 'https://business.thefragment.app/signup', '_blank')}
+      // onOrganiserClick={() => window.open(modalMode === 'login' ? 'http://localhost:5174/login' : 'http://localhost:5174/signup', '_blank')}
       />
     </nav>
   );

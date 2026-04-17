@@ -76,7 +76,6 @@ body {
 
 /* Individual nav link — same style as other links */
 .nav-links a.individual-link {
-  background-color: transparent;
   color: #000;
   font-weight: 500;
 }
