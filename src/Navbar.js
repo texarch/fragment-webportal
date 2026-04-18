@@ -77,10 +77,68 @@ const Navbar = ({ currentView }) => {
           <Link to="/pricing" onClick={() => setIsOpen(false)}>Pricing</Link>
           <Link to="/individual" className="individual-link" onClick={() => setIsOpen(false)}>Individual</Link>
         </div>
-        {/* Auth buttons inside the menu for mobile  */}
+        {/* Auth buttons inside the menu for mobile — same as desktop */}
         <div className="auth-buttons auth-buttons-mobile">
-          <button className="login" onClick={() => setIsOpen(false)}>Log In</button>
-          <button className="signup" onClick={() => setIsOpen(false)}>Start for free</button>
+          <div className="organiser-auth-btns">
+            {isModalPage ? (
+              <button
+                className="login-link login-btn-modal"
+                onClick={() => {
+                  setIsOpen(false);
+                  setModalMode('login');
+                  setShowRoleModal(true);
+                }}
+              >
+                <span className="login-text-btn">Log in</span>
+              </button>
+            ) : (
+              <a
+                href={isIndividualView ? 'https://my.thefragment.app/login' : 'https://business.thefragment.app/login'}
+                className="login-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setIsOpen(false)}
+              >
+                <span className="login-text-btn">Log in</span>
+              </a>
+            )}
+
+            {isModalPage ? (
+              <button
+                className="nav-img-btn login-btn-modal"
+                style={{ background: 'transparent', padding: 0, border: 'none' }}
+                onClick={() => {
+                  setIsOpen(false);
+                  setModalMode('signup');
+                  setShowRoleModal(true);
+                }}
+              >
+                <img
+                  src={currentView === 'individual' ? startBtnIndividual : startBtnOrganiser}
+                  alt="Start for free"
+                  className="nav-img-btn start-img-btn"
+                />
+              </button>
+            ) : (
+              isIndividualView ? (
+                <a
+                  href="https://my.thefragment.app/signup"
+                  target="_blank" rel="noopener noreferrer"
+                  onClick={() => setIsOpen(false)}
+                >
+                  <img src={startBtnIndividual} alt="Start for free" className="nav-img-btn start-img-btn" />
+                </a>
+              ) : (
+                <a
+                  href="https://business.thefragment.app/signup"
+                  target="_blank" rel="noopener noreferrer"
+                  onClick={() => setIsOpen(false)}
+                >
+                  <img src={startBtnOrganiser} alt="Start for free" className="nav-img-btn start-img-btn" />
+                </a>
+              )
+            )}
+          </div>
         </div>
       </div>
 
