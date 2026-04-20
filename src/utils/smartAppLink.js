@@ -117,8 +117,8 @@ export function openFragmentApp(mode = 'login') {
     window.location.href = intentUrl;
 
   } else if (isIOS()) {
-    // iOS: Try the universal link first.
-    const universalLink = `${FRAGMENT_UNIVERSAL_LINK}${appPath}`;
+    // iOS: Try the custom scheme first.
+    const customSchemeUrl = `thefragmentapp://${mode === 'login' ? 'login' : 'signup'}`;
     let appOpened = false;
 
     const handleVisibilityChange = () => {
@@ -141,14 +141,14 @@ export function openFragmentApp(mode = 'login') {
     document.addEventListener('visibilitychange', handleVisibilityChange);
     window.addEventListener('blur', handleBlur);
 
-    // Try opening via universal link
-    window.location.assign(universalLink);
+    // Try opening via custom scheme
+    window.location.href = customSchemeUrl;
 
     // Fallback: if app didn't open within 2.5s, go to App Store
     setTimeout(() => {
       cleanup();
       if (!appOpened && !document.hidden) {
-        window.location.assign(storeUrl);
+        window.location.href = storeUrl;
       }
     }, 2500);
 
@@ -185,7 +185,7 @@ export function openFragmentBusinessApp(mode = 'login') {
     window.location.href = intentUrl;
 
   } else if (isIOS()) {
-    const universalLink = `${BUSINESS_UNIVERSAL_LINK}${appPath}`;
+    const customSchemeUrl = `fragmentbusiness://${mode === 'login' ? 'login' : 'signup'}`;
     let appOpened = false;
 
     const handleVisibilityChange = () => {
@@ -208,12 +208,12 @@ export function openFragmentBusinessApp(mode = 'login') {
     document.addEventListener('visibilitychange', handleVisibilityChange);
     window.addEventListener('blur', handleBlur);
 
-    window.location.assign(universalLink);
+    window.location.href = customSchemeUrl;
 
     setTimeout(() => {
       cleanup();
       if (!appOpened && !document.hidden) {
-        window.location.assign(storeUrl);
+        window.location.href = storeUrl;
       }
     }, 2500);
 
