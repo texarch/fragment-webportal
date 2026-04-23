@@ -1,11 +1,8 @@
-/* ================================
-   MAIN WRAPPER (matches Page2-section)
-================================ */
 .page3-wrapper {
   width: 100%;
   display: flex;
   justify-content: center;
-  padding: 0 25px 25px 25px; /* Removed top padding to eliminate the transparent doodle gap above */
+  padding: 0 25px 0 25px; /* Removed top and bottom padding to eliminate gap */
   box-sizing: border-box;
 }
 

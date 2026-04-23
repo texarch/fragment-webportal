@@ -286,8 +286,8 @@
     }
 }
 
-/* ── Responsive — mobile ── */
-@media (max-width: 700px) {
+/* ── Responsive — mobile and tablet ── */
+@media (max-width: 800px) {
     .page1d-container {
         padding: 60px 20px;
     }

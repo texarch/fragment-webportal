@@ -5,8 +5,8 @@ import CreateImg from "./assets/Group 43057 Create Image.png";
 import PlanImg from "./assets/Group 650 Plan Image.png";
 import ShareImg from "./assets/Group 578 Share Image.png";
 import KnowImg from "./assets/Group 651 Know Image.png";
-import AddImg from "./assets/Group 43059 Add Image.png";
-import ShowImg from "./assets/Group 43060 Show Image.png";
+// import AddImg from "./assets/Group 43059 Add Image.png";
+// import ShowImg from "./assets/Group 43060 Show Image.png";
 import InteractImg from "./assets/Group 43061 Interact Image.png";
 import SeeImg from "./assets/Group 43062 See Image.png";
 
@@ -15,8 +15,8 @@ import MobileCreateImg from "./assets/editor/Create (1).png";
 import MobilePlanImg from "./assets/editor/Plan.png";
 import MobileShareImg from "./assets/editor/Share.png";
 import MobileKnowImg from "./assets/editor/Know.png";
-import MobileAddImg from "./assets/editor/Add.png";
-import MobileShowImg from "./assets/editor/Show.png";
+// import MobileAddImg from "./assets/editor/Add.png";
+// import MobileShowImg from "./assets/editor/Show.png";
 import MobileInteractImg from "./assets/editor/Interact.png";
 import MobileSeeImg from "./assets/editor/See.png";
 
@@ -25,8 +25,8 @@ const images = [
   PlanImg,
   ShareImg,
   KnowImg,
-  AddImg,
-  ShowImg,
+  // AddImg,
+  // ShowImg,
   InteractImg,
   SeeImg
 ];
@@ -36,8 +36,8 @@ const mobileItems = [
   { text: "Plan", subtitle: "Schedules and events for your groups.", img: MobilePlanImg },
   { text: "Share", subtitle: "Calendars and events privately or with all Users", img: MobileShareImg },
   { text: "Know", subtitle: "Who follows your calendars and gets updates automatically", img: MobileKnowImg },
-  { text: "Add", subtitle: "Tickets to the events", img: MobileAddImg },
-  { text: "Show", subtitle: "Availability for one on one's and other reservations", img: MobileShowImg },
+  // { text: "Add", subtitle: "Tickets to the events", img: MobileAddImg },
+  // { text: "Show", subtitle: "Availability for one on one's and other reservations", img: MobileShowImg },
   { text: "Interact", subtitle: "With your Users", img: MobileInteractImg },
   { text: "See", subtitle: "User Likes and Attending", img: MobileSeeImg },
 ];
@@ -49,7 +49,7 @@ export default function Page4() {
       <div className="page4-desktop">
         <div className="page4-header">
           <span className="page4-with-text">with </span>
-          <img src={logo} alt="Logo" className="page4-logo" />
+          {/* <img src={logo} alt="Logo" className="page4-logo" /> */}
           <span className="page4-fragment-text">Fragment Business</span>
         </div>
         {images.map((img, i) => (

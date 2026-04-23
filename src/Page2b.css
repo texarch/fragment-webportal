@@ -137,5 +137,6 @@
 
   .page2b-cards-row {
     justify-content: flex-start;
+    padding: 20px 24px;
   }
 }

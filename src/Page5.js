@@ -14,15 +14,15 @@ const Page5 = () => {
       <div data-property-1="Variant3" className="fragment-card">
 
         {/* Heading */}
-        <div className="heading-row">
+        {/* <div className="heading-row">
           <span className="heading-text">If you are a</span>
           <span className="heading-creator">Creator</span>
         </div>
 
         {/* Subtitle */}
-        <p className="sub-text">
-          Fragment Business helps keep your entire team on the same page!
-        </p>
+        {/* <p className="sub-text"> */}
+        {/* Fragment Business helps keep your entire team on the same page! */}
+        {/* </p> */}
 
 
         {/* <div className="website-row">
@@ -38,7 +38,7 @@ const Page5 = () => {
         </div> */}
 
         {/* Store Buttons */}
-        <div className="store-row">
+        {/* <div className="store-row">
           <img
             src={Button_download_playstore}
             alt="Download on Play Store"
@@ -52,7 +52,7 @@ const Page5 = () => {
             className="store-image"
             onClick={() => window.open("https://apps.apple.com/us/app/fragment-business/id6479656621", "_blank")}
           />
-        </div>
+        </div> */}
 
         {/* NEW CALENDAR SYNC SECTION */}
         <div className="calendar-sync-container">
