@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css2?family=Cambo&display=swap');
+
+.page1d-container {
+    width: 100%;
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 40px;
+    overflow: hidden;
+}
+
+.page1d-content {
+    max-width: 1400px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+/* ── Left text ── */
+.page1d-left {
+    flex: 0 1 35%;
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+    min-width: 260px;
+}
+
+.setup-title-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.title-once {
+    color: #64748b;
+    font-size: clamp(40px, 4.5vw, 72px);
+    font-family: "Cambo", serif;
+    font-weight: 400;
+    line-height: 1.1;
+}
+
+.title-run {
+    color: #000;
+    font-size: clamp(56px, 6.5vw, 110px);
+    font-family: "Cambo", serif;
+    font-weight: 400;
+    line-height: 1.1;
+}
+
+.setup-divider {
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    margin: 10px 0 5px;
+}
+
+.setup-description {
+    color: #000;
+    font-size: clamp(13px, 1.1vw, 17px);
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+/* ── Right: two-column staggered ── */
+.page1d-right {
+    flex: 1 1 60%;
+    display: flex;
+    align-items: flex-start;
+    min-width: 0;
+    overflow: visible;
+}
+
+.cards-wrapper {
+    width: 100%;
+    display: flex;
+    gap: 0;
+    margin-left: -10px;
+    align-items: flex-start;
+}
+
+.cards-col {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    flex: 1;
+    min-width: 0;
+}
+
+.cards-col-right {
+    margin-top: clamp(30px, 4vw, 60px);
+    margin-left: -15px;
+}
+
+/* ── Card base ── */
+.setup-card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    cursor: default;
+    transition: transform 0.3s ease-in-out,
+        opacity 0.3s ease-in-out,
+        filter 0.3s ease-in-out;
+}
+
+/* ── Layering: z-index + overlap + depth shadows ── */
+
+/* Card 0 — top-left, foreground */
+.cards-col-left .setup-card:nth-child(1) {
+    z-index: 4;
+    transform: scale(1.02);
+    box-shadow: 3px 6px 24px 0 rgba(0, 0, 0, 0.16);
+}
+
+/* Card 1 — bottom-left, recessed, overlaps card 0 */
+.cards-col-left .setup-card:nth-child(2) {
+    z-index: 2;
+    margin-top: -12px;
+    box-shadow: 2px 4px 14px 0 rgba(0, 0, 0, 0.09);
+}
+
+/* Card 2 — top-right, mid-layer */
+.cards-col-right .setup-card:nth-child(1) {
+    z-index: 3;
+    box-shadow: 2px 4px 16px 0 rgba(0, 0, 0, 0.11);
+}
+
+/* Card 3 — bottom-right, front, overlaps card 2 */
+.cards-col-right .setup-card:nth-child(2) {
+    z-index: 5;
+    margin-top: -10px;
+    transform: scale(1.02);
+    box-shadow: 3px 6px 22px 0 rgba(0, 0, 0, 0.18);
+}
+
+/* ── Floating animations per card ── */
+.cards-col-left .setup-card:nth-child(1) {
+    animation: float1 7s ease-in-out infinite;
+}
+
+.cards-col-left .setup-card:nth-child(2) {
+    animation: float2 9s ease-in-out infinite 0.4s;
+}
+
+.cards-col-right .setup-card:nth-child(1) {
+    animation: float3 8s ease-in-out infinite 0.8s;
+}
+
+.cards-col-right .setup-card:nth-child(2) {
+    animation: float4 7.5s ease-in-out infinite 1.2s;
+}
+
+@keyframes float1 {
+
+    0%,
+    100% {
+        transform: scale(1.02) translateY(0);
+    }
+
+    50% {
+        transform: scale(1.02) translateY(-10px);
+    }
+}
+
+@keyframes float2 {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+@keyframes float3 {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+@keyframes float4 {
+
+    0%,
+    100% {
+        transform: scale(1.02) translateY(0);
+    }
+
+    50% {
+        transform: scale(1.02) translateY(-14px);
+    }
+}
+
+/* ── Hover focus effect ── */
+.cards-wrapper:hover .setup-card {
+    opacity: 0.75;
+    filter: blur(0.3px);
+    animation-play-state: paused;
+    transition: opacity 0.4s ease, filter 0.4s ease;
+}
+
+.cards-wrapper .setup-card:hover {
+    opacity: 1 !important;
+    filter: none !important;
+    transform: translateY(-12px) scale(1.02);
+    z-index: 50;
+    animation-play-state: paused;
+    transition: opacity 0.4s ease, filter 0.4s ease, transform 0.35s ease;
+}
+
+/* ── Card internals ── */
+.setup-card-title {
+    font-family: "Cambo", serif;
+    font-weight: 400;
+    color: #000;
+    text-align: center;
+    letter-spacing: 0.03em;
+    width: 100%;
+}
+
+.title-lg {
+    font-size: clamp(20px, 1.8vw, 30px);
+    margin-bottom: clamp(8px, 0.8vw, 14px);
+}
+
+.title-md {
+    font-size: clamp(18px, 1.5vw, 24px);
+    margin-bottom: clamp(6px, 0.6vw, 10px);
+}
+
+.card-divider {
+    width: 100%;
+    height: 0;
+    outline: 1px solid #000;
+    margin-bottom: clamp(8px, 0.8vw, 14px);
+}
+
+.card-description {
+    font-family: "SF Pro", "Inter", sans-serif;
+    color: #6b7280;
+    text-align: center;
+    line-height: 1.55;
+    width: 100%;
+}
+
+.desc-lg {
+    font-size: clamp(13px, 1.1vw, 18px);
+}
+
+.desc-md {
+    font-size: clamp(12px, 1vw, 16px);
+}
+
+/* ── Responsive — tablet ── */
+@media (max-width: 1024px) {
+    .page1d-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 50px;
+    }
+
+    .page1d-left {
+        flex: none;
+        width: 100%;
+        align-items: center;
+    }
+
+    .page1d-right {
+        width: 100%;
+    }
+
+    .setup-card {
+        max-width: 100% !important;
+    }
+}
+
+/* ── Responsive — mobile ── */
+@media (max-width: 700px) {
+    .page1d-container {
+        padding: 60px 20px;
+    }
+
+    .cards-wrapper {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .cards-col {
+        width: 100%;
+    }
+
+    .cards-col-right {
+        margin-top: 0;
+    }
+
+    .setup-card {
+        max-width: 100% !important;
+    }
+
+    .cards-wrapper:hover .setup-card {
+        opacity: 1;
+        filter: none;
+    }
+}

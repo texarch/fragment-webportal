@@ -11,11 +11,13 @@ const Page3 = () => {
         <div className="page3-text-section">
 
           <div className="page3-heading-bar">
-            <h2 className="page3-heading">Co-Create Your<br/>Events</h2>
+            <h2 className="page3-heading-primary">Co-Create</h2>
+            <h2 className="page3-heading-secondary">Your Events</h2>
           </div>
 
           <p className="page3-subtext">
-            Add collaborators to your calendars so they can add, edit, and manage events with you
+            Add collaborators to your calendars so they can add, edit, and<br/>
+            manage events with you
           </p>
         </div>
 

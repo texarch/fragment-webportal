@@ -2,7 +2,9 @@ import React from 'react';
 import Page1 from './Page1';
 import Page1b from './Page1b';
 import Page1c from './Page1c';
+import Page1d from './Page1d';
 import Page2 from './Page2';
+import Page2b from './Page2b';
 import Page3 from './Page3';
 import Page4 from './Page4';
 import Page5 from './Page5';
@@ -19,7 +21,9 @@ const Organiser = ({ setView }) => {
       <Page1 />
       <Page1b />
       <Page1c />
+      <Page1d />
       <Page2 />
+      <Page2b />
       <Page3 />
       <Page4 />
       <Page5 />
