@@ -1,0 +1,136 @@
+.page1c-container {
+    width: 100%;
+    min-height: 85vh;
+    background-color: #F7F9FF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 40px;
+    overflow-x: hidden;
+}
+
+.page1c-content {
+    max-width: 1300px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 100px;
+}
+
+.page1c-left {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chaos-img {
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+    /* Optional: filter: drop-shadow(0 10px 20px rgba(0,0,0,0.05)); */
+}
+
+.page1c-right {
+    flex: 1.2;
+    display: flex;
+    flex-direction: column;
+}
+
+.chaos-title-container {
+    position: relative;
+    height: 170px;
+    width: 100%;
+}
+
+.title-build {
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #64748b;
+    font-size: 72px;
+    font-family: "Cambo", serif;
+    font-weight: 400;
+    line-height: 76px;
+    white-space: nowrap;
+}
+
+.title-chaos {
+    position: absolute;
+    left: 300px;
+    top: 76px;
+    color: #000;
+    font-size: 100px;
+    font-family: "Cambo", serif;
+    font-weight: 400;
+    line-height: 1;
+}
+
+.chaos-divider {
+    width: 97%;
+    height: 1px;
+    background-color: #000;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+
+.chaos-description {
+    color: #000;
+    font-size: 25px;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-weight: 400;
+    line-height: 1.4;
+    max-width: 700px;
+}
+
+.chaos-description strong {
+    font-weight: 700;
+}
+
+@media (max-width: 1100px) {
+    .page1c-content {
+        gap: 50px;
+    }
+
+    .title-chaos {
+        font-size: 100px;
+        left: 150px;
+    }
+}
+
+@media (max-width: 900px) {
+    .page1c-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 60px;
+    }
+
+    .page1c-right {
+        align-items: center;
+    }
+
+    .chaos-title-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        position: static;
+        margin-bottom: 20px;
+    }
+
+    .title-build,
+    .title-chaos {
+        position: static;
+        font-size: 40px;
+        line-height: 1.2;
+    }
+
+    .title-chaos {
+        font-size: 64px;
+    }
+
+    .chaos-description {
+        font-size: 20px;
+    }
+}

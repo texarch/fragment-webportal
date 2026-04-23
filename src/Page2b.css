@@ -1,0 +1,142 @@
+.page2b-section {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 0px 24px 200px;
+  /* Increased bottom padding to accommodate overflowing cards */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page2b-container {
+  max-width: 1280px;
+  width: 100%;
+  text-align: center;
+  background-color: #F7F7F7;
+  border-radius: 40px;
+  padding: 80px 0 0 0;
+  /* Removed bottom padding so negative margin can pull the background up */
+}
+
+/* ── Heading ── */
+.page2b-content {
+  font-family: 'Cambo', serif;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 60px;
+  letter-spacing: -0.02em;
+  margin-bottom: 56px;
+}
+
+.text-black {
+  color: #000000;
+}
+
+.text-slate-500 {
+  color: #64748b;
+}
+
+/* ── Cards Row ── */
+.page2b-cards-row {
+  overflow-x: auto;
+  padding: 20px 0 20px 0;
+  margin-bottom: -150px;
+  width: 100%;
+  scrollbar-width: none;
+}
+
+.page2b-cards-row::-webkit-scrollbar {
+  display: none;
+}
+
+.page2b-cards-track {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: stretch;
+  width: max-content;
+  /* Removed CSS animation to allow JS-based scrollLeft which supports native manual scrolling */
+}
+
+/* ── Individual Card ── */
+.page2b-card {
+  width: 288px;
+  flex-shrink: 0;
+  background-color: #ffffff;
+  border-radius: 24px;
+  padding: 24px;
+  box-shadow:
+    4px 4px 12px 0px rgba(0, 0, 0, 0.25),
+    inset 0px -4px 5px 0px rgba(0, 0, 0, 0.15);
+  outline: 3px solid rgba(0, 0, 0, 0.12);
+  outline-offset: -3px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  text-align: left;
+}
+
+/* ── Card header (image icon + title) ── */
+.page2b-card-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+/* ── Image used as icon ── */
+.page2b-card-icon {
+  width: 32px;
+  height: 32px;
+  object-fit: cover;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+
+.page2b-card-title {
+  font-family: 'Cambo', serif;
+  font-size: 22px;
+  font-weight: 400;
+  color: #000;
+}
+
+/* ── Card body text ── */
+.page2b-card-desc {
+  align-self: stretch;
+  color: #000;
+  font-family: "SF Pro", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 274;
+  line-height: normal;
+  letter-spacing: -0.32px;
+  margin: 0;
+}
+
+.page2b-card-list {
+  font-family: 'SF Pro', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  color: #000;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .page2b-section {
+    padding: 80px 20px 60px;
+  }
+
+  .page2b-content {
+    font-size: 28px;
+    line-height: 40px;
+    margin-bottom: 40px;
+  }
+
+  .page2b-cards-row {
+    justify-content: flex-start;
+    padding: 20px 24px;
+  }
+}

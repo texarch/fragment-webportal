@@ -72,11 +72,11 @@ const Navbar = ({ currentView }) => {
       <div className={`nav-links-wrapper collapse ${isOpen ? 'show' : ''}`} id="navbarNav">
         <div className="nav-links">
           <Link to="/about" onClick={() => setIsOpen(false)}>About</Link>
-          <Link to="/blog" className="blog-link" onClick={() => setIsOpen(false)}>Blog</Link>
-          <Link to="/contact" onClick={() => setIsOpen(false)}>Contact</Link>
-          <Link to="/faqs" onClick={() => setIsOpen(false)}>FAQs</Link>
-          <Link to="/pricing" onClick={() => setIsOpen(false)}>Pricing</Link>
           <Link to="/individual" className="individual-link" onClick={() => setIsOpen(false)}>Individual</Link>
+          <Link to="/pricing" onClick={() => setIsOpen(false)}>Pricing</Link>
+          <Link to="/blog" className="blog-link" onClick={() => setIsOpen(false)}>Blog</Link>
+          <Link to="/faqs" onClick={() => setIsOpen(false)}>FAQ's</Link>
+          <Link to="/contact" onClick={() => setIsOpen(false)}>Contact</Link>
         </div>
         {/* Auth buttons inside the menu for mobile — same as desktop */}
         <div className="auth-buttons auth-buttons-mobile">

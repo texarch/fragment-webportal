@@ -1,66 +1,36 @@
 import React from "react";
 import "./Page1.css";
-import page1Image from "./assets/page1(image).png";
-import { useNavigate } from "react-router-dom";
+import heroImage from "./assets/hero image.png";
 
 const Page1 = () => {
-  const navigate = useNavigate();
-
   return (
-    <>
-
-      <div className="page1-wrapper">
-        <div className="page1-content">
-
-          {/* LEFT SIDE */}
-          <div className="page1-left">
-
-
-
-            {/* Heading */}
-            <h1 className="page1-heading">
-              Manage schedules &
-              <br />
-              bookings across groups.
-            </h1>
-
-            {/* Divider Line */}
-            <div className="page1-divider"></div>
-
-            {/* Subtext */}
-            <p className="page1-subtext">
-              Create calendars for each group, share events,
-              manage bookings & payments.
-            </p>
-
-            {/* Button */}
-            <div className="page1-buttons">
-              <button
-                className="demo-btn"
-                onClick={() => navigate("/Demo")}
-              >
-                <span>Book a Demo</span>
-              </button>
-            </div>
-
-          </div>
-
-          {/* RIGHT SIDE */}
-          <div className="page1-right">
-            <div className="mockup-wrapper">
-              <div className="w-[1000px] relative">
-                <img
-                  src={page1Image}
-                  alt="Page 1 Visual"
-                  className="page1-single-img"
-                />
-              </div>
-            </div>
-          </div>
-
-        </div>
+    <div className="page1-hero-container">
+      {/* Badge */}
+      <div className="hero-badge">
+        <div className="badge-dot" />
+        <div className="badge-text">Not just events.</div>
       </div>
-    </>
+
+      {/* Main Heading */}
+      <div className="hero-heading-wrapper">
+        <h1 className="hero-title">Run group schedules and recurring events</h1>
+        <h1 className="hero-subtitle">with Zero Setup</h1>
+      </div>
+
+      {/* Subtext/Description */}
+      <div className="hero-description-wrapper">
+        <p className="hero-description">
+          Create groups, manage schedules, run one-on-ones and collect payments.
+          <br />
+          All from one place. Always updated. Automatically shared.
+        </p>
+      </div>
+
+      {/* Hero Image Mockup */}
+      <div className="hero-image-wrapper">
+        <img src={heroImage} alt="Fragment Calendar Mockup" className="hero-image" />
+      </div>
+    </div>
   );
 };
 

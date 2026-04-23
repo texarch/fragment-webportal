@@ -254,30 +254,30 @@
     flex: 0 0 50%;
     /* Force 50% width */
     width: 50%;
-    align-items: flex-start;
-    /* Left align items */
-    padding-left: 10px;
-    /* Align with container edge */
-    padding-right: 10px;
+    align-items: center;
+    /* Center align items */
+    padding-left: 0px;
+    padding-right: 0px;
     /* Space between columns */
     box-sizing: border-box;
+    text-align: center;
   }
 
   .footer-right {
     flex: 0 0 50%;
     /* Force 50% width */
     width: 50%;
-    align-items: flex-start;
-    /* Left align items */
-    padding-left: 10px;
-    /* Offset for second column */
+    align-items: center;
+    /* Center align items */
+    padding-left: 0px;
     box-sizing: border-box;
+    text-align: center;
   }
 
-  /* Ensure links are left aligned */
+  /* Ensure links are center aligned */
   .footer-middle a,
   .footer-right a {
-    text-align: left;
+    text-align: center;
     width: 100%;
     padding: 5px 0;
     display: block;

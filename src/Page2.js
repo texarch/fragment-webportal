@@ -13,7 +13,7 @@ const Page2 = () => {
             Build communities around your events, don’t just send invites!
           </h2>
 
-          <h3 className="available-text">Also Available on</h3>
+          <h3 className="available-text">Now Available on</h3>
 
           <div className="store-buttons">
             <img
