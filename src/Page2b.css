@@ -126,7 +126,11 @@
 /* ── Responsive ── */
 @media (max-width: 768px) {
   .page2b-section {
-    padding: 80px 20px 60px;
+    padding: 20px 20px 60px;
+  }
+
+  .page2b-container {
+    padding-top: 40px;
   }
 
   .page2b-content {
@@ -138,5 +142,6 @@
   .page2b-cards-row {
     justify-content: flex-start;
     padding: 20px 24px;
+    margin-bottom: 0px;
   }
 }

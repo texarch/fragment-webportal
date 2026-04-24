@@ -11,9 +11,8 @@ import LinkedIn from '../assets/linkedin2.jpg';
 import YouTube from '../assets/youtube.jpg';
 import Facebook from '../assets/facebook.jpg';
 
-import InstaIcon from '../assets/insta.png';
-import LinkedInIcon from '../assets/linkedin.png';
-import EmailIcon from '../assets/email.png';
+// Removed unused social icon imports
+import Page20 from '../Page20';
 
 // const REACT_APP_API_URL='https://fragment.thefragment.app/dev/website'
 const REACT_APP_API_URL = 'https://fragment.thefragment.app/dev/website';
@@ -236,41 +235,7 @@ function Contact() {
         </div>
       </div>
 
-      <footer className="footer">
-        <div className="footer-content">
-          <div className="footer-column social-contact">
-            <div className="social-icons-footer">
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-                <img src={InstaIcon} alt="Instagram" />
-              </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-                <img src={LinkedInIcon} alt="LinkedIn" />
-              </a>
-              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">
-                <img src={EmailIcon} alt="YouTube" />
-              </a>
-            </div>
-            <p>Email:<span> hi@thefragment.app</span> </p>
-            {/* <p>Phone number</p>
-            <p>Address</p> */}
-          </div>
-
-          <div className="footer-column offset-top">
-            <p>About Us</p>
-            <p>Work with us</p>
-            <p>FAQs</p>
-          </div>
-
-          <div className="footer-column offset-top">
-            <p>Privacy</p>
-            <p>Terms and Conditions</p>
-          </div>
-        </div>
-
-        <div className="footer-bottom">
-          <p>CopyRight Info</p>
-        </div>
-      </footer>
+      <Page20 />
     </div>
   );
 }

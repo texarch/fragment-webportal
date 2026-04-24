@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import './Pricing.css';
 import comingSoonImg from '../assets/comingsoon.jpg';
-import Insta0 from '../assets/insta.png';
-import LinkedIn0 from '../assets/linkedin.png';
-import YouTube0 from '../assets/email.png';
+// Removed unused social icon imports
 import RoleSelectionModal from '../components/RoleSelectionModal';
+import { isMobileDevice, openFragmentApp, openFragmentBusinessApp } from '../utils/smartAppLink';
+import Page20 from '../Page20';
 
 const Pricing = () => {
   const [showRoleModal, setShowRoleModal] = useState(false);
@@ -55,48 +55,26 @@ const Pricing = () => {
           </div>
         </div>
       </div>
-      <footer className="footer">
-        <div className="footer-content">
-          <div className="footer-column social-contact">
-            <div className="social-icons-footer">
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-                <img src={Insta0} alt="Instagram" />
-              </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-                <img src={LinkedIn0} alt="LinkedIn" />
-              </a>
-              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">
-                <img src={YouTube0} alt="YouTube" />
-              </a>
-            </div>
-            <p>Email:<span> hi@thefragment.app</span> </p>
-            {/* <p>Phone number</p>
-            <p>Address</p> */}
-          </div>
-
-          <div className="footer-column offset-top">
-            <p>About Us</p>
-            <p>Work with us</p>
-            <p>FAQs</p>
-          </div>
-
-          <div className="footer-column offset-top">
-            <p>Privacy</p>
-            <p>Terms and Conditions</p>
-          </div>
-        </div>
-
-        <div className="footer-bottom">
-          <p>CopyRight Info</p>
-        </div>
-      </footer>
+      <Page20 />
 
       <RoleSelectionModal
         isOpen={showRoleModal}
         onClose={() => setShowRoleModal(false)}
         prefixText="Sign-in as"
-        onIndividualClick={() => window.open('http://localhost:5173/signup', '_blank')}
-        onOrganiserClick={() => window.open('http://localhost:5174/signup', '_blank')}
+        onIndividualClick={() => {
+          if (isMobileDevice()) {
+            openFragmentApp('signup');
+          } else {
+            window.open('https://my.thefragment.app/signup', '_blank');
+          }
+        }}
+        onOrganiserClick={() => {
+          if (isMobileDevice()) {
+            openFragmentBusinessApp('signup');
+          } else {
+            window.open('https://business.thefragment.app/signup', '_blank');
+          }
+        }}
       />
     </div>
   );

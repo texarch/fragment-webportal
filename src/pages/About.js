@@ -5,14 +5,13 @@ import apg1image from "../assets/apg00image.png";
 import apg2a from "../assets/apg2a.jpg";
 import apg2b from "../assets/apg2b.jpg";
 
-import Insta from "../assets/insta.png";
-import LinkedIn from "../assets/linkedin.png";
-import YouTube from "../assets/email.png";
+// Removed unused social icon imports
 
 import pg3a from "../assets/pg3a.png";
 import pg3b from "../assets/pg3b.png";
 import pg3c from "../assets/pg3c.png";
 import pg3d from "../assets/pg3d.png";
+import Page20 from "../Page20";
 
 // APage1 Component
 const APage1 = () => {
@@ -127,38 +126,7 @@ const Apage4 = () => {
 const Apage5 = () => {
   return (
     <div>
-      <footer className="footer">
-        <div className="footer-content">
-          <div className="footer-column social-contact">
-            <div className="social-icons-footer">
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-                <img src={Insta} alt="Instagram" />
-              </a>
-              <a href="www.linkedin.com/company/thefragmentapp/" target="_blank" rel="noopener noreferrer">
-                <img src={LinkedIn} alt="LinkedIn" />
-              </a>
-              <a href="https://www.youtube.com/@thefragmentapp" target="_blank" rel="noopener noreferrer">
-                <img src={YouTube} alt="YouTube" />
-              </a>
-            </div>
-            <p>Email:<span> hi@thefragment.app</span> </p>
-            {/* <p>Phone number</p>
-            <p>Address</p> */}
-          </div>
-          <div className="footer-column offset-top">
-            <p>About Us</p>
-            <p>Work with us</p>
-            <p>FAQs</p>
-          </div>
-          <div className="footer-column offset-top">
-            <p>Privacy</p>
-            <p>Terms and Conditions</p>
-          </div>
-        </div>
-        <div className="footer-bottom">
-          <p>CopyRight Info</p>
-        </div>
-      </footer>
+      <Page20 />
     </div>
   );
 };

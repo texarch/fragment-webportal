@@ -154,10 +154,23 @@
   margin-bottom: 5px;
 }
 
-.social-icons {
-  width: 160px;
-  height: auto;
+.social-icons-sprite {
+  display: flex;
+  gap: 0;
 }
+
+.sprite-icon {
+  width: 40px;
+  height: 27.6px;
+  background-image: url('./assets/connections_page11.png');
+  background-size: 160px auto;
+  background-repeat: no-repeat;
+  display: block;
+}
+
+.sprite-icon.instagram { background-position: 0 0; }
+.sprite-icon.linkedin { background-position: -40px 0; }
+.sprite-icon.youtube { background-position: -120px 0; }
 
 .email {
   font-size: 0.95rem;
@@ -285,8 +298,18 @@
     /* Slightly larger text for mobile */
   }
 
-  .social-icons {
-    width: 140px;
+  .social-icons-sprite {
     margin: 10px 0;
+    justify-content: center;
   }
+  
+  .sprite-icon {
+    width: 35px;
+    height: 24.1px;
+    background-size: 140px auto;
+  }
+  
+  .sprite-icon.instagram { background-position: 0 0; }
+  .sprite-icon.linkedin { background-position: -35px 0; }
+  .sprite-icon.youtube { background-position: -105px 0; }
 }
