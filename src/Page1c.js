@@ -21,8 +21,8 @@ const Page1c = () => {
           <div className="chaos-divider" />
           
           <p className="chaos-description">
-            No need for spreadsheets, message broadcasts, update emails, payment follow-ups. <br/>
-            Just one tool that handles all of it — <br /><strong>automatically</strong>.
+            No need for spreadsheets, message broadcasts, update emails, payment follow-ups. <br/><br/>
+            Just one tool that handles all of it — <strong>automatically</strong>.
           </p>
         </div>
       </div>

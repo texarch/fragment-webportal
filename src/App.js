@@ -62,12 +62,12 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/organiser" element={<Organiser />} />
         <Route path="/individual" element={<Individual />} />
-        <Route path="/Contact" element={<Contact />} />
-        <Route path="/About" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/about" element={<About />} />
         <Route path="/pricing" element={<Pricing />} />
         <Route path="/Demo" element={<Demo currentView={currentView} setView={setCurrentView} />} />
-        <Route path="/FAQs" element={<FAQs currentView={currentView} setView={setCurrentView} />} />
-        <Route path="/Blog" element={<Blog currentView={currentView} setView={setCurrentView} />} />
+        <Route path="/faqs" element={<FAQs currentView={currentView} setView={setCurrentView} />} />
+        <Route path="/blog" element={<Blog currentView={currentView} setView={setCurrentView} />} />
         <Route path="/blog/all" element={<BlogList />} />
         <Route path="/blog/post/:id" element={<BlogPost setView={setCurrentView} />} />
         <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
