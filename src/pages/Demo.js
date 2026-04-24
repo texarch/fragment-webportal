@@ -6,6 +6,7 @@ import './Demo.css';
 import InstaIcon from '../assets/insta.png';
 import LinkedInIcon from '../assets/linkedin.png';
 import EmailIcon from '../assets/email.png';
+import Page20 from '../Page20';
 import LikeImage from '../assets/like.png';
 import UnlikeImage from '../assets/unlike.png';
 
@@ -449,43 +450,7 @@ const Demo = ({ currentView, setView }) => {
       <AskModal isOpen={showAskModal} onClose={() => setShowAskModal(false)} category={selectedCategory} />
       */}
       <div>
-        <footer className="footer">
-          <div className="footer-content">
-            <div className="footer-column social-contact">
-              <div className="social-icons-footer">
-                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-                  <img src={InstaIcon} alt="Instagram" />
-                </a>
-                <a href="www.linkedin.com/company/thefragmentapp/" target="_blank" rel="noopener noreferrer">
-                  <img src={LinkedInIcon} alt="LinkedIn" />
-                </a>
-                <a href="https://www.youtube.com/@thefragmentapp" target="_blank" rel="noopener noreferrer">
-                  <img src={EmailIcon} alt="YouTube" />
-                </a>
-              </div>
-              <p>Email:<span> hi@thefragment.app</span></p>
-            </div>
-
-            <div className="footer-column offset-top">
-              <p>About Us</p>
-              <p>Work with us</p>
-              <p>FAQs</p>
-            </div>
-
-            <div className="footer-column offset-top">
-              <p>
-                <a href="/privacy-policy">Privacy</a>
-              </p>
-              <p>
-                <a href="/terms-and-conditions">Terms and Conditions</a>
-              </p>
-            </div>
-          </div>
-
-          <div className="footer-bottom">
-            <p>CopyRight Info</p>
-          </div>
-        </footer>
+        <Page20 />
       </div>
     </>
   );
