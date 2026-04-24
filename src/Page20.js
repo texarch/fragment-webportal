@@ -19,9 +19,9 @@ const Page20 = () => {
 
         <div className="footer-links-wrapper">
           <div className="footer-middle">
-            <Link to="/About">About Us</Link>
+            <Link to="/about">About Us</Link>
             <a href="/">Work with us</a>
-            <Link to="/FAQs">FAQ's</Link>
+            <Link to="/faqs">FAQ's</Link>
           </div>
 
           <div className="footer-right">
