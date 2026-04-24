@@ -25,8 +25,8 @@ const Page20 = () => {
           </div>
 
           <div className="footer-right">
-            <a href="/">Privacy</a>
-            <a href="/">Terms and Conditions</a>
+            <a href="/privacy-policy">Privacy</a>
+            <a href="/terms-and-conditions">Terms and Conditions</a>
           </div>
         </div>
       </div>

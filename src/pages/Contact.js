@@ -235,7 +235,45 @@ function Contact() {
         </div>
       </div>
 
-      <Page20 />
+      <footer className="footer">
+        <div className="footer-content">
+          <div className="footer-column social-contact">
+            <div className="social-icons-footer">
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                <img src={InstaIcon} alt="Instagram" />
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                <img src={LinkedInIcon} alt="LinkedIn" />
+              </a>
+              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">
+                <img src={EmailIcon} alt="YouTube" />
+              </a>
+            </div>
+            <p>Email:<span> hi@thefragment.app</span> </p>
+            {/* <p>Phone number</p>
+            <p>Address</p> */}
+          </div>
+
+          <div className="footer-column offset-top">
+            <p>About Us</p>
+            <p>Work with us</p>
+            <p>FAQs</p>
+          </div>
+
+          <div className="footer-column offset-top">
+            <p>
+              <a href="/privacy-policy">Privacy</a>
+            </p>
+            <p>
+              <a href="/terms-and-conditions">Terms and Conditions</a>
+            </p>
+          </div>
+        </div>
+
+        <div className="footer-bottom">
+          <p>CopyRight Info</p>
+        </div>
+      </footer>
     </div>
   );
 }
