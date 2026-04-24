@@ -63,7 +63,7 @@ export default function Page4() {
       <div className="page4-mobile">
         <div className="page4-header page4-header-mobile">
           <span className="page4-with-text">with </span>
-          <img src={logo} alt="Logo" className="page4-logo" />
+          {/* <img src={logo} alt="Logo" className="page4-logo" /> */}
           <span className="page4-fragment-text">Fragment Business</span>
         </div>
         {mobileItems.map((item, i) => (

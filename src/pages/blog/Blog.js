@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import BlogHero from './BlogHero';
 import BlogPage2 from './blog_page2';
-import BlogFooter from './BlogFooter';
 import './Blog.css'; // Ensure CSS is imported
+import Page20 from '../../Page20';
 
 const Blog = ({ currentView, setView }) => {
   // Map global state (lowercase) to local component expectation (Capitalized)
@@ -35,7 +35,7 @@ const Blog = ({ currentView, setView }) => {
 
       <BlogHero selectedCategory={selectedCategory} />
       <BlogPage2 selectedCategory={selectedCategory} />
-      <BlogFooter />
+      <Page20 />
     </div>
   );
 };

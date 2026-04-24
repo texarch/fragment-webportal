@@ -137,9 +137,13 @@
     transform: translateY(50px);
   }
 
+  .Page2-section {
+    padding-bottom: 20px;
+  }
+
   .Page2-text-right {
     justify-content: center;
-    padding-bottom: 100px;
+    padding-bottom: 40px;
   }
 
   .Page2-text-right p {

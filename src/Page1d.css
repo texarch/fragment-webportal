@@ -289,24 +289,42 @@
 /* ── Responsive — mobile and tablet ── */
 @media (max-width: 800px) {
     .page1d-container {
-        padding: 60px 20px;
+        padding: 60px 10px;
     }
 
     .cards-wrapper {
-        flex-direction: column;
-        gap: 16px;
+        flex-direction: row;
+        gap: 10px;
+        margin-left: 0;
     }
 
     .cards-col {
         width: 100%;
+        gap: 10px;
     }
 
     .cards-col-right {
         margin-top: 0;
+        margin-left: 0;
     }
 
     .setup-card {
         max-width: 100% !important;
+        padding: 16px 12px !important;
+        margin-top: 0 !important;
+        border-radius: 12px !important;
+        justify-content: flex-start;
+    }
+
+    .title-lg, .title-md {
+        font-size: 15px;
+        margin-bottom: 6px;
+        line-height: 1.2;
+    }
+
+    .desc-lg, .desc-md {
+        font-size: 12px;
+        line-height: 1.35;
     }
 
     .cards-wrapper:hover .setup-card {

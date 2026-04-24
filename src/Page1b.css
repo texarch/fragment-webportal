@@ -69,6 +69,11 @@
 }
 
 @media (max-width: 768px) {
+    .page1b-container {
+        min-height: auto;
+        padding: 60px 20px;
+    }
+
     .page1b-title {
         font-size: 36px;
         line-height: 44px;

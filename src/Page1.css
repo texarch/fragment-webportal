@@ -28,9 +28,9 @@
 }
 
 /* Ensure content stays above the background */
-.hero-badge, 
-.hero-heading-wrapper, 
-.hero-description-wrapper, 
+.hero-badge,
+.hero-heading-wrapper,
+.hero-description-wrapper,
 .hero-image-wrapper {
     position: relative;
     z-index: 1;
@@ -147,6 +147,8 @@
 @media (max-width: 768px) {
     .page1-hero-container {
         padding-top: 60px;
+        min-height: auto;
+        padding-bottom: 0px;
     }
 
     .hero-title {

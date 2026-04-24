@@ -5,14 +5,13 @@ import apg1image from "../assets/apg00image.png";
 import apg2a from "../assets/apg2a.jpg";
 import apg2b from "../assets/apg2b.jpg";
 
-import Insta from "../assets/insta.png";
-import LinkedIn from "../assets/linkedin.png";
-import YouTube from "../assets/email.png";
+// Removed unused social icon imports
 
 import pg3a from "../assets/pg3a.png";
 import pg3b from "../assets/pg3b.png";
 import pg3c from "../assets/pg3c.png";
 import pg3d from "../assets/pg3d.png";
+import Page20 from "../Page20";
 
 // APage1 Component
 const APage1 = () => {

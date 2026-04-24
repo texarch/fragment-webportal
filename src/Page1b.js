@@ -1,5 +1,6 @@
 import React from 'react';
 import './Page1b.css';
+import { openFragmentBusinessApp } from './utils/smartAppLink';
 
 const Page1b = () => {
   return (
@@ -14,14 +15,12 @@ const Page1b = () => {
         If people need to show up for it — Fragment can create it, share it, and keep everyone updated without the <span>back-and-forth.</span>
       </p>
       
-      <a 
-        href="https://business.thefragment.app/signup" 
-        target="_blank" 
-        rel="noopener noreferrer"
+      <button 
+        onClick={() => openFragmentBusinessApp('signup')}
         className="page1b-btn"
       >
         Start for Free
-      </a>
+      </button>
     </div>
   );
 };

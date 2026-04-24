@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import './Pricing.css';
 import comingSoonImg from '../assets/comingsoon.jpg';
-import Insta0 from '../assets/insta.png';
-import LinkedIn0 from '../assets/linkedin.png';
-import YouTube0 from '../assets/email.png';
+// Removed unused social icon imports
 import RoleSelectionModal from '../components/RoleSelectionModal';
+import { isMobileDevice, openFragmentApp, openFragmentBusinessApp } from '../utils/smartAppLink';
+import Page20 from '../Page20';
 
 const Pricing = () => {
   const [showRoleModal, setShowRoleModal] = useState(false);
@@ -99,8 +99,20 @@ const Pricing = () => {
         isOpen={showRoleModal}
         onClose={() => setShowRoleModal(false)}
         prefixText="Sign-in as"
-        onIndividualClick={() => window.open('http://localhost:5173/signup', '_blank')}
-        onOrganiserClick={() => window.open('http://localhost:5174/signup', '_blank')}
+        onIndividualClick={() => {
+          if (isMobileDevice()) {
+            openFragmentApp('signup');
+          } else {
+            window.open('https://my.thefragment.app/signup', '_blank');
+          }
+        }}
+        onOrganiserClick={() => {
+          if (isMobileDevice()) {
+            openFragmentBusinessApp('signup');
+          } else {
+            window.open('https://business.thefragment.app/signup', '_blank');
+          }
+        }}
       />
     </div>
   );

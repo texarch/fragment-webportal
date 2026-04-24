@@ -3,9 +3,8 @@ import './Demo.css';
 
 import LikeImage from '../assets/like.png';
 import UnlikeImage from '../assets/unlike.png';
-import InstaIcon from '../assets/insta.png';
-import LinkedInIcon from '../assets/linkedin.png';
-import EmailIcon from '../assets/email.png';
+// Removed unused social icon imports
+import Page20 from '../Page20';
 
 import { getFAQs, saveQuestion, getReaction, saveFAQReaction, saveUserReactionLocal } from './blog/faqStorage';
 

@@ -11,9 +11,8 @@ import LinkedIn from '../assets/linkedin2.jpg';
 import YouTube from '../assets/youtube.jpg';
 import Facebook from '../assets/facebook.jpg';
 
-import InstaIcon from '../assets/insta.png';
-import LinkedInIcon from '../assets/linkedin.png';
-import EmailIcon from '../assets/email.png';
+// Removed unused social icon imports
+import Page20 from '../Page20';
 
 // const REACT_APP_API_URL='https://fragment.thefragment.app/dev/website'
 const REACT_APP_API_URL = 'https://fragment.thefragment.app/dev/website';
