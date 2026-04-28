@@ -18,14 +18,24 @@ const Page11 = ({ setView }) => {
           <div className="left-content">
 
 
+            <div className="h-9 px-2 py-1 bg-cyan-50 rounded-2xl inline-flex justify-center items-center gap-2">
+              <div className="w-3 h-3 bg-sky-300 rounded-full" />
+              <div className="text-center justify-start text-black text-lg font-['SF_Pro'] tracking-wide">Not just for Organisers.</div>
+            </div>
+
             <div className="title-text">
-              Stay organized with multi-calendars, to-dos, and automatic event sync.
+              Also for those who like to<br />
+              stay organized in their own<br />
+              way.
             </div>
 
             <div className="divider-line" />
 
             <div className="subtitle-text">
-              Create calendars, follow organizers, engage, and book events and slots.
+              Create your own planning space — <br />
+              manage multi-calendars and to-dos,<br />
+              follow organizers, engage, book events,<br />
+              and stay auto-synced.
             </div>
           </div>
 
