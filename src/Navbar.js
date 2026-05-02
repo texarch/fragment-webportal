@@ -51,8 +51,9 @@ const Navbar = ({ currentView }) => {
   return (
     <nav className="navbar" ref={navRef}>
       <div className="logo">
-        <Link to="/">
+        <Link to="/" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none', gap: '8px' }}>
           <img src={logo} alt="Logo" />
+          <div className="justify-start text-black text-3xl font-normal font-['Poppins'] leading-10 tracking-wider">Fragment</div>
         </Link>
       </div>
 
@@ -71,12 +72,12 @@ const Navbar = ({ currentView }) => {
       {/* Collapsible menu */}
       <div className={`nav-links-wrapper collapse ${isOpen ? 'show' : ''}`} id="navbarNav">
         <div className="nav-links">
-          <Link to="/about" onClick={() => setIsOpen(false)}>About</Link>
-          <Link to="/individual" className="individual-link" onClick={() => setIsOpen(false)}>Individual</Link>
-          <Link to="/pricing" onClick={() => setIsOpen(false)}>Pricing</Link>
-          <Link to="/blog" className="blog-link" onClick={() => setIsOpen(false)}>Blog</Link>
-          <Link to="/faqs" onClick={() => setIsOpen(false)}>FAQ's</Link>
-          <Link to="/contact" onClick={() => setIsOpen(false)}>Contact</Link>
+          <Link to="/about" className={location.pathname === '/about' ? 'active' : ''} onClick={() => setIsOpen(false)}>About</Link>
+          <Link to="/individual" className={`individual-link ${location.pathname === '/individual' ? 'active' : ''}`} onClick={() => setIsOpen(false)}>Individual</Link>
+          <Link to="/pricing" className={location.pathname === '/pricing' ? 'active' : ''} onClick={() => setIsOpen(false)}>Pricing</Link>
+          <Link to="/blog" className={`blog-link ${location.pathname === '/blog' ? 'active' : ''}`} onClick={() => setIsOpen(false)}>Blog</Link>
+          <Link to="/faqs" className={location.pathname === '/faqs' ? 'active' : ''} onClick={() => setIsOpen(false)}>FAQ's</Link>
+          <Link to="/contact" className={location.pathname === '/contact' ? 'active' : ''} onClick={() => setIsOpen(false)}>Contact</Link>
         </div>
         {/* Auth buttons inside the menu for mobile — same as desktop */}
         <div className="auth-buttons auth-buttons-mobile">
