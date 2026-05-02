@@ -33,7 +33,18 @@ body {
   height: 50px;
   width: auto;
   /* margin-left: -0%; */
-  margin-right: 60%;
+}
+
+/* Tailwind-equivalent classes for the Fragment logo text */
+.justify-start { display: flex; justify-content: flex-start; }
+.text-black { color: black; }
+.text-3xl { font-size: 1.875rem; /* 30px */ }
+.font-normal { font-weight: 400; }
+.leading-10 { line-height: 2.5rem; /* 40px */ }
+.tracking-wider { letter-spacing: 0.05em; }
+
+.navbar .logo a div {
+  font-family: 'Poppins', sans-serif;
 }
 
 .nav-links-wrapper {
